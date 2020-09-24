@@ -52,6 +52,8 @@ public class PlayerInput : MonoBehaviour
 
 
       Player.Character.Move.performed += ctx => playerScript.moveDirection = ctx.ReadValue<Vector2>(); // This permantly binds the given inputs to the script with no need for any update function
+      Player.Character.Dash.performed += ctx => playerScript.Dash();
+      Player.Character.Attack.performed += ctx => playerScript.Attack();
   }
 
   public IEnumerator waitForPlayerToSpawn()  // This waits for a player to be Instantiated, when one is it will bind the inputs

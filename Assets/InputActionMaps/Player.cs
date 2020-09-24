@@ -25,6 +25,22 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1e98442-69bc-41c0-84a6-b3f60321b083"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""886817b5-e4b1-4e0c-a988-1e6ab1a31e28"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -93,6 +109,50 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44a140e5-2698-49eb-91e2-57249a3ef85b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""794970ed-37df-4536-939d-cbaf5310337e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""46610b44-0d82-4978-b512-b060c1b4df21"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""126cbb16-b79e-4022-b4c7-b1d80926f071"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -102,6 +162,8 @@ public class @Player : IInputActionCollection, IDisposable
         // Character
         m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
         m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
+        m_Character_Attack = m_Character.FindAction("Attack", throwIfNotFound: true);
+        m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -152,11 +214,15 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Character;
     private ICharacterActions m_CharacterActionsCallbackInterface;
     private readonly InputAction m_Character_Move;
+    private readonly InputAction m_Character_Attack;
+    private readonly InputAction m_Character_Dash;
     public struct CharacterActions
     {
         private @Player m_Wrapper;
         public CharacterActions(@Player wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Character_Move;
+        public InputAction @Attack => m_Wrapper.m_Character_Attack;
+        public InputAction @Dash => m_Wrapper.m_Character_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -169,6 +235,12 @@ public class @Player : IInputActionCollection, IDisposable
                 @Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                @Attack.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAttack;
+                @Dash.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -176,6 +248,12 @@ public class @Player : IInputActionCollection, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
     }
@@ -183,5 +261,7 @@ public class @Player : IInputActionCollection, IDisposable
     public interface ICharacterActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }

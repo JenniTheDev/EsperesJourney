@@ -48,10 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0}
   moveSpeed: 100
+  dashSpeed: 5
+  dashTimeLength: 0.25
   rb: {fileID: 0}
-  moving:
-    m_PersistentCalls:
-      m_Calls: []
   attack:
     m_PersistentCalls:
       m_Calls: []
