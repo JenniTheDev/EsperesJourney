@@ -23,9 +23,8 @@ public class PlayerInput : MonoBehaviour
   }
 
 
-
-  public void Rebind()                   // This script checks if a player is in the scene,  If so it will bind the inputs to the script, If not it will wait unil a player is Instantiated
-  {
+  // This script checks if a player is in the scene,  If so it will bind the inputs to the script, If not it will wait unil a player is Instantiated
+  public void Rebind(){
       // if player gameObject is not set in inspector then it will auto set
       if (_Player == null)
       {
@@ -42,9 +41,8 @@ public class PlayerInput : MonoBehaviour
       }
   }
 
-
-  public void BindInputs ()              // This script will bind the inputs on the Input action map to the needed script
-  {
+  // This script will bind the inputs on the Input action map to the needed script
+  public void BindInputs (){
       if (playerScript == null)         // Access the need script on the Player GameObject
       {
           playerScript = _Player.GetComponent<PlayerController>();
@@ -56,8 +54,8 @@ public class PlayerInput : MonoBehaviour
       Player.Character.Attack.performed += ctx => playerScript.Attack();
   }
 
-  public IEnumerator waitForPlayerToSpawn()  // This waits for a player to be Instantiated, when one is it will bind the inputs
-  {
+  // This waits for a player to be Instantiated, when one is it will bind the inputs
+  public IEnumerator waitForPlayerToSpawn(){
       int i = 1;
       GameObject[] _player;
       do
@@ -74,13 +72,13 @@ public class PlayerInput : MonoBehaviour
       yield return null;
   }
 
-  private void OnEnable()  // This will enable the Input Action Map
-  {
+   // This will enable the Input Action Map
+  private void OnEnable(){
     Player.Enable();
   }
 
-  private void OnDisable() // This will enable the Input Action Map
-  {
+  // This will enable the Input Action Map
+  private void OnDisable(){
     Player.Disable();
   }
 }

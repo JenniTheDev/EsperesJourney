@@ -10,44 +10,42 @@ public class PlayerController : MonoBehaviour
     [Tooltip ("Used for debugging purposes.  This will show what direction the player is trying to move in.")]
     public Vector2 moveDirection;  // Will be the direction that the player moves in
     [Tooltip ("This is the speed at which the player moves")]
-    public int moveSpeed;          // The move speed of the player
+    [SerializeField] private int moveSpeed;          // The move speed of the player
     [Tooltip ("This is the speed at which the player dashes")]
-    public int dashSpeed;          // The Dash speed of the player
-    private bool isDashing = false; // Used by some functions to tell if the player is currently dashing
+    [SerializeField] private int dashSpeed;          // The Dash speed of the player
+    [SerializeField] private bool isDashing = false; // Used by some functions to tell if the player is currently dashing
     [Tooltip ("This is the amount of time that the player can not control the character")]
-    public float dashTimeLength = 0.5f;    // The time that the dash lasts
+    [SerializeField] private float dashTimeLength = 0.5f;    // The time that the dash lasts
 
     [Space]
     [Header ("Physics")]
     [Tooltip ("The Rigidbody2D of the player.  If not set in the inspector it will default to any Rigidbody2D attached to this gameObject")]
-    public Rigidbody2D rb; // The rigid body on the player
+    [SerializeField] private  Rigidbody2D rb; // The rigid body on the player
 
     [Space]
     [Header ("Events")]
-    public UnityEvent attack;
-    public UnityEvent dash;
-    public UnityEvent ability;
+    [SerializeField] private  UnityEvent attack;
+    [SerializeField] private  UnityEvent dash;
+    [SerializeField] private  UnityEvent ability;
 
 
     // --- Updates -------------------------------------------------------
 
-    public void Awake()
-    {
+    public void Awake(){
       if(rb == null)
       {
         rb = gameObject.GetComponent<Rigidbody2D>();
       }
     }
 
-    public void FixedUpdate()
-    {
+    public void FixedUpdate(){
       MovePlayer(moveDirection);
     }
 
     // --- Actions --------------------------------------------------------
 
-    public void MovePlayer(Vector2 input)  // Will control the player Movement
-    {
+    // Will control the player Movement
+    public void MovePlayer(Vector2 input){
       if (!isDashing) rb.velocity = new Vector3(input.x, input.y, 0) * moveSpeed * Time.deltaTime;
     }
 
@@ -57,27 +55,28 @@ public class PlayerController : MonoBehaviour
       Debug.Log("The player is attacking");
     }
 
-    public void Dash()  // Will trigger when the player dashes
-    {
+    // Will trigger when the player dashes
+    public void Dash(){
       dash.Invoke();
       Debug.Log("The player is dashing");
 
       StartCoroutine(PlayerDash());
     }
 
-    public void Ability()
-    {
+    public void Ability(){
       ability.Invoke();
     }
 
     // --- IEnumerators -------------------------------------------
 
-    public IEnumerator PlayerDash()  // Will control the player dashing
-    {
+     // Will control the player dashing
+    public IEnumerator PlayerDash(){
       isDashing = true;
+
       Vector2 dashDirection = moveDirection * dashSpeed;
       rb.AddForce(dashDirection, ForceMode2D.Impulse);
       yield return new WaitForSeconds(dashTimeLength);
+      
       isDashing = false;
     }
 }
