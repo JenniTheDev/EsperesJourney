@@ -13,9 +13,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int moveSpeed;          // The move speed of the player
     [Tooltip ("This is the speed at which the player dashes")]
     [SerializeField] private int dashSpeed;          // The Dash speed of the player
-    [SerializeField] private bool isDashing = false; // Used by some functions to tell if the player is currently dashing
     [Tooltip ("This is the amount of time that the player can not control the character")]
     [SerializeField] private float dashTimeLength = 0.5f;    // The time that the dash lasts
+    [Space]
+    [Header ("Attacking and Abilities")]
+    [Tooltip ("The GameObject that will be spawned when the player does the basic attack")]
+    [SerializeField] private GameObject basicAttackObject;          // The object that will be spawned when the player preforms a basic attack
+    [Tooltip ("The point where the above GameObject will spawn")]
+    [SerializeField] private GameObject basicAttackSpawnPoint; // This will be where the basic attack is Instantiated
+    [Tooltip ("This is the amount of time that the player can not control the character")]
+    [SerializeField] private float basicAttackTimeLength = 1; // The length in time that the player will not have control durring the basic attack
+    [Tooltip ("This is the amount of time that the above object will be in the scene")]
+    [SerializeField] private float basicAttackObjectTimeLength = 0.25f; // The Length in time that the attack object will be in the scene
+    [Space]
+    [Header ("Other")]
+    [Tooltip ("The lenght of time after the player death event that this gameObject will be destroyed")]
+    [SerializeField] private float playerDeathTimeLength = 0.1f; // The Length in time unitl this gameObject is destroyed
+    [Tooltip ("Shows weather or not the player has control of the character")]
+    [SerializeField] private bool playerHasControl = true;   // This controls weather or not the player can do something;
 
     [Space]
     [Header ("Physics")]
@@ -27,6 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private  UnityEvent attack;
     [SerializeField] private  UnityEvent dash;
     [SerializeField] private  UnityEvent ability;
+    [SerializeField] private  UnityEvent playerDeath;
 
 
     // --- Updates -------------------------------------------------------
@@ -46,37 +62,67 @@ public class PlayerController : MonoBehaviour
 
     // Will control the player Movement
     public void MovePlayer(Vector2 input){
-      if (!isDashing) rb.velocity = new Vector3(input.x, input.y, 0) * moveSpeed * Time.deltaTime;
+      if (playerHasControl) rb.velocity = new Vector3(input.x, input.y, 0) * moveSpeed * Time.deltaTime;
     }
 
-    public void Attack()
-    {
-      attack.Invoke();
-      Debug.Log("The player is attacking");
+    public void Attack(){
+      if(playerHasControl){
+        attack.Invoke();
+        Debug.Log("The player is attacking");
+        StartCoroutine(PlayerAttack());
+      }
     }
 
     // Will trigger when the player dashes
     public void Dash(){
-      dash.Invoke();
-      Debug.Log("The player is dashing");
+      if (playerHasControl){
+        dash.Invoke();
+        Debug.Log("The player is dashing");
 
-      StartCoroutine(PlayerDash());
+        StartCoroutine(PlayerDash());
+      }
     }
 
     public void Ability(){
       ability.Invoke();
     }
 
+    public void Death(){
+      playerDeath.Invoke();
+      Debug.Log("Player has died");
+      Destroy (gameObject, playerDeathTimeLength);
+    }
+
+    // --- Collisions --------------------------------------------
+
+    public void OnCollisionEnter2D (Collision2D col){
+      if(col.gameObject.tag == "Enemy"){
+          Debug.Log ("Player touched and enemy");
+          Death();
+        }
+    }
+
     // --- IEnumerators -------------------------------------------
 
      // Will control the player dashing
     public IEnumerator PlayerDash(){
-      isDashing = true;
+      playerHasControl = false;
 
       Vector2 dashDirection = moveDirection * dashSpeed;
       rb.AddForce(dashDirection, ForceMode2D.Impulse);
       yield return new WaitForSeconds(dashTimeLength);
-      
-      isDashing = false;
+
+      playerHasControl = true;
+    }
+
+    public IEnumerator PlayerAttack(){
+      playerHasControl = false;
+
+      rb.velocity = new Vector2(0,0);
+      GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, Quaternion.identity);
+      Destroy(attack, basicAttackObjectTimeLength);
+
+      yield return new WaitForSeconds(basicAttackTimeLength);
+      playerHasControl = true;
     }
 }
