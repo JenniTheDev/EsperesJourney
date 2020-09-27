@@ -41,6 +41,14 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Blink"",
+                    ""type"": ""Button"",
+                    ""id"": ""56836d0c-50b4-4394-9cf1-0ee6152eaf6d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -153,6 +161,28 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""88ae8797-dae5-4205-904c-a76b374f3565"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Blink"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""76cf0709-359e-4b98-9c6c-bb854963ff03"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Blink"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +194,7 @@ public class @Player : IInputActionCollection, IDisposable
         m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
         m_Character_Attack = m_Character.FindAction("Attack", throwIfNotFound: true);
         m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
+        m_Character_Blink = m_Character.FindAction("Blink", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -216,6 +247,7 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Character_Move;
     private readonly InputAction m_Character_Attack;
     private readonly InputAction m_Character_Dash;
+    private readonly InputAction m_Character_Blink;
     public struct CharacterActions
     {
         private @Player m_Wrapper;
@@ -223,6 +255,7 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Character_Move;
         public InputAction @Attack => m_Wrapper.m_Character_Attack;
         public InputAction @Dash => m_Wrapper.m_Character_Dash;
+        public InputAction @Blink => m_Wrapper.m_Character_Blink;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,6 +274,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Dash.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnDash;
+                @Blink.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnBlink;
+                @Blink.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnBlink;
+                @Blink.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnBlink;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -254,6 +290,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @Blink.started += instance.OnBlink;
+                @Blink.performed += instance.OnBlink;
+                @Blink.canceled += instance.OnBlink;
             }
         }
     }
@@ -263,5 +302,6 @@ public class @Player : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnBlink(InputAction.CallbackContext context);
     }
 }
