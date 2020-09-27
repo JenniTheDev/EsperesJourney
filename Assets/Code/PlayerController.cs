@@ -20,8 +20,11 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     [Header ("Health")]
+      [Tooltip ("This is the players current health")]
       [SerializeField] int currentHealth = 100;
+      [Tooltip ("This is the maximum players health")]
       [SerializeField] int maxHealth = 100;
+      [Tooltip ("This is the minimum players health.  If the current health ever equals this the player will die")]
       [SerializeField] int minHealth = 0;
 
     [Space]
@@ -138,6 +141,7 @@ public class PlayerController : MonoBehaviour
       else return false;
     }
 
+    // Will kill the player
     public void Death(){
       playerDeath.Invoke();
       Debug.Log("Player has died");
@@ -146,6 +150,7 @@ public class PlayerController : MonoBehaviour
 
     // --- Collisions --------------------------------------------
 
+    // Triggers when the player collides with another normal collider
     public void OnCollisionEnter2D (Collision2D col){
       Debug.Log ("Player touched something");
 
@@ -158,6 +163,7 @@ public class PlayerController : MonoBehaviour
       }
     }
 
+    // Triggers when the player collides with a trigger
     public void OnTriggerEnter2D (Collider2D col){
       Debug.Log ("Player touched something");
 
