@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private GameObject blinkPoint;       // This is the point that the player will blind/teleport to
 
     [Space]
+    [Header ("Health")]
+      [SerializeField] int currentHealth = 100;
+      [SerializeField] int maxHealth = 100;
+      [SerializeField] int minHealth = 0;
+
+    [Space]
     [Header ("Attacking and Abilities")]
       [Tooltip ("The GameObject that will be spawned when the player does the basic attack")]
       [SerializeField] private GameObject basicAttackObject;          // The object that will be spawned when the player preforms a basic attack
@@ -47,6 +53,8 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private  UnityEvent dash;
       [SerializeField] private  UnityEvent teleport;
       [SerializeField] private  UnityEvent ability;
+      [SerializeField] private  UnityEvent healthIncrease;
+      [SerializeField] private  UnityEvent healthDecrease;
       [SerializeField] private  UnityEvent playerDeath;
 
 
@@ -107,6 +115,29 @@ public class PlayerController : MonoBehaviour
       ability.Invoke();
     }
 
+    // --- Health --------------------------------------------------------
+
+    // Sets the currentHealth to the given input
+    public void setCurrentHealth(int input){
+      currentHealth = input;
+      Debug.Log ("The players currentHealth was set to " + input);
+    }
+
+    // Adds the given input to the currentHealth
+    public void updateCurrentHealth(int input){
+      currentHealth += input;
+      Debug.Log ("Something changed the players currentHealth by " + input + " units");
+
+      if (input > 0) healthIncrease.Invoke();
+      if (input < 0) healthDecrease.Invoke();
+    }
+
+    // Returns true if the currentHealth is less than or equal to the minHealth
+    public bool isCharacterDead(){
+      if(currentHealth <= minHealth) return true;
+      else return false;
+    }
+
     public void Death(){
       playerDeath.Invoke();
       Debug.Log("Player has died");
@@ -116,10 +147,27 @@ public class PlayerController : MonoBehaviour
     // --- Collisions --------------------------------------------
 
     public void OnCollisionEnter2D (Collision2D col){
-      if(col.gameObject.tag == "Enemy"){
-          Debug.Log ("Player touched and enemy");
-          Death();
-        }
+      Debug.Log ("Player touched something");
+
+      if(col.gameObject.GetComponent<damage>() != null){
+        updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
+        if (isCharacterDead()) Death();
+      }
+      else{
+        Debug.Log ("This object does not have a damage script attached");
+      }
+    }
+
+    public void OnTriggerEnter2D (Collider2D col){
+      Debug.Log ("Player touched something");
+
+      if(col.gameObject.GetComponent<damage>() != null){
+        updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
+        if (isCharacterDead()) Death();
+      }
+      else{
+        Debug.Log ("This object does not have a damage script attached");
+      }
     }
 
     // --- IEnumerators -------------------------------------------

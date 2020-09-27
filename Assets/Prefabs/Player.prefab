@@ -53,6 +53,9 @@ MonoBehaviour:
   dashTimeLength: 0.25
   playerRotater: {fileID: 6185858564192968498}
   blinkPoint: {fileID: 2975084780385116093}
+  currentHealth: 100
+  maxHealth: 100
+  minHealth: 0
   basicAttackObject: {fileID: 7388582123865409461, guid: b05cf89c7f5a7f44f8bf0dd6f6e2720c,
     type: 3}
   basicAttackSpawnPoint: {fileID: 5423960392871623183}
@@ -67,7 +70,16 @@ MonoBehaviour:
   dash:
     m_PersistentCalls:
       m_Calls: []
+  teleport:
+    m_PersistentCalls:
+      m_Calls: []
   ability:
+    m_PersistentCalls:
+      m_Calls: []
+  healthIncrease:
+    m_PersistentCalls:
+      m_Calls: []
+  healthDecrease:
     m_PersistentCalls:
       m_Calls: []
   playerDeath:
@@ -130,7 +142,6 @@ GameObject:
   m_Component:
   - component: {fileID: 265542271286718927}
   - component: {fileID: 453806786912284393}
-  - component: {fileID: 2001174160517791348}
   m_Layer: 0
   m_Name: BlinkPoint
   m_TagString: Untagged
@@ -202,32 +213,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2001174160517791348
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2975084780385116093}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
-  m_EdgeRadius: 0
 --- !u!1 &4385570815342025147
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +427,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
