@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Events")]
       [SerializeField] private  UnityEvent attack;
       [SerializeField] private  UnityEvent dash;
+      [SerializeField] private  UnityEvent teleport;
       [SerializeField] private  UnityEvent ability;
       [SerializeField] private  UnityEvent playerDeath;
 
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerTeleport(){
       rb.MovePosition(blinkPoint.transform.position);
+      teleport.Invoke();
       Debug.Log("Player has teleported");
     }
 
