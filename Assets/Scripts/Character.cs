@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,14 +11,16 @@ public class Character : MonoBehaviour, IMoveableChar {
     // If using force
     //[SerializeField] private float moveForce = 3.0f;
     // For Velocity
-    [SerializeField] private float unitsPerSecond = 10;
+    [SerializeField] private float unitsPerSecond = 5;
 
     private Rigidbody2D rb;
+    private LayerMask wallMask;
 
     #region MonoBehavior
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
+        wallMask = LayerMask.NameToLayer("Wall");
     }
 
     #endregion
@@ -60,11 +63,14 @@ public class Character : MonoBehaviour, IMoveableChar {
         if (dir == CharDirection.Right) {
             rb.velocity = new Vector2(unitsPerSecond, 0);
         }
-
-
-
     }
 
+    public void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.layer == wallMask) {
+            rb.velocity = Vector2.zero;
+            Debug.Log("wall");
+        }
+    }
 
     #endregion
 }
