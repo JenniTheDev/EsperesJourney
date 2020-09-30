@@ -1,0 +1,659 @@
+fileFormatVersion: 2
+guid: 50f321fcad68f474eb4deaa4f54df9d8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7660058185959228050
+    second: Character Size Chart_V3_0
+  - first:
+      213: -935981773711855890
+    second: Character Size Chart_V3_0
+  - first:
+      213: 6043112038400679594
+    second: Character Size Chart_V3_1
+  - first:
+      213: -3425714803327050550
+    second: Character Size Chart_V3_2
+  - first:
+      213: -6040823192722681679
+    second: Character Size Chart_V3_3
+  - first:
+      213: 8619728004093783821
+    second: Character Size Chart_V3_4
+  - first:
+      213: -5646812407966958081
+    second: Character Size Chart_V3_5
+  - first:
+      213: 4488976171005254297
+    second: Character Size Chart_V3_6
+  - first:
+      213: -5272973980409414991
+    second: Character Size Chart_V3_7
+  - first:
+      213: -8115006558262496328
+    second: Character Size Chart_V3_8
+  - first:
+      213: 8598866062369968837
+    second: Character Size Chart_V3_9
+  - first:
+      213: -665078176891183941
+    second: Character Size Chart_V3_10
+  - first:
+      213: 3403409513690108675
+    second: Character Size Chart_V3_11
+  - first:
+      213: 2191689619183764892
+    second: Character Size Chart_V3_12
+  - first:
+      213: 5638533098217357527
+    second: Character Size Chart_V3_13
+  - first:
+      213: 6727090610629110068
+    second: Character Size Chart_V3_14
+  - first:
+      213: -3162837178445638088
+    second: Character Size Chart_V3_15
+  - first:
+      213: 6497369760337864665
+    second: Character Size Chart_V3_16
+  - first:
+      213: 6323676923877877005
+    second: Character Size Chart_V3_17
+  - first:
+      213: 8810764996070429678
+    second: Character Size Chart_V3_18
+  - first:
+      213: 1406867926213642220
+    second: Character Size Chart_V3_19
+  - first:
+      213: -3853454253501255981
+    second: Character Size Chart_V3_20
+  - first:
+      213: 2876308498611389810
+    second: Character Size Chart_V3_21
+  - first:
+      213: -3935713189598490997
+    second: Character Size Chart_V3_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character Size Chart_V3_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 137
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee2aad2989b203f0800000000000000
+      internalID: -935981773711855890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 80
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae52c291627dd350800000000000000
+      internalID: 6043112038400679594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 76
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accd4ed598a6570d0800000000000000
+      internalID: -3425714803327050550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 72
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0d2d6df4faa2ca0800000000000000
+      internalID: -6040823192722681679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 72
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f2f7053fc6f9770800000000000000
+      internalID: 8619728004093783821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_5
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 87
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd7cd5780e72a1b0800000000000000
+      internalID: -5646812407966958081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_6
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 80
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a16fd3b0c0c4e30800000000000000
+      internalID: 4488976171005254297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 69
+        width: 43
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bab1db2a12a2d6b0800000000000000
+      internalID: -5272973980409414991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 11
+        width: 53
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b37cc8c784b16f80800000000000000
+      internalID: -8115006558262496328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_9
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 11
+        width: 41
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c259beff1f455770800000000000000
+      internalID: 8598866062369968837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_10
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 11
+        width: 61
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc598efbea25c6f0800000000000000
+      internalID: -665078176891183941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_11
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 11
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3031fa0bbe65b3f20800000000000000
+      internalID: 3403409513690108675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_12
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 55
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c950c59b8127a6e10800000000000000
+      internalID: 2191689619183764892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_13
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 8
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d047858af7104e40800000000000000
+      internalID: 5638533098217357527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_14
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 46
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439e96ac44d6b5d50800000000000000
+      internalID: 6727090610629110068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 44
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8365958f7585b14d0800000000000000
+      internalID: -3162837178445638088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_16
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 10
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7ad4b5f5b4b2a50800000000000000
+      internalID: 6497369760337864665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_17
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 9
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05631278a632c750800000000000000
+      internalID: 6323676923877877005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_18
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 10
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3593e1510264a70800000000000000
+      internalID: 8810764996070429678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_19
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 8
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7cadbcce2368310800000000000000
+      internalID: 1406867926213642220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_20
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 10
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dee6ddd5c7c58ac0800000000000000
+      internalID: -3853454253501255981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_21
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 11
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2754b241753bae720800000000000000
+      internalID: 2876308498611389810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Size Chart_V3_22
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 10
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e8924d4b98169c0800000000000000
+      internalID: -3935713189598490997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
