@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
       [SerializeField] int maxHealth = 100;
       [Tooltip ("This is the minimum players health.  If the current health ever equals this the player will die")]
       [SerializeField] int minHealth = 0;
+      [Tooltip ("List all the GameObject tags of objects that can alter the health of this gameObject")]
+      [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
 
     [Space]
     [Header ("Attacking and Abilities")]
@@ -126,6 +128,22 @@ public class PlayerController : MonoBehaviour
       Debug.Log ("The players currentHealth was set to " + input);
     }
 
+    public bool canThisObjectDamageMe (Collision2D col){
+      foreach(string _tag in tagsThatCanAffectObjectsHealth)
+      {
+        if(col.gameObject.tag == _tag) return true;
+      }
+      return false;
+    }
+
+    public bool canThisObjectDamageMe_Collider2D (Collider2D col){
+      foreach(string _tag in tagsThatCanAffectObjectsHealth)
+      {
+        if(col.gameObject.tag == _tag) return true;
+      }
+      return false;
+    }
+
     // Adds the given input to the currentHealth
     public void updateCurrentHealth(int input){
       currentHealth += input;
@@ -154,7 +172,7 @@ public class PlayerController : MonoBehaviour
     public void OnCollisionEnter2D (Collision2D col){
       Debug.Log ("Player touched something");
 
-      if(col.gameObject.GetComponent<damage>() != null){
+      if(col.gameObject.GetComponent<damage>() != null && canThisObjectDamageMe(col)){
         updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
         if (isCharacterDead()) Death();
       }
@@ -167,7 +185,7 @@ public class PlayerController : MonoBehaviour
     public void OnTriggerEnter2D (Collider2D col){
       Debug.Log ("Player touched something");
 
-      if(col.gameObject.GetComponent<damage>() != null){
+      if(col.gameObject.GetComponent<damage>() != null && canThisObjectDamageMe_Collider2D(col)){
         updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
         if (isCharacterDead()) Death();
       }
@@ -193,7 +211,7 @@ public class PlayerController : MonoBehaviour
       playerHasControl = false;
 
       rb.velocity = new Vector2(0,0);
-      GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, Quaternion.identity);
+      GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, basicAttackSpawnPoint.transform.rotation);
       Destroy(attack, basicAttackObjectTimeLength);
 
       yield return new WaitForSeconds(basicAttackTimeLength);
