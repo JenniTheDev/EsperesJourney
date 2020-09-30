@@ -49,6 +49,22 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb3c1b1b-b054-442f-93c9-20da5f4fdc62"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Heal"",
+                    ""type"": ""Button"",
+                    ""id"": ""f5ad345c-bd59-4f5f-b08f-eb378b89e3c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -183,6 +199,50 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Blink"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""53a6c293-0aac-4d13-8a3d-8e35127c8080"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""97d37fee-ab1f-43cb-8468-8cd540e01c6c"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""339ec742-bcbc-4db0-b28e-e97a06de1919"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1aa82236-3a25-4d82-98b8-1fbc737253e6"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -195,6 +255,8 @@ public class @Player : IInputActionCollection, IDisposable
         m_Character_Attack = m_Character.FindAction("Attack", throwIfNotFound: true);
         m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
         m_Character_Blink = m_Character.FindAction("Blink", throwIfNotFound: true);
+        m_Character_Shoot = m_Character.FindAction("Shoot", throwIfNotFound: true);
+        m_Character_Heal = m_Character.FindAction("Heal", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -248,6 +310,8 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Character_Attack;
     private readonly InputAction m_Character_Dash;
     private readonly InputAction m_Character_Blink;
+    private readonly InputAction m_Character_Shoot;
+    private readonly InputAction m_Character_Heal;
     public struct CharacterActions
     {
         private @Player m_Wrapper;
@@ -256,6 +320,8 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @Attack => m_Wrapper.m_Character_Attack;
         public InputAction @Dash => m_Wrapper.m_Character_Dash;
         public InputAction @Blink => m_Wrapper.m_Character_Blink;
+        public InputAction @Shoot => m_Wrapper.m_Character_Shoot;
+        public InputAction @Heal => m_Wrapper.m_Character_Heal;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -277,6 +343,12 @@ public class @Player : IInputActionCollection, IDisposable
                 @Blink.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnBlink;
                 @Blink.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnBlink;
                 @Blink.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnBlink;
+                @Shoot.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnShoot;
+                @Heal.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
+                @Heal.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
+                @Heal.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -293,6 +365,12 @@ public class @Player : IInputActionCollection, IDisposable
                 @Blink.started += instance.OnBlink;
                 @Blink.performed += instance.OnBlink;
                 @Blink.canceled += instance.OnBlink;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+                @Heal.started += instance.OnHeal;
+                @Heal.performed += instance.OnHeal;
+                @Heal.canceled += instance.OnHeal;
             }
         }
     }
@@ -303,5 +381,7 @@ public class @Player : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnBlink(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
     }
 }

@@ -64,10 +64,18 @@ MonoBehaviour:
   basicAttackSpawnPoint: {fileID: 5423960392871623183}
   basicAttackTimeLength: 0.25
   basicAttackObjectTimeLength: 0.25
+  projectileObject: {fileID: 2774401395151226017, guid: 68520dd4e3635724c96d488b03ed1e2d,
+    type: 3}
+  projectileSpawnPoint: {fileID: 5423960392871623183}
+  projectileTimeLength: 0.25
+  projectileObjectTimeLength: 3
   playerDeathTimeLength: 0.1
   playerHasControl: 1
   rb: {fileID: 0}
   attack:
+    m_PersistentCalls:
+      m_Calls: []
+  fireProjectile:
     m_PersistentCalls:
       m_Calls: []
   dash:
