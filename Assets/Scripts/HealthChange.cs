@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class damage : MonoBehaviour
+public class HealthChange : MonoBehaviour
 {
     [Tooltip ("This amount will be added to the players current health.  Make it a (+) positive number for healing, and a (-) negative number for damage.")]
     public int units = 0;

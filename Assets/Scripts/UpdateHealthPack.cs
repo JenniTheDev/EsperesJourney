@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class heal : MonoBehaviour
+public class UpdateHealthPack : MonoBehaviour
 {
     public int units = 1;
 }

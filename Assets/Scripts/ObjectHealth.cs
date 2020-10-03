@@ -72,21 +72,21 @@ public class ObjectHealth : MonoBehaviour
   public void OnCollisionEnter2D (Collision2D col){
       Debug.Log ("Object touched something");
 
-      if(col.gameObject.GetComponent<damage>() != null && canThisObjectDamageMe(col)){
-        updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
+      if(col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)){
+        updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
         if (isObjectDead()) Death();
       }
       else{
         Debug.Log ("This object does not have a damage script attached");
       }
-  }  
+  }
 
   // Triggers when the player collides with a trigger
   public void OnTriggerEnter2D (Collider2D col){
       Debug.Log ("Object touched something");
 
-      if(col.gameObject.GetComponent<damage>() != null && canThisObjectDamageMe_Collider2D(col)){
-        updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
+      if(col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe_Collider2D(col)){
+        updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
         if (isObjectDead()) Death();
       }
       else{

@@ -245,12 +245,12 @@ public class PlayerController : MonoBehaviour
     public void OnCollisionEnter2D (Collision2D col){
       Debug.Log ("Player touched something");
 
-      if(col.gameObject.GetComponent<damage>() != null && canThisObjectDamageMe(col)){
-        updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
+      if(col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)){
+        updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
         if (isCharacterDead()) Death();
       }
-      else if(col.gameObject.GetComponent<heal>() != null){
-        updateCurrentHealthPacks(col.gameObject.GetComponent<heal>().units);
+      else if(col.gameObject.GetComponent<UpdateHealthPack>() != null){
+        updateCurrentHealthPacks(col.gameObject.GetComponent<UpdateHealthPack>().units);
       }
     }
 
@@ -258,12 +258,12 @@ public class PlayerController : MonoBehaviour
     public void OnTriggerEnter2D (Collider2D col){
       Debug.Log ("Player touched something");
 
-      if(col.gameObject.GetComponent<damage>() != null && canThisObjectDamageMe_Collider2D(col)){
-        updateCurrentHealth(col.gameObject.GetComponent<damage>().units);
+      if(col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe_Collider2D(col)){
+        updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
         if (isCharacterDead()) Death();
       }
-      else if(col.gameObject.GetComponent<heal>() != null){
-        updateCurrentHealthPacks(col.gameObject.GetComponent<heal>().units);
+      else if(col.gameObject.GetComponent<UpdateHealthPack>() != null){
+        updateCurrentHealthPacks(col.gameObject.GetComponent<UpdateHealthPack>().units);
       }
     }
 
