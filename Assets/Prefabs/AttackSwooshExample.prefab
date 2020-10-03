@@ -120,7 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7388582123865409461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d104e2240ef1645428c0e08cea1edc9f, type: 3}
+  m_Script: {fileID: 11500000, guid: ba2235f0ab1f6554e853678f2f9883b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   units: -50
@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f09d9f5ff2dc3c48a808c78c8b47c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0, z: 0}
   moveSpeed: 1
   rb: {fileID: 2809617849578263132}
 --- !u!50 &2809617849578263132

@@ -44,38 +44,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 2336119128233695951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322f7d561fe31b14fae0af3dbf2e969f, type: 3}
+  m_Script: {fileID: 11500000, guid: f19c822821150064995777bd1c72764a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0}
   moveSpeed: 100
-  dashSpeed: 5
-  dashTimeLength: 0.25
+  dashSpeed: 10
+  dashTimeLength: 0.5
   playerRotater: {fileID: 6185858564192968498}
   blinkPoint: {fileID: 2975084780385116093}
   currentHealth: 100
   maxHealth: 100
   minHealth: 0
-  tagsThatCanAffectObjectsHealth:
-  - Enemy
-  - Health
+  currentNumberOfHealthPacks: 3
+  maxNumberOfHealthPacks: 3
+  minNumberOfHealthPacks: 0
+  tagsThatCanAffectObjectsHealth: []
   basicAttackObject: {fileID: 7388582123865409461, guid: b05cf89c7f5a7f44f8bf0dd6f6e2720c,
     type: 3}
   basicAttackSpawnPoint: {fileID: 5423960392871623183}
-  basicAttackTimeLength: 0.25
+  basicAttackTimeLength: 1
   basicAttackObjectTimeLength: 0.25
   projectileObject: {fileID: 2774401395151226017, guid: 68520dd4e3635724c96d488b03ed1e2d,
     type: 3}
   projectileSpawnPoint: {fileID: 5423960392871623183}
-  projectileTimeLength: 0.25
-  projectileObjectTimeLength: 3
+  projectileTimeLength: 1
+  projectileObjectTimeLength: 0.25
+  projectileCoolDownTime: 3
+  canUseProjectileAttack: 1
   playerDeathTimeLength: 0.1
   playerHasControl: 1
-  rb: {fileID: 0}
+  rb: {fileID: 6157322793373976047}
   attack:
     m_PersistentCalls:
       m_Calls: []
   fireProjectile:
+    m_PersistentCalls:
+      m_Calls: []
+  projectileAttackHasCooledDown:
     m_PersistentCalls:
       m_Calls: []
   dash:
@@ -94,6 +100,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   playerDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  fullOnHealthPacks:
+    m_PersistentCalls:
+      m_Calls: []
+  outOfHealthPack:
+    m_PersistentCalls:
+      m_Calls: []
+  healthPackGained:
+    m_PersistentCalls:
+      m_Calls: []
+  healthPackUsed:
     m_PersistentCalls:
       m_Calls: []
 --- !u!50 &6157322793373976047
