@@ -59,7 +59,9 @@ MonoBehaviour:
   currentNumberOfHealthPacks: 3
   maxNumberOfHealthPacks: 3
   minNumberOfHealthPacks: 0
-  tagsThatCanAffectObjectsHealth: []
+  tagsThatCanAffectObjectsHealth:
+  - Enemy
+  - Health
   basicAttackObject: {fileID: 7388582123865409461, guid: b05cf89c7f5a7f44f8bf0dd6f6e2720c,
     type: 3}
   basicAttackSpawnPoint: {fileID: 5423960392871623183}
