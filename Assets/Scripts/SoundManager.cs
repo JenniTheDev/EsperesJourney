@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour {
     #endregion
 
     // These sounds need to come from the player
+    // The AudioSource should be on the object it sounds like it is coming from
     #region Sound Effects
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource meleeAttackSound;
@@ -20,6 +21,7 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource rangedAttackSound;
     [SerializeField] private AudioSource healthPotPickup;
     [SerializeField] private AudioSource healthPotUse;
+    
 
 
     #endregion

@@ -21,24 +21,20 @@ public class InputManager : MonoBehaviour {
 
     private void Update() {
 
-        // TODO How do I make the char move only when the key is pressed down? 
-        // I tried GetButtonDown but that gives an error on rightKey can't convert to string
-        if (Input.GetKey(upKey)) {
+        if (Input.GetKeyDown(upKey)) {
             playerCharacter.MoveUp();
         }
-        if (Input.GetKey(downKey)) {
+        if (Input.GetKeyDown(downKey)) {
             playerCharacter.MoveDown();
         }
-        if (Input.GetKey(leftKey)) {
+        if (Input.GetKeyDown(leftKey)) {
             playerCharacter.MoveLeft();
         }
-        if (Input.GetKey(rightKey)) {
+        if (Input.GetKeyDown(rightKey)) {
             playerCharacter.MoveRight();
         }
-        // if (Input.GetButtonDown(rightKey)) {
-         //   playerCharacter.MoveRight();
-        // }   
-    }   
+
+    }
 
     #endregion
 }
