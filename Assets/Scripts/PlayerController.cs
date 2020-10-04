@@ -33,6 +33,12 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
 
     [Space]
+    [Header ("Death and Respawning")]
+      [SerializeField] private bool playerIsDead = false;
+      [SerializeField] private float timeToWaitToRespawn = 0.5f;
+      [SerializeField] private Vector3 respawnLocation;
+
+    [Space]
     [Header ("Basic Attack")]
       [Tooltip ("The GameObject that will be spawned when the player does the basic attack")]
       [SerializeField] private GameObject basicAttackObject;          // The object that will be spawned when the player preforms a basic attack
@@ -80,7 +86,9 @@ public class PlayerController : MonoBehaviour
       [SerializeField] private  UnityEvent ability;
       [SerializeField] private  UnityEvent healthIncrease;
       [SerializeField] private  UnityEvent healthDecrease;
-      [SerializeField] private  UnityEvent playerDeath;
+      [SerializeField] private  UnityEvent playerDied;
+      [SerializeField] private  UnityEvent playerRespawned;
+      [SerializeField] private  UnityEvent playerRespawnLocationUpdated;
       [SerializeField] private  UnityEvent fullOnHealthPacks;
       [SerializeField] private  UnityEvent outOfHealthPack;
       [SerializeField] private  UnityEvent healthPackGained;
@@ -108,7 +116,7 @@ public class PlayerController : MonoBehaviour
       if (playerHasControl) rb.velocity = new Vector3(input.x, input.y, 0) * moveSpeed * Time.deltaTime;
 
       // rotating player
-      if (playerRotater != null){
+      if (playerRotater != null && playerHasControl){
         if (input.x != 0 || input.y != 0){
           float angle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
           playerRotater.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -117,9 +125,16 @@ public class PlayerController : MonoBehaviour
     }
 
     public void PlayerTeleport(){
-      rb.MovePosition(blinkPoint.transform.position);
-      teleport.Invoke();
-      Debug.Log("Player has teleported");
+      if(playerHasControl){
+        rb.MovePosition(blinkPoint.transform.position);
+        teleport.Invoke();
+        Debug.Log("Player has teleported");
+      }
+    }
+
+    public void SetPlayerPosition(Vector3 input){
+      rb.velocity = new Vector3(0,0,0);
+      gameObject.transform.position = input;
     }
 
     public void Attack(){
@@ -194,9 +209,16 @@ public class PlayerController : MonoBehaviour
 
     // Will kill the player
     public void Death(){
-      playerDeath.Invoke();
       Debug.Log("Player has died");
-      Destroy (gameObject, playerDeathTimeLength);
+      playerDied.Invoke();
+      StartCoroutine(PlayerDeathAndRespawn());
+    }
+
+    // Sets the position that the players will respawn at
+    public void SetPlayerRespawnPosition(Vector3 input){
+      respawnLocation = input;
+      playerRespawnLocationUpdated.Invoke();
+      Debug.Log("Something updated the players respawn position");
     }
 
     // --- HealthPacks ------------------------------------------------
@@ -308,5 +330,18 @@ public class PlayerController : MonoBehaviour
       canUseProjectileAttack = true;
       projectileAttackHasCooledDown.Invoke();
       Debug.Log ("The Player can use the Projectile attack again");
+    }
+
+    public IEnumerator PlayerDeathAndRespawn(){
+      playerHasControl = false;
+      rb.velocity = new Vector3(0,0,0);
+
+      yield return new WaitForSeconds(timeToWaitToRespawn);
+      SetPlayerPosition(respawnLocation);
+      setCurrentHealth(maxHealth);
+      Debug.Log("The Player has respawned");
+      playerRespawned.Invoke();
+
+      playerHasControl = true;
     }
 }

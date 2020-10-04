@@ -1,8 +1,9 @@
-﻿using System.Collections;
+// Digx7
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class destroyOnImpact : MonoBehaviour
+public class DestroyObject : MonoBehaviour
 {
     [SerializeField] float destroyTimeDelay = 0.0f;
     [SerializeField] bool destroyOnImpactWithAnything = false;
