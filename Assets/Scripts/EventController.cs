@@ -41,6 +41,12 @@ public class EventController {
     public delegate void OnLivesLeftHandler();
     public event OnLivesLeftHandler OnLivesLeft;
 
+    // Character Specific Events to possibly move in the future
+    public delegate void OnHealthPotFindHandler();
+    public event OnHealthPotFindHandler OnHealthPotFind;
+
+
+
 
     #endregion
 
@@ -64,6 +70,10 @@ public class EventController {
 
     public void BroadcastLivesLeft() {
         OnLivesLeft?.Invoke();
+    }
+
+    public void BroadcastHealthPotFind() {
+        OnHealthPotFind?.Invoke();
     }
 
     #endregion

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// Brought to you by Jenni
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
@@ -13,14 +14,25 @@ public class Character : MonoBehaviour, IMoveableChar {
     // For Velocity
     [SerializeField] private float unitsPerSecond = 5;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D character;
     private LayerMask wallMask;
+    private LayerMask healthPotMask;
 
     #region MonoBehavior
 
+    // Should this be start instead of Awake ?
     private void Awake() {
-        rb = GetComponent<Rigidbody2D>();
+        character = GetComponent<Rigidbody2D>();
         wallMask = LayerMask.NameToLayer("Wall");
+        healthPotMask = LayerMask.NameToLayer("HealthPot");
+    }
+
+    private void OnEnable() {
+        Subscribe();
+    }
+
+    private void OnDisable() {
+        Unsubscribe();
     }
 
     #endregion
@@ -47,29 +59,50 @@ public class Character : MonoBehaviour, IMoveableChar {
     // Velocity instead? 
     private void MoveCharacter(CharDirection dir) {
         //var moveTowards = Vector2.up * ((dir == CharDirection.Up) ? moveForce : -moveForce);
-        // rb.AddForce(moveTowards);
+        // character.AddForce(moveTowards);
 
         // moveTowards = Vector2.left * ((dir == CharDirection.Left) ? moveForce : -moveForce);
-        // rb.AddForce(moveTowards);
+        // character.AddForce(moveTowards);
         if (dir == CharDirection.Up) {
-            rb.velocity = new Vector2(0, unitsPerSecond);
+            character.velocity = new Vector2(0, unitsPerSecond);
         }
         if (dir == CharDirection.Down) {
-            rb.velocity = new Vector2(0, -unitsPerSecond);
+            character.velocity = new Vector2(0, -unitsPerSecond);
         }
         if (dir == CharDirection.Left) {
-            rb.velocity = new Vector2(-unitsPerSecond, 0);
+            character.velocity = new Vector2(-unitsPerSecond, 0);
         }
         if (dir == CharDirection.Right) {
-            rb.velocity = new Vector2(unitsPerSecond, 0);
+            character.velocity = new Vector2(unitsPerSecond, 0);
         }
     }
 
     public void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.layer == wallMask) {
-            rb.velocity = Vector2.zero;
+            // This doesn't stop the player from going through the wall
+            character.velocity = Vector2.zero;
             Debug.Log("wall");
+        } 
+
+        // TODO This is not working 
+        if (collision.gameObject.layer == healthPotMask) {
+            EventController.Instance.BroadcastHealthPotFind();
+            Debug.Log("Player has touched a health pot");
         }
+    }
+
+    
+    
+
+    private void Subscribe() {
+        Unsubscribe();
+        // EventController events character needs to know about +=
+        
+       
+    }
+
+    private void Unsubscribe() {
+        // -= events listed above
     }
 
     #endregion
