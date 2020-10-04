@@ -51,10 +51,14 @@ public class GameManager : MonoBehaviour {
     private void Subscribe() {
         Unsubscribe();
         EventController.Instance.OnPause += PauseGame;
-
+        EventController.Instance.OnReset += StartGame;
+        EventController.Instance.OnResume += ResumeGame;
     }
 
     private void Unsubscribe() {
         EventController.Instance.OnPause -= PauseGame;
+        EventController.Instance.OnReset -= StartGame;
+        EventController.Instance.OnResume -= ResumeGame;
+
     }
 }
