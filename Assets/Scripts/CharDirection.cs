@@ -1,4 +1,5 @@
-﻿public enum CharDirection {
+﻿// Brought to you by Jenni
+public enum CharDirection {
     None,
     Up,
     Down,
