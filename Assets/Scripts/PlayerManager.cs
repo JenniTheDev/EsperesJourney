@@ -1,11 +1,9 @@
-﻿// Brought to you by Jenni
-using System;
+﻿using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
-    // 
 
     // Player statistics
     [SerializeField] private int playerHealth;
@@ -13,10 +11,10 @@ public class PlayerManager : MonoBehaviour {
     [SerializeField] private int coinsCollected; // currency?
     [SerializeField] private int availableHealthPots;
 
-    // TODO Player Sounds - Moving to SoundManager ??
-    // [SerializeField] private AudioSource dashSound;
-    // [SerializeField] private AudioSource attackSound;
-    // [SerializeField] private AudioSource teleportSound;
+    // Player Sounds
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource attackSound;
+    [SerializeField] private AudioSource teleportSound;
 
     // Player game object  (not sure if this is right)
     [SerializeField] private GameObject player;
@@ -28,7 +26,12 @@ public class PlayerManager : MonoBehaviour {
         set { playerHealth = Math.Max(0, value); }
     }
 
-   public int CoinsCollected {
+    public int LivesLeft {
+        get { return livesLeft; }
+        set { livesLeft = Math.Max(0, value); }
+    }
+
+    public int CoinsCollected {
         get { return coinsCollected; }
         set { coinsCollected = Math.Max(0, value); }
     }
@@ -41,18 +44,11 @@ public class PlayerManager : MonoBehaviour {
 
 
     #region Monobehaviors
-    // On awake?
+
     void Start() {
-        Subscribe();
+
     }
 
-    private void OnEnable() {
-        Subscribe();
-    }
-
-    private void OnDisable() {
-        Unsubscribe();
-    }
     #endregion
 
 
@@ -75,26 +71,7 @@ public class PlayerManager : MonoBehaviour {
         // Update UI coin amount
     }
 
-    public void IncreaseHealthPotNum() {
-        availableHealthPots++;
-        // Update UI Health Pot amount
-    }
-
-
-
-    private void Subscribe() {
-        Unsubscribe();
-        EventController.Instance.OnHealthPotFind += IncreaseHealthPotNum;
-    }
-
-    private void Unsubscribe() {
-        EventController.Instance.OnHealthPotFind -= IncreaseHealthPotNum;
-
-    }
-
-
-
-    // TODO health pots OnEnable, OnDisable, Subscribe and Unsubscribe
+    // TODO LivesLeft, health pots OnEnable, OnDisable, Subscribe and Unsubscribe
 
 
 
