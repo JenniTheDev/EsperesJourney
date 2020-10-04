@@ -20,6 +20,9 @@ public class InputManager : MonoBehaviour {
     }
 
     private void Update() {
+
+        // TODO How do I make the char move only when the key is pressed down? 
+        // I tried GetButtonDown but that gives an error on rightKey can't convert to string
         if (Input.GetKey(upKey)) {
             playerCharacter.MoveUp();
         }
@@ -32,7 +35,10 @@ public class InputManager : MonoBehaviour {
         if (Input.GetKey(rightKey)) {
             playerCharacter.MoveRight();
         }
-    }
+        // if (Input.GetButtonDown(rightKey)) {
+         //   playerCharacter.MoveRight();
+        // }   
+    }   
 
     #endregion
 }
