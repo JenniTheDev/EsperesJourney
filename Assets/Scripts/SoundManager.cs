@@ -33,7 +33,11 @@ public class SoundManager : MonoBehaviour {
 
     private void Start() {
         Subscribe();
+        // TODO: Is this the right way 
         sewerLevelMusic = GetComponent<AudioSource>();
+        healthPotPickup = GetComponent<AudioSource>();
+        pauseMusic = GetComponent<AudioSource>();
+        playerDeath = GetComponent<AudioSource>();
         healthPotPickup = GetComponent<AudioSource>();
     }
 

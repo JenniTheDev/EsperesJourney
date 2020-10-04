@@ -9,11 +9,10 @@ public class PlayerManager : MonoBehaviour {
 
     // Player statistics
     [SerializeField] private int playerHealth;
-    [SerializeField] private int livesLeft;
     [SerializeField] private int coinsCollected; // currency?
     [SerializeField] private int availableHealthPots;
 
-    // TODO Player Sounds - Moving to SoundManager ??
+    // TODO Player Sounds - Moved to SoundManager , but should they be left here??
     // [SerializeField] private AudioSource dashSound;
     // [SerializeField] private AudioSource attackSound;
     // [SerializeField] private AudioSource teleportSound;
@@ -80,6 +79,11 @@ public class PlayerManager : MonoBehaviour {
         // Update UI Health Pot amount
     }
 
+    public void HealthPotUsed() {
+        // TODO Health Pot Class with health pot values 
+        IncreaseHealth(10);
+    }
+
 
 
     private void Subscribe() {
@@ -91,17 +95,6 @@ public class PlayerManager : MonoBehaviour {
         EventController.Instance.OnHealthPotFind -= IncreaseHealthPotNum;
 
     }
-
-
-
-    // TODO health pots OnEnable, OnDisable, Subscribe and Unsubscribe
-
-
-
-
-
-
-
 
     #endregion
 

@@ -1,4 +1,4 @@
-﻿// brought to you by Jenni
+﻿// Brought to you by Jenni
 
 using System;
 using System.Diagnostics.Tracing;
