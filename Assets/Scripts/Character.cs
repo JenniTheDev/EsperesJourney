@@ -12,7 +12,7 @@ public class Character : MonoBehaviour, IMoveableChar {
     // If using force
     //[SerializeField] private float moveForce = 3.0f;
     // For Velocity
-    [SerializeField] private float unitsPerSecond = 5;
+    [SerializeField] private float unitsPerSecond = 5.0f;
 
     private Rigidbody2D character;
     private LayerMask wallMask;
@@ -79,12 +79,12 @@ public class Character : MonoBehaviour, IMoveableChar {
 
     public void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.layer == wallMask) {
-            // This doesn't stop the player from going through the wall
+            // This doesn't stop the player from going through the wall 
             character.velocity = Vector2.zero;
             Debug.Log("wall");
         } 
 
-        // TODO This is not working 
+        // TODO This is not working, does not say player touched the health pot, what did I do wrong? 
         if (collision.gameObject.layer == healthPotMask) {
             EventController.Instance.BroadcastHealthPotFind();
             Debug.Log("Player has touched a health pot");
