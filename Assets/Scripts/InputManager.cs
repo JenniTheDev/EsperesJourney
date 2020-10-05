@@ -12,7 +12,8 @@ public class InputManager : MonoBehaviour {
 
     [SerializeField] private Character character;
     private IMoveableChar playerCharacter;
-
+    private float vinput = 0.0f;
+    private float hinput = 0.0f;
     #region Monobehavior
 
     private void Start() {
@@ -23,17 +24,11 @@ public class InputManager : MonoBehaviour {
 
         // TODO How do I make the char move only when the key is pressed down? 
         // I tried GetButtonDown but that gives an error on rightKey can't convert to string
-        if (Input.GetKey(upKey)) {
-            playerCharacter.MoveUp();
-        }
-        if (Input.GetKey(downKey)) {
-            playerCharacter.MoveDown();
-        }
-        if (Input.GetKey(leftKey)) {
-            playerCharacter.MoveLeft();
-        }
-        if (Input.GetKey(rightKey)) {
-            playerCharacter.MoveRight();
+        vinput = Input.GetAxis("Vertical");
+        hinput = Input.GetAxis("Horizontal");
+
+        if (vinput != 0.0f || hinput != 0.0f) {
+            playerCharacter.Move(new Vector2(hinput, vinput));
         }
         // if (Input.GetButtonDown(rightKey)) {
          //   playerCharacter.MoveRight();
