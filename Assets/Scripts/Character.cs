@@ -84,11 +84,11 @@ public class Character : MonoBehaviour, IMoveableChar {
 
     public void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.layer == wallMask) {
-            // This doesn't stop the player from going through the wall
+            // This doesn't stop the player from going through the wall 
             character.velocity = Vector2.zero;
         }
 
-        // TODO This is not working 
+        // TODO This is not working, does not say player touched the health pot, what did I do wrong? 
         if (collision.gameObject.layer == healthPotMask) {
             Debug.Log("Health Pot Hit");
             //EventController.Instance.BroadcastHealthPotFind();
