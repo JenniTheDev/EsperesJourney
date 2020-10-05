@@ -75,7 +75,6 @@ public class EventController {
 
     public void BroadcastHealthPotFind() {
         OnHealthPotFind?.Invoke();
-        OnHealthPotFind();
         Debug.Log("Broadcast");
     }
 

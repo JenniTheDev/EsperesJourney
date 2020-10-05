@@ -6,10 +6,10 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
     #region Game Audio
     // these sounds would originate from one direction
-    [SerializeField] private AudioSource sewerLevelMusic;
-    [SerializeField] private AudioSource pauseMusic;
-    [SerializeField] private AudioSource playerDeath;
-    [SerializeField] private AudioSource menuMusic;
+    private AudioSource sewerLevelMusic;
+    private AudioSource pauseMusic;
+    private AudioSource playerDeath;
+    private AudioSource menuMusic;
     #endregion
 
     // These sounds need to come from the player
@@ -20,8 +20,11 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource teleportSound;
     [SerializeField] private AudioSource rangedAttackSound;
     [SerializeField] private AudioSource healthPotPickup;
+    [SerializeField] private AudioClip healthPotPickupSound;
     [SerializeField] private AudioSource healthPotUse;
-    
+
+
+
 
 
     #endregion
@@ -37,10 +40,9 @@ public class SoundManager : MonoBehaviour {
         Subscribe();
         // TODO: Audio Sources go on the game object they play from
         sewerLevelMusic = GetComponent<AudioSource>();
-        healthPotPickup = GetComponent<AudioSource>();
         pauseMusic = GetComponent<AudioSource>();
         playerDeath = GetComponent<AudioSource>();
-        
+
     }
 
     private void OnEnable() {
@@ -70,7 +72,8 @@ public class SoundManager : MonoBehaviour {
 
     private void PlayHealthPotPickup() {
         healthPotPickup = GetComponent<AudioSource>();
-       healthPotPickup.Play();
+        healthPotPickup.clip = healthPotPickupSound;
+        healthPotPickup.Play();
     }
 
     private void Subscribe() {
