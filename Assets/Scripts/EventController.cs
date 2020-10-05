@@ -12,7 +12,7 @@ public class EventController {
     private static EventController instance = null;
     public static EventController Instance {
         get {
-            if (instance == null && isQuitting) {
+            if (instance == null && !isQuitting) {
                 instance = new EventController();
                 Application.quitting += () => isQuitting = true;
             }

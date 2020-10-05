@@ -59,6 +59,5 @@ public class GameManager : MonoBehaviour {
         EventController.Instance.OnPause -= PauseGame;
         EventController.Instance.OnReset -= StartGame;
         EventController.Instance.OnResume -= ResumeGame;
-
     }
 }

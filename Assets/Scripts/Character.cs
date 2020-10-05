@@ -56,6 +56,11 @@ public class Character : MonoBehaviour, IMoveableChar {
         MoveCharacter(CharDirection.Right);
     }
 
+    // Change this on refactor.
+    public void Move(Vector2 dir) {
+
+        character.velocity = dir * unitsPerSecond;
+    }
     // Velocity instead? 
     private void MoveCharacter(CharDirection dir) {
         //var moveTowards = Vector2.up * ((dir == CharDirection.Up) ? moveForce : -moveForce);
@@ -81,13 +86,12 @@ public class Character : MonoBehaviour, IMoveableChar {
         if (collision.gameObject.layer == wallMask) {
             // This doesn't stop the player from going through the wall 
             character.velocity = Vector2.zero;
-            Debug.Log("wall");
-        } 
+        }
 
         // TODO This is not working, does not say player touched the health pot, what did I do wrong? 
         if (collision.gameObject.layer == healthPotMask) {
-            EventController.Instance.BroadcastHealthPotFind();
-            Debug.Log("Player has touched a health pot");
+            Debug.Log("Health Pot Hit");
+            //EventController.Instance.BroadcastHealthPotFind();
         }
     }
 
