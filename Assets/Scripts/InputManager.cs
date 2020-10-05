@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour {
 
-    [SerializeField] private KeyCode upKey = KeyCode.W;
-    [SerializeField] private KeyCode downKey = KeyCode.S;
-    [SerializeField] private KeyCode leftKey = KeyCode.A;
-    [SerializeField] private KeyCode rightKey = KeyCode.D;
+    // These can be removed as this is built in to use WASD
+    // [SerializeField] private KeyCode upKey = KeyCode.W;
+    // [SerializeField] private KeyCode downKey = KeyCode.S;
+    // [SerializeField] private KeyCode leftKey = KeyCode.A;
+    // [SerializeField] private KeyCode rightKey = KeyCode.D;
+
+    [SerializeField] private KeyCode pauseButton = KeyCode.P;
+    [SerializeField] private KeyCode resumeButton = KeyCode.P;
+    [SerializeField] private KeyCode exitGame;
 
     [SerializeField] private Character character;
     private IMoveableChar playerCharacter;
@@ -22,8 +27,7 @@ public class InputManager : MonoBehaviour {
 
     private void Update() {
 
-        // TODO How do I make the char move only when the key is pressed down? 
-        // I tried GetButtonDown but that gives an error on rightKey can't convert to string
+        // moves character any direction by getting x & y
         vinput = Input.GetAxis("Vertical");
         hinput = Input.GetAxis("Horizontal");
 

@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
-    // 
+    
 
     // Player statistics
     [SerializeField] private int playerHealth;
@@ -81,6 +81,7 @@ public class PlayerManager : MonoBehaviour {
 
     public void HealthPotUsed() {
         // TODO Health Pot Class with health pot values 
+        // This number should not be hardcoded
         IncreaseHealth(10);
     }
 

@@ -35,12 +35,12 @@ public class SoundManager : MonoBehaviour {
 
     private void Start() {
         Subscribe();
-        // TODO: Is this the right way 
+        // TODO: Audio Sources go on the game object they play from
         sewerLevelMusic = GetComponent<AudioSource>();
         healthPotPickup = GetComponent<AudioSource>();
         pauseMusic = GetComponent<AudioSource>();
         playerDeath = GetComponent<AudioSource>();
-        healthPotPickup = GetComponent<AudioSource>();
+        
     }
 
     private void OnEnable() {
@@ -69,7 +69,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     private void PlayHealthPotPickup() {
-        healthPotPickup.Play();
+        healthPotPickup = GetComponent<AudioSource>();
+       healthPotPickup.Play();
     }
 
     private void Subscribe() {
