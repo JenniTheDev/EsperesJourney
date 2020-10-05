@@ -45,7 +45,7 @@ public class EventController {
     public delegate void OnHealthPotFindHandler();
     public event OnHealthPotFindHandler OnHealthPotFind;
 
-    pu
+    
 
 
 
@@ -75,6 +75,8 @@ public class EventController {
 
     public void BroadcastHealthPotFind() {
         OnHealthPotFind?.Invoke();
+        OnHealthPotFind();
+        Debug.Log("Broadcast");
     }
 
     #endregion

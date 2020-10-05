@@ -1,4 +1,5 @@
 ﻿// Brought to you by Jenni
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
@@ -38,7 +39,7 @@ public class Character : MonoBehaviour, IMoveableChar {
     #endregion
 
     #region Methods
-
+    // These can probably be removed
     public void MoveUp() {
         MoveCharacter(CharDirection.Up);
     }
@@ -68,6 +69,8 @@ public class Character : MonoBehaviour, IMoveableChar {
 
         // moveTowards = Vector2.left * ((dir == CharDirection.Left) ? moveForce : -moveForce);
         // character.AddForce(moveTowards);
+
+        // These direction specific items can all be removed
         if (dir == CharDirection.Up) {
             character.velocity = new Vector2(0, unitsPerSecond);
         }
@@ -91,12 +94,18 @@ public class Character : MonoBehaviour, IMoveableChar {
         // TODO This is not working, does not say player touched the health pot, what did I do wrong? 
         if (collision.gameObject.layer == healthPotMask) {
             Debug.Log("Health Pot Hit");
-            //EventController.Instance.BroadcastHealthPotFind();
+            EventController.Instance.BroadcastHealthPotFind();
+            
+           
         }
     }
 
-    
-    
+    private void PlayHealthPotPickup() {
+        AudioSource healthPotPickup = GetComponent<AudioSource>();
+        healthPotPickup.Play();
+        Debug.Log("sound");
+    }
+
 
     private void Subscribe() {
         Unsubscribe();
