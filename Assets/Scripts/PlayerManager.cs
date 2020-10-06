@@ -5,12 +5,12 @@ using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
-    
+
 
     // Player statistics
     [SerializeField] private int playerHealth;
     [SerializeField] private int coinsCollected; // currency?
-    [SerializeField] private int availableHealthPots;
+    [SerializeField] private int availableHealthPots = 0;
 
     // TODO Player Sounds - Moved to SoundManager , but should they be left here??
     // [SerializeField] private AudioSource dashSound;
@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour {
         set { playerHealth = Math.Max(0, value); }
     }
 
-   public int CoinsCollected {
+    public int CoinsCollected {
         get { return coinsCollected; }
         set { coinsCollected = Math.Max(0, value); }
     }
@@ -60,22 +60,23 @@ public class PlayerManager : MonoBehaviour {
     // making them public for now so they can be used by other classes
     public void IncreaseHealth(int value) {
         // pass in value from pot or buff
-        playerHealth =+ value;
+        playerHealth = +value;
         // Update UI Health Amount
     }
 
     public void DecreaseHealth(int value) {
-        playerHealth =+ value;
+        playerHealth = +value;
         // Update UI Health Amount
     }
 
     public void CollectedCoins(int coinValue) {
-        coinsCollected =+ coinValue;
+        coinsCollected = +coinValue;
         // Update UI coin amount
     }
 
     public void IncreaseHealthPotNum() {
         availableHealthPots++;
+        Debug.Log("Health Pots " + availableHealthPots);
         // Update UI Health Pot amount
     }
 

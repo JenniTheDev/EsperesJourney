@@ -6,22 +6,25 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
     #region Game Audio
     // these sounds would originate from one direction
-    private AudioSource sewerLevelMusic;
-    private AudioSource pauseMusic;
-    private AudioSource playerDeath;
-    private AudioSource menuMusic;
+    [SerializeField] private AudioSource sewerLevelMusic;
+    [SerializeField] private AudioClip sewerLevelMusicSound;
+    [SerializeField] private AudioSource pauseMusic;
+    [SerializeField] private AudioClip pauseMusicSound;
+    [SerializeField] private AudioSource playerDeath;
+    [SerializeField] private AudioClip playerDeathSound;
+
     #endregion
 
     // These sounds need to come from the player
     // The AudioSource should be on the object it sounds like it is coming from
     #region Sound Effects
-    [SerializeField] private AudioSource dashSound;
-    [SerializeField] private AudioSource meleeAttackSound;
-    [SerializeField] private AudioSource teleportSound;
-    [SerializeField] private AudioSource rangedAttackSound;
+    // [SerializeField] private AudioSource dashSound;
+    // [SerializeField] private AudioSource meleeAttackSound;
+    // [SerializeField] private AudioSource teleportSound;
+    // [SerializeField] private AudioSource rangedAttackSound;
     [SerializeField] private AudioSource healthPotPickup;
     [SerializeField] private AudioClip healthPotPickupSound;
-    [SerializeField] private AudioSource healthPotUse;
+    // [SerializeField] private AudioSource healthPotUse;
 
 
 
@@ -38,10 +41,9 @@ public class SoundManager : MonoBehaviour {
 
     private void Start() {
         Subscribe();
-        // TODO: Audio Sources go on the game object they play from
-        sewerLevelMusic = GetComponent<AudioSource>();
-        pauseMusic = GetComponent<AudioSource>();
-        playerDeath = GetComponent<AudioSource>();
+        // Audio Sources go on the game object they play from
+        PlayLevelMusic();
+
 
     }
 
@@ -57,7 +59,7 @@ public class SoundManager : MonoBehaviour {
     #region Methods
 
     private void PlayLevelMusic() {
-        sewerLevelMusic = GetComponent<AudioSource>();
+        sewerLevelMusic.clip = sewerLevelMusicSound;
         sewerLevelMusic.Play();
 
     }
@@ -71,7 +73,6 @@ public class SoundManager : MonoBehaviour {
     }
 
     private void PlayHealthPotPickup() {
-        healthPotPickup = GetComponent<AudioSource>();
         healthPotPickup.clip = healthPotPickupSound;
         healthPotPickup.Play();
     }
