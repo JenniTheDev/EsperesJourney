@@ -86,16 +86,19 @@ public class PlayerManager : MonoBehaviour {
         IncreaseHealth(10);
     }
 
-
+    public void PlayerDied() {
+        // do death reset here
+    }
 
     private void Subscribe() {
         Unsubscribe();
         EventController.Instance.OnHealthPotFind += IncreaseHealthPotNum;
+        EventController.Instance.OnPlayerDeath += PlayerDied;
     }
 
     private void Unsubscribe() {
         EventController.Instance.OnHealthPotFind -= IncreaseHealthPotNum;
-
+        EventController.Instance.OnPlayerDeath -= PlayerDied;
     }
 
     #endregion
