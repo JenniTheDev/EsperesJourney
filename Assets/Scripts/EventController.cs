@@ -45,6 +45,9 @@ public class EventController {
     public delegate void OnHealthPotFindHandler();
     public event OnHealthPotFindHandler OnHealthPotFind;
 
+    public delegate void OnPlayerDeathHandler();
+    public event OnPlayerDeathHandler OnPlayerDeath;
+
     
 
 
@@ -76,6 +79,11 @@ public class EventController {
     public void BroadcastHealthPotFind() {
         OnHealthPotFind?.Invoke();
         Debug.Log("Broadcast");
+    }
+
+    public void BroadcastOnPlayerDeath() {
+        OnPlayerDeath?.Invoke();
+        Debug.Log("Broadcast death");
     }
 
     #endregion
