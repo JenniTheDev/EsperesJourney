@@ -1,20 +1,21 @@
-﻿using System;
+﻿// Brought to you by Jenni
+using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
 
+
     // Player statistics
     [SerializeField] private int playerHealth;
-    [SerializeField] private int livesLeft;
     [SerializeField] private int coinsCollected; // currency?
-    [SerializeField] private int availableHealthPots;
+    [SerializeField] private int availableHealthPots = 0;
 
-    // Player Sounds
-    [SerializeField] private AudioSource dashSound;
-    [SerializeField] private AudioSource attackSound;
-    [SerializeField] private AudioSource teleportSound;
+    // TODO Player Sounds - Moved to SoundManager , but should they be left here??
+    // [SerializeField] private AudioSource dashSound;
+    // [SerializeField] private AudioSource attackSound;
+    // [SerializeField] private AudioSource teleportSound;
 
     // Player game object  (not sure if this is right)
     [SerializeField] private GameObject player;
@@ -24,11 +25,6 @@ public class PlayerManager : MonoBehaviour {
     public int PlayerHealth {
         get { return playerHealth; }
         set { playerHealth = Math.Max(0, value); }
-    }
-
-    public int LivesLeft {
-        get { return livesLeft; }
-        set { livesLeft = Math.Max(0, value); }
     }
 
     public int CoinsCollected {
@@ -44,11 +40,18 @@ public class PlayerManager : MonoBehaviour {
 
 
     #region Monobehaviors
-
+    // On awake?
     void Start() {
-
+        Subscribe();
     }
 
+    private void OnEnable() {
+        Subscribe();
+    }
+
+    private void OnDisable() {
+        Unsubscribe();
+    }
     #endregion
 
 
@@ -57,28 +60,46 @@ public class PlayerManager : MonoBehaviour {
     // making them public for now so they can be used by other classes
     public void IncreaseHealth(int value) {
         // pass in value from pot or buff
-        playerHealth =+ value;
+        playerHealth = +value;
         // Update UI Health Amount
     }
 
     public void DecreaseHealth(int value) {
-        playerHealth =+ value;
+        playerHealth = +value;
         // Update UI Health Amount
     }
 
     public void CollectedCoins(int coinValue) {
-        coinsCollected =+ coinValue;
+        coinsCollected = +coinValue;
         // Update UI coin amount
     }
 
-    // TODO LivesLeft, health pots OnEnable, OnDisable, Subscribe and Unsubscribe
+    public void IncreaseHealthPotNum() {
+        availableHealthPots++;
+        Debug.Log("Health Pots " + availableHealthPots);
+        // Update UI Health Pot amount
+    }
 
+    public void HealthPotUsed() {
+        // TODO Health Pot Class with health pot values 
+        // This number should not be hardcoded
+        IncreaseHealth(10);
+    }
 
+    public void PlayerDied() {
+        // do death reset here
+    }
 
+    private void Subscribe() {
+        Unsubscribe();
+        EventController.Instance.OnHealthPotFind += IncreaseHealthPotNum;
+        EventController.Instance.OnPlayerDeath += PlayerDied;
+    }
 
-
-
-
+    private void Unsubscribe() {
+        EventController.Instance.OnHealthPotFind -= IncreaseHealthPotNum;
+        EventController.Instance.OnPlayerDeath -= PlayerDied;
+    }
 
     #endregion
 

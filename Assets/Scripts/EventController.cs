@@ -1,4 +1,4 @@
-﻿// brought to you by Jenni
+﻿// Brought to you by Jenni
 
 using System;
 using System.Diagnostics.Tracing;
@@ -12,7 +12,7 @@ public class EventController {
     private static EventController instance = null;
     public static EventController Instance {
         get {
-            if (instance == null && isQuitting) {
+            if (instance == null && !isQuitting) {
                 instance = new EventController();
                 Application.quitting += () => isQuitting = true;
             }
@@ -41,6 +41,16 @@ public class EventController {
     public delegate void OnLivesLeftHandler();
     public event OnLivesLeftHandler OnLivesLeft;
 
+    // Character Specific Events to possibly move in the future
+    public delegate void OnHealthPotFindHandler();
+    public event OnHealthPotFindHandler OnHealthPotFind;
+
+    public delegate void OnPlayerDeathHandler();
+    public event OnPlayerDeathHandler OnPlayerDeath;
+
+    
+
+
 
     #endregion
 
@@ -64,6 +74,16 @@ public class EventController {
 
     public void BroadcastLivesLeft() {
         OnLivesLeft?.Invoke();
+    }
+
+    public void BroadcastHealthPotFind() {
+        OnHealthPotFind?.Invoke();
+        Debug.Log("Broadcast");
+    }
+
+    public void BroadcastOnPlayerDeath() {
+        OnPlayerDeath?.Invoke();
+        Debug.Log("Broadcast death");
     }
 
     #endregion

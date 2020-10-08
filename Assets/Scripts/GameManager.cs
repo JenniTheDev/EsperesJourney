@@ -1,4 +1,4 @@
-﻿//brought to you by Jenni
+﻿// Brought to you by Jenni
 using System;
 using UnityEngine;
 
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour {
         currentState = GameState.Paused;
         startButton.SetActive(true);
         resumeButton.SetActive(true);
+        EventController.Instance.BroadcastPause();
     }
 
     public void ResumeGame() {
@@ -50,9 +51,13 @@ public class GameManager : MonoBehaviour {
     private void Subscribe() {
         Unsubscribe();
         EventController.Instance.OnPause += PauseGame;
+        EventController.Instance.OnReset += StartGame;
+        EventController.Instance.OnResume += ResumeGame;
     }
 
     private void Unsubscribe() {
         EventController.Instance.OnPause -= PauseGame;
+        EventController.Instance.OnReset -= StartGame;
+        EventController.Instance.OnResume -= ResumeGame;
     }
 }
