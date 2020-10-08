@@ -34,10 +34,6 @@ public class InputManager : MonoBehaviour {
         if (vinput != 0.0f || hinput != 0.0f) {
             playerCharacter.Move(new Vector2(hinput, vinput));
         }
-        // if (Input.GetButtonDown(rightKey)) {
-         //   playerCharacter.MoveRight();
-        // }   
-    }   
 
     }
 
