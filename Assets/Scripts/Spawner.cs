@@ -1,4 +1,5 @@
 // Digx7
+// OBSOLUTE: Use SpawnerScript instead
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

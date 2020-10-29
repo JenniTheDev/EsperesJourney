@@ -15,7 +15,6 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] int minHealth = 0;
     [Tooltip ("List all the GameObject tags of objects that can alter the health of this gameObject")]
     [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
-    [SerializeField] private float playerDeathTimeLength = 0.1f; // The Length in time unitl this gameObject is destroyed
 
   [Header ("Events")]
     [SerializeField] private  UnityEvent healthIncrease;
@@ -65,7 +64,6 @@ public class ObjectHealth : MonoBehaviour
   public void Death(){
       objectDeath.Invoke();
       Debug.Log("Object has died");
-      Destroy (gameObject, playerDeathTimeLength);
   }
 
   // --- Collisions --------------------------------------------
