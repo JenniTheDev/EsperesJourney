@@ -62,6 +62,21 @@ public class PlayerController : MonoBehaviour
    //   [SerializeField] private bool canUseProjectileAttack = true;
 
     [Space]
+    [Header ("Projectile Attack")]
+      [Tooltip ("The GameObject that will be spawned when the player does the basic attack")]
+      [SerializeField] private GameObject projectileObject;          // The object that will be spawned when the player preforms a basic attack
+      [Tooltip ("The point where the above GameObject will spawn")]
+      [SerializeField] private GameObject projectileSpawnPoint; // This will be where the basic attack is Instantiated
+      [Tooltip ("This is the amount of time that the player can not control the character")]
+      [SerializeField] private float projectileTimeLength = 1; // The length in time that the player will not have control durring the basic attack
+      [Tooltip ("This is the amount of time that the above object will be in the scene")]
+      [SerializeField] private float projectileObjectTimeLength = 0.25f; // The Length in time that the attack object will be in the scene
+      [Tooltip ("The cooldown time of this attack")]
+      [SerializeField] private float projectileCoolDownTime = 3.0f; // The Length of the cool down time of this attack
+      [Tooltip ("The bool controlling weather or not the player can use the projetile ability")]
+      [SerializeField] private bool canUseProjectileAttack = true;
+
+    [Space]
     [Header ("Other")]
       [Tooltip ("The lenght of time after the player death event that this gameObject will be destroyed")]
       [SerializeField] private float playerDeathTimeLength = 0.1f; // The Length in time unitl this gameObject is destroyed
