@@ -217,9 +217,9 @@ GameObject:
   - component: {fileID: 168838992}
   - component: {fileID: 168838993}
   - component: {fileID: 168838994}
-  - component: {fileID: 168838996}
   - component: {fileID: 168838995}
   - component: {fileID: 168838997}
+  - component: {fileID: 168838998}
   m_Layer: 0
   m_Name: TestChar
   m_TagString: Player
@@ -329,19 +329,6 @@ CircleCollider2D:
   m_Offset: {x: -0.3, y: -0.3}
   serializedVersion: 2
   m_Radius: 0.15243623
---- !u!114 &168838996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168838991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d76b37fbbec63ba47895e4f7df82ab40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitsPerSecond: 5
 --- !u!114 &168838997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +345,40 @@ MonoBehaviour:
   coinsCollected: 0
   availableHealthPots: 0
   player: {fileID: 168838991}
+--- !u!114 &168838998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168838991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19c822821150064995777bd1c72764a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0}
+  moveSpeed: 1
+  dashSpeed: 0
+  dashTimeLength: 0.5
+  playerRotater: {fileID: 0}
+  blinkPoint: {fileID: 0}
+  projectileTimeLength: 1
+  playerDeathTimeLength: 0.1
+  playerHasControl: 1
+  rb: {fileID: 168838994}
+  dash:
+    m_PersistentCalls:
+      m_Calls: []
+  teleport:
+    m_PersistentCalls:
+      m_Calls: []
+  ability:
+    m_PersistentCalls:
+      m_Calls: []
+  playerDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &320993802
 GameObject:
   m_ObjectHideFlags: 0
@@ -11383,7 +11404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1621522260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11399,7 +11420,7 @@ MonoBehaviour:
   pauseButton: 112
   resumeButton: 112
   exitGame: 27
-  character: {fileID: 168838996}
+  character: {fileID: 0}
 --- !u!4 &1621522261
 Transform:
   m_ObjectHideFlags: 0
