@@ -218,8 +218,8 @@ GameObject:
   - component: {fileID: 168838993}
   - component: {fileID: 168838994}
   - component: {fileID: 168838995}
+  - component: {fileID: 168838996}
   - component: {fileID: 168838997}
-  - component: {fileID: 168838998}
   m_Layer: 0
   m_Name: TestChar
   m_TagString: Player
@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168838991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.73, y: 4.16, z: 0}
+  m_LocalPosition: {x: -4.75, y: 4.18, z: 0}
   m_LocalScale: {x: 1.1138908, y: 0.9693143, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -322,14 +322,14 @@ CircleCollider2D:
   m_GameObject: {fileID: 168838991}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3d8815dc9d6fb0f4da8a0b09896645dc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: -0.3}
+  m_Offset: {x: 0, y: -0.7}
   serializedVersion: 2
-  m_Radius: 0.15243623
---- !u!114 &168838997
+  m_Radius: 0.25
+--- !u!114 &168838996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,7 +345,7 @@ MonoBehaviour:
   coinsCollected: 0
   availableHealthPots: 0
   player: {fileID: 168838991}
---- !u!114 &168838998
+--- !u!114 &168838997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0}
-  moveSpeed: 1
+  moveSpeed: 300
   dashSpeed: 0
   dashTimeLength: 0.5
   playerRotater: {fileID: 0}
@@ -366,7 +366,7 @@ MonoBehaviour:
   projectileTimeLength: 1
   playerDeathTimeLength: 0.1
   playerHasControl: 1
-  rb: {fileID: 168838994}
+  rb: {fileID: 0}
   dash:
     m_PersistentCalls:
       m_Calls: []
@@ -959,6 +959,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1098446576}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &850640191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850640193}
+  - component: {fileID: 850640192}
+  m_Layer: 0
+  m_Name: InputHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &850640192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850640191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9473b018ef5d2fe4fb076908fd5f5b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 0}
+--- !u!4 &850640193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850640191}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857053881
 GameObject:
@@ -1627,7 +1671,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.9245283, g: 0.15263437, b: 0.37886977, a: 1}
   m_FlipX: 0
