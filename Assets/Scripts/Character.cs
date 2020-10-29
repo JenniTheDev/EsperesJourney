@@ -18,6 +18,7 @@ public class Character : MonoBehaviour, IMoveableChar {
     private Rigidbody2D character;
     private LayerMask wallMask;
     private LayerMask healthPotMask;
+    private LayerMask treasureChestMask;
 
     #region MonoBehavior
 
@@ -26,6 +27,8 @@ public class Character : MonoBehaviour, IMoveableChar {
         character = GetComponent<Rigidbody2D>();
         wallMask = LayerMask.NameToLayer("Wall");
         healthPotMask = LayerMask.NameToLayer("HealthPot");
+        treasureChestMask = LayerMask.NameToLayer("Treasure");
+
     }
 
     private void OnEnable() {
@@ -95,23 +98,19 @@ public class Character : MonoBehaviour, IMoveableChar {
         if (collision.gameObject.layer == healthPotMask) {
             Debug.Log("Health Pot Hit");
             EventController.Instance.BroadcastHealthPotFind();
-            
-           
+        }
+
+        if (collision.gameObject.layer == treasureChestMask) {
+            Debug.Log("Treasure Hit");
+            EventController.Instance.BroadcastOnTreasureFind();
         }
     }
-
-    private void PlayHealthPotPickup() {
-        AudioSource healthPotPickup = GetComponent<AudioSource>();
-        healthPotPickup.Play();
-        Debug.Log("sound");
-    }
-
 
     private void Subscribe() {
         Unsubscribe();
         // EventController events character needs to know about +=
-        
-       
+
+
     }
 
     private void Unsubscribe() {

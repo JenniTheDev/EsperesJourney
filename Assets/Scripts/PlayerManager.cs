@@ -19,6 +19,11 @@ public class PlayerManager : MonoBehaviour {
 
     // Player game object  (not sure if this is right)
     [SerializeField] private GameObject player;
+    private Rigidbody2D character;
+    private LayerMask wallMask;
+    private LayerMask healthPotMask;
+    private LayerMask treasureChestMask;
+
 
     #region Properties
 
@@ -43,6 +48,10 @@ public class PlayerManager : MonoBehaviour {
     // On awake?
     void Start() {
         Subscribe();
+        character = GetComponent<Rigidbody2D>();
+        wallMask = LayerMask.NameToLayer("Wall");
+        healthPotMask = LayerMask.NameToLayer("HealthPot");
+        treasureChestMask = LayerMask.NameToLayer("Treasure");
     }
 
     private void OnEnable() {
@@ -89,6 +98,35 @@ public class PlayerManager : MonoBehaviour {
     public void PlayerDied() {
         // do death reset here
     }
+
+    // Added these 
+    public void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.layer == wallMask) {
+            // This doesn't stop the player from going through the wall 
+            character.velocity = Vector2.zero;
+        }
+
+        // TODO This is not working, does not say player touched the health pot, what did I do wrong? 
+        if (collision.gameObject.layer == healthPotMask) {
+            Debug.Log("Health Pot Hit");
+            EventController.Instance.BroadcastHealthPotFind();
+        }
+
+        if (collision.gameObject.layer == treasureChestMask) {
+            Debug.Log("Treasure Hit");
+            EventController.Instance.BroadcastOnTreasureFind();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
     private void Subscribe() {
         Unsubscribe();
