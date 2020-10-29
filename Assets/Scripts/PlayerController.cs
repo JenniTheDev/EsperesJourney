@@ -97,6 +97,13 @@ public class PlayerController : MonoBehaviour
       {
         rb = gameObject.GetComponent<Rigidbody2D>();
       }
+
+        Subscribe();
+
+    }
+
+    private void OnDisable() {
+        Unsubscribe();
     }
 
     public void FixedUpdate(){
@@ -287,33 +294,47 @@ public class PlayerController : MonoBehaviour
       playerHasControl = true;
     }
 
-  //  public IEnumerator PlayerAttack(){
-   //   playerHasControl = false;
+    //  public IEnumerator PlayerAttack(){
+    //   playerHasControl = false;
 
-   //   rb.velocity = new Vector2(0,0);
-   //   GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, basicAttackSpawnPoint.transform.rotation);
-   //   Destroy(attack, basicAttackObjectTimeLength);
+    //   rb.velocity = new Vector2(0,0);
+    //   GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, basicAttackSpawnPoint.transform.rotation);
+    //   Destroy(attack, basicAttackObjectTimeLength);
 
- //     yield return new WaitForSeconds(basicAttackTimeLength);
-  //    playerHasControl = true;
-  //  }
+    //     yield return new WaitForSeconds(basicAttackTimeLength);
+    //    playerHasControl = true;
+    //  }
 
-  //  public IEnumerator PlayerProjectileAbility(){
-   //   playerHasControl = false;
-   //   canUseProjectileAttack = false;
+    //  public IEnumerator PlayerProjectileAbility(){
+    //   playerHasControl = false;
+    //   canUseProjectileAttack = false;
 
     //  rb.velocity = new Vector2(0,0);
-   //   GameObject projectile = Instantiate(projectileObject, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
-   //   Destroy(projectile, projectileObjectTimeLength);
+    //   GameObject projectile = Instantiate(projectileObject, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
+    //   Destroy(projectile, projectileObjectTimeLength);
 
-   //   yield return new WaitForSeconds(projectileTimeLength);
-   //   playerHasControl = true;
-  //  }
+    //   yield return new WaitForSeconds(projectileTimeLength);
+    //   playerHasControl = true;
+    //  }
 
-  //  public IEnumerator PlayerProjectileAbilityCooldown(){
-  //    yield return new WaitForSeconds(projectileCoolDownTime);
-   //   canUseProjectileAttack = true;
-  //    projectileAttackHasCooledDown.Invoke();
-  //    Debug.Log ("The Player can use the Projectile attack again");
- //   }
+    //  public IEnumerator PlayerProjectileAbilityCooldown(){
+    //    yield return new WaitForSeconds(projectileCoolDownTime);
+    //   canUseProjectileAttack = true;
+    //    projectileAttackHasCooledDown.Invoke();
+    //    Debug.Log ("The Player can use the Projectile attack again");
+    //   }
+
+    // Added for event handling
+
+    private void Subscribe() {
+        Unsubscribe();
+        EventController.Instance.OnPlayerDeath += Death;
+
+    }
+
+    private void Unsubscribe() {
+        EventController.Instance.OnPlayerDeath -= Death;
+    }
+
+
 }
