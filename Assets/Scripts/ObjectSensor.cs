@@ -59,7 +59,6 @@ public class ObjectSensor : MonoBehaviour
   // --- Collisions --------------------------------------------
 
   public void OnCollisionEnter2D (Collision2D col){
-      Debug.Log ("Object touched something");
 
       if(getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
         InvokeDetectedSomething();
@@ -67,7 +66,6 @@ public class ObjectSensor : MonoBehaviour
 
   // Triggers when the player collides with a trigger
   public void OnTriggerEnter2D (Collider2D col){
-      Debug.Log ("Object touched something");
 
       if(getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
         InvokeDetectedSomething();
