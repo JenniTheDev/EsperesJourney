@@ -144,8 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f09d9f5ff2dc3c48a808c78c8b47c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 0
+  StartOnAwake: 1
   moveSpeed: 10
   rb: {fileID: 846143577140302560}
+  movementMode: 0
+  directionToMove: {x: 1, y: 0, z: 0}
+  objectToMoveTowards: {fileID: 0}
 --- !u!114 &5929086354629968212
 MonoBehaviour:
   m_ObjectHideFlags: 0

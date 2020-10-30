@@ -2,6 +2,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerControllerTestSceneCode : MonoBehaviour
 {
@@ -15,11 +16,58 @@ public class PlayerControllerTestSceneCode : MonoBehaviour
     public Spawner playerSpawner;
     public PlayerInput codeHolder;
 
+    public UnityEvent FKeyPressed;
+    public UnityEvent IKeyPressed;
+    public UnityEvent AKeyPressed;
+    public UnityEvent DKeyPressed;
+    public UnityEvent RKeyPressed;
+
     public void Update()
     {
-      if(Input.GetKeyDown(KeyCode.R)){
-        playerSpawner.spawnObject();
-        codeHolder.Rebind();
-      }
+      if(Input.GetKeyDown(KeyCode.F)) FKeyPressed.Invoke();
+      if(Input.GetKeyDown(KeyCode.I)) IKeyPressed.Invoke();
+      if(Input.GetKeyDown(KeyCode.A)) AKeyPressed.Invoke();
+      if(Input.GetKeyDown(KeyCode.D)) DKeyPressed.Invoke();
+      if(Input.GetKeyDown(KeyCode.R)) RKeyPressed.Invoke();
+    }
+
+    public void OnStartEventIdle()
+    {
+      Debug.Log("The 'On Start' event in the 'Idle' state has been called");
+    }
+
+    public void OnEndStateIdle()
+    {
+      Debug.Log("The 'On End' event in the 'Idle' state has been called");
+    }
+
+    public void OnStartEventFollow()
+    {
+      Debug.Log("The 'On Start' event in the 'Follow' state has been called");
+    }
+
+    public void OnEndEventFollow()
+    {
+      Debug.Log("The 'On End' event in the 'Follow' state has been called");
+    }
+
+    public void OnStartEventAttack()
+    {
+      Debug.Log("The 'On Start' event in the 'Attack' state has been called");
+    }
+
+    public void OnEndEventAttack()
+    {
+      Debug.Log("The 'On End' event in the 'Attack' state has been called");
+    }
+
+    public void OnStartEventDie()
+    {
+      Debug.Log("The 'On Start' event in the 'Die' state has been called");
+    }
+
+    public void OnEndEventDie()
+    {
+      Debug.Log("The 'On End' event in the 'Die' state has been called");
     }
 }
