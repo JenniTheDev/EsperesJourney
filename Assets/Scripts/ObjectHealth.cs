@@ -1,4 +1,5 @@
-﻿// Digx
+﻿// Digx7
+// Acts as a health system for what ever you want
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

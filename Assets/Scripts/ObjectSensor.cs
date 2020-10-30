@@ -1,3 +1,5 @@
+// Digx7
+// This script activates an event if it detected something in its collider or trigger
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +9,12 @@ public class ObjectSensor : MonoBehaviour
 {
 
   public enum mode {Collider, Trigger}
+  [Header("Main")]
+  [Tooltip("Collider: for if you have a generic 2D box collider attached.\nTrigger: for if you have the collider set as a trigger.")]
   [SerializeField]private mode sensorMode = mode.Collider;
+  [Tooltip("Set this is you want to detect everything regardless of any tags.")]
   [SerializeField]private bool detectEverything = false;
+  [Tooltip("Set the tag of any objects this sensor is looking for.")]
   [SerializeField]private List<string> tagsToListenFor;
   [Space]
 

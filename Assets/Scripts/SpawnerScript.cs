@@ -1,5 +1,6 @@
 // Digx7
-// Replaces Spawner
+// Replaces Spawner.
+// Will us the Spawn class to Instantiate or spawn in what ever you want where you want it
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,8 +36,7 @@ public class SpawnerScript : MonoBehaviour
     }
 
     // this function will handel reading the spawn class and spawning the item
-    IEnumerator spawning ()
-    {
+    IEnumerator spawning (){
         int x = 0;
         float rate;
         Vector3 location;
@@ -49,7 +49,7 @@ public class SpawnerScript : MonoBehaviour
             yield return new WaitForSeconds(rate);
 
             //increment spawned
-            x++;
+            if(!spawn.spawnInfinitly)x++;
 
             //find spawn location
             if (spawn.spawnMode == Spawn.mode.UseCordinates){

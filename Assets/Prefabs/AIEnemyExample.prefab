@@ -209,6 +209,7 @@ MonoBehaviour:
     startOnAwake: 0
     spawnRateRange: {x: 1, y: 1}
     maxSpawn: 10
+    spawnInfinitly: 1
     spawnMode: 0
     spawnLocationGameObject: {fileID: 0}
     spawnLocation: {x: 0.25, y: 0, z: 0}

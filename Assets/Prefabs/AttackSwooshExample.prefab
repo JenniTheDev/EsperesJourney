@@ -137,8 +137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f09d9f5ff2dc3c48a808c78c8b47c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 0
+  StartOnAwake: 1
   moveSpeed: 1
   rb: {fileID: 2809617849578263132}
+  movementMode: 0
+  directionToMove: {x: 1, y: 0, z: 0}
+  useLocalSpace: 1
+  objectToMoveTowards: {fileID: 0}
 --- !u!50 &2809617849578263132
 Rigidbody2D:
   serializedVersion: 4
