@@ -5124,6 +5124,7 @@ MonoBehaviour:
   playerDeath:
     m_PersistentCalls:
       m_Calls: []
+  animator: {fileID: 856456449}
 --- !u!114 &856456444
 MonoBehaviour:
   m_ObjectHideFlags: 0
