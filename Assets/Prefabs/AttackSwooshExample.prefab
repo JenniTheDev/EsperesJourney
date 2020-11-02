@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3323008876538450080}
   - component: {fileID: 9167186605309026534}
   - component: {fileID: 2809617849578263132}
+  - component: {fileID: -2033423063588099531}
   m_Layer: 0
   m_Name: AttackSwooshExample
   m_TagString: Player_Attack
@@ -136,8 +137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f09d9f5ff2dc3c48a808c78c8b47c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 0
+  StartOnAwake: 1
   moveSpeed: 1
   rb: {fileID: 2809617849578263132}
+  movementMode: 0
+  directionToMove: {x: 1, y: 0, z: 0}
+  useLocalSpace: 1
+  objectToMoveTowards: {fileID: 0}
 --- !u!50 &2809617849578263132
 Rigidbody2D:
   serializedVersion: 4
@@ -159,3 +166,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-2033423063588099531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388582123865409461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 1
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 1
+  tagsThatCanDestroyThisObject: []
