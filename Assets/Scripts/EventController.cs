@@ -51,6 +51,9 @@ public class EventController {
     public delegate void OnTreasureFindHandler();
     public event OnTreasureFindHandler OnTreasureFind;
 
+    public delegate void OnObjectDestroyHandler();
+    public event OnObjectDestroyHandler OnObjectDestroy;
+
     
 
 
@@ -92,6 +95,11 @@ public class EventController {
     public void BroadcastOnTreasureFind() {
         OnTreasureFind?.Invoke();
         Debug.Log("Broadcast Treasure");
+    }
+
+    public void BroadcastOnObjectDestroy() {
+        OnObjectDestroy?.Invoke();
+        Debug.Log("Broadcast Object Destroy");
     }
 
     #endregion
