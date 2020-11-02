@@ -84,11 +84,13 @@ public class PlayerController : MonoBehaviour
    //   [SerializeField] private  UnityEvent healthIncrease;
     //  [SerializeField] private  UnityEvent healthDecrease;
       [SerializeField] private  UnityEvent playerDeath;
-   //   [SerializeField] private  UnityEvent fullOnHealthPacks;
-   //   [SerializeField] private  UnityEvent outOfHealthPack;
-   //   [SerializeField] private  UnityEvent healthPackGained;
-   //   [SerializeField] private  UnityEvent healthPackUsed;
+    //   [SerializeField] private  UnityEvent fullOnHealthPacks;
+    //   [SerializeField] private  UnityEvent outOfHealthPack;
+    //   [SerializeField] private  UnityEvent healthPackGained;
+    //   [SerializeField] private  UnityEvent healthPackUsed;
 
+
+   // public Animator animator;
 
     // --- Updates -------------------------------------------------------
 
@@ -105,6 +107,17 @@ public class PlayerController : MonoBehaviour
     private void OnDisable() {
         Unsubscribe();
     }
+
+
+    public Animator animator;
+
+    public void Update() {
+        animator.SetFloat("Horizontal", moveDirection.x);
+        animator.SetFloat("Vertical", moveDirection.y);
+        animator.SetFloat("Speed", moveDirection.sqrMagnitude);
+    }
+
+
 
     public void FixedUpdate(){
       MovePlayer(moveDirection);
@@ -125,6 +138,8 @@ public class PlayerController : MonoBehaviour
         }
       }
     }
+
+
 
     public void PlayerTeleport(){
       rb.MovePosition(blinkPoint.transform.position);
