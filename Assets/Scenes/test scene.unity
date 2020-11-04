@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11077161}
   - component: {fileID: 11077162}
+  - component: {fileID: 11077163}
   m_Layer: 0
   m_Name: Bed 1 (3)
   m_TagString: Untagged
@@ -203,6 +204,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &11077163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11077160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &53800043
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +509,7 @@ Transform:
   - {fileID: 94481269}
   - {fileID: 71610415}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &103134777
 GameObject:
@@ -584,7 +601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &104411321
 GameObject:
@@ -596,6 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104411322}
   - component: {fileID: 104411323}
+  - component: {fileID: 104411324}
   m_Layer: 0
   m_Name: S_Triangle Crate (1)
   m_TagString: Untagged
@@ -667,6 +685,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &104411324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104411321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
+--- !u!1 &130908631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130908633}
+  - component: {fileID: 130908632}
+  m_Layer: 0
+  m_Name: TestBossDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &130908632
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130908631}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4}
+  m_EdgeRadius: 0
+--- !u!4 &130908633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130908631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 374.53, y: 34.046, z: -4.326172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 471876231}
+  - {fileID: 1486357632}
+  - {fileID: 701430966}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186933550
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186933551}
   - component: {fileID: 186933552}
+  - component: {fileID: 186933553}
   m_Layer: 0
   m_Name: Candle 1
   m_TagString: Untagged
@@ -749,6 +844,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &186933553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186933550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &195083024
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 195083025}
   - component: {fileID: 195083026}
+  - component: {fileID: 195083027}
   m_Layer: 0
   m_Name: Bed 1 (2)
   m_TagString: Untagged
@@ -831,6 +943,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &195083027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195083024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &225063216
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225063217}
   - component: {fileID: 225063218}
+  - component: {fileID: 225063219}
   m_Layer: 0
   m_Name: Vase Bowl 1 (7)
   m_TagString: Untagged
@@ -913,6 +1042,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &225063219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225063216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &225662752
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +1068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225662753}
   - component: {fileID: 225662754}
+  - component: {fileID: 225662755}
   m_Layer: 0
   m_Name: Candle 1 (7)
   m_TagString: Untagged
@@ -995,6 +1141,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &225662755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225662752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &233280398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 261811896}
   - component: {fileID: 261811897}
+  - component: {fileID: 261811898}
   m_Layer: 0
   m_Name: Vertical Switch (1)
   m_TagString: Untagged
@@ -1159,6 +1322,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &261811898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261811895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &270175467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270175468}
   - component: {fileID: 270175469}
+  - component: {fileID: 270175470}
   m_Layer: 0
   m_Name: ML_Rectangle Yellow Case
   m_TagString: Untagged
@@ -1241,6 +1421,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &270175470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270175467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &285383775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285383776}
   - component: {fileID: 285383777}
+  - component: {fileID: 285383778}
   m_Layer: 0
   m_Name: Large Crate (1)
   m_TagString: Untagged
@@ -1323,6 +1520,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &285383778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285383775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &310755044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310755045}
   - component: {fileID: 310755046}
+  - component: {fileID: 310755047}
   m_Layer: 0
   m_Name: Tall Crate
   m_TagString: Untagged
@@ -1404,6 +1618,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &310755047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310755044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &320880883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338549426}
   - component: {fileID: 338549427}
+  - component: {fileID: 338549428}
   m_Layer: 0
   m_Name: Large Crate
   m_TagString: Untagged
@@ -1650,6 +1881,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &338549428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338549425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &343588694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343588695}
   - component: {fileID: 343588696}
+  - component: {fileID: 343588697}
   m_Layer: 0
   m_Name: Bottle Med 3 (1)
   m_TagString: Untagged
@@ -1732,6 +1980,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &343588697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343588694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &346278996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +2006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346278997}
   - component: {fileID: 346278998}
+  - component: {fileID: 346278999}
   m_Layer: 0
   m_Name: Tall Crate (2)
   m_TagString: Untagged
@@ -1813,6 +2078,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &346278999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346278996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &365403412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +2104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365403413}
   - component: {fileID: 365403414}
+  - component: {fileID: 365403415}
   m_Layer: 0
   m_Name: Book Shelf 2
   m_TagString: Untagged
@@ -1895,6 +2177,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &365403415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365403412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &367791954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +2203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367791955}
   - component: {fileID: 367791956}
+  - component: {fileID: 367791957}
   m_Layer: 0
   m_Name: M_Thin Rectangle Box
   m_TagString: Untagged
@@ -1977,6 +2276,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &367791957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367791954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &368278698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +2302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368278699}
   - component: {fileID: 368278700}
+  - component: {fileID: 368278701}
   m_Layer: 0
   m_Name: Large Crate (6)
   m_TagString: Untagged
@@ -2059,6 +2375,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &368278701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368278698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &377337817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387023794}
   - component: {fileID: 387023795}
+  - component: {fileID: 387023796}
   m_Layer: 0
   m_Name: Vase Bowl 1 (4)
   m_TagString: Untagged
@@ -2223,6 +2556,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &387023796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387023793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
+--- !u!1 &431524818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431524821}
+  - component: {fileID: 431524820}
+  - component: {fileID: 431524819}
+  - component: {fileID: 431524822}
+  m_Layer: 0
+  m_Name: TestKey
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &431524819
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431524818}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!212 &431524820
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431524818}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.40557134, g: 0.7482187, b: 0.9245283, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &431524821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431524818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 362.06, y: 38.01, z: -3.09375}
+  m_LocalScale: {x: 2.4487066, y: 2.6007843, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &431524822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431524818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyType: 0
 --- !u!1 &432716872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,6 +2694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432716873}
   - component: {fileID: 432716874}
+  - component: {fileID: 432716875}
   m_Layer: 0
   m_Name: ML_Rectangle Yellow Case (2)
   m_TagString: Untagged
@@ -2305,6 +2767,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &432716875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432716872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &440546514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,10 +2795,10 @@ GameObject:
   - component: {fileID: 440546519}
   - component: {fileID: 440546518}
   - component: {fileID: 440546517}
-  - component: {fileID: 440546516}
   - component: {fileID: 440546515}
+  - component: {fileID: 440546521}
   m_Layer: 0
-  m_Name: TestChar (1)
+  m_Name: 'TestChar '
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2403,23 +2881,6 @@ MonoBehaviour:
   healthPackUsed:
     m_PersistentCalls:
       m_Calls: []
-  animator: {fileID: 0}
---- !u!114 &440546516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440546514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bc8e38d008a5aa44805b8e9d8adb5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 0
-  coinsCollected: 0
-  availableHealthPots: 0
-  player: {fileID: 440546514}
 --- !u!58 &440546517
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2518,10 +2979,23 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.75, y: 4.18, z: 0}
   m_LocalScale: {x: 1.1138908, y: 0.9693143, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1264053184}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &440546521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440546514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fcf1a9f34cd80438fc0e96a412a7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &444621864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,6 +3006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444621865}
   - component: {fileID: 444621866}
+  - component: {fileID: 444621867}
   m_Layer: 0
   m_Name: Bottle Med 1
   m_TagString: Untagged
@@ -2604,6 +3079,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &444621867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444621864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
+--- !u!1 &471876230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471876231}
+  - component: {fileID: 471876232}
+  m_Layer: 0
+  m_Name: TopDoorHalf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471876231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471876230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0078, y: 0.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 130908633}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &471876232
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471876230}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.38823533, g: 0.7176471, b: 0.89019614, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 1
+  m_Size: {x: 1, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &490412786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +3186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490412787}
   - component: {fileID: 490412788}
+  - component: {fileID: 490412789}
   m_Layer: 0
   m_Name: Bed 1 (1)
   m_TagString: Untagged
@@ -2686,6 +3259,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &490412789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490412786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &497149246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +3285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497149247}
   - component: {fileID: 497149248}
+  - component: {fileID: 497149249}
   m_Layer: 0
   m_Name: Candle 1 (6)
   m_TagString: Untagged
@@ -2768,6 +3358,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &497149249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497149246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &509687090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,6 +3384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509687091}
   - component: {fileID: 509687092}
+  - component: {fileID: 509687093}
   m_Layer: 0
   m_Name: ML_Shelf
   m_TagString: Untagged
@@ -2850,6 +3457,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &509687093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509687090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &518408161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,6 +3483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 518408162}
   - component: {fileID: 518408163}
+  - component: {fileID: 518408164}
   m_Layer: 0
   m_Name: Trash Bag 3
   m_TagString: Untagged
@@ -2932,6 +3556,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &518408164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518408161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &527588444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,6 +3664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531977215}
   - component: {fileID: 531977216}
+  - component: {fileID: 531977217}
   m_Layer: 0
   m_Name: Trash Bag 2 (1)
   m_TagString: Untagged
@@ -3096,6 +3737,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &531977217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531977214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &533610577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,6 +3763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533610578}
   - component: {fileID: 533610579}
+  - component: {fileID: 533610580}
   m_Layer: 0
   m_Name: ML_Rectangle Yellow Case (1)
   m_TagString: Untagged
@@ -3178,6 +3836,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &533610580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533610577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &562545249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,7 +3871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &562545250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3396,7 +4070,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575082128
 GameObject:
@@ -3408,6 +4082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575082129}
   - component: {fileID: 575082130}
+  - component: {fileID: 575082131}
   m_Layer: 0
   m_Name: Large Crate (3)
   m_TagString: Untagged
@@ -3480,6 +4155,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &575082131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575082128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &604150422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +4181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 604150423}
   - component: {fileID: 604150424}
+  - component: {fileID: 604150425}
   m_Layer: 0
   m_Name: M_Thin Rectangle Box (2)
   m_TagString: Untagged
@@ -3562,6 +4254,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &604150425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604150422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &610189157
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,7 +4350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620927567
 GameObject:
@@ -3736,6 +4444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657544750}
   - component: {fileID: 657544751}
+  - component: {fileID: 657544752}
   m_Layer: 0
   m_Name: Rectangle Machine (1)
   m_TagString: Untagged
@@ -3808,6 +4517,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &657544752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657544749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &691379981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,6 +4543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691379982}
   - component: {fileID: 691379983}
+  - component: {fileID: 691379984}
   m_Layer: 0
   m_Name: S_Rectangle Box
   m_TagString: Untagged
@@ -3890,6 +4616,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &691379984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691379981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &691621730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +4642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691621731}
   - component: {fileID: 691621732}
+  - component: {fileID: 691621733}
   m_Layer: 0
   m_Name: Vase Bowl 1 (8)
   m_TagString: Untagged
@@ -3972,6 +4715,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &691621733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691621730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &697589454
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,6 +4741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697589455}
   - component: {fileID: 697589456}
+  - component: {fileID: 697589457}
   m_Layer: 0
   m_Name: Trash Bag 1 (1)
   m_TagString: Untagged
@@ -4054,6 +4814,79 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &697589457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697589454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
+--- !u!1 &701430965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 701430966}
+  - component: {fileID: 701430967}
+  m_Layer: 0
+  m_Name: ColliderToStopPlayerMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &701430966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701430965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 130908633}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &701430967
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701430965}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &703953057
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,6 +4897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703953058}
   - component: {fileID: 703953059}
+  - component: {fileID: 703953060}
   m_Layer: 0
   m_Name: Trash Bag 1 (3)
   m_TagString: Untagged
@@ -4136,6 +4970,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &703953060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703953057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &724536800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,6 +4996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724536801}
   - component: {fileID: 724536802}
+  - component: {fileID: 724536803}
   m_Layer: 0
   m_Name: Tall Crate (1)
   m_TagString: Untagged
@@ -4217,6 +5068,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &724536803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724536800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &730403856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,6 +5094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 730403857}
   - component: {fileID: 730403858}
+  - component: {fileID: 730403859}
   m_Layer: 0
   m_Name: S_Thin Tall Box (1)
   m_TagString: Untagged
@@ -4298,6 +5166,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &730403859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730403856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &743948298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +5274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786027438}
   - component: {fileID: 786027439}
+  - component: {fileID: 786027440}
   m_Layer: 0
   m_Name: Vase Container 1 (2)
   m_TagString: Untagged
@@ -4461,6 +5346,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &786027440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786027437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &811634240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,6 +5372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811634241}
   - component: {fileID: 811634242}
+  - component: {fileID: 811634243}
   m_Layer: 0
   m_Name: Ruined Box (1)
   m_TagString: Untagged
@@ -4543,6 +5445,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &811634243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811634240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &821194446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,6 +5471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 821194447}
   - component: {fileID: 821194448}
+  - component: {fileID: 821194449}
   m_Layer: 0
   m_Name: Vertical Switch (3)
   m_TagString: Untagged
@@ -4625,6 +5544,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &821194449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821194446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &826078825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4635,6 +5570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826078826}
   - component: {fileID: 826078827}
+  - component: {fileID: 826078828}
   m_Layer: 0
   m_Name: Vase Container 1 (1)
   m_TagString: Untagged
@@ -4706,6 +5642,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &826078828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826078825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &839522290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4716,6 +5668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839522291}
   - component: {fileID: 839522292}
+  - component: {fileID: 839522293}
   m_Layer: 0
   m_Name: Vase Bowl 1 (2)
   m_TagString: Untagged
@@ -4788,6 +5741,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &839522293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839522290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &848875651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4798,6 +5767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848875652}
   - component: {fileID: 848875653}
+  - component: {fileID: 848875654}
   m_Layer: 0
   m_Name: Bottle Med 3
   m_TagString: Untagged
@@ -4870,6 +5840,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &848875654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848875651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &851330707
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,6 +5866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851330708}
   - component: {fileID: 851330709}
+  - component: {fileID: 851330710}
   m_Layer: 0
   m_Name: Trash Bag 2 (2)
   m_TagString: Untagged
@@ -4952,6 +5939,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &851330710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851330707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &857053881
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,6 +6256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932837193}
   - component: {fileID: 932837194}
+  - component: {fileID: 932837195}
   m_Layer: 0
   m_Name: Trash Bag 3 (2)
   m_TagString: Untagged
@@ -5325,6 +6329,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &932837195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932837192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1003765241
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,7 +6399,7 @@ Transform:
   - {fileID: 1318683939}
   - {fileID: 1519967105}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009967753
 GameObject:
@@ -5391,6 +6411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009967754}
   - component: {fileID: 1009967755}
+  - component: {fileID: 1009967756}
   m_Layer: 0
   m_Name: Vertical Switch
   m_TagString: Untagged
@@ -5463,6 +6484,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1009967756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009967753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1014251391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,6 +6637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104918980}
   - component: {fileID: 1104918981}
+  - component: {fileID: 1104918982}
   m_Layer: 0
   m_Name: Vase Container 1 (3)
   m_TagString: Untagged
@@ -5671,6 +6709,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1104918982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104918979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1105164478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5681,6 +6735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1105164479}
   - component: {fileID: 1105164480}
+  - component: {fileID: 1105164481}
   m_Layer: 0
   m_Name: Trash Bag 1
   m_TagString: Untagged
@@ -5753,6 +6808,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1105164481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105164478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1105437437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5797,7 +6868,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156131595
 GameObject:
@@ -5809,6 +6880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156131596}
   - component: {fileID: 1156131597}
+  - component: {fileID: 1156131598}
   m_Layer: 0
   m_Name: Vertical Metal Crate
   m_TagString: Untagged
@@ -5881,6 +6953,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1156131598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156131595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1156730142
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,6 +6979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156730143}
   - component: {fileID: 1156730144}
+  - component: {fileID: 1156730145}
   m_Layer: 0
   m_Name: M_End Table
   m_TagString: Untagged
@@ -5963,6 +7052,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1156730145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156730142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1161877637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5973,6 +7078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161877638}
   - component: {fileID: 1161877639}
+  - component: {fileID: 1161877640}
   m_Layer: 0
   m_Name: Bottle Med 2
   m_TagString: Untagged
@@ -6045,6 +7151,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1161877640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161877637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1210414634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,7 +7856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1215395592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6934,7 +8056,7 @@ Transform:
   m_Children:
   - {fileID: 876570194}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226047229
 GameObject:
@@ -6946,6 +8068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1226047230}
   - component: {fileID: 1226047231}
+  - component: {fileID: 1226047232}
   m_Layer: 0
   m_Name: Large Crate (5)
   m_TagString: Untagged
@@ -7018,6 +8141,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1226047232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226047229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1248579764
 GameObject:
   m_ObjectHideFlags: 0
@@ -7028,6 +8167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248579765}
   - component: {fileID: 1248579766}
+  - component: {fileID: 1248579767}
   m_Layer: 0
   m_Name: Large Crate (2)
   m_TagString: Untagged
@@ -7100,6 +8240,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1248579767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248579764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1264053180
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,11 +8348,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264053180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.72, y: 4.29, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.026932811, y: 0.11348243, z: -10}
+  m_LocalScale: {x: 0.8977541, y: 1.0316572, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 440546520}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1288022173
 GameObject:
@@ -7208,6 +8364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1288022174}
   - component: {fileID: 1288022175}
+  - component: {fileID: 1288022176}
   m_Layer: 0
   m_Name: Vase Bowl 1
   m_TagString: Untagged
@@ -7280,6 +8437,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1288022176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288022173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1289287494
 GameObject:
   m_ObjectHideFlags: 0
@@ -7290,6 +8463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289287495}
   - component: {fileID: 1289287496}
+  - component: {fileID: 1289287497}
   m_Layer: 0
   m_Name: Candle 1 (8)
   m_TagString: Untagged
@@ -7362,6 +8536,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1289287497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289287494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1293172415
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,6 +8562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293172416}
   - component: {fileID: 1293172417}
+  - component: {fileID: 1293172418}
   m_Layer: 0
   m_Name: Bottle Small 2
   m_TagString: Untagged
@@ -7444,6 +8635,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1293172418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293172415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1306072970
 GameObject:
   m_ObjectHideFlags: 0
@@ -7524,7 +8731,7 @@ Transform:
   m_LocalScale: {x: 5, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1306072973
 BoxCollider2D:
@@ -7771,6 +8978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319224388}
   - component: {fileID: 1319224389}
+  - component: {fileID: 1319224390}
   m_Layer: 0
   m_Name: Trash Bag 5 Small (1)
   m_TagString: Untagged
@@ -7843,6 +9051,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1319224390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319224387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1340435360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7853,6 +9077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1340435361}
   - component: {fileID: 1340435362}
+  - component: {fileID: 1340435363}
   m_Layer: 0
   m_Name: ML_Rectangle Case (1)
   m_TagString: Untagged
@@ -7924,6 +9149,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1340435363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340435360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1362857617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7966,7 +9207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1387454395
 GameObject:
@@ -7978,6 +9219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1387454396}
   - component: {fileID: 1387454397}
+  - component: {fileID: 1387454398}
   m_Layer: 0
   m_Name: Bookshelf 1
   m_TagString: Untagged
@@ -8050,6 +9292,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1387454398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387454395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1389167921
 GameObject:
   m_ObjectHideFlags: 0
@@ -8060,6 +9318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389167922}
   - component: {fileID: 1389167923}
+  - component: {fileID: 1389167924}
   m_Layer: 0
   m_Name: L_Tall Thin Crate (1)
   m_TagString: Untagged
@@ -8132,6 +9391,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1389167924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389167921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1437215084
 GameObject:
   m_ObjectHideFlags: 0
@@ -8142,6 +9417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1437215085}
   - component: {fileID: 1437215086}
+  - component: {fileID: 1437215087}
   m_Layer: 0
   m_Name: S_Thin Tall Box
   m_TagString: Untagged
@@ -8213,6 +9489,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1437215087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437215084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1445614665
 GameObject:
   m_ObjectHideFlags: 0
@@ -8223,6 +9515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445614666}
   - component: {fileID: 1445614667}
+  - component: {fileID: 1445614668}
   m_Layer: 0
   m_Name: Bed 1
   m_TagString: Untagged
@@ -8295,6 +9588,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1445614668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445614665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1465865930
 GameObject:
   m_ObjectHideFlags: 0
@@ -8305,6 +9614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465865931}
   - component: {fileID: 1465865932}
+  - component: {fileID: 1465865933}
   m_Layer: 0
   m_Name: M_Thin Rectangle Box (1)
   m_TagString: Untagged
@@ -8377,6 +9687,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1465865933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465865930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1483105022
 GameObject:
   m_ObjectHideFlags: 0
@@ -8387,6 +9713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1483105023}
   - component: {fileID: 1483105024}
+  - component: {fileID: 1483105025}
   m_Layer: 0
   m_Name: Trash Bag 2
   m_TagString: Untagged
@@ -8459,6 +9786,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1483105025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483105022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
+--- !u!1 &1486357631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486357632}
+  - component: {fileID: 1486357633}
+  m_Layer: 0
+  m_Name: BottomDoorHalf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486357632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486357631}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: -1.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 130908633}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1486357633
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486357631}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.38823533, g: 0.7176471, b: 0.89019614, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 1
+  m_Size: {x: 1, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1493631931
 GameObject:
   m_ObjectHideFlags: 0
@@ -8469,6 +9893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1493631932}
   - component: {fileID: 1493631933}
+  - component: {fileID: 1493631934}
   m_Layer: 0
   m_Name: XS_Cup 1 (1)
   m_TagString: Untagged
@@ -8540,6 +9965,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1493631934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493631931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1496548743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8550,6 +9991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496548744}
   - component: {fileID: 1496548745}
+  - component: {fileID: 1496548746}
   m_Layer: 0
   m_Name: Large Crate (4)
   m_TagString: Untagged
@@ -8622,6 +10064,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1496548746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496548743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1500675987
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,6 +10090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500675988}
   - component: {fileID: 1500675989}
+  - component: {fileID: 1500675990}
   m_Layer: 0
   m_Name: Trash Bag 3 (1)
   m_TagString: Untagged
@@ -8704,6 +10163,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1500675990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500675987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1515130375
 GameObject:
   m_ObjectHideFlags: 0
@@ -8714,6 +10189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1515130376}
   - component: {fileID: 1515130377}
+  - component: {fileID: 1515130378}
   m_Layer: 0
   m_Name: Vase Bowl 1 (6)
   m_TagString: Untagged
@@ -8786,6 +10262,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1515130378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515130375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1516293097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8878,6 +10370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517668445}
   - component: {fileID: 1517668446}
+  - component: {fileID: 1517668447}
   m_Layer: 0
   m_Name: Bottle Large 1
   m_TagString: Untagged
@@ -8950,6 +10443,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1517668447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517668444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1519967104
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,6 +10596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522204704}
   - component: {fileID: 1522204705}
+  - component: {fileID: 1522204706}
   m_Layer: 0
   m_Name: Vase Container 1
   m_TagString: Untagged
@@ -9158,6 +10668,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1522204706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522204703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1531149987
 GameObject:
   m_ObjectHideFlags: 0
@@ -9168,6 +10694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1531149988}
   - component: {fileID: 1531149989}
+  - component: {fileID: 1531149990}
   m_Layer: 0
   m_Name: ML_Shelf (1)
   m_TagString: Untagged
@@ -9240,6 +10767,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1531149990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531149987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1540081495
 GameObject:
   m_ObjectHideFlags: 0
@@ -9250,6 +10793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540081496}
   - component: {fileID: 1540081497}
+  - component: {fileID: 1540081498}
   m_Layer: 0
   m_Name: Large Crate (7)
   m_TagString: Untagged
@@ -9322,6 +10866,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1540081498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540081495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1566377901
 GameObject:
   m_ObjectHideFlags: 0
@@ -9332,6 +10892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566377902}
   - component: {fileID: 1566377903}
+  - component: {fileID: 1566377904}
   m_Layer: 0
   m_Name: Bottle Small 2 (1)
   m_TagString: Untagged
@@ -9404,6 +10965,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1566377904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566377901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1567680428
 GameObject:
   m_ObjectHideFlags: 0
@@ -9414,6 +10991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567680429}
   - component: {fileID: 1567680430}
+  - component: {fileID: 1567680431}
   m_Layer: 0
   m_Name: Bottle Small 1 (1)
   m_TagString: Untagged
@@ -9486,6 +11064,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1567680431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567680428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1574783377
 GameObject:
   m_ObjectHideFlags: 0
@@ -9496,6 +11090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1574783378}
   - component: {fileID: 1574783379}
+  - component: {fileID: 1574783380}
   m_Layer: 0
   m_Name: M_Triangle Crate
   m_TagString: Untagged
@@ -9568,6 +11163,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1574783380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574783377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1588184623
 GameObject:
   m_ObjectHideFlags: 0
@@ -9578,6 +11189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588184624}
   - component: {fileID: 1588184625}
+  - component: {fileID: 1588184626}
   m_Layer: 0
   m_Name: Ruined Box
   m_TagString: Untagged
@@ -9650,6 +11262,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1588184626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588184623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1591518051
 GameObject:
   m_ObjectHideFlags: 0
@@ -9787,6 +11415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595107191}
   - component: {fileID: 1595107192}
+  - component: {fileID: 1595107193}
   m_Layer: 0
   m_Name: Rectangle Machine
   m_TagString: Untagged
@@ -9859,6 +11488,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1595107193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595107190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1600549137
 GameObject:
   m_ObjectHideFlags: 0
@@ -9869,6 +11514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1600549138}
   - component: {fileID: 1600549139}
+  - component: {fileID: 1600549140}
   m_Layer: 0
   m_Name: Bottle Large 2
   m_TagString: Untagged
@@ -9941,6 +11587,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1600549140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600549137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1606323839
 GameObject:
   m_ObjectHideFlags: 0
@@ -9951,6 +11613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606323840}
   - component: {fileID: 1606323841}
+  - component: {fileID: 1606323842}
   m_Layer: 0
   m_Name: S_Triangle Crate
   m_TagString: Untagged
@@ -10022,6 +11685,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1606323842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606323839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1612632931
 GameObject:
   m_ObjectHideFlags: 0
@@ -10032,6 +11711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1612632932}
   - component: {fileID: 1612632933}
+  - component: {fileID: 1612632934}
   m_Layer: 0
   m_Name: M_Vertical Case
   m_TagString: Untagged
@@ -10104,52 +11784,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1621522259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1621522261}
-  - component: {fileID: 1621522260}
-  m_Layer: 0
-  m_Name: InputManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1621522260
+--- !u!114 &1612632934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621522259}
+  m_GameObject: {fileID: 1612632931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92835116ebb201044a411ffc311be98f, type: 3}
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseButton: 112
-  resumeButton: 112
-  exitGame: 0
---- !u!4 &1621522261
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621522259}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1644494943
 GameObject:
   m_ObjectHideFlags: 0
@@ -10160,6 +11810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644494944}
   - component: {fileID: 1644494945}
+  - component: {fileID: 1644494946}
   m_Layer: 0
   m_Name: Candle 1 (2)
   m_TagString: Untagged
@@ -10232,6 +11883,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1644494946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644494943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1652664278
 GameObject:
   m_ObjectHideFlags: 0
@@ -10242,6 +11909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652664279}
   - component: {fileID: 1652664280}
+  - component: {fileID: 1652664281}
   m_Layer: 0
   m_Name: Bottle Small 1
   m_TagString: Untagged
@@ -10314,6 +11982,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1652664281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652664278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1664563475
 GameObject:
   m_ObjectHideFlags: 0
@@ -10324,6 +12008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1664563476}
   - component: {fileID: 1664563477}
+  - component: {fileID: 1664563478}
   m_Layer: 0
   m_Name: XS_Triangle Crate
   m_TagString: Untagged
@@ -10396,6 +12081,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1664563478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664563475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1700565205
 GameObject:
   m_ObjectHideFlags: 0
@@ -10406,6 +12107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700565206}
   - component: {fileID: 1700565207}
+  - component: {fileID: 1700565208}
   m_Layer: 0
   m_Name: Bottle Large 1 (1)
   m_TagString: Untagged
@@ -10478,6 +12180,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1700565208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700565205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1737399270
 GameObject:
   m_ObjectHideFlags: 0
@@ -10488,6 +12206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737399271}
   - component: {fileID: 1737399272}
+  - component: {fileID: 1737399273}
   m_Layer: 0
   m_Name: S_Rectangle Box (1)
   m_TagString: Untagged
@@ -10560,6 +12279,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1737399273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737399270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1742043352
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,7 +12425,7 @@ Transform:
   - {fileID: 195083025}
   - {fileID: 11077161}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752650305
 GameObject:
@@ -10702,6 +12437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752650306}
   - component: {fileID: 1752650307}
+  - component: {fileID: 1752650308}
   m_Layer: 0
   m_Name: Candle 1 (3)
   m_TagString: Untagged
@@ -10774,6 +12510,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1752650308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752650305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1754480389
 GameObject:
   m_ObjectHideFlags: 0
@@ -69105,6 +70857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1858536618}
   - component: {fileID: 1858536619}
+  - component: {fileID: 1858536620}
   m_Layer: 0
   m_Name: Vertical Switch (2)
   m_TagString: Untagged
@@ -69177,6 +70930,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1858536620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858536617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1869680539
 GameObject:
   m_ObjectHideFlags: 0
@@ -69187,6 +70956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869680540}
   - component: {fileID: 1869680541}
+  - component: {fileID: 1869680542}
   m_Layer: 0
   m_Name: Candle 1 (4)
   m_TagString: Untagged
@@ -69259,6 +71029,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1869680542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869680539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1884805512
 GameObject:
   m_ObjectHideFlags: 0
@@ -69269,6 +71055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884805513}
   - component: {fileID: 1884805514}
+  - component: {fileID: 1884805515}
   m_Layer: 0
   m_Name: Candle 1 (1)
   m_TagString: Untagged
@@ -69341,6 +71128,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1884805515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884805512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1885317957
 GameObject:
   m_ObjectHideFlags: 0
@@ -69351,6 +71154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885317958}
   - component: {fileID: 1885317959}
+  - component: {fileID: 1885317960}
   m_Layer: 0
   m_Name: Vase Bowl 1 (1)
   m_TagString: Untagged
@@ -69423,6 +71227,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1885317960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885317957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1941877139
 GameObject:
   m_ObjectHideFlags: 0
@@ -69433,6 +71253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941877140}
   - component: {fileID: 1941877141}
+  - component: {fileID: 1941877142}
   m_Layer: 0
   m_Name: Vase Bowl 1 (9)
   m_TagString: Untagged
@@ -69505,6 +71326,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1941877142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941877139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1955096603
 GameObject:
   m_ObjectHideFlags: 0
@@ -69515,6 +71352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955096604}
   - component: {fileID: 1955096605}
+  - component: {fileID: 1955096606}
   m_Layer: 0
   m_Name: Trash Bag 5 Small
   m_TagString: Untagged
@@ -69587,6 +71425,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1955096606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955096603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1964786834
 GameObject:
   m_ObjectHideFlags: 0
@@ -69597,6 +71451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964786835}
   - component: {fileID: 1964786836}
+  - component: {fileID: 1964786837}
   m_Layer: 0
   m_Name: XS_Cup 1
   m_TagString: Untagged
@@ -69668,6 +71523,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1964786837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964786834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1979317131
 GameObject:
   m_ObjectHideFlags: 0
@@ -69678,6 +71549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1979317132}
   - component: {fileID: 1979317133}
+  - component: {fileID: 1979317134}
   m_Layer: 0
   m_Name: Trash Bag 4
   m_TagString: Untagged
@@ -69750,6 +71622,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1979317134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979317131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &1988185390
 GameObject:
   m_ObjectHideFlags: 0
@@ -69760,6 +71648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988185391}
   - component: {fileID: 1988185392}
+  - component: {fileID: 1988185393}
   m_Layer: 0
   m_Name: XS_Paper
   m_TagString: Untagged
@@ -69832,6 +71721,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1988185393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988185390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2001409650
 GameObject:
   m_ObjectHideFlags: 0
@@ -69842,6 +71747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001409651}
   - component: {fileID: 2001409652}
+  - component: {fileID: 2001409653}
   m_Layer: 0
   m_Name: Candle 1 (5)
   m_TagString: Untagged
@@ -69914,6 +71820,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2001409653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001409650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2010339376
 GameObject:
   m_ObjectHideFlags: 0
@@ -69924,6 +71846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010339377}
   - component: {fileID: 2010339378}
+  - component: {fileID: 2010339379}
   m_Layer: 0
   m_Name: Bottle Small 3
   m_TagString: Untagged
@@ -69996,6 +71919,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2010339379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010339376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2011530823
 GameObject:
   m_ObjectHideFlags: 0
@@ -70006,6 +71945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011530824}
   - component: {fileID: 2011530825}
+  - component: {fileID: 2011530826}
   m_Layer: 0
   m_Name: Vase Bowl 1
   m_TagString: Untagged
@@ -70078,6 +72018,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2011530826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011530823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2024400461
 GameObject:
   m_ObjectHideFlags: 0
@@ -73160,7 +75116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053652926
 GameObject:
@@ -73172,6 +75128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053652927}
   - component: {fileID: 2053652928}
+  - component: {fileID: 2053652929}
   m_Layer: 0
   m_Name: L_Tall Thin Crate
   m_TagString: Untagged
@@ -73244,6 +75201,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2053652929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053652926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2057036391
 GameObject:
   m_ObjectHideFlags: 0
@@ -73254,6 +75227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057036392}
   - component: {fileID: 2057036393}
+  - component: {fileID: 2057036394}
   m_Layer: 0
   m_Name: Bottle Large 2 (1)
   m_TagString: Untagged
@@ -73326,6 +75300,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2057036394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057036391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2065142337
 GameObject:
   m_ObjectHideFlags: 0
@@ -73336,6 +75326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065142338}
   - component: {fileID: 2065142339}
+  - component: {fileID: 2065142340}
   m_Layer: 0
   m_Name: Trash Bag 1 (2)
   m_TagString: Untagged
@@ -73408,6 +75399,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2065142340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065142337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2068004202
 GameObject:
   m_ObjectHideFlags: 0
@@ -73418,6 +75425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068004203}
   - component: {fileID: 2068004204}
+  - component: {fileID: 2068004205}
   m_Layer: 0
   m_Name: Vertical Switch (4)
   m_TagString: Untagged
@@ -73490,6 +75498,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2068004205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068004202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2081120667
 GameObject:
   m_ObjectHideFlags: 0
@@ -73500,6 +75524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081120668}
   - component: {fileID: 2081120669}
+  - component: {fileID: 2081120670}
   m_Layer: 0
   m_Name: Vase Bowl 1 (5)
   m_TagString: Untagged
@@ -73572,6 +75597,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2081120670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081120667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2087825697
 GameObject:
   m_ObjectHideFlags: 0
@@ -73664,6 +75705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118667207}
   - component: {fileID: 2118667208}
+  - component: {fileID: 2118667209}
   m_Layer: 0
   m_Name: ML_Rectangle Case
   m_TagString: Untagged
@@ -73735,6 +75777,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2118667209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118667206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []
 --- !u!1 &2143720446
 GameObject:
   m_ObjectHideFlags: 0
@@ -73745,6 +75803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143720447}
   - component: {fileID: 2143720448}
+  - component: {fileID: 2143720449}
   m_Layer: 0
   m_Name: XS_Book
   m_TagString: Untagged
@@ -73817,3 +75876,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2143720449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143720446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimeDelay: 0
+  destroyOnImpactWithAnything: 0
+  destroyOnAwake: 0
+  tagsThatCanDestroyThisObject: []

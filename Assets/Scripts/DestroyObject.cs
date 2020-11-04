@@ -8,6 +8,7 @@ public class DestroyObject : MonoBehaviour {
     [SerializeField] bool destroyOnImpactWithAnything = false;
     [SerializeField] bool destroyOnAwake = false;
     [SerializeField] List<string> tagsThatCanDestroyThisObject;
+    // Object health? If we want it to destroy with a few hits? 
 
     public void Awake() {
         if (destroyOnAwake) _Destory();

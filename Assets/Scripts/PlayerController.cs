@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private UnityEvent healthPackUsed;
 
 
-    public Animator animator;
+   // public Animator animator;
 
     // --- Updates -------------------------------------------------------
 
@@ -112,9 +112,9 @@ public class PlayerController : MonoBehaviour {
     public void Update() {
 
         // Movement Animation
-        animator.SetFloat("Horizontal", moveDirection.x);
-        animator.SetFloat("Vertical", moveDirection.y);
-        animator.SetFloat("Speed", moveDirection.sqrMagnitude);
+      //  animator.SetFloat("Horizontal", moveDirection.x);
+      //  animator.SetFloat("Vertical", moveDirection.y);
+      //  animator.SetFloat("Speed", moveDirection.sqrMagnitude);
     }
 
 
