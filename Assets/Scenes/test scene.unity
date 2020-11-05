@@ -710,7 +710,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 130908633}
-  - component: {fileID: 130908632}
   m_Layer: 0
   m_Name: TestBossDoor
   m_TagString: Untagged
@@ -718,32 +717,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &130908632
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130908631}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 4}
-  m_EdgeRadius: 0
 --- !u!4 &130908633
 Transform:
   m_ObjectHideFlags: 0
@@ -752,7 +725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130908631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 374.53, y: 34.046, z: -4.326172}
+  m_LocalPosition: {x: 374.53, y: 34.046, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 471876231}
@@ -2665,7 +2638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431524818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 362.06, y: 38.01, z: -3.09375}
+  m_LocalPosition: {x: 362.06, y: 38.01, z: 0}
   m_LocalScale: {x: 2.4487066, y: 2.6007843, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2891,7 +2864,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 3d8815dc9d6fb0f4da8a0b09896645dc, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.7}
@@ -2976,9 +2949,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440546514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.75, y: 4.18, z: 0}
-  m_LocalScale: {x: 1.1138908, y: 0.9693143, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 362.05, y: 34.046, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1264053184}
   m_Father: {fileID: 0}
@@ -2996,6 +2969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcf1a9f34cd80438fc0e96a412a7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyList: 
 --- !u!1 &444621864
 GameObject:
   m_ObjectHideFlags: 0
@@ -4840,6 +4814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 701430966}
   - component: {fileID: 701430967}
+  - component: {fileID: 701430968}
   m_Layer: 0
   m_Name: ColliderToStopPlayerMove
   m_TagString: Untagged
@@ -4887,6 +4862,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &701430968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701430965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61593a29f1919fc4cb3edd6881debc38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyType: 0
 --- !u!1 &703953057
 GameObject:
   m_ObjectHideFlags: 0

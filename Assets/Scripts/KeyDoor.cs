@@ -17,9 +17,12 @@ public class KeyDoor : MonoBehaviour {
     }
 
     public void OpenDoor() {
+
         //  doorAnims.OpenDoor();
         // hides door when key is used - could also destroy object ? 
-        gameObject.SetActive(false);
+        // Play door sound
+         gameObject.SetActive(false);
+       
     }
 
     public void PlayOpenFailAnim() {

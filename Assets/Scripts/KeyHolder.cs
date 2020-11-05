@@ -7,7 +7,7 @@ public class KeyHolder : MonoBehaviour
 {
     // The key list will need to be shown on the UI if this is used
 
-    private List<Key.KeyType> keyList;
+    [SerializeField] private List<Key.KeyType> keyList;
 
     private void Awake() {
         keyList = new List<Key.KeyType>();
@@ -19,7 +19,7 @@ public class KeyHolder : MonoBehaviour
     }
 
     public void AddKey(Key.KeyType keyType) {
-        Debug.Log("Added Key: + keyType");
+        Debug.Log("Added Key:" + keyType);
             keyList.Add(keyType);
     }
 
@@ -46,9 +46,10 @@ public class KeyHolder : MonoBehaviour
            if (keyDoor != null) {
             // if holding the right key to the door
             if (ContainsKey(keyDoor.GetKeyType())) {
+                keyDoor.OpenDoor();
                 // Remove Key if single use key
                 RemoveKey(keyDoor.GetKeyType());
-                keyDoor.OpenDoor();
+                
             } else {
                 // play fail sound for key?
                 // fail door animation ?
