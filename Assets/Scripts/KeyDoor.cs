@@ -26,14 +26,17 @@ public class KeyDoor : MonoBehaviour {
     //    }
     //}
 
-    private void OnTriggerExit2D(Collider2D collider) {
-         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
-         if (keyHolder != null) {
-              CloseDoor();
-          }
 
-        
-    }
+    // Might be more practical to set door as active during boss fight 
+
+    //private void OnTriggerExit2D(Collider2D collider) {
+    //    KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
+    //    if (keyHolder != null) {
+    //        CloseDoor();
+    //    }
+
+
+    //}
 
     public void OpenDoor() {
 
@@ -41,6 +44,7 @@ public class KeyDoor : MonoBehaviour {
         // sets door inactive when key is used - could also destroy object ? 
         // Play door sound
         gameObject.SetActive(false);
+
 
     }
 
