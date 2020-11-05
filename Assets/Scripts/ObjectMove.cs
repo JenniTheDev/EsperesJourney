@@ -23,11 +23,14 @@ public class ObjectMove : MonoBehaviour
     [Header ("Toward Object Mode")]
       [Tooltip("Only works in TowardObject Movement Mode")]
       [SerializeField] private GameObject objectToMoveTowards;
+      [SerializeField] private bool lookForGameObjectOnAwake = false;
+      [SerializeField] private string tagOfGameObjectToLookFor;
 
     private Vector3 forwardVel;
     private Vector3 horizontalVel;
 
     public void Awake(){
+      if(lookForGameObjectOnAwake) findGameObjectWithTag();
       if(StartOnAwake) isOn = true;
     }
 
@@ -84,5 +87,22 @@ public class ObjectMove : MonoBehaviour
 
     public void setObjectToMoveTowards(GameObject target){
       objectToMoveTowards = target;
+    }
+
+    // --- Auto set Object -----------------
+
+    public bool doesThisObjectHaveTagImLookingFor (GameObject obj){
+      if (obj.tag == tagOfGameObjectToLookFor) return true;
+      return false;
+    }
+
+    public void findGameObjectWithTag (){
+      GameObject[] _object = GameObject.FindGameObjectsWithTag(tagOfGameObjectToLookFor);
+
+      int i = 1;
+      if (i == _object.Length)
+      {
+          objectToMoveTowards = _object[0];
+      }
     }
 }
