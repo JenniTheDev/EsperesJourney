@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour {
     [SerializeField] private int livesLeft;
     [SerializeField] private int coinsCollected; // currency?
     [SerializeField] private int availableHealthPots;
+    [SerializeField] private int MAXHPOTS = 3;
 
     // Player Sounds
     [SerializeField] private AudioSource dashSound;
@@ -57,20 +58,44 @@ public class PlayerManager : MonoBehaviour {
     // making them public for now so they can be used by other classes
     public void IncreaseHealth(int value) {
         // pass in value from pot or buff
-        playerHealth =+ value;
+        playerHealth += value;
+
         // Update UI Health Amount
+        EventController.Instance.BroadcastHealthUpdate(playerHealth);
     }
 
     public void DecreaseHealth(int value) {
-        playerHealth =+ value;
+        playerHealth += value;
+
         // Update UI Health Amount
+        EventController.Instance.BroadcastHealthUpdate(playerHealth);
     }
 
     public void CollectedCoins(int coinValue) {
-        coinsCollected =+ coinValue;
-        // Update UI coin amount
+        coinsCollected += coinValue;
+        // Update UI coin amount with total coins collected
+        EventController.Instance.BroadcastCoinUpdate(coinsCollected);
     }
 
+    public void HealthPotsOnEnable()
+    {
+        if ((availableHealthPots + 1) <= MAXHPOTS)
+        {
+            availableHealthPots += 1;
+            //Update UI health pots
+            EventController.Instance.BroadcastHealthPotsUpdate(availableHealthPots, MAXHPOTS);
+        }
+    }
+
+    public void HealthPotsOnDisable()
+    {
+        if ((availableHealthPots - 1) >= 0)
+        {
+            availableHealthPots -= 1;
+            //broadcast event
+            EventController.Instance.BroadcastHealthPotsUpdate(availableHealthPots, MAXHPOTS);
+        }
+    }
     // TODO LivesLeft, health pots OnEnable, OnDisable, Subscribe and Unsubscribe
 
 

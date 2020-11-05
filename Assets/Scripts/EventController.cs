@@ -41,6 +41,15 @@ public class EventController {
     public delegate void OnLivesLeftHandler();
     public event OnLivesLeftHandler OnLivesLeft;
 
+    public delegate void OnHealthUpdateHandler(int hp);
+    public event OnHealthUpdateHandler OnHealthUpdate;
+
+    public delegate void OnHealthPotsUpdateHandler(int hPots, int MaxHpots);
+    public event OnHealthPotsUpdateHandler OnHealthPotsUpdate;
+
+    public delegate void OnCoinUpdateHandler(int coins);
+    public event OnCoinUpdateHandler OnCoinUpdate;
+
 
     #endregion
 
@@ -64,6 +73,21 @@ public class EventController {
 
     public void BroadcastLivesLeft() {
         OnLivesLeft?.Invoke();
+    }
+
+    public void BroadcastHealthUpdate(int hp)
+    {
+        OnHealthUpdate?.Invoke(hp);
+    }
+
+    public void BroadcastHealthPotsUpdate(int hPots, int MaxHpots)
+    {
+        OnHealthPotsUpdate?.Invoke(hPots, MaxHpots);
+    }
+
+    public void BroadcastCoinUpdate(int coins)
+    {
+        OnCoinUpdate?.Invoke(coins);
     }
 
     #endregion
