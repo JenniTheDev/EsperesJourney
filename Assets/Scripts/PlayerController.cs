@@ -1,6 +1,7 @@
 // Digx7
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -122,7 +123,14 @@ public class PlayerController : MonoBehaviour {
     public void FixedUpdate() {
         MovePlayer(moveDirection);
     }
+    public Animator animator;
 
+public void Update()
+    {
+        animator.SetFloat("Horizontal", moveDirection.x);
+        animator.SetFloat("Vertical", moveDirection.y);
+        animator.SetFloat("Speed", moveDirection.sqrMagnitude);
+    }
     // --- Actions --------------------------------------------------------
 
     // Will control the player Movement
