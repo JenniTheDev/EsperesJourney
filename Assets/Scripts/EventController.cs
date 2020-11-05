@@ -41,9 +41,6 @@ public class EventController {
     public delegate void OnLivesLeftHandler();
     public event OnLivesLeftHandler OnLivesLeft;
 
-    // Character Specific Events to possibly move in the future
-    public delegate void OnHealthPotFindHandler();
-    public event OnHealthPotFindHandler OnHealthPotFind;
 
     public delegate void OnPlayerDeathHandler();
     public event OnPlayerDeathHandler OnPlayerDeath;

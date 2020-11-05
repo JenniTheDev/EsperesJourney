@@ -35,15 +35,21 @@ public class PlayerController : MonoBehaviour {
 
     // These should be moved to it's own class
     [Space]
-    [Header("Basic Attack")]
-    [Tooltip("The GameObject that will be spawned when the player does the basic attack")]
-    [SerializeField] private GameObject basicAttackObject;          // The object that will be spawned when the player preforms a basic attack
-    [Tooltip("The point where the above GameObject will spawn")]
-    [SerializeField] private GameObject basicAttackSpawnPoint; // This will be where the basic attack is Instantiated
-    [Tooltip("This is the amount of time that the player can not control the character")]
-    [SerializeField] private float basicAttackTimeLength = 1; // The length in time that the player will not have control durring the basic attack
-    [Tooltip("This is the amount of time that the above object will be in the scene")]
-    [SerializeField] private float basicAttackObjectTimeLength = 0.25f; // The Length in time that the attack object will be in the scene
+    [Header ("Death and Respawning")]
+      [SerializeField] private bool playerIsDead = false;
+      [SerializeField] private float timeToWaitToRespawn = 0.5f;
+      [SerializeField] private Vector3 respawnLocation;
+
+    [Space]
+    [Header ("Basic Attack")]
+      [Tooltip ("The GameObject that will be spawned when the player does the basic attack")]
+      [SerializeField] private GameObject basicAttackObject;          // The object that will be spawned when the player preforms a basic attack
+      [Tooltip ("The point where the above GameObject will spawn")]
+      [SerializeField] private GameObject basicAttackSpawnPoint; // This will be where the basic attack is Instantiated
+      [Tooltip ("This is the amount of time that the player can not control the character")]
+      [SerializeField] private float basicAttackTimeLength = 1; // The length in time that the player will not have control durring the basic attack
+      [Tooltip ("This is the amount of time that the above object will be in the scene")]
+      [SerializeField] private float basicAttackObjectTimeLength = 0.25f; // The Length in time that the attack object will be in the scene
 
     // These should be moved to their own class
     [Space]
@@ -74,20 +80,22 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private Rigidbody2D rb; // The rigid body on the player
 
     [Space]
-    [Header("Events")]
-    [SerializeField] private UnityEvent attack;
-    [SerializeField] private UnityEvent fireProjectile;
-    [SerializeField] private UnityEvent projectileAttackHasCooledDown;
-    [SerializeField] private UnityEvent dash;
-    [SerializeField] private UnityEvent teleport;
-    [SerializeField] private UnityEvent ability;
-    [SerializeField] private UnityEvent healthIncrease;
-    [SerializeField] private UnityEvent healthDecrease;
-    [SerializeField] private UnityEvent playerDeath;
-    [SerializeField] private UnityEvent fullOnHealthPacks;
-    [SerializeField] private UnityEvent outOfHealthPack;
-    [SerializeField] private UnityEvent healthPackGained;
-    [SerializeField] private UnityEvent healthPackUsed;
+    [Header ("Events")]
+      [SerializeField] private  UnityEvent attack;
+      [SerializeField] private  UnityEvent fireProjectile;
+      [SerializeField] private  UnityEvent projectileAttackHasCooledDown;
+      [SerializeField] private  UnityEvent dash;
+      [SerializeField] private  UnityEvent teleport;
+      [SerializeField] private  UnityEvent ability;
+      [SerializeField] private  UnityEvent healthIncrease;
+      [SerializeField] private  UnityEvent healthDecrease;
+      [SerializeField] private  UnityEvent playerDied;
+      [SerializeField] private  UnityEvent playerRespawned;
+      [SerializeField] private  UnityEvent playerRespawnLocationUpdated;
+      [SerializeField] private  UnityEvent fullOnHealthPacks;
+      [SerializeField] private  UnityEvent outOfHealthPack;
+      [SerializeField] private  UnityEvent healthPackGained;
+      [SerializeField] private  UnityEvent healthPackUsed;
 
 
    // public Animator animator;
@@ -138,29 +146,33 @@ public void Update()
         // moving player
         if (playerHasControl) rb.velocity = new Vector3(input.x, input.y, 0) * moveSpeed * Time.deltaTime;
 
-        // rotating player
-        if (playerRotater != null) {
-            if (input.x != 0 || input.y != 0) {
-                float angle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
-                playerRotater.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            }
+      // rotating player
+      if (playerRotater != null && playerHasControl){
+        if (input.x != 0 || input.y != 0){
+          float angle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
+          playerRotater.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         }
     }
 
-
-
-    public void PlayerTeleport() {
+    public void PlayerTeleport(){
+      if(playerHasControl){
         rb.MovePosition(blinkPoint.transform.position);
         teleport.Invoke();
         Debug.Log("Player has teleported");
+      }
     }
 
-    public void Attack() {
-        if (playerHasControl) {
-            attack.Invoke();
-            Debug.Log("The player is attacking");
-            StartCoroutine(PlayerAttack());
-        }
+    public void SetPlayerPosition(Vector3 input){
+      rb.velocity = new Vector3(0,0,0);
+      gameObject.transform.position = input;
+    }
+
+    public void Attack(){
+      if(playerHasControl){
+        attack.Invoke();
+        Debug.Log("The player is attacking");
+        StartCoroutine(PlayerAttack());
+      }
     }
 
     public void ProjectileAbility() {
@@ -228,10 +240,17 @@ public void Update()
 
     // TODO: add event handler for player death
     // Will kill the player
-    public void Death() {
-        playerDeath.Invoke();
-        Debug.Log("Player has died");
-        Destroy(gameObject, playerDeathTimeLength);
+    public void Death(){
+      Debug.Log("Player has died");
+      playerDied.Invoke();
+      StartCoroutine(PlayerDeathAndRespawn());
+    }
+
+    // Sets the position that the players will respawn at
+    public void SetPlayerRespawnPosition(Vector3 input){
+      respawnLocation = input;
+      playerRespawnLocationUpdated.Invoke();
+      Debug.Log("Something updated the players respawn position");
     }
 
     // --- HealthPacks ------------------------------------------------
@@ -352,5 +371,16 @@ public void Update()
         EventController.Instance.OnPlayerDeath -= Death;
     }
 
+    public IEnumerator PlayerDeathAndRespawn(){
+      playerHasControl = false;
+      rb.velocity = new Vector3(0,0,0);
 
+      yield return new WaitForSeconds(timeToWaitToRespawn);
+      SetPlayerPosition(respawnLocation);
+      setCurrentHealth(maxHealth);
+      Debug.Log("The Player has respawned");
+      playerRespawned.Invoke();
+
+      playerHasControl = true;
+    }
 }

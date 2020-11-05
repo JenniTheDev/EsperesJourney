@@ -1,4 +1,4 @@
-﻿// Brought to you by Jenni
+﻿// brought to you by Jenni
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,8 +68,8 @@ public class SoundManager : MonoBehaviour {
         pauseMusic.Play();
     }
 
-    private void PlayPlayerDeathMusic() {
-        playerDeath.Play();
+    private void PlayGameOverMusic() {
+        gameOver.Play();
     }
 
     private void PlayHealthPotPickup() {
@@ -81,15 +81,13 @@ public class SoundManager : MonoBehaviour {
         Unsubscribe();
         EventController.Instance.OnResume += PlayLevelMusic;
         EventController.Instance.OnPause += PlayPauseMusic;
-        EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
-        EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
+        EventController.Instance.OnGameOver += PlayGameOverMusic;
     }
 
     private void Unsubscribe() {
         EventController.Instance.OnResume -= PlayLevelMusic;
         EventController.Instance.OnPause -= PlayPauseMusic;
-        EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;
-        EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
+        EventController.Instance.OnGameOver -= PlayGameOverMusic;
     }
     #endregion
 

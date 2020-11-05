@@ -1,5 +1,4 @@
-﻿// Brought to you by Jenni
-using System;
+﻿using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
@@ -13,10 +12,10 @@ public class PlayerManager : MonoBehaviour {
     [SerializeField] private int availableHealthPots;
     [SerializeField] private int MAXHPOTS = 3;
 
-    // TODO Player Sounds - Moved to SoundManager , but should they be left here??
-    // [SerializeField] private AudioSource dashSound;
-    // [SerializeField] private AudioSource attackSound;
-    // [SerializeField] private AudioSource teleportSound;
+    // Player Sounds
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource attackSound;
+    [SerializeField] private AudioSource teleportSound;
 
     // Player game object  (not sure if this is right)
     [SerializeField] private GameObject player;
@@ -33,6 +32,12 @@ public class PlayerManager : MonoBehaviour {
         set { playerHealth = Math.Max(0, value); }
     }
 
+    public int LivesLeft {
+        get { return livesLeft; }
+        set { livesLeft = Math.Max(0, value); }
+    }
+
+    public int CoinsCollected {
     public int CoinsCollected {
         get { return coinsCollected; }
         set { coinsCollected = Math.Max(0, value); }
@@ -46,7 +51,7 @@ public class PlayerManager : MonoBehaviour {
 
 
     #region Monobehaviors
-    // On awake?
+
     void Start() {
         Subscribe();
         character = GetComponent<Rigidbody2D>();
@@ -55,13 +60,8 @@ public class PlayerManager : MonoBehaviour {
         treasureChestMask = LayerMask.NameToLayer("Treasure");
     }
 
-    private void OnEnable() {
-        Subscribe();
     }
 
-    private void OnDisable() {
-        Unsubscribe();
-    }
     #endregion
 
 
@@ -89,6 +89,7 @@ public class PlayerManager : MonoBehaviour {
         EventController.Instance.BroadcastCoinUpdate(coinsCollected);
     }
 
+    // TODO LivesLeft, health pots OnEnable, OnDisable, Subscribe and Unsubscribe
     public void HealthPotsOnEnable()
     {
         if ((availableHealthPots + 1) <= MAXHPOTS)
