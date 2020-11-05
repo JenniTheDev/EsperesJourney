@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyDoor : MonoBehaviour {
+public class KeyDoor : MonoBehaviour, ITriggerable {
 
     [SerializeField] private Key.KeyType keyType;
 
@@ -27,16 +27,9 @@ public class KeyDoor : MonoBehaviour {
     //}
 
 
-    // Might be more practical to set door as active during boss fight 
+    ////// Might be more practical to set door as active during boss fight 
 
-    //private void OnTriggerExit2D(Collider2D collider) {
-    //    KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
-    //    if (keyHolder != null) {
-    //        CloseDoor();
-    //    }
-
-
-    //}
+    
 
     public void OpenDoor() {
 
@@ -60,5 +53,17 @@ public class KeyDoor : MonoBehaviour {
         // AudioSource doorFailSound = GetComponent<AudioSource>();
         // doorFailSound.Play();
         // Debug.Log("door fail sound");
+    }
+
+    public void TriggerExecute() {
+        OpenDoor();
+
+
+    }
+
+    public void TriggerRelease() {
+        CloseDoor();
+
+
     }
 }
