@@ -10,7 +10,10 @@ public class Key : MonoBehaviour {
         None,
         Blue,
         Green,
-        Red
+        Red,
+        Yellow,
+        Black,
+        Grey,
     }
 
     public KeyType GetKeyType() {
@@ -23,6 +26,9 @@ public class Key : MonoBehaviour {
             case KeyType.Red: return Color.red;
             case KeyType.Green: return Color.green;
             case KeyType.Blue: return Color.blue;
+            case KeyType.Yellow: return Color.yellow;
+            case KeyType.Black: return Color.black;
+            case KeyType.Grey: return Color.grey;
         }
     }
  }

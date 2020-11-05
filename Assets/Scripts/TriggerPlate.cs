@@ -5,7 +5,10 @@ using UnityEngine;
 public class TriggerPlate : MonoBehaviour {
 
     [SerializeField] private GameObject door;
-    [SerializeField] private Key.KeyType keyType;
+    // for only one key
+     [SerializeField] private Key.KeyType keyType;
+    // For a list of keys
+    // [SerializeField] private List<Key.KeyType> keyList;
     private ITriggerable triggeredItem;
 
     private void Start() {
