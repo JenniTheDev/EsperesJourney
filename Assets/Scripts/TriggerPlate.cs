@@ -5,7 +5,8 @@ using UnityEngine;
 public class TriggerPlate : MonoBehaviour {
 
     [SerializeField] private GameObject door;
-     private ITriggerable triggeredItem;
+    [SerializeField] private Key.KeyType keyType;
+    private ITriggerable triggeredItem;
 
     private void Start() {
         triggeredItem = door.GetComponent<ITriggerable>();
@@ -13,11 +14,10 @@ public class TriggerPlate : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collider) {
         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
-        if (keyHolder != null) {
+        if (keyHolder != null && keyHolder.ContainsKey(keyType)) {
             triggeredItem.TriggerExecute();
         }
     }
-
 
     private void OnTriggerExit2D(Collider2D collider) {
         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();

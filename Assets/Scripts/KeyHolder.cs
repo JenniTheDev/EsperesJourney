@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyHolder : MonoBehaviour
-{
+public class KeyHolder : MonoBehaviour {
     // The key can be shown on the UI if we want
     // Or we can just leave them in the list
     // They can be single use or used until a point when the list is cleared
@@ -22,7 +21,7 @@ public class KeyHolder : MonoBehaviour
 
     public void AddKey(Key.KeyType keyType) {
         Debug.Log("Added Key:" + keyType);
-            keyList.Add(keyType);
+        keyList.Add(keyType);
     }
 
     public void RemoveKey(Key.KeyType keyType) {
@@ -44,31 +43,30 @@ public class KeyHolder : MonoBehaviour
             // Play key pickup sound?
             // broadcast key pickup ? 
         }
-        KeyDoor keyDoor = collider.GetComponent<KeyDoor>();
-           if (keyDoor != null) {
-            // if holding the right key to the door
-            if (ContainsKey(keyDoor.GetKeyType())) {
-                keyDoor.OpenDoor();
-                // Remove Key if single use key
-               // RemoveKey(keyDoor.GetKeyType());
-                
-            } else {
-                // play fail sound for key?
-                // fail door animation ?
-            }
-        } 
+        //    KeyDoor keyDoor = collider.GetComponent<KeyDoor>();
+        //       if (keyDoor != null) {
+        //        // if holding the right key to the door
+        //        if (ContainsKey(keyDoor.GetKeyType())) {
+        //            keyDoor.OpenDoor();
+        //            // Remove Key if single use key
+        //           // RemoveKey(keyDoor.GetKeyType());
+
+        //        } else {
+        //            // play fail sound for key?
+        //            // fail door animation ?
+        //        }
+        //    } 
+        }
+
+        // For event manager
+        public void Subscribe() {
+            Unsubscribe();
+            // event for key use ?     
+        }
+
+        public void Unsubscribe() {
+
+        }
+
+
     }
-
-    // For event manager
-    public void Subscribe() {
-        Unsubscribe();
-        // event for key use ? 
-        
-    }
-
-    public void Unsubscribe() {
-
-    }
-
-
-}

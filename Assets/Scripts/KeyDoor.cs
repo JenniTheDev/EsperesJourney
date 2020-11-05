@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour, ITriggerable {
 
-    [SerializeField] private Key.KeyType keyType;
+    // [SerializeField] private Key.KeyType keyType;
 
     // private DoorAnims doorAnims;
 
@@ -13,32 +13,18 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
         // doorAnims = GetComponent<DoorAnims>();
     }
 
-    public Key.KeyType GetKeyType() {
-        return keyType;
-    }
+   // public Key.KeyType GetKeyType() {
+   //     return keyType;
+   // }
 
-    //private void OnTriggerEnter2D(Collider2D collider) {
-    //    KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
-    //    if (keyHolder != null) {
-    //        if (keyHolder.ContainsKey(keyType)) {
-    //            OpenDoor();
-    //        }
-    //    }
-    //}
-
-
-    ////// Might be more practical to set door as active during boss fight 
-
-    
+     //TODO: Lock door on boss fight  
+ 
 
     public void OpenDoor() {
-
-        //  doorAnims.OpenDoor();
+        // doorAnims.OpenDoor();
         // sets door inactive when key is used - could also destroy object ? 
         // Play door sound
         gameObject.SetActive(false);
-
-
     }
 
 
@@ -57,13 +43,9 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
 
     public void TriggerExecute() {
         OpenDoor();
-
-
     }
 
     public void TriggerRelease() {
         CloseDoor();
-
-
     }
 }
