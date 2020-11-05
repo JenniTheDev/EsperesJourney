@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class KeyHolder : MonoBehaviour
 {
-    // The key list will need to be shown on the UI if this is used
+    // The key can be shown on the UI if we want
+    // Or we can just leave them in the list
+    // They can be single use or used until a point when the list is cleared
 
     [SerializeField] private List<Key.KeyType> keyList;
 
@@ -48,7 +50,7 @@ public class KeyHolder : MonoBehaviour
             if (ContainsKey(keyDoor.GetKeyType())) {
                 keyDoor.OpenDoor();
                 // Remove Key if single use key
-                RemoveKey(keyDoor.GetKeyType());
+               // RemoveKey(keyDoor.GetKeyType());
                 
             } else {
                 // play fail sound for key?

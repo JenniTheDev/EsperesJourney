@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// Jenni
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,20 +10,45 @@ public class KeyDoor : MonoBehaviour {
     // private DoorAnims doorAnims;
 
     private void Awake() {
-       // doorAnims = GetComponent<DoorAnims>();
+        // doorAnims = GetComponent<DoorAnims>();
     }
 
     public Key.KeyType GetKeyType() {
         return keyType;
     }
 
+    //private void OnTriggerEnter2D(Collider2D collider) {
+    //    KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
+    //    if (keyHolder != null) {
+    //        if (keyHolder.ContainsKey(keyType)) {
+    //            OpenDoor();
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerExit2D(Collider2D collider) {
+         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
+         if (keyHolder != null) {
+              CloseDoor();
+          }
+
+        
+    }
+
     public void OpenDoor() {
 
         //  doorAnims.OpenDoor();
-        // hides door when key is used - could also destroy object ? 
+        // sets door inactive when key is used - could also destroy object ? 
         // Play door sound
-         gameObject.SetActive(false);
-       
+        gameObject.SetActive(false);
+
+    }
+
+
+    public void CloseDoor() {
+        gameObject.SetActive(true);
+        // doorAnim.PlayCloseAnim();
+        // play door closed sound
     }
 
     public void PlayOpenFailAnim() {
