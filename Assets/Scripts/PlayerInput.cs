@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-  /* Description --
-   *  This script will handel the player inputs using the new input manager package
-   *  This is done this way so that the player object can be destroyed and respawned easily
-   *  This script was copied from one of my other projects
-   */
+    /* Description --
+     *  This script will handel the player inputs using the new input manager package
+     *  This is done this way so that the player object can be destroyed and respawned easily
+     *  This script was copied from one of my other projects
+     */
 
-  public PlayerController playerScript;  // This references the script on the player object we need to access
+     public PlayerController playerScript;  // This references the script on the player object we need to access
+ 
   public Player Player;                  // This references the input action map
   private GameObject _Player;            // This references the player gameObject in the scene
 
@@ -51,10 +52,10 @@ public class PlayerInput : MonoBehaviour
 
       Player.Character.Move.performed += ctx => playerScript.moveDirection = ctx.ReadValue<Vector2>(); // This permantly binds the given inputs to the script with no need for any update function
       Player.Character.Dash.performed += ctx => playerScript.Dash();
-      Player.Character.Attack.performed += ctx => playerScript.Attack();
+    //  Player.Character.Attack.performed += ctx => playerScript.Attack();
       Player.Character.Blink.performed += ctx => playerScript.PlayerTeleport();
-      Player.Character.Shoot.performed += ctx => playerScript.ProjectileAbility();
-      Player.Character.Heal.performed += ctx => playerScript.updateCurrentHealthPacks(-1);
+   //   Player.Character.Shoot.performed += ctx => playerScript.ProjectileAbility();
+    //  Player.Character.Heal.performed += ctx => playerScript.updateCurrentHealthPacks(-1);
   }
 
   // This waits for a player to be Instantiated, when one is it will bind the inputs

@@ -1,0 +1,1256 @@
+fileFormatVersion: 2
+guid: 1aeb0da53a672784fbd8d0b52baba615
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8005097014741587281
+    second: Sewer Props dirty_0
+  - first:
+      213: -4436271570680348924
+    second: Sewer Props dirty_1
+  - first:
+      213: -7672893343467657186
+    second: Sewer Props dirty_2
+  - first:
+      213: 8371645494264255508
+    second: Sewer Props dirty_3
+  - first:
+      213: 4516322358022952109
+    second: Sewer Props dirty_4
+  - first:
+      213: 5951036300380696463
+    second: Sewer Props dirty_5
+  - first:
+      213: 9123075341566079597
+    second: Sewer Props dirty_6
+  - first:
+      213: -8432530916650097939
+    second: Sewer Props dirty_7
+  - first:
+      213: -5759124799570351137
+    second: Sewer Props dirty_8
+  - first:
+      213: 162967782963661971
+    second: Sewer Props dirty_9
+  - first:
+      213: 98989057138047578
+    second: Sewer Props dirty_10
+  - first:
+      213: 2379870481576117415
+    second: Sewer Props dirty_11
+  - first:
+      213: -4863464413700203091
+    second: Sewer Props dirty_12
+  - first:
+      213: -7072182145605034159
+    second: Sewer Props dirty_13
+  - first:
+      213: 4572655677681764607
+    second: Sewer Props dirty_14
+  - first:
+      213: 5344157219807098011
+    second: Sewer Props dirty_15
+  - first:
+      213: 685756231595540259
+    second: Sewer Props dirty_16
+  - first:
+      213: 2244209281979651875
+    second: Sewer Props dirty_17
+  - first:
+      213: 4824015183472178788
+    second: Sewer Props dirty_18
+  - first:
+      213: -2257351669644942934
+    second: Sewer Props dirty_19
+  - first:
+      213: 1546097928022773745
+    second: Sewer Props dirty_20
+  - first:
+      213: 6152988543763879204
+    second: Sewer Props dirty_21
+  - first:
+      213: 309314925393871490
+    second: Sewer Props dirty_22
+  - first:
+      213: 5823871108197750525
+    second: Sewer Props dirty_23
+  - first:
+      213: -7611509991355543301
+    second: Sewer Props dirty_24
+  - first:
+      213: 2253535215344472765
+    second: Sewer Props dirty_25
+  - first:
+      213: -766499455627573769
+    second: Sewer Props dirty_26
+  - first:
+      213: -5052703619457094238
+    second: Sewer Props dirty_27
+  - first:
+      213: -786218581509090027
+    second: Sewer Props dirty_28
+  - first:
+      213: -8597641460798258242
+    second: Sewer Props dirty_29
+  - first:
+      213: 1657559536224158159
+    second: Sewer Props dirty_30
+  - first:
+      213: 582409226891290676
+    second: Sewer Props dirty_31
+  - first:
+      213: 9031264287725716418
+    second: Sewer Props dirty_32
+  - first:
+      213: 6520838299834059044
+    second: Sewer Props dirty_33
+  - first:
+      213: 4168773181798576325
+    second: Sewer Props dirty_34
+  - first:
+      213: -8311090321889799680
+    second: Sewer Props dirty_35
+  - first:
+      213: 722420747043609707
+    second: Sewer Props dirty_36
+  - first:
+      213: -2062511579894609428
+    second: Sewer Props dirty_37
+  - first:
+      213: 9219982487911813474
+    second: Sewer Props dirty_38
+  - first:
+      213: 2714355224516150881
+    second: Sewer Props dirty_39
+  - first:
+      213: 852426275559054438
+    second: Sewer Props dirty_40
+  - first:
+      213: 5465490610208653027
+    second: Sewer Props dirty_0
+  - first:
+      213: 2183925065341197163
+    second: Sewer Props dirty_1
+  - first:
+      213: -2968332510639297494
+    second: Sewer Props dirty_2
+  - first:
+      213: 6621681669753554665
+    second: Sewer Props dirty_3
+  - first:
+      213: -4280901947006632571
+    second: Sewer Props dirty_4
+  - first:
+      213: 9058935844178237842
+    second: Sewer Props dirty_5
+  - first:
+      213: 5068494715308859673
+    second: Sewer Props dirty_6
+  - first:
+      213: 8867367484074876840
+    second: Sewer Props dirty_7
+  - first:
+      213: 5752116725441701217
+    second: Sewer Props dirty_8
+  - first:
+      213: 7693108856940071581
+    second: Sewer Props dirty_9
+  - first:
+      213: -7326489166947533979
+    second: Sewer Props dirty_10
+  - first:
+      213: 7983546981853138447
+    second: Sewer Props dirty_11
+  - first:
+      213: -3585183414161092679
+    second: Sewer Props dirty_12
+  - first:
+      213: 1943303139356747539
+    second: Sewer Props dirty_13
+  - first:
+      213: 5947343371881393658
+    second: Sewer Props dirty_14
+  - first:
+      213: 2203928563764833159
+    second: Sewer Props dirty_16
+  - first:
+      213: -6872731452548574176
+    second: Sewer Props dirty_17
+  - first:
+      213: 3138665996297622103
+    second: Sewer Props dirty_18
+  - first:
+      213: 3028027583168267284
+    second: Sewer Props dirty_19
+  - first:
+      213: 981887374729538646
+    second: Sewer Props dirty_20
+  - first:
+      213: 2688685658516990126
+    second: Sewer Props dirty_21
+  - first:
+      213: 5893638873192879213
+    second: Sewer Props dirty_22
+  - first:
+      213: -3637200118393676131
+    second: Sewer Props dirty_23
+  - first:
+      213: -7367512126158333095
+    second: Sewer Props dirty_24
+  - first:
+      213: -8288881292243373951
+    second: Sewer Props dirty_25
+  - first:
+      213: -8525723595439297495
+    second: Sewer Props dirty_26
+  - first:
+      213: -497957688284321820
+    second: Sewer Props dirty_27
+  - first:
+      213: 2434073428814498513
+    second: Sewer Props dirty_28
+  - first:
+      213: 6063610146268783504
+    second: Sewer Props dirty_29
+  - first:
+      213: 8284454029913665952
+    second: Sewer Props dirty_30
+  - first:
+      213: -3717300339188176031
+    second: Sewer Props dirty_31
+  - first:
+      213: -4724885918209731359
+    second: Sewer Props dirty_32
+  - first:
+      213: -485225987342479942
+    second: Sewer Props dirty_33
+  - first:
+      213: -7710717585279626277
+    second: Sewer Props dirty_34
+  - first:
+      213: -6610171988708032441
+    second: Sewer Props dirty_35
+  - first:
+      213: -5001618396985830224
+    second: Sewer Props dirty_36
+  - first:
+      213: -7814497253969403322
+    second: Sewer Props dirty_37
+  - first:
+      213: 7952466696648029342
+    second: Sewer Props dirty_38
+  - first:
+      213: -6631250581437928604
+    second: Sewer Props dirty_39
+  - first:
+      213: -4090691999325984279
+    second: Sewer Props dirty_40
+  - first:
+      213: 5414833758041819031
+    second: Sewer Props dirty_41
+  - first:
+      213: 1408486545104586285
+    second: Sewer Props dirty_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sewer Props dirty_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 145
+        width: 66
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faaa9cb8dae28e090800000000000000
+      internalID: -8005097014741587281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 165
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ffe66c2823f62c0800000000000000
+      internalID: -4436271570680348924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_2
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 173
+        width: 96
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18a6272828648590800000000000000
+      internalID: -7672893343467657186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_3
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 140
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414de1fd83f0e2470800000000000000
+      internalID: 8371645494264255508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_4
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 115
+        width: 43
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4dc1191433dae30800000000000000
+      internalID: 4516322358022952109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_5
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 115
+        width: 38
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f65a93cf3569250800000000000000
+      internalID: 5951036300380696463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_6
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 143
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62fb21efacab9e70800000000000000
+      internalID: 9123075341566079597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_7
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 152
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2629b0fc1a9fa80800000000000000
+      internalID: -8432530916650097939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_8
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 103
+        width: 29
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb6778028a7310b0800000000000000
+      internalID: -5759124799570351137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_9
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 67
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cc16dc55af24200800000000000000
+      internalID: 162967782963661971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_10
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 70
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a3d53e50eaf5100800000000000000
+      internalID: 98989057138047578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 110
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a448c9089ff60120800000000000000
+      internalID: 2379870481576117415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_12
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 89
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad55ab22e0818cb0800000000000000
+      internalID: -4863464413700203091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_13
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 71
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f1a500fcf8add90800000000000000
+      internalID: -7072182145605034159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_14
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 44
+        width: 18
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff80564ac16557f30800000000000000
+      internalID: 4572655677681764607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_16
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 84
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f33cac8ab448900800000000000000
+      internalID: 685756231595540259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_17
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 84
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327180e9378052f10800000000000000
+      internalID: 2244209281979651875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_18
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 78
+        width: 74
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46633f9204852f240800000000000000
+      internalID: 4824015183472178788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_19
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 71
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1adadcd964ca0e0800000000000000
+      internalID: -2257351669644942934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_20
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 73
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffc3cbbfd7d47510800000000000000
+      internalID: 1546097928022773745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_21
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 72
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425181a0b7ec36550800000000000000
+      internalID: 6152988543763879204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_22
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 59
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28204db2948ea4400800000000000000
+      internalID: 309314925393871490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_23
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 63
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df699cdaaeb82d050800000000000000
+      internalID: 5823871108197750525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_24
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 51
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf09ae88dfb7e5690800000000000000
+      internalID: -7611509991355543301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_25
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 27
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2d07fa65a264f10800000000000000
+      internalID: 2253535215344472765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_26
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 59
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5c9c26ec8dc55f0800000000000000
+      internalID: -766499455627573769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_27
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 45
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adede614d031e9b0800000000000000
+      internalID: -5052703619457094238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_28
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 50
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515d65d9d5ac615f0800000000000000
+      internalID: -786218581509090027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_29
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 48
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb303f6c4aa0fa880800000000000000
+      internalID: -8597641460798258242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_30
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 25
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1c3b6bd95d00710800000000000000
+      internalID: 1657559536224158159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_31
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 26
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438e3ca2b12251800800000000000000
+      internalID: 582409226891290676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_32
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 37
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3009e150f755d70800000000000000
+      internalID: 9031264287725716418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_33
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 27
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4290f5382ebae7a50800000000000000
+      internalID: 6520838299834059044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_34
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 27
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0774a2f157ad930800000000000000
+      internalID: 4168773181798576325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_35
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 25
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0025293e26319ac80800000000000000
+      internalID: -8311090321889799680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_36
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 27
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c18e587dd860a00800000000000000
+      internalID: 722420747043609707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_37
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 25
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9804f45ac7063e0800000000000000
+      internalID: -2062511579894609428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_38
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 27
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2615e432935f3ff70800000000000000
+      internalID: 9219982487911813474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_39
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 27
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166c28702b35ba520800000000000000
+      internalID: 2714355224516150881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_40
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 27
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c18e76e2d64db00800000000000000
+      internalID: 852426275559054438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_15
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 63
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94f0764da24a2a40800000000000000
+      internalID: 5344157219807098011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_41
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 50
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79740e92d9a552b40800000000000000
+      internalID: 5414833758041819031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer Props dirty_42
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 37
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2640efdc03fb8310800000000000000
+      internalID: 1408486545104586285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
