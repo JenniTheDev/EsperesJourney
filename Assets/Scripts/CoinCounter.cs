@@ -8,16 +8,28 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private Text coinsTxt;
     private void OnEnable()
     {
-        //subscribe to eventcontroller OnHealthPotsUpdate
-        EventController.Instance.OnCoinUpdate += UpdateCoinCounter;
+        Subscribe();
     }
     private void OnDisable()
     {
-        //unsubscribe to eventcontroller OnHealthPotsUpdate
-        EventController.Instance.OnCoinUpdate -= UpdateCoinCounter;
+        Unsubscribe();  
     }
 
     private void UpdateCoinCounter(int coins) {
         coinsTxt.text = coins.ToString();
     }
+
+    public void Subscribe() {
+        Unsubscribe();
+        //subscribe to eventcontroller OnHealthPotsUpdate
+       // EventController.Instance.OnCoinUpdate += UpdateCoinCounter;
+    }
+
+    public void Unsubscribe() {
+        //unsubscribe to eventcontroller OnHealthPotsUpdate
+      //  EventController.Instance.OnCoinUpdate -= UpdateCoinCounter;
+    }
+
+
+
 }

@@ -54,6 +54,11 @@ public class EventController {
     public delegate void OnObjectDestroyHandler();
     public event OnObjectDestroyHandler OnObjectDestroy;
 
+    public delegate void OnCoinUpdateHandler();
+    public event OnCoinUpdateHandler OnCoinUpdate;
+
+    
+
 
 
 
@@ -100,6 +105,11 @@ public class EventController {
     public void BroadcastOnObjectDestroy() {
         OnObjectDestroy?.Invoke();
         Debug.Log("Broadcast Object Destroy");
+    }
+
+    public void BroadcastOnCoinUpdate() {
+        OnCoinUpdate?.Invoke();
+        Debug.Log("Broadcast Coin Update");
     }
 
     #endregion

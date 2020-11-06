@@ -107,12 +107,12 @@ public class PlayerController : MonoBehaviour {
             rb = gameObject.GetComponent<Rigidbody2D>();
         }
 
-        // Subscribe();
+       
 
     }
 
     private void OnDisable() {
-       // Unsubscribe();
+      
     }
 
 
@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         public void Ability() {
-           // ability.Invoke();
+            ability.Invoke();
         }
 
         // --- Health --------------------------------------------------------

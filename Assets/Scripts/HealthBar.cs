@@ -11,12 +11,12 @@ public class HealthBar : MonoBehaviour
     {
         slider = gameObject.GetComponent<Slider>();
         //subscribe to eventcontroller OnHealthPotsUpdate
-        EventController.Instance.OnHealthUpdate += UpdateHealthBar;
+       // EventController.Instance.OnHealthUpdate += UpdateHealthBar;
     }
     private void OnDisable()
     {
         //unsubscribe to eventcontroller OnHealthPotsUpdate
-        EventController.Instance.OnHealthUpdate -= UpdateHealthBar;
+       // EventController.Instance.OnHealthUpdate -= UpdateHealthBar;
     }
 
     // UpdateHPCounter is called when OnHealthUpdate is broadcasted
