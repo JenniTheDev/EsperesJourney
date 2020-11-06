@@ -32,12 +32,9 @@ public class PlayerManager : MonoBehaviour {
         set { playerHealth = Math.Max(0, value); }
     }
 
-    public int LivesLeft {
-        get { return livesLeft; }
-        set { livesLeft = Math.Max(0, value); }
-    }
+    
 
-    public int CoinsCollected {
+    
     public int CoinsCollected {
         get { return coinsCollected; }
         set { coinsCollected = Math.Max(0, value); }
@@ -60,7 +57,7 @@ public class PlayerManager : MonoBehaviour {
         treasureChestMask = LayerMask.NameToLayer("Treasure");
     }
 
-    }
+    
 
     #endregion
 
@@ -73,20 +70,20 @@ public class PlayerManager : MonoBehaviour {
         playerHealth += value;
 
         // Update UI Health Amount
-        EventController.Instance.BroadcastHealthUpdate(playerHealth);
+       // EventController.Instance.BroadcastHealthUpdate(playerHealth);
     }
 
     public void DecreaseHealth(int value) {
         playerHealth += value;
 
         // Update UI Health Amount
-        EventController.Instance.BroadcastHealthUpdate(playerHealth);
+       // EventController.Instance.BroadcastHealthUpdate(playerHealth);
     }
 
     public void CollectedCoins(int coinValue) {
         coinsCollected += coinValue;
         // Update UI coin amount with total coins collected
-        EventController.Instance.BroadcastCoinUpdate(coinsCollected);
+       // EventController.Instance.BroadcastCoinUpdate(coinsCollected);
     }
 
     // TODO LivesLeft, health pots OnEnable, OnDisable, Subscribe and Unsubscribe
@@ -96,7 +93,7 @@ public class PlayerManager : MonoBehaviour {
         {
             availableHealthPots += 1;
             //Update UI health pots
-            EventController.Instance.BroadcastHealthPotsUpdate(availableHealthPots, MAXHPOTS);
+           // EventController.Instance.BroadcastHealthPotsUpdate(availableHealthPots, MAXHPOTS);
         }
     }
 
@@ -106,7 +103,7 @@ public class PlayerManager : MonoBehaviour {
         {
             availableHealthPots -= 1;
             //broadcast event
-            EventController.Instance.BroadcastHealthPotsUpdate(availableHealthPots, MAXHPOTS);
+           // EventController.Instance.BroadcastHealthPotsUpdate(availableHealthPots, MAXHPOTS);
         }
     }
     // TODO LivesLeft, health pots OnEnable, OnDisable, Subscribe and Unsubscribe
@@ -140,24 +137,14 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
     private void Subscribe() {
         Unsubscribe();
-        EventController.Instance.OnHealthPotFind += IncreaseHealthPotNum;
+      //  EventController.Instance.OnHealthPotFind += IncreaseHealthPotNum;
         EventController.Instance.OnPlayerDeath += PlayerDied;
     }
 
     private void Unsubscribe() {
-        EventController.Instance.OnHealthPotFind -= IncreaseHealthPotNum;
+      //  EventController.Instance.OnHealthPotFind -= IncreaseHealthPotNum;
         EventController.Instance.OnPlayerDeath -= PlayerDied;
     }
 

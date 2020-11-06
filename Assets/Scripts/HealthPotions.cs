@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// Reeder ? 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,13 +13,11 @@ public class HealthPotions : MonoBehaviour
 
     private void OnEnable()
     {
-        //subscribe to eventcontroller OnHealthPotsUpdate
-        EventController.Instance.OnHealthPotsUpdate += UpdateCounter;
+        Subscribe();
     }
     private void OnDisable()
     {
-        //unsubscribe to eventcontroller OnHealthPotsUpdate
-        EventController.Instance.OnHealthPotsUpdate -= UpdateCounter;
+        Unsubscribe();
     }
 
     //UpdateCounter is called when OnHealthPotsUpdate is broadcasted
@@ -37,4 +36,19 @@ public class HealthPotions : MonoBehaviour
             }
         }
     }
+
+    public void Subscribe() {
+        Unsubscribe();
+       // EventController.Instance.OnHealthPotFind += UpdateCounter;
+    }
+
+    public void Unsubscribe() {
+      //  EventController.Instance.OnHealthPotFind -= UpdateCounter;
+    }
+
+
+
+
+
+
 }
