@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿// Jenni
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerPlateNoKey : MonoBehaviour
 {
-    [SerializeField] private GameObject door;
-  
+     [SerializeField] private GameObject door;
+   // [SerializeField] private List<GameObject> doors;
+
     private ITriggerable triggeredItem;
 
     private void Start() {
@@ -13,8 +15,10 @@ public class TriggerPlateNoKey : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-       
-            triggeredItem.TriggerExecute();
+        // AudioSource buttonClick = GetComponent<AudioSource>();
+        // buttonClick.Play();
+        // Debug.Log("Button Click Sound");
+        triggeredItem.TriggerExecute();
         
     }
 

@@ -5,19 +5,21 @@ using UnityEngine;
 
 public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     // This script only removes the blocking colider. 
-    // It is opening a route only
-
+    // It is a one way door
+    // should probably rename this
+    [SerializeField] private bool doorStartPosition;
     // private DoorAnims doorAnims;
 
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
+        gameObject.SetActive(doorStartPosition);
     }
         
     public void OpenDoor() {
         // doorAnims.OpenDoor();
         // sets door inactive when key is used - could also destroy object ? 
         // Play door sound
-        gameObject.SetActive(false);
+        gameObject.SetActive(!doorStartPosition);
     }
 
    public void PlayOpenFailAnim() {

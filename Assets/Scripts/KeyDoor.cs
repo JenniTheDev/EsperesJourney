@@ -9,8 +9,11 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
 
     // private DoorAnims doorAnims;
 
+    
+
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
+
     }
 
    // public Key.KeyType GetKeyType() {
@@ -22,8 +25,10 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
 
     public void OpenDoor() {
         // doorAnims.OpenDoor();
-        // sets door inactive when key is used - could also destroy object ? 
-        // Play door sound
+        
+        // AudioSource doorMoveSound = GetComponent<AudioSource>();
+        // doorMoveSound.Play();
+        // Debug.Log("door move sound");
         gameObject.SetActive(false);
     }
 
@@ -31,7 +36,9 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
     public void CloseDoor() {
         gameObject.SetActive(true);
         // doorAnim.PlayCloseAnim();
-        // play door closed sound
+        // AudioSource doorMoveSound = GetComponent<AudioSource>();
+        // doorMoveSound.Play();
+        // Debug.Log("door move sound");
     }
 
     public void PlayOpenFailAnim() {
