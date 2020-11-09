@@ -23,7 +23,7 @@ public class DoorBoolLock : MonoBehaviour, ITriggerable {
     }
 
     public void TriggerRelease() {
-        gameObject.SetActive(true);
+        // gameObject.SetActive(true);
     }
 
     public bool PermissionCheck() {
