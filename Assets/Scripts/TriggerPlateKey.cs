@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerPlate : MonoBehaviour {
+public class TriggerPlateKey : MonoBehaviour {
 
     [SerializeField] private GameObject door;
     // for only one key
