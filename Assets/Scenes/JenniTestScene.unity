@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1250586064}
+  isTriggered: 0
 --- !u!61 &40945756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -959,6 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 471876230}
+  isTriggered: 0
 --- !u!4 &186933551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2101631487383795482, guid: ed9e9a48436407544834e759351e7c3d,
@@ -2960,7 +2962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440546514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 367.5, y: 33.84, z: 0}
+  m_LocalPosition: {x: 53.35, y: 1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1264053184}
@@ -3057,6 +3059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 574917082}
+  isTriggered: 0
 --- !u!1 &471795050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6497,6 +6500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1985090412}
+  isTriggered: 0
 --- !u!61 &922613119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7076,6 +7080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1985090412}
+  isTriggered: 0
 --- !u!61 &1089214961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8560,10 +8565,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1250586064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5571840d645a4124b9ff07686c0530ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 0abbf45710f35064c9c489d2897c1c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorStartPosition: 0
+  numberOfSwitches: 2
+  triggerOne: {fileID: 1303164634}
+  triggerTwo: {fileID: 40945755}
 --- !u!61 &1250586067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8893,6 +8900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1250586064}
+  isTriggered: 0
 --- !u!61 &1303164635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74539,6 +74547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 2041754623}
+  isTriggered: 0
 --- !u!1 &2081120667
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,8 @@ using UnityEngine;
 public class TriggerPlateNoKey : MonoBehaviour
 {
      [SerializeField] private GameObject door;
-   // [SerializeField] private List<GameObject> doors;
-
+    // [SerializeField] private List<GameObject> doors;
+    [SerializeField] private bool isTriggered;
     private ITriggerable triggeredItem;
 
     private void Start() {
@@ -18,14 +18,19 @@ public class TriggerPlateNoKey : MonoBehaviour
         // AudioSource buttonClick = GetComponent<AudioSource>();
         // buttonClick.Play();
         // Debug.Log("Button Click Sound");
+        isTriggered = true;
         triggeredItem.TriggerExecute();
         
     }
 
     private void OnTriggerExit2D(Collider2D collider) {
-
+        isTriggered = false;
             triggeredItem.TriggerRelease();
-        
-
     }
+
+    public bool IsTriggered() {
+        return isTriggered;
+    }
+
+
 }
