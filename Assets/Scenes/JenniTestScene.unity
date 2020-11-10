@@ -3313,7 +3313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440546514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 219.5, y: 73.1, z: 0}
+  m_LocalPosition: {x: -4.89, y: 4.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1264053184}
@@ -7523,7 +7523,6 @@ GameObject:
   - component: {fileID: 906425570}
   - component: {fileID: 906425569}
   - component: {fileID: 906425571}
-  - component: {fileID: 906425572}
   m_Layer: 0
   m_Name: BridgeFromSwitchRoom
   m_TagString: Untagged
@@ -7635,18 +7634,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorStartPosition: 1
   doorDidItsJob: 0
---- !u!114 &906425572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906425567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61593a29f1919fc4cb3edd6881debc38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &922613116
 GameObject:
   m_ObjectHideFlags: 0

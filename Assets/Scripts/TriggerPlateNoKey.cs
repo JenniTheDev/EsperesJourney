@@ -31,7 +31,7 @@ public class TriggerPlateNoKey : MonoBehaviour {
             // Commented out to try event system to open door
             triggeredItem.TriggerExecute();
             // Broadcast door trigger event ? 
-            EventController.Instance.BroadcastOnTriggerUse();
+            // EventController.Instance.BroadcastOnTriggerUse();
         }
     }
 
