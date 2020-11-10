@@ -41,7 +41,7 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
         // Debug.Log("door move sound");
     }
 
-    public void PlayOpenFailAnim() {
+    public void DoorFail() {
         // doorAnim.PlayOpenFailAnim();
         // AudioSource doorFailSound = GetComponent<AudioSource>();
         // doorFailSound.Play();
