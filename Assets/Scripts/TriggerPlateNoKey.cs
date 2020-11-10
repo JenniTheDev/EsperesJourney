@@ -28,7 +28,10 @@ public class TriggerPlateNoKey : MonoBehaviour {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Character")) {
             isTriggered = true;
             Debug.Log("Is triggered" + isTriggered);
+            // Commented out to try event system to open door
             triggeredItem.TriggerExecute();
+            // Broadcast door trigger event ? 
+            EventController.Instance.BroadcastOnTriggerUse();
         }
     }
 
@@ -43,6 +46,7 @@ public class TriggerPlateNoKey : MonoBehaviour {
 
 
 }
+// Jenni's notes
 // for plates, can use array
 // check is this down all the way through
 // have another object that subscribes to the events
@@ -50,3 +54,4 @@ public class TriggerPlateNoKey : MonoBehaviour {
 //  check order
 // are the prievious ones good? 
 // when one is wrong, switch them all back 
+// indicator to let player know reset

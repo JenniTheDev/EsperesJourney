@@ -6,10 +6,13 @@ public class TriggerPlateKey : MonoBehaviour {
 
     [SerializeField] private GameObject door;
     // for only one key
-     [SerializeField] private Key.KeyType keyType;
+    // [SerializeField] private Key.KeyType keyType;
     // For a list of keys
-    // [SerializeField] private List<Key.KeyType> keyList;
+     [SerializeField] private List<Key.KeyType> keyList;
+    [SerializeField] private List<Key.KeyType> playerKeyList;
     private ITriggerable triggeredItem;
+    [SerializeField] private int numOfCorrectKeys = 0;
+    [SerializeField] private int numCorrectExpected; 
 
     private void Start() {
         triggeredItem = door.GetComponent<ITriggerable>();
@@ -17,8 +20,23 @@ public class TriggerPlateKey : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collider) {
         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
-        if (keyHolder != null && keyHolder.ContainsKey(keyType)) {
+        playerKeyList = keyHolder.GetKeyList();
+        if (keyHolder != null) {
+            for (int i = 0; i < playerKeyList.Count; i++) {
+                if (playerKeyList[i] == keyList[i]) {
+                    numOfCorrectKeys++;
+                }
+            }
+        }
+        if (numOfCorrectKeys == numCorrectExpected) {
+            keyHolder.ResetKeyList();
             triggeredItem.TriggerExecute();
+            gameObject.SetActive(false);
+        } else {
+            // play audio for fail 
+            // fail animation ? 
+            // If Keys are being used and the key objects are being destroyed, respawn key objects here
+            keyHolder.ResetKeyList();
         }
     }
 
