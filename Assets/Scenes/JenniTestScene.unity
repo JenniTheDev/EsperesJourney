@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0}
   moveSpeed: 300
-  dashSpeed: 0
+  dashSpeed: 10
   dashTimeLength: 0.5
   playerRotater: {fileID: 0}
   blinkPoint: {fileID: 0}
@@ -3135,23 +3135,32 @@ MonoBehaviour:
   currentNumberOfHealthPacks: 3
   maxNumberOfHealthPacks: 3
   minNumberOfHealthPacks: 0
-  tagsThatCanAffectObjectsHealth: []
+  tagsThatCanAffectObjectsHealth:
+  - Enemy
+  - Health
   playerIsDead: 0
-  timeToWaitToRespawn: 0.5
+  timeToWaitToRespawn: 5
   respawnLocation: {x: 0, y: 0, z: 0}
-  basicAttackObject: {fileID: 0}
-  basicAttackSpawnPoint: {fileID: 0}
+  basicAttackObject: {fileID: 7388582123865409461, guid: 104d3a4257fd4384c89f41f747391a28,
+    type: 3}
+  basicAttackSpawnPoint: {fileID: 2774401395151226017, guid: 68520dd4e3635724c96d488b03ed1e2d,
+    type: 3}
   basicAttackTimeLength: 1
   basicAttackObjectTimeLength: 0.25
-  projectileObject: {fileID: 0}
-  projectileSpawnPoint: {fileID: 0}
+  projectileObject: {fileID: 2774401395151226017, guid: 68520dd4e3635724c96d488b03ed1e2d,
+    type: 3}
+  projectileSpawnPoint: {fileID: 440546514}
   projectileTimeLength: 1
-  projectileObjectTimeLength: 0.25
+  projectileObjectTimeLength: 1
   projectileCoolDownTime: 3
   canUseProjectileAttack: 1
+  animator: {fileID: 0}
+  movemtentDirectionXFloat: Horizontal
+  movemtentDirectionYFloat: Vertical
+  movemtentDirectionSqrMagnitudeFloat: Speed
   playerDeathTimeLength: 0.1
   playerHasControl: 1
-  rb: {fileID: 0}
+  rb: {fileID: 440546518}
   attack:
     m_PersistentCalls:
       m_Calls: []
@@ -3178,10 +3187,76 @@ MonoBehaviour:
       m_Calls: []
   playerDied:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   playerRespawned:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   playerRespawnLocationUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -3197,7 +3272,6 @@ MonoBehaviour:
   healthPackUsed:
     m_PersistentCalls:
       m_Calls: []
-  animator: {fileID: 440546516}
 --- !u!95 &440546516
 Animator:
   serializedVersion: 3
@@ -8069,6 +8143,11 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6108951273502244193, guid: 5b7a830adbf0ddb4fa2f7cf55b1c730b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6108951273502244198, guid: 5b7a830adbf0ddb4fa2f7cf55b1c730b,
         type: 3}
       propertyPath: m_Radius
@@ -11143,6 +11222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 0}
+  _Player: {fileID: 0}
 --- !u!4 &1362857619
 Transform:
   m_ObjectHideFlags: 0
@@ -11697,6 +11777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108951273502244193, guid: 8d196175aeee4374690d914eccb1bffe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6108951273502244198, guid: 8d196175aeee4374690d914eccb1bffe,
         type: 3}
@@ -72508,6 +72593,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6108951273502244193, guid: 1d054ee43d0d8b5499de26d73d06f2c7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6108951273502244195, guid: 1d054ee43d0d8b5499de26d73d06f2c7,
         type: 3}
       propertyPath: keyType
@@ -72781,6 +72871,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108951273502244193, guid: ab0561ca487f94245ba15fa3a708926b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6108951273502244198, guid: ab0561ca487f94245ba15fa3a708926b,
         type: 3}

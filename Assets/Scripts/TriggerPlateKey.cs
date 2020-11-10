@@ -16,6 +16,7 @@ public class TriggerPlateKey : MonoBehaviour {
 
     private void Start() {
         triggeredItem = door.GetComponent<ITriggerable>();
+        numCorrectExpected = keyList.Count;
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
@@ -31,6 +32,7 @@ public class TriggerPlateKey : MonoBehaviour {
         if (numOfCorrectKeys == numCorrectExpected) {
             keyHolder.ResetKeyList();
             triggeredItem.TriggerExecute();
+            numOfCorrectKeys = 0;
             gameObject.SetActive(false);
         } else {
             // play audio for fail 

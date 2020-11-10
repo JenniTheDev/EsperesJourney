@@ -874,7 +874,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 262343025}
-  keyType: 1
+  keyList: 
+  playerKeyList: 
+  numOfCorrectKeys: 0
+  numCorrectExpected: 0
 --- !u!1001 &149635762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4121,6 +4124,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6157322793373976047, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157322793373976047, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c270bde6f540edc48a01f07da37cbd69, type: 3}
 --- !u!1 &657544749
@@ -6030,6 +6043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5571840d645a4124b9ff07686c0530ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorStartPosition: 0
+  doorDidItsJob: 0
 --- !u!1 &923802725
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,7 +6720,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 906425567}
-  keyType: 3
+  keyList: 
+  playerKeyList: 
+  numOfCorrectKeys: 0
+  numCorrectExpected: 0
 --- !u!61 &1146959031
 BoxCollider2D:
   m_ObjectHideFlags: 0
