@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour, ITriggerable {
 
-    // [SerializeField] private Key.KeyType keyType;
+    [SerializeField] private AudioSource doorOpenSound;
 
     // private DoorAnims doorAnims;
 
@@ -16,9 +16,7 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
 
     }
 
-   // public Key.KeyType GetKeyType() {
-   //     return keyType;
-   // }
+  
 
      //TODO: Lock door on boss fight  
  
@@ -27,9 +25,10 @@ public class KeyDoor : MonoBehaviour, ITriggerable {
         // doorAnims.OpenDoor();
         
         // AudioSource doorMoveSound = GetComponent<AudioSource>();
-        // doorMoveSound.Play();
+         doorOpenSound.Play();
         // Debug.Log("door move sound");
         gameObject.SetActive(false);
+       
     }
 
 

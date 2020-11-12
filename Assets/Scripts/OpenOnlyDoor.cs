@@ -10,7 +10,9 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     // should probably rename this
     [SerializeField] private bool doorStartPosition;
     [SerializeField] private bool doorDidItsJob;
+    [SerializeField] private AudioSource doorMotionSound;
     // private DoorAnims doorAnims;
+
 
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
@@ -23,7 +25,8 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         // doorAnims.OpenDoor();
         // sets door inactive when key is used - could also destroy object ? 
         // Play door sound
-
+        doorMotionSound.Play();
+       // EventController.Instance.BroadcastOnTriggerUse();
         // If using event manager to handle triggers, and you want to avoid triggering all doors every time
         // maybe ? 
         // if doorDidItsJob is false, then 

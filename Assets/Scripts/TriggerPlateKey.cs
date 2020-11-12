@@ -19,6 +19,11 @@ public class TriggerPlateKey : MonoBehaviour {
         numCorrectExpected = keyList.Count;
     }
 
+    // when keys collected = num of expected keys, check lists and trigger door
+    // may avoid having to specifically hit trigger
+    // if lists dont match, clear player key list, play fail sound
+
+
     private void OnTriggerEnter2D(Collider2D collider) {
         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
         playerKeyList = keyHolder.GetKeyList();
@@ -36,6 +41,7 @@ public class TriggerPlateKey : MonoBehaviour {
             gameObject.SetActive(false);
         } else {
             // play audio for fail 
+
             // fail animation ? 
             // If Keys are being used and the key objects are being destroyed, respawn key objects here
             keyHolder.ResetKeyList();

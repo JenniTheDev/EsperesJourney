@@ -9,7 +9,8 @@ public class DoorBoolLock : MonoBehaviour, ITriggerable {
     [SerializeField] private int numberOfSwitches;
      [SerializeField] private TriggerPlateNoKey triggerOne;
      [SerializeField] private TriggerPlateNoKey triggerTwo;
-    
+    [SerializeField] private AudioSource doorMotionSound;
+
     void Start() {
        
 
@@ -18,6 +19,7 @@ public class DoorBoolLock : MonoBehaviour, ITriggerable {
 
     public void TriggerExecute() {
        if (PermissionCheck() == true) {
+            doorMotionSound.Play();
             gameObject.SetActive(false);
         }
         

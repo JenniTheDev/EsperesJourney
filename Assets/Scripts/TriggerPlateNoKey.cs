@@ -25,7 +25,7 @@ public class TriggerPlateNoKey : MonoBehaviour {
         // anything on this layer to count
         // can set multiple layers to one object
 
-        if (collider.gameObject.layer == LayerMask.NameToLayer("Character")) {
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
             isTriggered = true;
             Debug.Log("Is triggered" + isTriggered);
             // Commented out to try event system to open door
