@@ -53,6 +53,8 @@ public class ObjectHealth : MonoBehaviour
 
       if (input > 0) healthIncrease.Invoke();
       if (input < 0) healthDecrease.Invoke();
+
+      if (isObjectDead()) Death();
   }
 
   // Returns true if the currentHealth is less than or equal to the minHealth
@@ -74,7 +76,6 @@ public class ObjectHealth : MonoBehaviour
 
       if(col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)){
         updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
-        if (isObjectDead()) Death();
       }
       else{
         Debug.Log ("This object does not have a damage script attached");
