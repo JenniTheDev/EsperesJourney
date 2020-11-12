@@ -119,7 +119,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void Update() {
-      MovementAnimation();
+        IdleAnimation();
+        MovementAnimation();
     }
 
     public void FixedUpdate() {
@@ -215,6 +216,15 @@ public class PlayerController : MonoBehaviour {
         animator.SetFloat(movemtentDirectionYFloat, moveDirection.y);
         animator.SetFloat(movemtentDirectionSqrMagnitudeFloat, moveDirection.sqrMagnitude);
       }
+    }
+
+    public void IdleAnimation()
+    {
+        if(moveDirection.x >= 0.1 || moveDirection.x <= -0.1 || moveDirection.y >= 0.1 || moveDirection.y <= -0.1)
+        {
+            animator.SetFloat("lastMoveHorizontal", -moveDirection.x);
+            animator.SetFloat("lastMoveVertical", moveDirection.y);
+        }
     }
 
     #endregion
