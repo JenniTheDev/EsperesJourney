@@ -142,7 +142,7 @@ MonoBehaviour:
   moveSpeed: 1
   rb: {fileID: 2364712726166288025}
   movementMode: 0
-  directionToMove: {x: 1, y: 0, z: 0}
+  directionToMove: {x: -1, y: 0, z: 0}
   useLocalSpace: 1
   objectToMoveTowards: {fileID: 0}
   lookForGameObjectOnAwake: 0

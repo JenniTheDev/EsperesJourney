@@ -150,7 +150,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 2373712438653992048}
   movementMode: 0
-  directionToMove: {x: 1, y: 0, z: 0}
+  directionToMove: {x: -1, y: 0, z: 0}
   useLocalSpace: 1
   objectToMoveTowards: {fileID: 0}
   lookForGameObjectOnAwake: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0.01
-  destroyOnImpactWithAnything: 1
-  destroyOnAwake: 1
+  destroyOnImpactWithAnyColliders: 1
+  destroyOnImpactWithAnyTriggers: 0
+  destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []

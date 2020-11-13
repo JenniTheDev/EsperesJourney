@@ -30,6 +30,7 @@ public class Spawn
 
     [Tooltip("Only works if this sensor is in UseObject Spawn Mode")]
     public GameObject spawnLocationGameObject;
+    public bool useGameObjectRotation = false;
 
     [Tooltip("Only works if this sensor is in UseCordinates Spawn Mode")]
     public Vector3 spawnLocation;

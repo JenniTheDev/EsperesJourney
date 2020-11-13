@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class DestroyObject : MonoBehaviour {
     [SerializeField] float destroyTimeDelay = 0.0f;
-    [SerializeField] bool destroyOnImpactWithAnything = false;
+    [SerializeField] bool destroyOnImpactWithAnyColliders = false;
+    [SerializeField] bool destroyOnImpactWithAnyTriggers = false;
     [SerializeField] bool destroyOnAwake = false;
     [SerializeField] List<string> tagsThatCanDestroyThisObject;
-    // Object health? If we want it to destroy with a few hits? 
+    // Object health? If we want it to destroy with a few hits?
 
     public void Awake() {
         if (destroyOnAwake) _Destory();
@@ -35,12 +36,12 @@ public class DestroyObject : MonoBehaviour {
     }
 
     public void OnCollisionEnter2D(Collision2D col) {
-        if (destroyOnImpactWithAnything) _Destory();
+        if (destroyOnImpactWithAnyColliders) _Destory();
         else if (canThisObjectDamageMe(col)) _Destory();
     }
 
     public void OnTriggerEnter2D(Collider2D col) {
-        if (destroyOnImpactWithAnything) _Destory();
+        if (destroyOnImpactWithAnyTriggers) _Destory();
         else if (canThisObjectDamageMe_Collider2D(col)) _Destory();
     }
 
