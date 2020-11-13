@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour {
     #region Game Audio
     // these sounds would originate from one direction
     [SerializeField] private AudioSource sewerLevelMusic;
-   // [SerializeField] private AudioClip sewerLevelMusicSound;
+    [SerializeField] private AudioClip sewerLevelMusicSound;
     [SerializeField] private AudioSource pauseMusic;
     [SerializeField] private AudioClip pauseMusicSound;
     [SerializeField] private AudioSource playerDeath;
@@ -94,6 +94,7 @@ public class SoundManager : MonoBehaviour {
 
     private void Subscribe() {
         Unsubscribe();
+        EventController.Instance.OnReset += PlayLevelMusic;
         EventController.Instance.OnResume += PlayLevelMusic;
         EventController.Instance.OnPause += PlayPauseMusic;
         EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
@@ -102,6 +103,7 @@ public class SoundManager : MonoBehaviour {
     }
 
     private void Unsubscribe() {
+        EventController.Instance.OnReset -= PlayLevelMusic;
         EventController.Instance.OnResume -= PlayLevelMusic;
         EventController.Instance.OnPause -= PlayPauseMusic;
         EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;

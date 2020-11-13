@@ -10,6 +10,7 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     // should probably rename this
     [SerializeField] private bool doorStartPosition;
     [SerializeField] private bool doorDidItsJob;
+    [SerializeField] private AudioClip doorMotionClip;
     [SerializeField] private AudioSource doorMotionSound;
     // private DoorAnims doorAnims;
 
