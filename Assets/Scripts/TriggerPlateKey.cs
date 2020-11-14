@@ -28,18 +28,20 @@ public class TriggerPlateKey : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collider) {
         KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
         playerKeyList = keyHolder.GetKeyList();
-        if (keyHolder != null) {
+        if (keyHolder != null && playerKeyList.Count <= numCorrectExpected) {
             for (int i = 0; i < playerKeyList.Count; i++) {
                 if (playerKeyList[i] == keyList[i]) {
                     numOfCorrectKeys++;
                 }
             }
         }
+        // if correct
         if (numOfCorrectKeys == numCorrectExpected) {
             keyHolder.ResetKeyList();
             triggeredItem.TriggerExecute();
             numOfCorrectKeys = 0;
             gameObject.SetActive(false);
+            // if not correct
         } else if (playerKeyList.Count >= numCorrectExpected) {
             doorFailSound.Play();
             keyHolder.ResetKeyList();
@@ -50,7 +52,7 @@ public class TriggerPlateKey : MonoBehaviour {
 
        
         // If Keys are being used and the key objects are being destroyed, respawn key objects here
-        keyHolder.ResetKeyList();
+       // keyHolder.ResetKeyList();
     }
 
         //while (keyHolder != null ) {
