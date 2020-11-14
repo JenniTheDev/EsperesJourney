@@ -9,8 +9,8 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     // It is a one way door
     // should probably rename this
     [SerializeField] private bool doorStartPosition;
-    [SerializeField] private bool doorDidItsJob;
-    [SerializeField] private AudioClip doorMotionClip;
+   // [SerializeField] private bool doorDidItsJob;
+   // [SerializeField] private AudioClip doorMotionClip;
     [SerializeField] private AudioSource doorMotionSound;
     // private DoorAnims doorAnims;
 
@@ -18,21 +18,24 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
         gameObject.SetActive(doorStartPosition);
-        doorDidItsJob = false;
+        // doorDidItsJob = false;
         Subscribe();
     }
         
     public void OpenDoor() {
+        // this is not working
+      //  WaitASecond(2);
         // doorAnims.OpenDoor();
         // sets door inactive when key is used - could also destroy object ? 
         // Play door sound
         doorMotionSound.Play();
-       // EventController.Instance.BroadcastOnTriggerUse();
+        // EventController.Instance.BroadcastOnTriggerUse();
         // If using event manager to handle triggers, and you want to avoid triggering all doors every time
         // maybe ? 
         // if doorDidItsJob is false, then 
+        // doorDidItsJob = true;
         gameObject.SetActive(!doorStartPosition);
-        doorDidItsJob = true;
+        
     }
 
    public void PlayOpenFailAnim() {
@@ -42,9 +45,9 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         // Debug.Log("door fail sound");
     }
 
-    public bool HasDoorMoved() {
-        return doorDidItsJob;
-    }
+   // public bool HasDoorMoved() {
+       // return doorDidItsJob;
+   // }
 
     public void TriggerExecute() {
         Debug.Log(" Trigger execute called");
@@ -64,6 +67,14 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         EventController.Instance.OnTriggerUse -= TriggerExecute;
 
     }
+
+    
+
+    IEnumerator WaitASecond(float delay) {
+        yield return new WaitForSecondsRealtime(delay);
+        doorMotionSound.Play();
+    }
+
 
 }
 

@@ -12,7 +12,8 @@ public class TriggerPlateKey : MonoBehaviour {
     [SerializeField] private List<Key.KeyType> playerKeyList;
     private ITriggerable triggeredItem;
     [SerializeField] private int numOfCorrectKeys = 0;
-    [SerializeField] private int numCorrectExpected; 
+    [SerializeField] private int numCorrectExpected;
+    [SerializeField] private AudioSource doorFailSound;
 
     private void Start() {
         triggeredItem = door.GetComponent<ITriggerable>();
@@ -39,20 +40,47 @@ public class TriggerPlateKey : MonoBehaviour {
             triggeredItem.TriggerExecute();
             numOfCorrectKeys = 0;
             gameObject.SetActive(false);
-        } else {
-            // play audio for fail 
-
-            // fail animation ? 
-            // If Keys are being used and the key objects are being destroyed, respawn key objects here
+        } else if (playerKeyList.Count >= numCorrectExpected) {
+            doorFailSound.Play();
             keyHolder.ResetKeyList();
+            numOfCorrectKeys = 0;
         }
+        // needs logic for wrong order? 
+       
+
+       
+        // If Keys are being used and the key objects are being destroyed, respawn key objects here
+        keyHolder.ResetKeyList();
     }
 
-    private void OnTriggerExit2D(Collider2D collider) {
-        KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
-        if (keyHolder != null) {
-            triggeredItem.TriggerRelease();
-        }
- 
+        //while (keyHolder != null ) {
+        //    for (int i = 0; i < playerKeyList.Count; i++) {
+        //        if (playerKeyList[i] == keyList[i]) {
+        //            numOfCorrectKeys++;
+        //        }
+        //    }
+        //    if (numOfCorrectKeys == numCorrectExpected) {
+        //        keyHolder.ResetKeyList();
+        //        triggeredItem.TriggerExecute();
+        //        numOfCorrectKeys = 0;
+        //        gameObject.SetActive(false);
+        //    } else if (playerKeyList.Count > numCorrectExpected) {
+        //        // play audio fail
+        //        keyHolder.ResetKeyList();
+        //        numOfCorrectKeys = 0;
+        //    }
+
+        //}
+
+
+
     }
-}
+
+//    private void OnTriggerExit2D(Collider2D collider) {
+//        KeyHolder keyHolder = collider.GetComponent<KeyHolder>();
+//        if (keyHolder != null) {
+//            triggeredItem.TriggerRelease();
+//        }
+ 
+//    }
+//}

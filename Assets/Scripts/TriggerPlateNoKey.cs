@@ -9,6 +9,7 @@ public class TriggerPlateNoKey : MonoBehaviour {
     [SerializeField] private bool isTriggered;
     private ITriggerable triggeredItem;
     // [SerializeField] private GameObject triggerObject;
+    [SerializeField] private AudioSource buttonClick;
 
 
     private void Start() {
@@ -16,9 +17,9 @@ public class TriggerPlateNoKey : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        // AudioSource buttonClick = GetComponent<AudioSource>();
-        // buttonClick.Play();
-        // Debug.Log("Button Click Sound");
+         
+       //  buttonClick.Play();
+       //  Debug.Log("Button Click Sound");
 
         // compare layer   or other.gameObject.layer 
         // if (other.gameObject.layer == LayerMask.GetMask("Character")){}
@@ -26,6 +27,8 @@ public class TriggerPlateNoKey : MonoBehaviour {
         // can set multiple layers to one object
 
         if (collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            buttonClick.Play();
+            Debug.Log("Button Click Sound");
             isTriggered = true;
             Debug.Log("Is triggered" + isTriggered);
             // Commented out to try event system to open door
