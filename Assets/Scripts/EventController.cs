@@ -57,6 +57,11 @@ public class EventController {
     public delegate void OnCoinUpdateHandler();
     public event OnCoinUpdateHandler OnCoinUpdate;
 
+    public delegate void OnTriggerUseHandler();
+    public event OnTriggerUseHandler OnTriggerUse;
+
+    
+
     
 
 
@@ -110,6 +115,11 @@ public class EventController {
     public void BroadcastOnCoinUpdate() {
         OnCoinUpdate?.Invoke();
         Debug.Log("Broadcast Coin Update");
+    }
+
+    public void BroadcastOnTriggerUse() {
+        OnTriggerUse?.Invoke();
+        Debug.Log("Broadcast Trigger Use");
     }
 
     #endregion

@@ -5,36 +5,42 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour, ITriggerable {
 
-    // [SerializeField] private Key.KeyType keyType;
+    [SerializeField] private AudioSource doorOpenSound;
 
     // private DoorAnims doorAnims;
 
+    
+
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
+
     }
 
-   // public Key.KeyType GetKeyType() {
-   //     return keyType;
-   // }
+  
 
      //TODO: Lock door on boss fight  
  
 
     public void OpenDoor() {
         // doorAnims.OpenDoor();
-        // sets door inactive when key is used - could also destroy object ? 
-        // Play door sound
+        
+        // AudioSource doorMoveSound = GetComponent<AudioSource>();
+         doorOpenSound.Play();
+        // Debug.Log("door move sound");
         gameObject.SetActive(false);
+       
     }
 
 
     public void CloseDoor() {
         gameObject.SetActive(true);
         // doorAnim.PlayCloseAnim();
-        // play door closed sound
+        // AudioSource doorMoveSound = GetComponent<AudioSource>();
+        // doorMoveSound.Play();
+        // Debug.Log("door move sound");
     }
 
-    public void PlayOpenFailAnim() {
+    public void DoorFail() {
         // doorAnim.PlayOpenFailAnim();
         // AudioSource doorFailSound = GetComponent<AudioSource>();
         // doorFailSound.Play();
