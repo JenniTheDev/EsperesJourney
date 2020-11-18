@@ -21,11 +21,18 @@ public class KeyHolder : MonoBehaviour {
 
     public void AddKey(Key.KeyType keyType) {
         Debug.Log("Added Key:" + keyType);
+        // AudioSource sucessPickup = GetComponent<AudioSource>();
+        // sucessPickup.Play();
+        // Debug.Log("Sucessful Key Pickup");
         keyList.Add(keyType);
     }
 
     public void RemoveKey(Key.KeyType keyType) {
         keyList.Remove(keyType);
+    }
+
+    public void ResetKeyList() {
+        keyList.Clear();
     }
 
     public bool ContainsKey(Key.KeyType keyType) {
@@ -38,8 +45,13 @@ public class KeyHolder : MonoBehaviour {
         if (key != null) {
             // Add key to list
             AddKey(key.GetKeyType());
+            // Play sucessful action sound 
+            
+
+
             // destroy key object
-            Destroy(key.gameObject);
+            // Not destroying key object since keys are not being physical keys for now
+            // Destroy(key.gameObject);
             // Play key pickup sound?
             // broadcast key pickup ? 
         }
@@ -56,17 +68,17 @@ public class KeyHolder : MonoBehaviour {
         //            // fail door animation ?
         //        }
         //    } 
-        }
+    }
 
-        // For event manager
-        public void Subscribe() {
-            Unsubscribe();
-            // event for key use ?     
-        }
+    // For event manager
+    public void Subscribe() {
+        Unsubscribe();
+        // event for key use ?     
+    }
 
-        public void Unsubscribe() {
-
-        }
-
+    public void Unsubscribe() {
 
     }
+
+
+}

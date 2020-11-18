@@ -25,6 +25,9 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource healthPotPickup;
     [SerializeField] private AudioClip healthPotPickupSound;
     // [SerializeField] private AudioSource healthPotUse;
+    [SerializeField] private AudioSource doorOpen;
+    [SerializeField] private AudioSource doorClose;
+    [SerializeField] private AudioSource doorFail;
 
 
 
@@ -59,7 +62,7 @@ public class SoundManager : MonoBehaviour {
     #region Methods
 
     private void PlayLevelMusic() {
-        sewerLevelMusic.clip = sewerLevelMusicSound;
+       // sewerLevelMusic.clip = sewerLevelMusicSound;
         sewerLevelMusic.Play();
 
     }
@@ -77,19 +80,35 @@ public class SoundManager : MonoBehaviour {
         healthPotPickup.Play();
     }
 
+    public void PlayDoorOpen() {
+        doorOpen.Play();
+    }
+
+    private void PlayDoorClose() {
+
+    }
+
+    private void PlayDoorFail() {
+
+    }
+
     private void Subscribe() {
         Unsubscribe();
+        EventController.Instance.OnReset += PlayLevelMusic;
         EventController.Instance.OnResume += PlayLevelMusic;
         EventController.Instance.OnPause += PlayPauseMusic;
         EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
         EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
+        EventController.Instance.OnTriggerUse += PlayDoorOpen;
     }
 
     private void Unsubscribe() {
+        EventController.Instance.OnReset -= PlayLevelMusic;
         EventController.Instance.OnResume -= PlayLevelMusic;
         EventController.Instance.OnPause -= PlayPauseMusic;
         EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;
         EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
+        EventController.Instance.OnTriggerUse -= PlayDoorOpen;
     }
     #endregion
 }

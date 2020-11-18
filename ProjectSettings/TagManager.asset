@@ -18,14 +18,14 @@ TagManager:
   - 
   - 
   - Wall
-  - Character
+  - Player
   - HealthPot
   - Treasure
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - SwitchOne
+  - SwitchTwo
+  - SwitchThree
+  - SwitchFour
   - 
   - 
   - 
