@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour {
       [SerializeField] int minNumberOfHealthPacks = 0;
       [Tooltip("List all the GameObject tags of objects that can alter the health of this gameObject")]
       [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
+      [SerializeField] private bool isDead = false;
 
     // These should be moved to it's own class
     [Space]
@@ -210,7 +211,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void MovementAnimation(){
-      if (IsAnimatorSet()){
+      if (IsAnimatorSet() && playerHasControl){
         animator.SetFloat(movemtentDirectionXFloat, moveDirection.x);
         animator.SetFloat(movemtentDirectionYFloat, moveDirection.y);
         animator.SetFloat(movemtentDirectionSqrMagnitudeFloat, moveDirection.sqrMagnitude);
@@ -263,9 +264,13 @@ public class PlayerController : MonoBehaviour {
     // TODO: add event handler for player death
     // Will kill the player
     public void Death() {
-        Debug.Log("Player has died");
-        playerDied.Invoke();
-        StartCoroutine(PlayerDeathAndRespawn());
+        if(!isDead){
+          Debug.Log("Player has died");
+          playerDied.Invoke();
+          StartCoroutine(PlayerDeathAndRespawn());
+
+          isDead = true;
+        }
     }
 
     // Sets the position that the players will respawn at
@@ -411,6 +416,7 @@ public class PlayerController : MonoBehaviour {
         playerRespawned.Invoke();
 
         playerHasControl = true;
+        isDead = false;
     }
 
     #endregion

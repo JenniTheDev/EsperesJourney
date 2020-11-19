@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 739909499589524081}
   - component: {fileID: 739909499589524080}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall_Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739909499589524086}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8006411, y: -0.08869882, z: 0.08115774}
-  m_LocalScale: {x: 1, y: 21.629454, z: 1}
+  m_LocalScale: {x: 2.1, y: 196.82028, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,5 +106,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.03, y: 0.16}
+  m_Size: {x: 2.03, y: 0.14}
   m_EdgeRadius: 0
