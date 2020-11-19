@@ -40,6 +40,7 @@ public class SpawnerScript : MonoBehaviour
         int x = 0;
         float rate;
         Vector3 location;
+        Quaternion rotation;
 
         // will run until has hit max rate
         while(x < spawn.maxSpawn)
@@ -63,13 +64,16 @@ public class SpawnerScript : MonoBehaviour
               {
                   location += gameObject.transform.position;
               }
+
+              rotation = Quaternion.identity;
             }
             else{
               location = spawn.spawnLocationGameObject.transform.position;
+              rotation = spawn.spawnLocationGameObject.transform.rotation;
             }
 
             //spawn object
-            GameObject g = Instantiate(spawn.spawnableObject, location, Quaternion.identity);
+            GameObject g = Instantiate(spawn.spawnableObject, location, rotation);
         }
     }
 
