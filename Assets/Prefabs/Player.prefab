@@ -147,9 +147,10 @@ MonoBehaviour:
   maxNumberOfHealthPacks: 3
   minNumberOfHealthPacks: 0
   tagsThatCanAffectObjectsHealth:
-  - Enemy
+  - Enemy_Attack
   - Health
   - Boss_Attack
+  isDead: 0
   playerIsDead: 0
   timeToWaitToRespawn: 5
   respawnLocation: {x: 0, y: 0, z: 0}
