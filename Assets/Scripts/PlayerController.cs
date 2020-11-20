@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour {
       [SerializeField] int minNumberOfHealthPacks = 0;
       [Tooltip("List all the GameObject tags of objects that can alter the health of this gameObject")]
       [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
+      [SerializeField] private List<string> tagsThatCanCauseFalling;
+      [SerializeField] private int howMuchDamageToTakeFromFall = 10;
       [SerializeField] private bool isDead = false;
 
     // These should be moved to it's own class

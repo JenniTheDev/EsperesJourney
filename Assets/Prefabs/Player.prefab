@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 635257059}
   - component: {fileID: 5667941462196116730}
   - component: {fileID: 8236183712725930891}
+  - component: {fileID: 3062696027622491874}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -140,6 +141,7 @@ MonoBehaviour:
   dashTimeLength: 0.5
   playerRotater: {fileID: 6185858564192968498}
   blinkPoint: {fileID: 2975084780385116093}
+  positionBeforeLastTeleport: {x: 0, y: 0, z: 0}
   currentHealth: 100
   maxHealth: 100
   minHealth: 0
@@ -150,6 +152,8 @@ MonoBehaviour:
   - Enemy_Attack
   - Health
   - Boss_Attack
+  tagsThatCanCauseFalling: []
+  howMuchDamageToTakeFromFall: 10
   isDead: 0
   playerIsDead: 0
   timeToWaitToRespawn: 5
@@ -174,8 +178,9 @@ MonoBehaviour:
   playerHasControl: 1
   rb: {fileID: 6157322793373976047}
   lastPositionBeforeFall: {x: 0, y: 0, z: 0}
-  lastVelocityBeforeFall: {x: 0, y: 0, z: 0}
+  lastMoveDirectionBeforeFall: {x: 0, y: 0, z: 0}
   playerShouldFall: 0
+  timeToWaitAfterFalling: 0.5
   attack:
     m_PersistentCalls:
       m_Calls: []
@@ -407,6 +412,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.75}
   serializedVersion: 2
   m_Radius: 0.23
+--- !u!61 &3062696027622491874
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336119128233695951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 1.78125}
+    newSize: {x: 0.65, y: 0.95}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 1.78125}
+  m_EdgeRadius: 0
 --- !u!1 &2975084780385116093
 GameObject:
   m_ObjectHideFlags: 0
