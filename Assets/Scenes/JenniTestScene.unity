@@ -10311,8 +10311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 906425567}
-  keyList: 03000000040000000200000001000000
-  playerKeyList: 
+  correctKeyList: 00000000000000000000000000000000
+  playerKeyList: 03000000040000000100000002000000
   numOfCorrectKeys: 0
   numCorrectExpected: 4
   doorFailSound: {fileID: 509067678}
