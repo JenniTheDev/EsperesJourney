@@ -10,8 +10,8 @@ public class InstantSuccessTrigger : MonoBehaviour {
     // for only one key
     // [SerializeField] private Key.KeyType keyType;
     // For a list of keys
-    [SerializeField] private List<Key.KeyType> correctKeyList;
-    [SerializeField] private List<Key.KeyType> playerKeyList;
+    [SerializeField] private List<KeyType> correctKeyList;
+    [SerializeField] private List<KeyType> playerKeyList;
     private ITriggerable triggeredItem;
     [SerializeField] private int numOfCorrectKeys = 0;
     [SerializeField] private int numCorrectExpected;
@@ -20,8 +20,7 @@ public class InstantSuccessTrigger : MonoBehaviour {
 
     void Start() {
         triggeredItem = door.GetComponent<ITriggerable>();
-        numCorrectExpected = correctKeyList.Count;
-       
+        numCorrectExpected = correctKeyList.Count;       
     }
 
     // Update is called once per frame

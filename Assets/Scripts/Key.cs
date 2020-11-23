@@ -1,34 +1,23 @@
 ﻿// Jenni
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Key : MonoBehaviour {
-    [SerializeField] private KeyType keyType;
+    [SerializeField] private KeyType type;
 
-    public enum KeyType {
-        None,
-        Blue,
-        Green,
-        Red,
-        Yellow,
-        Black,
-        Grey,
-    }
-
-    public KeyType GetKeyType() {
-        return keyType;
-    }
+    #region Properties
+    public KeyType Type { get; private set; }
+    #endregion
 
     public static Color GetColor(KeyType keyType) {
         switch (keyType) {
-            default:
             case KeyType.Red: return Color.red;
             case KeyType.Green: return Color.green;
             case KeyType.Blue: return Color.blue;
             case KeyType.Yellow: return Color.yellow;
             case KeyType.Black: return Color.black;
             case KeyType.Grey: return Color.grey;
+            default: throw new ArgumentNullException();
         }
     }
  }

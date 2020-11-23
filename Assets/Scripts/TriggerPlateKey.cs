@@ -9,8 +9,8 @@ public class TriggerPlateKey : MonoBehaviour {
     // for only one key
     // [SerializeField] private Key.KeyType keyType;
     // For a list of keys
-    [SerializeField] private List<Key.KeyType> keyList;
-    [SerializeField] private List<Key.KeyType> playerKeyList;
+    [SerializeField] private List<KeyType> keyList;
+    [SerializeField] private List<KeyType> playerKeyList;
     private ITriggerable triggeredItem;
     [SerializeField] private int numOfCorrectKeys = 0;
     [SerializeField] private int numCorrectExpected;

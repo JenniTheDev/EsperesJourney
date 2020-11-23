@@ -1,6 +1,7 @@
 ﻿// Brought to you by Jenni
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 
@@ -60,17 +61,19 @@ public class EventController {
     public delegate void OnTriggerUseHandler();
     public event OnTriggerUseHandler OnTriggerUse;
 
-    
+    public event Action<List<KeyType>> OnKeyHolderChange;
 
-    
-
-
-
-
-
+    public event Action OnKeyComboFail;    
     #endregion
 
     #region Class Methods
+    public void BroadcastKeyComboFail() {
+        OnKeyComboFail?.Invoke();
+    }
+
+    public void BroadcastKeyHolderChange(List<KeyType> keys) {
+        OnKeyHolderChange?.Invoke(keys);
+    }
 
     public void BroadcastReset() {
         OnReset?.Invoke();
