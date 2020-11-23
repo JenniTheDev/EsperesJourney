@@ -56,25 +56,7 @@ public class TriggerPlateKey : MonoBehaviour {
         // keyHolder.ResetKeyList();
         //}
 
-        // This crashes Unity
-        //    while (playerKeyList.Count < 5) {
-        //        for (int i = 0; i < playerKeyList.Count; i++) {
-        //            if (playerKeyList[i] == keyList[i]) {
-        //                numOfCorrectKeys++;
-        //            }
-        //        }
-        //        if (numOfCorrectKeys == numCorrectExpected) {
-        //            keyHolder.ResetKeyList();
-        //            triggeredItem.TriggerExecute();
-        //            numOfCorrectKeys = 0;
-        //            gameObject.SetActive(false);
-        //        } else if (playerKeyList.Count > numCorrectExpected) {
-        //            doorFailSound.Play();
-        //            keyHolder.ResetKeyList();
-        //            numOfCorrectKeys = 0;
-        //        }
-
-        //    }
+       
 
 
 

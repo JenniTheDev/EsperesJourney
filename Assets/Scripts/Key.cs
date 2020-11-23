@@ -6,7 +6,11 @@ public class Key : MonoBehaviour {
     [SerializeField] private KeyType type;
 
     #region Properties
-    public KeyType Type { get; private set; }
+    public KeyType Type {
+        get {
+            return this.type;
+        }
+    }
     #endregion
 
     public static Color GetColor(KeyType keyType) {

@@ -26,12 +26,11 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         // this is not working
       //  WaitASecond(2);
         // doorAnims.OpenDoor();
-        // sets door inactive when key is used - could also destroy object ? 
-        // Play door sound
+              
         doorMotionSound.Play();
         // EventController.Instance.BroadcastOnTriggerUse();
         // If using event manager to handle triggers, and you want to avoid triggering all doors every time
-        // maybe ? 
+       
         // if doorDidItsJob is false, then 
         // doorDidItsJob = true;
         gameObject.SetActive(!doorStartPosition);

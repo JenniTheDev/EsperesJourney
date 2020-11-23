@@ -33,11 +33,12 @@ public class KeyHolder : MonoBehaviour {
     }
 
     public void AddKey(KeyType keyType) {
-        Debug.Log("Added Key:" + keyType);
+        
         // AudioSource sucessPickup = GetComponent<AudioSource>();
         // sucessPickup.Play();
         // Debug.Log("Sucessful Key Pickup");
         keyList.Add(keyType);
+        Debug.Log($"Added Key: {keyType} {keyList.Count}");
     }
 
     public void RemoveKey(KeyType keyType) {
@@ -54,8 +55,10 @@ public class KeyHolder : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collider) {
         Key key = collider.GetComponent<Key>();
+        
         // Debug.Log("Collided with Key");
         if (key != null) {
+            Debug.Log($"{key.Type} {collider.gameObject.name}");
             // Add key to list
             AddKey(key.Type);
             // Play sucessful action sound 
@@ -68,19 +71,7 @@ public class KeyHolder : MonoBehaviour {
             // Play key pickup sound?
             // broadcast key pickup ? 
         }
-        //    KeyDoor keyDoor = collider.GetComponent<KeyDoor>();
-        //       if (keyDoor != null) {
-        //        // if holding the right key to the door
-        //        if (ContainsKey(keyDoor.GetKeyType())) {
-        //            keyDoor.OpenDoor();
-        //            // Remove Key if single use key
-        //           // RemoveKey(keyDoor.GetKeyType());
-
-        //        } else {
-        //            // play fail sound for key?
-        //            // fail door animation ?
-        //        }
-        //    } 
+         
     }
 
     // For event manager
