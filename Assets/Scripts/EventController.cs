@@ -2,15 +2,14 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class EventController {
-
     #region Singleton
 
     private static bool isQuitting = false;
     private static EventController instance = null;
+
     public static EventController Instance {
         get {
             if (instance == null && !isQuitting) {
@@ -21,44 +20,58 @@ public class EventController {
         }
     }
 
-    private EventController() { }
-    #endregion
+    private EventController() {
+    }
+
+    #endregion Singleton
 
     #region EventSource & Delegates
+
     // Game events that require multiple game objects to update
     // should all be listed here
     public delegate void OnResetHandler();
+
     public event OnResetHandler OnReset;
 
     public delegate void OnPauseHandler();
+
     public event OnPauseHandler OnPause;
 
     public delegate void OnResumeHandler();
+
     public event OnResumeHandler OnResume;
 
     public delegate void OnGameOverHandler();
+
     public event OnGameOverHandler OnGameOver;
 
     public delegate void OnLivesLeftHandler();
+
     public event OnLivesLeftHandler OnLivesLeft;
 
     // Character Specific Events to possibly move in the future
     public delegate void OnHealthPotFindHandler();
+
     public event OnHealthPotFindHandler OnHealthPotFind;
 
     public delegate void OnPlayerDeathHandler();
+
     public event OnPlayerDeathHandler OnPlayerDeath;
 
     public delegate void OnTreasureFindHandler();
+
     public event OnTreasureFindHandler OnTreasureFind;
 
     public delegate void OnObjectDestroyHandler();
+
     public event OnObjectDestroyHandler OnObjectDestroy;
 
     public delegate void OnCoinUpdateHandler();
+
     public event OnCoinUpdateHandler OnCoinUpdate;
 
     public delegate void OnTriggerUseHandler();
+
     public event OnTriggerUseHandler OnTriggerUse;
 
     public event Action<List<KeyType>> OnKeyHolderChange;
@@ -70,9 +83,11 @@ public class EventController {
     public event Action OnDoorOpen;
 
     public event Action OnBridgeOpen;
-    #endregion
+
+    #endregion EventSource & Delegates
 
     #region Class Methods
+
     public void BroadcastDoorOpen() {
         OnDoorOpen?.Invoke();
     }
@@ -80,6 +95,7 @@ public class EventController {
     public void BroadcastBridgeOpen() {
         OnBridgeOpen?.Invoke();
     }
+
     public void BroadcastButtonPushSuccess() {
         OnButtonPushSuccess?.Invoke();
     }
@@ -142,5 +158,5 @@ public class EventController {
         Debug.Log("Broadcast Trigger Use");
     }
 
-    #endregion
+    #endregion Class Methods
 }

@@ -1,19 +1,12 @@
 ﻿// Jenni
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
-    // This script only removes the blocking colider. 
-    // It is a one way door
-    // should probably rename this
-    [SerializeField] private bool doorStartPosition;
-   // [SerializeField] private bool doorDidItsJob;
-   // [SerializeField] private AudioClip doorMotionClip;
-    [SerializeField] private AudioSource doorMotionSound;
-    // private DoorAnims doorAnims;
 
+    [SerializeField] private bool doorStartPosition;
+    private float delay = 0.5f;
+    // private DoorAnims doorAnims;
 
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
@@ -21,32 +14,21 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         // doorDidItsJob = false;
         Subscribe();
     }
-        
+
     public void OpenDoor() {
         // this is not working
-      //  WaitASecond(2);
+        //  WaitASecond(2);
         // doorAnims.OpenDoor();
-              
-        doorMotionSound.Play();
-        // EventController.Instance.BroadcastOnTriggerUse();
-        // If using event manager to handle triggers, and you want to avoid triggering all doors every time
-       
-        // if doorDidItsJob is false, then 
-        // doorDidItsJob = true;
-        gameObject.SetActive(!doorStartPosition);
-        
+        StartCoroutine(WaitASecond());
+
     }
 
-   public void PlayOpenFailAnim() {
+    public void PlayOpenFailAnim() {
         // doorAnim.PlayOpenFailAnim();
-        // AudioSource doorFailSound = GetComponent<AudioSource>();
-        // doorFailSound.Play();
+        EventController.Instance.BroadcastKeyComboFail();
         // Debug.Log("door fail sound");
     }
 
-   // public bool HasDoorMoved() {
-       // return doorDidItsJob;
-   // }
 
     public void TriggerExecute() {
         Debug.Log(" Trigger execute called");
@@ -54,7 +36,6 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     }
 
     public void TriggerRelease() {
-        
     }
 
     public void Subscribe() {
@@ -64,16 +45,12 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
 
     public void Unsubscribe() {
         EventController.Instance.OnTriggerUse -= TriggerExecute;
-
     }
 
-    
-
-    IEnumerator WaitASecond(float delay) {
+    private IEnumerator WaitASecond() {
         yield return new WaitForSecondsRealtime(delay);
-        doorMotionSound.Play();
+        EventController.Instance.BroadcastDoorOpen();
+        gameObject.SetActive(!doorStartPosition);
+
     }
-
-
 }
-

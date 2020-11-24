@@ -1,15 +1,13 @@
 ﻿// Jenni
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyOperatedDoor : MonoBehaviour {
     [SerializeField] private List<Key> keysToOpen;
-    [SerializeField] private AudioSource doorMotionSound;
     // private DoorAnims doorAnims;
 
-    void Start() {
+    private void Start() {
         EventController.Instance.OnKeyHolderChange += CheckForKeyCombo;
     }
 
@@ -23,7 +21,7 @@ public class KeyOperatedDoor : MonoBehaviour {
                 EventController.Instance.BroadcastButtonPushSuccess();
             }
         }
-        if (keys.Count == keysToOpen.Count) { 
+        if (keys.Count == keysToOpen.Count) {
             OpenBridge();
         }
     }
@@ -31,12 +29,12 @@ public class KeyOperatedDoor : MonoBehaviour {
     private void OpenBridge() {
         // doorAnims = GetComponent<DoorAnims>();
         // when door animation is done playing
-        doorMotionSound.Play();
+       
         EventController.Instance.BroadcastBridgeOpen();
         gameObject.SetActive(false);
     }
 
-    IEnumerator ResetKeyObjects() { 
+    private IEnumerator ResetKeyObjects() {
         yield return new WaitForSeconds(2);
 
         for (int i = 0; i < keysToOpen.Count; i++) {

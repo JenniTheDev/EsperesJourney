@@ -1,13 +1,12 @@
 ﻿// brought to you by Jenni
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyHolder : MonoBehaviour {
-
     [SerializeField] private List<KeyType> keyList;
 
     #region MonoBehaviour
+
     private void Awake() {
         keyList = new List<KeyType>();
     }
@@ -23,7 +22,8 @@ public class KeyHolder : MonoBehaviour {
     private void OnDisable() {
         Unsubscribe();
     }
-    #endregion
+
+    #endregion MonoBehaviour
 
     public List<KeyType> GetKeyList() {
         return keyList;
@@ -41,7 +41,6 @@ public class KeyHolder : MonoBehaviour {
     public void ResetKeyList() {
         keyList.Clear();
     }
-
 
     public bool ContainsKey(KeyType keyType) {
         return keyList.Contains(keyType);
@@ -62,13 +61,11 @@ public class KeyHolder : MonoBehaviour {
         EventController.Instance.OnKeyComboFail += ResetKeyList;
         EventController.Instance.OnDoorOpen += ResetKeyList;
         EventController.Instance.OnBridgeOpen += ResetKeyList;
-
     }
 
     public void Unsubscribe() {
         EventController.Instance.OnKeyComboFail -= ResetKeyList;
         EventController.Instance.OnDoorOpen -= ResetKeyList;
         EventController.Instance.OnBridgeOpen += ResetKeyList;
-
     }
 }

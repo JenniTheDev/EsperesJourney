@@ -1,46 +1,41 @@
 ﻿// Brought to you by Jenni
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
     #region Game Audio
+
     // these sounds would originate from one direction
     [SerializeField] private AudioSource sewerLevelMusic;
+
     [SerializeField] private AudioClip sewerLevelMusicSound;
     [SerializeField] private AudioSource pauseMusic;
     [SerializeField] private AudioClip pauseMusicSound;
     [SerializeField] private AudioSource playerDeath;
     [SerializeField] private AudioClip playerDeathSound;
 
-    #endregion
+    #endregion Game Audio
 
     // These sounds need to come from the player
     // The AudioSource should be on the object it sounds like it is coming from
     #region Sound Effects
+
     // [SerializeField] private AudioSource dashSound;
     // [SerializeField] private AudioSource meleeAttackSound;
     // [SerializeField] private AudioSource teleportSound;
     // [SerializeField] private AudioSource rangedAttackSound;
     [SerializeField] private AudioSource healthPotPickup;
+
     [SerializeField] private AudioClip healthPotPickupSound;
+
     // [SerializeField] private AudioSource healthPotUse;
     [SerializeField] private AudioSource doorOpen;
+
     [SerializeField] private AudioSource doorClose;
     [SerializeField] private AudioSource doorFail;
     [SerializeField] private AudioSource doorButtonClick;
     [SerializeField] private AudioSource bridgeOpen;
 
-
-
-
-
-    #endregion
-
-    #region Enemy Audio
-
-    #endregion
-
+    #endregion Sound Effects
 
     #region Monobehavior
 
@@ -56,7 +51,8 @@ public class SoundManager : MonoBehaviour {
     private void OnDisable() {
         Unsubscribe();
     }
-    #endregion
+
+    #endregion Monobehavior
 
     #region Methods
 
@@ -80,12 +76,12 @@ public class SoundManager : MonoBehaviour {
     public void PlayDoorOpen() {
         doorOpen.Play();
     }
+
     public void PlayBridgeOpen() {
         bridgeOpen.Play();
     }
 
     private void PlayDoorClose() {
-
     }
 
     private void PlayDoorFail() {
@@ -95,8 +91,6 @@ public class SoundManager : MonoBehaviour {
     private void PlayButtonClick() {
         doorButtonClick.Play();
     }
-
-
 
     private void Subscribe() {
         Unsubscribe();
@@ -124,5 +118,6 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnBridgeOpen -= PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail -= PlayDoorFail;
     }
-    #endregion
+
+    #endregion Methods
 }

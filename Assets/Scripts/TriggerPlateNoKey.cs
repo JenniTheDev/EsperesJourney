@@ -1,27 +1,26 @@
 ﻿// Jenni
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerPlateNoKey : MonoBehaviour {
     [SerializeField] private GameObject door;
+
     // [SerializeField] private List<GameObject> doors;
     [SerializeField] private bool isTriggered;
+
     private ITriggerable triggeredItem;
+
     // [SerializeField] private GameObject triggerObject;
     [SerializeField] private AudioSource buttonClick;
-
 
     private void Start() {
         triggeredItem = door.GetComponent<ITriggerable>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-         
-       //  buttonClick.Play();
-       //  Debug.Log("Button Click Sound");
+        //  buttonClick.Play();
+        //  Debug.Log("Button Click Sound");
 
-        // compare layer   or other.gameObject.layer 
+        // compare layer   or other.gameObject.layer
         // if (other.gameObject.layer == LayerMask.GetMask("Character")){}
         // anything on this layer to count
         // can set multiple layers to one object
@@ -33,7 +32,7 @@ public class TriggerPlateNoKey : MonoBehaviour {
             Debug.Log("Is triggered" + isTriggered);
             // Commented out to try event system to open door
             triggeredItem.TriggerExecute();
-            // Broadcast door trigger event ? 
+            // Broadcast door trigger event ?
             // EventController.Instance.BroadcastOnTriggerUse();
         }
     }
@@ -46,15 +45,14 @@ public class TriggerPlateNoKey : MonoBehaviour {
     public bool IsTriggered() {
         return isTriggered;
     }
-
-
 }
+
 // Jenni's notes
 // for plates, can use array
 // check is this down all the way through
 // have another object that subscribes to the events
 // keep track of the plate number that fired
 //  check order
-// are the prievious ones good? 
-// when one is wrong, switch them all back 
+// are the prievious ones good?
+// when one is wrong, switch them all back
 // indicator to let player know reset

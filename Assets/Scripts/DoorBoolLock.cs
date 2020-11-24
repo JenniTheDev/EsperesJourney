@@ -1,28 +1,23 @@
 ﻿// Jenni
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorBoolLock : MonoBehaviour, ITriggerable {
 
     // [SerializeField] private List<TriggerPlateNoKey> triggers;
     [SerializeField] private int numberOfSwitches;
-     [SerializeField] private TriggerPlateNoKey triggerOne;
-     [SerializeField] private TriggerPlateNoKey triggerTwo;
+
+    [SerializeField] private TriggerPlateNoKey triggerOne;
+    [SerializeField] private TriggerPlateNoKey triggerTwo;
     [SerializeField] private AudioSource doorMotionSound;
 
-    void Start() {
-       
-
+    private void Start() {
     }
 
-
     public void TriggerExecute() {
-       if (PermissionCheck() == true) {
+        if (PermissionCheck() == true) {
             doorMotionSound.Play();
             gameObject.SetActive(false);
         }
-        
     }
 
     public void TriggerRelease() {
@@ -34,7 +29,7 @@ public class DoorBoolLock : MonoBehaviour, ITriggerable {
         //     g.GetComponent<GameObject>();
         //    if (g.IsTriggered() == false) {
         //        return false;
-        //    } 
+        //    }
         //}
         if (triggerOne.IsTriggered() && triggerTwo.IsTriggered()) {
             return true;
@@ -48,5 +43,4 @@ public class DoorBoolLock : MonoBehaviour, ITriggerable {
         // doorFailSound.Play();
         // Debug.Log("door fail sound");
     }
-
 }

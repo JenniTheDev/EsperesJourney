@@ -1,14 +1,13 @@
 ﻿// Digx
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyObject : MonoBehaviour {
-    [SerializeField] float destroyTimeDelay = 0.0f;
-    [SerializeField] bool destroyOnImpactWithAnyColliders = false;
-    [SerializeField] bool destroyOnImpactWithAnyTriggers = false;
-    [SerializeField] bool destroyOnAwake = false;
-    [SerializeField] List<string> tagsThatCanDestroyThisObject;
+    [SerializeField] private float destroyTimeDelay = 0.0f;
+    [SerializeField] private bool destroyOnImpactWithAnyColliders = false;
+    [SerializeField] private bool destroyOnImpactWithAnyTriggers = false;
+    [SerializeField] private bool destroyOnAwake = false;
+    [SerializeField] private List<string> tagsThatCanDestroyThisObject;
     // Object health? If we want it to destroy with a few hits?
 
     public void Awake() {
@@ -55,11 +54,9 @@ public class DestroyObject : MonoBehaviour {
     public void Subscribe() {
         Unsubscibe();
         EventController.Instance.OnObjectDestroy += objectDestroyed;
-
     }
 
     public void Unsubscibe() {
         EventController.Instance.OnObjectDestroy -= objectDestroyed;
     }
-
 }

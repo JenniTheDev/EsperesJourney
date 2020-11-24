@@ -1,5 +1,4 @@
 ﻿//brought to you by Jenni
-using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -13,6 +12,7 @@ public class GameManager : MonoBehaviour {
     }
 
     #region MonoBehaviour
+
     private void Start() {
         Subscribe();
         currentState = GameState.StartMenu;
@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour {
     private void OnDisable() {
         Unsubscribe();
     }
-    #endregion
+
+    #endregion MonoBehaviour
 
     public void StartGame() {
         currentState = GameState.Playing;

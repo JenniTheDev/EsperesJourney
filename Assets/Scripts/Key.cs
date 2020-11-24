@@ -6,12 +6,14 @@ public class Key : MonoBehaviour {
     [SerializeField] private KeyType type;
 
     #region Properties
+
     public KeyType Type {
         get {
             return this.type;
         }
     }
-    #endregion
+
+    #endregion Properties
 
     public static Color GetColor(KeyType keyType) {
         switch (keyType) {
@@ -24,4 +26,4 @@ public class Key : MonoBehaviour {
             default: throw new ArgumentNullException();
         }
     }
- }
+}

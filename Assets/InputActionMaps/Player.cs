@@ -6,11 +6,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @Player : IInputActionCollection, IDisposable
-{
+public class @Player : IInputActionCollection, IDisposable {
     public InputActionAsset asset { get; }
-    public @Player()
-    {
+
+    public @Player() {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""Player"",
     ""maps"": [
@@ -259,52 +258,45 @@ public class @Player : IInputActionCollection, IDisposable
         m_Character_Heal = m_Character.FindAction("Heal", throwIfNotFound: true);
     }
 
-    public void Dispose()
-    {
+    public void Dispose() {
         UnityEngine.Object.Destroy(asset);
     }
 
-    public InputBinding? bindingMask
-    {
+    public InputBinding? bindingMask {
         get => asset.bindingMask;
         set => asset.bindingMask = value;
     }
 
-    public ReadOnlyArray<InputDevice>? devices
-    {
+    public ReadOnlyArray<InputDevice>? devices {
         get => asset.devices;
         set => asset.devices = value;
     }
 
     public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
 
-    public bool Contains(InputAction action)
-    {
+    public bool Contains(InputAction action) {
         return asset.Contains(action);
     }
 
-    public IEnumerator<InputAction> GetEnumerator()
-    {
+    public IEnumerator<InputAction> GetEnumerator() {
         return asset.GetEnumerator();
     }
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
+    IEnumerator IEnumerable.GetEnumerator() {
         return GetEnumerator();
     }
 
-    public void Enable()
-    {
+    public void Enable() {
         asset.Enable();
     }
 
-    public void Disable()
-    {
+    public void Disable() {
         asset.Disable();
     }
 
     // Character
     private readonly InputActionMap m_Character;
+
     private ICharacterActions m_CharacterActionsCallbackInterface;
     private readonly InputAction m_Character_Move;
     private readonly InputAction m_Character_Attack;
@@ -312,25 +304,41 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Character_Blink;
     private readonly InputAction m_Character_Shoot;
     private readonly InputAction m_Character_Heal;
-    public struct CharacterActions
-    {
+
+    public struct CharacterActions {
         private @Player m_Wrapper;
-        public CharacterActions(@Player wrapper) { m_Wrapper = wrapper; }
+
+        public CharacterActions(@Player wrapper) {
+            m_Wrapper = wrapper;
+        }
+
         public InputAction @Move => m_Wrapper.m_Character_Move;
         public InputAction @Attack => m_Wrapper.m_Character_Attack;
         public InputAction @Dash => m_Wrapper.m_Character_Dash;
         public InputAction @Blink => m_Wrapper.m_Character_Blink;
         public InputAction @Shoot => m_Wrapper.m_Character_Shoot;
         public InputAction @Heal => m_Wrapper.m_Character_Heal;
-        public InputActionMap Get() { return m_Wrapper.m_Character; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
+
+        public InputActionMap Get() {
+            return m_Wrapper.m_Character;
+        }
+
+        public void Enable() {
+            Get().Enable();
+        }
+
+        public void Disable() {
+            Get().Disable();
+        }
+
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
-        public void SetCallbacks(ICharacterActions instance)
-        {
-            if (m_Wrapper.m_CharacterActionsCallbackInterface != null)
-            {
+
+        public static implicit operator InputActionMap(CharacterActions set) {
+            return set.Get();
+        }
+
+        public void SetCallbacks(ICharacterActions instance) {
+            if (m_Wrapper.m_CharacterActionsCallbackInterface != null) {
                 @Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
@@ -351,8 +359,7 @@ public class @Player : IInputActionCollection, IDisposable
                 @Heal.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
-            if (instance != null)
-            {
+            if (instance != null) {
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
@@ -374,14 +381,21 @@ public class @Player : IInputActionCollection, IDisposable
             }
         }
     }
+
     public CharacterActions @Character => new CharacterActions(this);
-    public interface ICharacterActions
-    {
+
+    public interface ICharacterActions {
+
         void OnMove(InputAction.CallbackContext context);
+
         void OnAttack(InputAction.CallbackContext context);
+
         void OnDash(InputAction.CallbackContext context);
+
         void OnBlink(InputAction.CallbackContext context);
+
         void OnShoot(InputAction.CallbackContext context);
+
         void OnHeal(InputAction.CallbackContext context);
     }
 }
