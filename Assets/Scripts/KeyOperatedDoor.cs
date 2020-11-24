@@ -8,7 +8,23 @@ public class KeyOperatedDoor : MonoBehaviour {
     // private DoorAnims doorAnims;
 
     private void Start() {
+        Subscribe();
+    }
+
+    private void OnEnable() {
+        Subscribe();
+    }
+
+    private void Subscribe() {
         EventController.Instance.OnKeyHolderChange += CheckForKeyCombo;
+    }
+
+    private void OnDisable() {
+        Unsubscribe();
+    }
+
+    private void Unsubscribe() {
+        EventController.Instance.OnKeyHolderChange -= CheckForKeyCombo;
     }
 
     private void CheckForKeyCombo(List<KeyType> keys) {
@@ -29,7 +45,7 @@ public class KeyOperatedDoor : MonoBehaviour {
     private void OpenBridge() {
         // doorAnims = GetComponent<DoorAnims>();
         // when door animation is done playing
-       
+
         EventController.Instance.BroadcastBridgeOpen();
         gameObject.SetActive(false);
     }

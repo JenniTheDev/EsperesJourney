@@ -66,6 +66,6 @@ public class KeyHolder : MonoBehaviour {
     public void Unsubscribe() {
         EventController.Instance.OnKeyComboFail -= ResetKeyList;
         EventController.Instance.OnDoorOpen -= ResetKeyList;
-        EventController.Instance.OnBridgeOpen += ResetKeyList;
+        EventController.Instance.OnBridgeOpen -= ResetKeyList;
     }
 }

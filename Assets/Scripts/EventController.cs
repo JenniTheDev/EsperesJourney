@@ -89,26 +89,31 @@ public class EventController {
     #region Class Methods
 
     public void BroadcastDoorOpen() {
+        Debug.Log("Broadcast Door Open");
         OnDoorOpen?.Invoke();
     }
 
     public void BroadcastBridgeOpen() {
+        Debug.Log("Broadcast Bridge Open");
         OnBridgeOpen?.Invoke();
     }
 
     public void BroadcastButtonPushSuccess() {
+        Debug.Log("Broadcast Button Push Success");
         OnButtonPushSuccess?.Invoke();
     }
 
     public void BroadcastKeyComboFail() {
+        Debug.Log("Broadcast key combo fail");
         OnKeyComboFail?.Invoke();
     }
 
     public void BroadcastKeyHolderChange(List<KeyType> keys) {
+        Debug.Log("Broadcast Key Holder Change");
         OnKeyHolderChange?.Invoke(keys);
     }
 
-    public void BroadcastReset() {
+    public void BroadcastReset() { 
         OnReset?.Invoke();
     }
 
