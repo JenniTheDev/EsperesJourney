@@ -63,10 +63,27 @@ public class EventController {
 
     public event Action<List<KeyType>> OnKeyHolderChange;
 
-    public event Action OnKeyComboFail;    
+    public event Action OnKeyComboFail;
+
+    public event Action OnButtonPushSuccess;
+
+    public event Action OnDoorOpen;
+
+    public event Action OnBridgeOpen;
     #endregion
 
     #region Class Methods
+    public void BroadcastDoorOpen() {
+        OnDoorOpen?.Invoke();
+    }
+
+    public void BroadcastBridgeOpen() {
+        OnBridgeOpen?.Invoke();
+    }
+    public void BroadcastButtonPushSuccess() {
+        OnButtonPushSuccess?.Invoke();
+    }
+
     public void BroadcastKeyComboFail() {
         OnKeyComboFail?.Invoke();
     }

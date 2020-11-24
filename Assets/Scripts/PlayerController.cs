@@ -387,7 +387,7 @@ public class PlayerController : MonoBehaviour {
     // Enter -----
     // Triggers when the player collides with another normal collider
     public void OnCollisionEnter2D(Collision2D col) {
-        Debug.Log("Player touched something");
+       // Debug.Log("Player touched something");
 
         if (canThisObjectCauseFall(col)){
           StartCoroutine(PlayerFall());
@@ -401,7 +401,7 @@ public class PlayerController : MonoBehaviour {
 
     // Triggers when the player collides with a trigger
     public void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log("Player touched something");
+      //  Debug.Log("Player touched something");
 
         if (canThisObjectCauseFall_Collider2D(col)){
           StartCoroutine(PlayerFall());

@@ -28,6 +28,8 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource doorOpen;
     [SerializeField] private AudioSource doorClose;
     [SerializeField] private AudioSource doorFail;
+    [SerializeField] private AudioSource doorButtonClick;
+    [SerializeField] private AudioSource bridgeOpen;
 
 
 
@@ -44,10 +46,7 @@ public class SoundManager : MonoBehaviour {
 
     private void Start() {
         Subscribe();
-        // Audio Sources go on the game object they play from
         PlayLevelMusic();
-
-
     }
 
     private void OnEnable() {
@@ -62,9 +61,7 @@ public class SoundManager : MonoBehaviour {
     #region Methods
 
     private void PlayLevelMusic() {
-       // sewerLevelMusic.clip = sewerLevelMusicSound;
         sewerLevelMusic.Play();
-
     }
 
     private void PlayPauseMusic() {
@@ -83,14 +80,23 @@ public class SoundManager : MonoBehaviour {
     public void PlayDoorOpen() {
         doorOpen.Play();
     }
+    public void PlayBridgeOpen() {
+        bridgeOpen.Play();
+    }
 
     private void PlayDoorClose() {
 
     }
 
     private void PlayDoorFail() {
-
+        doorFail.Play();
     }
+
+    private void PlayButtonClick() {
+        doorButtonClick.Play();
+    }
+
+
 
     private void Subscribe() {
         Unsubscribe();
@@ -100,6 +106,10 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
         EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse += PlayDoorOpen;
+        EventController.Instance.OnButtonPushSuccess += PlayButtonClick;
+        EventController.Instance.OnDoorOpen += PlayDoorOpen;
+        EventController.Instance.OnBridgeOpen += PlayBridgeOpen;
+        EventController.Instance.OnKeyComboFail += PlayDoorFail;
     }
 
     private void Unsubscribe() {
@@ -109,6 +119,10 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;
         EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse -= PlayDoorOpen;
+        EventController.Instance.OnButtonPushSuccess -= PlayButtonClick;
+        EventController.Instance.OnDoorOpen -= PlayDoorOpen;
+        EventController.Instance.OnBridgeOpen -= PlayBridgeOpen;
+        EventController.Instance.OnKeyComboFail -= PlayDoorFail;
     }
     #endregion
 }
