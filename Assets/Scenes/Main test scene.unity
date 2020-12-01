@@ -6134,6 +6134,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: basicAttackTimeLength
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2336119128233695944, guid: c270bde6f540edc48a01f07da37cbd69,
         type: 3}
       propertyPath: m_LocalPosition.x

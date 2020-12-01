@@ -218,6 +218,21 @@ public class PlayerController : MonoBehaviour {
       }
     }
 
+    public void DeathAnimation(bool input)
+    {
+        animator.SetBool("Death", input);
+    }
+
+    public void AttackAnimation()
+    {
+        animator.SetTrigger("Attack");
+    }
+
+    public void DashAnimation()
+    {
+        animator.SetTrigger("Dash");
+    }
+
     public void IdleAnimation()
     {
         if(moveDirection.x >= 0.1 || moveDirection.x <= -0.1 || moveDirection.y >= 0.1 || moveDirection.y <= -0.1)
@@ -374,6 +389,7 @@ public class PlayerController : MonoBehaviour {
     public IEnumerator PlayerDash() {
         playerHasControl = false;
 
+        DashAnimation();
         Vector2 dashDirection = moveDirection * dashSpeed;
         rb.AddForce(dashDirection, ForceMode2D.Impulse);
         yield return new WaitForSeconds(dashTimeLength);
@@ -384,6 +400,7 @@ public class PlayerController : MonoBehaviour {
     public IEnumerator PlayerAttack() {
         playerHasControl = false;
 
+        AttackAnimation();
         rb.velocity = new Vector2(0, 0);
         GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, basicAttackSpawnPoint.transform.rotation);
         Destroy(attack, basicAttackObjectTimeLength);
@@ -414,12 +431,13 @@ public class PlayerController : MonoBehaviour {
         playerHasControl = false;
         rb.velocity = new Vector3(0, 0, 0);
 
+        DeathAnimation(true);
         yield return new WaitForSeconds(timeToWaitToRespawn);
         SetPlayerPosition(respawnLocation);
         setCurrentHealth(maxHealth);
         Debug.Log("The Player has respawned");
         playerRespawned.Invoke();
-
+        DeathAnimation(false);
         playerHasControl = true;
     }
 
