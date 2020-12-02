@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinCounter : MonoBehaviour
-{
+public class CoinCounter : MonoBehaviour {
     [SerializeField] private Text coinsTxt;
-    private void OnEnable()
-    {
+
+    private void OnEnable() {
         Subscribe();
     }
-    private void OnDisable()
-    {
-        Unsubscribe();  
+
+    private void OnDisable() {
+        Unsubscribe();
     }
 
     private void UpdateCoinCounter(int coins) {
@@ -22,14 +19,11 @@ public class CoinCounter : MonoBehaviour
     public void Subscribe() {
         Unsubscribe();
         //subscribe to eventcontroller OnHealthPotsUpdate
-       // EventController.Instance.OnCoinUpdate += UpdateCoinCounter;
+        // EventController.Instance.OnCoinUpdate += UpdateCoinCounter;
     }
 
     public void Unsubscribe() {
         //unsubscribe to eventcontroller OnHealthPotsUpdate
-      //  EventController.Instance.OnCoinUpdate -= UpdateCoinCounter;
+        //  EventController.Instance.OnCoinUpdate -= UpdateCoinCounter;
     }
-
-
-
 }

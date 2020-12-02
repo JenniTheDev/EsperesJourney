@@ -1,10 +1,8 @@
 // Digx7
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
-{
+public class PlayerInput : MonoBehaviour {
     /* Description --
     *  This script will handel the player inputs using the new input manager package
     *  This is done this way so that the player object can be destroyed and respawned easily
@@ -18,7 +16,7 @@ public class PlayerInput : MonoBehaviour
 
     // --- Updates -------------------------------------
 
-    public void Awake(){
+    public void Awake() {
         Player = new Player();             // This is needed to set up the input action map
 
         Rebind();
@@ -27,30 +25,26 @@ public class PlayerInput : MonoBehaviour
     // --- BindingInputs ----------------------------------
 
     // This script checks if a player is in the scene,  If so it will bind the inputs to the script, If not it will wait unil a player is Instantiated
-    public void Rebind(){
+    public void Rebind() {
         // if player gameObject is not set in inspector then it will auto set
-        if (_Player == null)
-        {
+        if (_Player == null) {
             GameObject[] _player = GameObject.FindGameObjectsWithTag("Player");  // searched for any player gameObject
 
             int i = 1;
-            if (i == _player.Length)
-            {
+            if (i == _player.Length) {
                 _Player = _player[0];
 
                 BindInputs();                                    // if one is found it will Bind the needed inputs to the playerScript
-            }
-            else StartCoroutine("waitForPlayerToSpawn");         // if one is not found it will wait until one is Instantiated
+            } else StartCoroutine("waitForPlayerToSpawn");         // if one is not found it will wait until one is Instantiated
         }
     }
 
     // This script will bind the inputs on the Input action map to the needed script
-    public void BindInputs (){
+    public void BindInputs() {
         if (playerScript == null)         // Access the need script on the Player GameObject
         {
             playerScript = _Player.GetComponent<PlayerController>();
         }
-
 
         Player.Character.Move.performed += ctx => playerScript.moveDirection = ctx.ReadValue<Vector2>(); // This permantly binds the given inputs to the script with no need for any update function
         Player.Character.Dash.performed += ctx => playerScript.Dash();
@@ -61,11 +55,10 @@ public class PlayerInput : MonoBehaviour
     }
 
     // This waits for a player to be Instantiated, when one is it will bind the inputs
-    public IEnumerator waitForPlayerToSpawn(){
+    public IEnumerator waitForPlayerToSpawn() {
         int i = 1;
         GameObject[] _player;
-        do
-        {
+        do {
             _player = GameObject.FindGameObjectsWithTag("Player");
             yield return null;
         } while (i != _player.Length);
@@ -80,13 +73,13 @@ public class PlayerInput : MonoBehaviour
 
     // --- Enable/Disable --------------------------------
 
-     // This will enable the Input Action Map
-    private void OnEnable(){
-      Player.Enable();
+    // This will enable the Input Action Map
+    private void OnEnable() {
+        Player.Enable();
     }
 
     // This will enable the Input Action Map
-    private void OnDisable(){
-      Player.Disable();
+    private void OnDisable() {
+        Player.Disable();
     }
 }

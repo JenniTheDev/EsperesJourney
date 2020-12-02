@@ -1,25 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthPot : MonoBehaviour {
 
     // This needs a correct value for health pot
     [SerializeField] private int healthPotStrength = 50;
+
     [SerializeField] private GameObject healthPotObject;
 
     #region Properties
+
     public int HealthPotAmount {
         get { return healthPotStrength; }
         set { healthPotStrength = value; }
     }
 
-    #endregion
+    #endregion Properties
 
     #region Monobehaviors
-    // On awake?
-    void Start() {
 
+    // On awake?
+    private void Start() {
         healthPotObject = GetComponent<GameObject>();
     }
 
@@ -30,13 +30,13 @@ public class HealthPot : MonoBehaviour {
     private void OnDisable() {
         Unsubscribe();
     }
-    #endregion
 
+    #endregion Monobehaviors
 
     #region Methods
+
     public void Subscribe() {
         EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
-
     }
 
     public void Unsubscribe() {
@@ -48,5 +48,6 @@ public class HealthPot : MonoBehaviour {
         healthPotPickup.Play();
         Debug.Log("sound");
     }
-    #endregion
+
+    #endregion Methods
 }

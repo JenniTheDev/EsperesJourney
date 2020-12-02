@@ -1,27 +1,23 @@
-﻿// Who wrote this? 
-using System.Collections;
-using System.Collections.Generic;
+﻿// Who wrote this?
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
-{
+public class HealthBar : MonoBehaviour {
     [SerializeField] private Slider slider;
-    private void OnEnable()
-    {
+
+    private void OnEnable() {
         slider = gameObject.GetComponent<Slider>();
         //subscribe to eventcontroller OnHealthPotsUpdate
-       // EventController.Instance.OnHealthUpdate += UpdateHealthBar;
+        // EventController.Instance.OnHealthUpdate += UpdateHealthBar;
     }
-    private void OnDisable()
-    {
+
+    private void OnDisable() {
         //unsubscribe to eventcontroller OnHealthPotsUpdate
-       // EventController.Instance.OnHealthUpdate -= UpdateHealthBar;
+        // EventController.Instance.OnHealthUpdate -= UpdateHealthBar;
     }
 
     // UpdateHPCounter is called when OnHealthUpdate is broadcasted
-    private void UpdateHealthBar(int hp)
-    {
+    private void UpdateHealthBar(int hp) {
         slider.value = hp;
     }
 }

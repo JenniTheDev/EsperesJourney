@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6108951273502244198}
   - component: {fileID: 6108951273502244195}
   m_Layer: 0
-  m_Name: TestKey_Red 1
+  m_Name: TestKey_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 5
+  type: 4
