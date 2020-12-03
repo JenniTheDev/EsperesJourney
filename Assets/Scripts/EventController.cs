@@ -113,7 +113,7 @@ public class EventController {
         OnKeyHolderChange?.Invoke(keys);
     }
 
-    public void BroadcastReset() { 
+    public void BroadcastReset() {
         OnReset?.Invoke();
     }
 

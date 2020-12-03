@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// Jenni
+using UnityEngine;
 
 public class HealthPot : MonoBehaviour {
 
