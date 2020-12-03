@@ -217,7 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &53800043
@@ -509,7 +510,7 @@ Transform:
   - {fileID: 94481269}
   - {fileID: 71610415}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &103134777
 GameObject:
@@ -601,7 +602,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &104411321
 GameObject:
@@ -698,7 +699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &114542443
@@ -796,7 +798,7 @@ RectTransform:
   - {fileID: 1757720879}
   - {fileID: 229460494}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -874,7 +876,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 262343025}
-  keyType: 1
+  keyList: 
+  playerKeyList: 
+  numOfCorrectKeys: 0
+  numCorrectExpected: 0
+  doorFailSound: {fileID: 0}
 --- !u!4 &186933551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2101631487383795482, guid: ed9e9a48436407544834e759351e7c3d,
@@ -977,7 +983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &225063216
@@ -1076,7 +1083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &225662752
@@ -1175,7 +1183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &229460493
@@ -1340,6 +1349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61593a29f1919fc4cb3edd6881debc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpenSound: {fileID: 0}
 --- !u!4 &262343027
 Transform:
   m_ObjectHideFlags: 0
@@ -1459,7 +1469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &310755045 stripped
@@ -1734,7 +1745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &346278996
@@ -1832,7 +1844,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &365403413 stripped
@@ -1943,7 +1956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &373680578
@@ -2199,7 +2213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &414469042
@@ -2398,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 1
+  type: 0
 --- !u!1 &432716872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,7 +2510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &444621865 stripped
@@ -2681,7 +2697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &497149246
@@ -2780,7 +2797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &509687091 stripped
@@ -2973,7 +2991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &533610577
@@ -3072,7 +3091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &562545249
@@ -3293,7 +3313,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575082128
 GameObject:
@@ -3391,7 +3411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &585045653 stripped
@@ -3496,7 +3517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &610189157
@@ -3579,7 +3601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619125672
 GameObject:
@@ -3834,7 +3856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &691379982 stripped
@@ -3939,7 +3962,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &697589454
@@ -4038,7 +4062,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &701430965
@@ -4194,7 +4219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &722170978
@@ -4247,7 +4273,7 @@ PrefabInstance:
     - target: {fileID: 6804946398786273525, guid: 24fd1514b0b45254f8fce5fc0f6d9d74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6804946398786273525, guid: 24fd1514b0b45254f8fce5fc0f6d9d74,
         type: 3}
@@ -4361,7 +4387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &730403856
@@ -4459,7 +4486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &743948298
@@ -4741,7 +4769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &811634240
@@ -4840,7 +4869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &813900118
@@ -4888,7 +4918,7 @@ PrefabInstance:
     - target: {fileID: 482214017074149118, guid: e61299e42ae270f47a46cb9de29b46ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 482214017074149118, guid: e61299e42ae270f47a46cb9de29b46ac,
         type: 3}
@@ -5007,7 +5037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &830998628
@@ -5191,7 +5222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &848875652 stripped
@@ -5296,7 +5328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &857053881
@@ -5714,6 +5747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5571840d645a4124b9ff07686c0530ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorStartPosition: 0
 --- !u!1 &923802725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5892,7 +5926,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &965140566
@@ -5941,7 +5976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 3
+  type: 0
 --- !u!58 &965140569
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6020,7 +6055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 0
+  type: 0
 --- !u!1 &1003765241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6058,6 +6093,11 @@ MonoBehaviour:
   playerDeathSound: {fileID: 0}
   healthPotPickup: {fileID: 0}
   healthPotPickupSound: {fileID: 0}
+  doorOpen: {fileID: 0}
+  doorClose: {fileID: 0}
+  doorFail: {fileID: 0}
+  doorButtonClick: {fileID: 0}
+  bridgeOpen: {fileID: 0}
 --- !u!4 &1003765243
 Transform:
   m_ObjectHideFlags: 0
@@ -6073,7 +6113,7 @@ Transform:
   - {fileID: 1318683939}
   - {fileID: 1519967105}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1009967754 stripped
 Transform:
@@ -6182,7 +6222,7 @@ PrefabInstance:
     - target: {fileID: 2336119128233695944, guid: c270bde6f540edc48a01f07da37cbd69,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2336119128233695944, guid: c270bde6f540edc48a01f07da37cbd69,
         type: 3}
@@ -6383,7 +6423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1105164479 stripped
@@ -6436,7 +6477,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146959029
 GameObject:
@@ -6469,7 +6510,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 906425567}
-  keyType: 3
+  keyList: 
+  playerKeyList: 
+  numOfCorrectKeys: 0
+  numCorrectExpected: 0
+  doorFailSound: {fileID: 0}
 --- !u!61 &1146959031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7491,7 +7536,7 @@ Transform:
   m_Children:
   - {fileID: 876570194}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226047229
 GameObject:
@@ -7589,7 +7634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1248579764
@@ -7688,7 +7734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1288022174 stripped
@@ -7793,7 +7840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1293172416 stripped
@@ -7882,7 +7930,7 @@ Transform:
   m_LocalScale: {x: 5, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1306072973
 BoxCollider2D:
@@ -8215,7 +8263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1340435360
@@ -8313,7 +8362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1362857617
@@ -8359,7 +8409,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1387454396 stripped
 Transform:
@@ -8463,7 +8513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1437215085 stripped
@@ -8513,7 +8564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1445614666 stripped
 Transform:
@@ -8617,7 +8668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1483105023 stripped
@@ -8740,7 +8792,7 @@ Transform:
   - {fileID: 414469043}
   - {fileID: 1978402477}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493631931
 GameObject:
@@ -8837,7 +8889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1496548743
@@ -8936,7 +8989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1500675987
@@ -9035,7 +9089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1502078390
@@ -9144,7 +9199,7 @@ Transform:
   - {fileID: 130908633}
   - {fileID: 431524821}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1515130375
 GameObject:
@@ -9242,7 +9297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1516293097
@@ -9562,7 +9618,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1540081495
@@ -9661,7 +9718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1566377901
@@ -9760,7 +9818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1567680428
@@ -9859,7 +9918,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1574783378 stripped
@@ -10121,7 +10181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1650449192
@@ -10311,7 +10372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1711646151
@@ -10677,7 +10739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1742043352
@@ -10806,7 +10869,7 @@ Transform:
   - {fileID: 195083025}
   - {fileID: 11077161}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752650305
 GameObject:
@@ -10904,7 +10967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1754480389
@@ -69282,7 +69346,7 @@ Transform:
   m_Children:
   - {fileID: 1210414635}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1869680539
 GameObject:
@@ -69380,7 +69444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1884805512
@@ -69479,7 +69544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1885317957
@@ -69578,7 +69644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1941877139
@@ -69677,7 +69744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1955096604 stripped
@@ -69908,7 +69976,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &2010339377 stripped
@@ -91903,7 +91972,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2053652927 stripped
 Transform:
@@ -92007,7 +92076,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &2065142337
@@ -92106,7 +92176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &2081120667
@@ -92205,7 +92276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &2087825697
@@ -92290,6 +92362,80 @@ Transform:
   m_Father: {fileID: 102438342}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2107241139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 136.68654
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 68.73993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.113281
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651669864522529186, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325486675690234959, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_Name
+      value: Brown Tent (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c6d6a063ffaab49b1726de2aed770e, type: 3}
 --- !u!4 &2118667207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4254881258018865449, guid: 35ccd5cae4b86d2468a85dad462d6c68,
@@ -93268,6 +93414,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803adc32a8d527447b3ba2ab1fc1a315, type: 3}
+--- !u!1001 &3697308522350555839
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.1236024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032475489464449961, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325486675690234959, guid: 05c6d6a063ffaab49b1726de2aed770e,
+        type: 3}
+      propertyPath: m_Name
+      value: Brown Tent
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c6d6a063ffaab49b1726de2aed770e, type: 3}
 --- !u!1001 &3740357004512209042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93727,7 +93942,7 @@ PrefabInstance:
     - target: {fileID: 482214017074149118, guid: e61299e42ae270f47a46cb9de29b46ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 482214017074149118, guid: e61299e42ae270f47a46cb9de29b46ac,
         type: 3}
