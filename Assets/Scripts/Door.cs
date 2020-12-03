@@ -47,7 +47,7 @@ public class Door : MonoBehaviour {
     private void CheckDoorLock() {
         if (AllTriggered()) {
             OpenDoor();
-        }
+        } 
     }
 
     private bool AllTriggered() {
