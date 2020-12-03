@@ -84,13 +84,9 @@ public class EventController {
 
     public event Action OnBridgeOpen;
 
-    
-
     #endregion EventSource & Delegates
 
     #region Class Methods
-
-    
 
     public void BroadcastDoorOpen() {
         Debug.Log("Broadcast Door Open");
@@ -117,7 +113,7 @@ public class EventController {
         OnKeyHolderChange?.Invoke(keys);
     }
 
-    public void BroadcastReset() { 
+    public void BroadcastReset() {
         OnReset?.Invoke();
     }
 

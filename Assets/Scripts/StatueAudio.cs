@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StatueAudio : MonoBehaviour {
-    [SerializeField] private List<AudioSource> statuePlaylist;
+    [SerializeField] private AudioSource statueAudio;
+    [SerializeField] private List<AudioClip> statuePlaylist;
 
 
     public void OnTriggerEnter2D(Collider2D collision) {
@@ -17,9 +18,10 @@ public class StatueAudio : MonoBehaviour {
 
     private IEnumerator PlayAudioPlaylist() {
         for (int i = 0; i < statuePlaylist.Count; i++) {
-            statuePlaylist[i].Play();
+            statueAudio.clip = statuePlaylist[i];
+            statueAudio.Play();
 
-            yield return new WaitForSeconds(statuePlaylist[i].clip.length);
+            yield return new WaitForSeconds(statuePlaylist[i].length);
         }
     }
 }

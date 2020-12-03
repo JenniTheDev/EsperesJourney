@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿// Jenni
 public class BridgeDoor : Door {
     protected override void OpenDoor() {
         EventController.Instance.BroadcastBridgeOpen();

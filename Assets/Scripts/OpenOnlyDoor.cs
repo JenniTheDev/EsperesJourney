@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine;
 
 public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
-
     [SerializeField] private bool doorStartPosition;
     private float delay = 0.5f;
     // private DoorAnims doorAnims;
@@ -19,8 +18,9 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         // this is not working
         //  WaitASecond(2);
         // doorAnims.OpenDoor();
-        StartCoroutine(WaitASecond());
-
+        EventController.Instance.BroadcastDoorOpen();
+        gameObject.SetActive(!doorStartPosition);
+        
     }
 
     public void PlayOpenFailAnim() {
@@ -28,7 +28,6 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         EventController.Instance.BroadcastKeyComboFail();
         // Debug.Log("door fail sound");
     }
-
 
     public void TriggerExecute() {
         Debug.Log(" Trigger execute called");
@@ -47,10 +46,5 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
         EventController.Instance.OnTriggerUse -= TriggerExecute;
     }
 
-    private IEnumerator WaitASecond() {
-        yield return new WaitForSecondsRealtime(delay);
-        EventController.Instance.BroadcastDoorOpen();
-        gameObject.SetActive(!doorStartPosition);
-
-    }
+    
 }

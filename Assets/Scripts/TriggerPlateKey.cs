@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿// Jenni
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerPlateKey : MonoBehaviour {
