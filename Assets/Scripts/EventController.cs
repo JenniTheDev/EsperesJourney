@@ -84,9 +84,13 @@ public class EventController {
 
     public event Action OnBridgeOpen;
 
+    
+
     #endregion EventSource & Delegates
 
     #region Class Methods
+
+    
 
     public void BroadcastDoorOpen() {
         Debug.Log("Broadcast Door Open");

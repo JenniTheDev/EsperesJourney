@@ -11,7 +11,7 @@ public class Trigger : MonoBehaviour {
     public bool IsTriggered {
         get { return this.isTriggered; }
     }
-
+    
     public event Action<Trigger> OnTriggered;
     public event Action<Trigger> OnTriggerChanged;
 
