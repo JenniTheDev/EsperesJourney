@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
       [SerializeField] private float dashTimeLength = 0.5f;    // The time that the dash lasts
       [SerializeField] private GameObject playerRotater;    // This is the gameObject that rotates in the direction that the player is moving
       [SerializeField] private GameObject blinkPoint;       // This is the point that the player will blind/teleport to
+      [SerializeField] private Vector3 positionBeforeLastTeleport;
 
     [Space]
     [Header("Health")]
@@ -33,6 +34,9 @@ public class PlayerController : MonoBehaviour {
       [SerializeField] int minNumberOfHealthPacks = 0;
       [Tooltip("List all the GameObject tags of objects that can alter the health of this gameObject")]
       [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
+      [SerializeField] private List<string> tagsThatCanCauseFalling;
+      [SerializeField] private int howMuchDamageToTakeFromFall = 10;
+      [SerializeField] private bool isDead = false;
 
     // These should be moved to it's own class
     [Space]
@@ -86,6 +90,10 @@ public class PlayerController : MonoBehaviour {
     [Header("Physics")]
       [Tooltip("The Rigidbody2D of the player.  If not set in the inspector it will default to any Rigidbody2D attached to this gameObject")]
       [SerializeField] private Rigidbody2D rb; // The rigid body on the player
+      [SerializeField] private Vector3 lastPositionBeforeFall;
+      [SerializeField] private Vector3 lastMoveDirectionBeforeFall;
+      [SerializeField] private bool playerShouldFall = false;
+      [SerializeField] private float timeToWaitAfterFalling = 0.5f;
 
     [Space]
     [Header("Events")]
@@ -119,7 +127,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void Update() {
-      MovementAnimation();
+        IdleAnimation();
+        MovementAnimation();
     }
 
     public void FixedUpdate() {
@@ -147,6 +156,7 @@ public class PlayerController : MonoBehaviour {
 
     public void PlayerTeleport() {
         if (playerHasControl) {
+            positionBeforeLastTeleport = getPosition();
             rb.MovePosition(blinkPoint.transform.position);
             teleport.Invoke();
             Debug.Log("Player has teleported");
@@ -166,6 +176,18 @@ public class PlayerController : MonoBehaviour {
 
             StartCoroutine(PlayerDash());
         }
+    }
+
+    public Vector3 getPosition(){
+      return gameObject.transform.position;
+    }
+
+    public Vector2 getMoveDirection(){
+      return moveDirection;
+    }
+
+    public Vector3 getPositionBeforeLastTeleport(){
+      return positionBeforeLastTeleport;
     }
 
     #endregion
@@ -210,11 +232,35 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void MovementAnimation(){
-      if (IsAnimatorSet()){
+      if (IsAnimatorSet() && playerHasControl){
         animator.SetFloat(movemtentDirectionXFloat, moveDirection.x);
         animator.SetFloat(movemtentDirectionYFloat, moveDirection.y);
         animator.SetFloat(movemtentDirectionSqrMagnitudeFloat, moveDirection.sqrMagnitude);
       }
+    }
+
+    public void DeathAnimation(bool input)
+    {
+        animator.SetBool("Death", input);
+    }
+
+    public void AttackAnimation()
+    {
+        animator.SetTrigger("Attack");
+    }
+
+    public void DashAnimation()
+    {
+        animator.SetTrigger("Dash");
+    }
+
+    public void IdleAnimation()
+    {
+        if(moveDirection.x >= 0.1 || moveDirection.x <= -0.1 || moveDirection.y >= 0.1 || moveDirection.y <= -0.1)
+        {
+            animator.SetFloat("lastMoveHorizontal", -moveDirection.x);
+            animator.SetFloat("lastMoveVertical", moveDirection.y);
+        }
     }
 
     #endregion
@@ -263,9 +309,13 @@ public class PlayerController : MonoBehaviour {
     // TODO: add event handler for player death
     // Will kill the player
     public void Death() {
-        Debug.Log("Player has died");
-        playerDied.Invoke();
-        StartCoroutine(PlayerDeathAndRespawn());
+        if(!isDead){
+          Debug.Log("Player has died");
+          playerDied.Invoke();
+          StartCoroutine(PlayerDeathAndRespawn());
+
+          isDead = true;
+        }
     }
 
     // Sets the position that the players will respawn at
@@ -284,6 +334,12 @@ public class PlayerController : MonoBehaviour {
     public void setCurrentHealthPacks(int input) {
         currentNumberOfHealthPacks = input;
         Debug.Log("The players number of health packs was set to " + input);
+    }
+
+    public int getCurrentHealthPacks()
+    {
+        Debug.Log("The players numberj of health packs is " + currentNumberOfHealthPacks);
+        return currentNumberOfHealthPacks;
     }
 
     public void updateCurrentHealthPacks(int input) {
@@ -318,6 +374,26 @@ public class PlayerController : MonoBehaviour {
 
     #endregion
 
+    #region Falling
+    // --- Falling --------------------------------------------------
+
+    public bool canThisObjectCauseFall(Collision2D col){
+      foreach (string _tag in tagsThatCanCauseFalling) {
+          if (col.gameObject.tag == _tag) return true;
+      }
+      return false;
+    }
+
+    public bool canThisObjectCauseFall_Collider2D(Collider2D col){
+      foreach (string _tag in tagsThatCanCauseFalling) {
+          if (col.gameObject.tag == _tag) return true;
+      }
+      return false;
+    }
+
+
+    #endregion
+
     #region Collisions
     // --- Collisions --------------------------------------------
 
@@ -326,16 +402,27 @@ public class PlayerController : MonoBehaviour {
       else return false;
     }
 
+    public Vector3 getVelocity(){
+      return rb.velocity;
+    }
+
+    public void zeroOutVelocity(){
+      rb.velocity = new Vector3(0,0,0);
+    }
+
     public Rigidbody2D GetRigidBody2DOnThisGameObject(){
       if(gameObject.GetComponent<Rigidbody2D>() != null) return gameObject.GetComponent<Rigidbody2D>();
       else return null;
     }
 
+    // Enter -----
     // Triggers when the player collides with another normal collider
     public void OnCollisionEnter2D(Collision2D col) {
         Debug.Log("Player touched something");
 
-        if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)) {
+        if (canThisObjectCauseFall(col)){
+          StartCoroutine(PlayerFall());
+        } else if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)) {
             updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
             if (isCharacterDead()) Death();
         } else if (col.gameObject.GetComponent<UpdateHealthPack>() != null) {
@@ -347,12 +434,40 @@ public class PlayerController : MonoBehaviour {
     public void OnTriggerEnter2D(Collider2D col) {
         Debug.Log("Player touched something");
 
-        if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe_Collider2D(col)) {
+        if (canThisObjectCauseFall_Collider2D(col)){
+          StartCoroutine(PlayerFall());
+        } else if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe_Collider2D(col)) {
             updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
             if (isCharacterDead()) Death();
         } else if (col.gameObject.GetComponent<UpdateHealthPack>() != null) {
             updateCurrentHealthPacks(col.gameObject.GetComponent<UpdateHealthPack>().units);
         }
+    }
+
+    // Stay ----
+    public void OnCollisionStay2D(Collision2D col){
+      if (canThisObjectCauseFall(col)){
+        playerShouldFall = true;
+      }
+    }
+
+    public void OnTriggerStay2D(Collider2D col){
+      if (canThisObjectCauseFall_Collider2D(col)){
+        playerShouldFall = true;
+      }
+    }
+
+    // Exit ------
+    public void OnCollisionExit2D(Collision2D col){
+      if (canThisObjectCauseFall(col)){
+        playerShouldFall = false;
+      }
+    }
+
+    public void OnTriggerExit2D(Collider2D col){
+      if (canThisObjectCauseFall_Collider2D(col)){
+        playerShouldFall = false;
+      }
     }
 
     #endregion
@@ -364,6 +479,7 @@ public class PlayerController : MonoBehaviour {
     public IEnumerator PlayerDash() {
         playerHasControl = false;
 
+        DashAnimation();
         Vector2 dashDirection = moveDirection * dashSpeed;
         rb.AddForce(dashDirection, ForceMode2D.Impulse);
         yield return new WaitForSeconds(dashTimeLength);
@@ -374,6 +490,7 @@ public class PlayerController : MonoBehaviour {
     public IEnumerator PlayerAttack() {
         playerHasControl = false;
 
+        AttackAnimation();
         rb.velocity = new Vector2(0, 0);
         GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, basicAttackSpawnPoint.transform.rotation);
         Destroy(attack, basicAttackObjectTimeLength);
@@ -404,13 +521,46 @@ public class PlayerController : MonoBehaviour {
         playerHasControl = false;
         rb.velocity = new Vector3(0, 0, 0);
 
+        DeathAnimation(true);
         yield return new WaitForSeconds(timeToWaitToRespawn);
         SetPlayerPosition(respawnLocation);
         setCurrentHealth(maxHealth);
         Debug.Log("The Player has respawned");
         playerRespawned.Invoke();
-
+        DeathAnimation(false);
         playerHasControl = true;
+        isDead = false;
+    }
+
+    public IEnumerator PlayerFall() {
+      lastPositionBeforeFall = getPosition();
+      lastMoveDirectionBeforeFall = getMoveDirection();
+
+      playerShouldFall = true;
+
+      while (!playerHasControl){
+        yield return null;
+      }
+
+      if(playerShouldFall){
+        Debug.Log("The player should fall.");
+        playerHasControl = false; // remove control
+        zeroOutVelocity(); // zero out movement
+        // Play fall animation
+
+        updateCurrentHealth(howMuchDamageToTakeFromFall);// Take damage
+
+        yield return new WaitForSeconds(timeToWaitAfterFalling);
+
+        Vector3 returnPostition = lastPositionBeforeFall - lastMoveDirectionBeforeFall;
+        if (returnPostition == getPosition()) returnPostition = getPositionBeforeLastTeleport();
+
+        SetPlayerPosition(returnPostition);
+        playerHasControl = true;
+      }
+      else {
+        Debug.Log("The player should not fall.");
+      }
     }
 
     #endregion

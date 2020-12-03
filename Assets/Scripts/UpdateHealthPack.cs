@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class UpdateHealthPack : MonoBehaviour
-{
+public class UpdateHealthPack : MonoBehaviour {
     public int units = 1;
 }
