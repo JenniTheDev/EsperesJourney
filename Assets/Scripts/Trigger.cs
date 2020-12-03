@@ -12,6 +12,8 @@ public class Trigger : MonoBehaviour {
         get { return this.isTriggered; }
     }
     
+    protected virtual void PlayClick() { }
+
     public event Action<Trigger> OnTriggered;
     public event Action<Trigger> OnTriggerChanged;
 
@@ -35,11 +37,11 @@ public class Trigger : MonoBehaviour {
         return false;
     }
 
-    private void FireTrigger() {
+    protected virtual void FireTrigger() {
         bool hasChanged = IsTriggered == false;
         this.isTriggered = true;
         OnTriggered?.Invoke(this);
-        if(hasChanged) { OnTriggerChanged?.Invoke(this); }
+        if (hasChanged) { OnTriggerChanged?.Invoke(this); }
     }
 
     public void ResetTrigger() {
