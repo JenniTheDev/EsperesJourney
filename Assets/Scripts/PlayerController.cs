@@ -336,6 +336,12 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("The players number of health packs was set to " + input);
     }
 
+    public int getCurrentHealthPacks()
+    {
+        Debug.Log("The players numberj of health packs is " + currentNumberOfHealthPacks);
+        return currentNumberOfHealthPacks;
+    }
+
     public void updateCurrentHealthPacks(int input) {
         currentNumberOfHealthPacks += input;
 
