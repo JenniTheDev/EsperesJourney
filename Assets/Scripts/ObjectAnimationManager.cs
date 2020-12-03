@@ -65,6 +65,14 @@ public class ObjectAnimationManager : MonoBehaviour
         }
     }
 
+    public void AttackAnimation(bool input)
+    {
+        if (IsAnimatorSet())
+        {
+            animator.SetBool("Attack", input);
+        }
+    }
+
     public void IdleAnimation()
     {
         if (IsAnimatorSet())
