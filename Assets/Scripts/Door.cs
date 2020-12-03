@@ -47,7 +47,9 @@ public class Door : MonoBehaviour {
     private void CheckDoorLock() {
         if (AllTriggered()) {
             OpenDoor();
-        } 
+        } else {
+            EventController.Instance.BroadcastKeyComboFail();
+        }
     }
 
     private bool AllTriggered() {
