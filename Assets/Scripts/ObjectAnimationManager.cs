@@ -73,6 +73,11 @@ public class ObjectAnimationManager : MonoBehaviour
         }
     }
 
+    public void DeathAnimation(bool input)
+    {
+        animator.SetBool("Death", input);
+    }
+
     public void IdleAnimation()
     {
         if (IsAnimatorSet())
