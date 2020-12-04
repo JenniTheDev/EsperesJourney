@@ -50,7 +50,7 @@ public class PlayerInput : MonoBehaviour {
         Player.Character.Dash.performed += ctx => playerScript.Dash();
         Player.Character.Attack.performed += ctx => playerScript.Attack();
         //Player.Character.Blink.performed += ctx => playerScript.PlayerTeleport();
-        Player.Character.Shoot.performed += ctx => playerScript.ProjectileAbility();
+        //Player.Character.Shoot.performed += ctx => playerScript.ProjectileAbility();
         Player.Character.Heal.performed += ctx => playerScript.updateCurrentHealthPacks(-1);
     }
 
