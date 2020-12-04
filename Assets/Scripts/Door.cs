@@ -40,15 +40,16 @@ public class Door : MonoBehaviour {
 
     private void UpdateTriggers(Trigger trigger) {
         triggeredOrder.Add(Array.IndexOf(triggers, trigger));
-        if (forceOrder && !TriggeredInOrder()) { ResetTriggers(); }
+        if (forceOrder && !TriggeredInOrder()) {
+            EventController.Instance.BroadcastKeyComboFail();
+            ResetTriggers();
+        }
         CheckDoorLock();
     }
 
     private void CheckDoorLock() {
         if (AllTriggered()) {
             OpenDoor();
-        } else {
-            EventController.Instance.BroadcastKeyComboFail();
         }
     }
 
