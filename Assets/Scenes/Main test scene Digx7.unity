@@ -1476,7 +1476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb583b1bd4a1f944a8fc690a39de747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsTxt: {fileID: 1728438051}
+  CoinsTxt: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &233280398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 1
+  type: 0
 --- !u!1 &432716872
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,11 +4352,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69,
-        type: 3}
-      propertyPath: dashSpeed
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 2336119128233695944, guid: c270bde6f540edc48a01f07da37cbd69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6427,7 +6423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorStartPosition: 0
-  doorMotionSound: {fileID: 0}
 --- !u!1 &923802725
 GameObject:
   m_ObjectHideFlags: 0
@@ -6746,7 +6741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 3
+  type: 0
 --- !u!58 &965140569
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6825,7 +6820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 0
+  type: 0
 --- !u!1 &1003765241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6866,6 +6861,8 @@ MonoBehaviour:
   doorOpen: {fileID: 0}
   doorClose: {fileID: 0}
   doorFail: {fileID: 0}
+  doorButtonClick: {fileID: 0}
+  bridgeOpen: {fileID: 0}
 --- !u!4 &1003765243
 Transform:
   m_ObjectHideFlags: 0

@@ -47,6 +47,8 @@ public class EventController {
 
     public delegate void OnLivesLeftHandler();
 
+    // game end
+
     public event OnLivesLeftHandler OnLivesLeft;
 
     // Character Specific Events to possibly move in the future
@@ -113,7 +115,7 @@ public class EventController {
         OnKeyHolderChange?.Invoke(keys);
     }
 
-    public void BroadcastReset() { 
+    public void BroadcastReset() {
         OnReset?.Invoke();
     }
 

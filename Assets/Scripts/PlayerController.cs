@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour {
       [SerializeField] private float playerDeathTimeLength = 0.1f; // The Length in time unitl this gameObject is destroyed
       [Tooltip("Shows weather or not the player has control of the character")]
       [SerializeField] private bool playerHasControl = true;   // This controls weather or not the player can do something;
+      [SerializeField] private Vector2 animationDirection;
 
     [Space]
     [Header("Physics")]
@@ -133,6 +134,7 @@ public class PlayerController : MonoBehaviour {
 
     public void FixedUpdate() {
         MovePlayer(moveDirection);
+        animationDirection = Vector3.Normalize(rb.velocity);
     }
 
     #endregion
@@ -274,6 +276,10 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("The players currentHealth was set to " + input);
     }
 
+    public int getCurrentHealth(){
+      return currentHealth;
+    }
+
     public bool canThisObjectDamageMe(Collision2D col) {
         foreach (string _tag in tagsThatCanAffectObjectsHealth) {
             if (col.gameObject.tag == _tag) return true;
@@ -334,6 +340,12 @@ public class PlayerController : MonoBehaviour {
     public void setCurrentHealthPacks(int input) {
         currentNumberOfHealthPacks = input;
         Debug.Log("The players number of health packs was set to " + input);
+    }
+
+    public int getCurrentHealthPacks()
+    {
+        Debug.Log("The players numberj of health packs is " + currentNumberOfHealthPacks);
+        return currentNumberOfHealthPacks;
     }
 
     public void updateCurrentHealthPacks(int input) {

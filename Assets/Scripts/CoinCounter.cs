@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinCounter : MonoBehaviour {
-    [SerializeField] private Text coinsTxt;
-
-    private void OnEnable() {
+public class CoinCounter : MonoBehaviour
+{
+    [SerializeField] private Text CoinsTxt;
+    [SerializeField] private GameObject player;
+    private void OnEnable()
+    {
         Subscribe();
+        //CoinsTxt.text = ;
     }
 
     private void OnDisable() {
@@ -13,7 +16,7 @@ public class CoinCounter : MonoBehaviour {
     }
 
     private void UpdateCoinCounter(int coins) {
-        coinsTxt.text = coins.ToString();
+        //coinsTxt.text = coins.ToString();
     }
 
     public void Subscribe() {
