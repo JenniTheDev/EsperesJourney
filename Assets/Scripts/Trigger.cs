@@ -15,8 +15,8 @@ public class Trigger : MonoBehaviour {
         get { return this.isTriggered; }
     }
 
-    protected virtual void PlayClick() {
-    }
+    // protected virtual void PlayClick() {
+    // }
 
     public event Action<Trigger> OnTriggered;
 
