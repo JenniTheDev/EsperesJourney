@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3654473270051558071}
   - component: {fileID: 3654473270051558070}
   - component: {fileID: 3654473270051558069}
+  - component: {fileID: 8430020248079814063}
   m_Layer: 0
   m_Name: Trash Bag 5 Small
   m_TagString: Untagged
@@ -100,3 +101,19 @@ MonoBehaviour:
   destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
+--- !u!58 &8430020248079814063
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654473270051558064}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.036206722, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.09724188
