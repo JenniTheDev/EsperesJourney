@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour {
         resumeButton.SetActive(true);
     }
 
+    
+
     public void ResumeGame() {
         currentState = GameState.Playing;
         startButton.SetActive(false);

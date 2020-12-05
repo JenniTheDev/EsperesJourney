@@ -2,40 +2,53 @@
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
-    #region Game Audio
 
-    // these sounds would originate from one direction
-    [SerializeField] private AudioSource sewerLevelMusic;
+    [SerializeField] public AudioSource soundtrack;
+    [SerializeField] public AudioSource environmentalSFX;
+    [SerializeField] public AudioSource espereAudio;
+    [SerializeField] public AudioSource enemyAudio;
+    [SerializeField] public AudioSource miscAudio;
 
+    #region Soundtracks
     [SerializeField] private AudioClip sewerLevelMusicSound;
-    [SerializeField] private AudioSource pauseMusic;
     [SerializeField] private AudioClip pauseMusicSound;
-    [SerializeField] private AudioSource playerDeath;
+    [SerializeField] private AudioClip gameWonSound;
+    [SerializeField] private AudioClip sewerAmbiant;
+    [SerializeField] private AudioClip mainMenuMusic;
+
+    #endregion
+
+    #region Espere
     [SerializeField] private AudioClip playerDeathSound;
+    [SerializeField] private AudioClip dashSound;
+    [SerializeField] private AudioClip meleeAttackSound;
+    [SerializeField] private AudioClip teleportSound;
+    // [SerializeField] private AudioClip rangedAttackSound;
+    // [SerializeField] private AudioClip healthPotPickup;
 
-    #endregion Game Audio
 
-    // These sounds need to come from the player
-    // The AudioSource should be on the object it sounds like it is coming from
-    #region Sound Effects
+    #endregion
 
-    // [SerializeField] private AudioSource dashSound;
-    // [SerializeField] private AudioSource meleeAttackSound;
-    // [SerializeField] private AudioSource teleportSound;
-    // [SerializeField] private AudioSource rangedAttackSound;
-    [SerializeField] private AudioSource healthPotPickup;
+    #region Enemies
 
-    [SerializeField] private AudioClip healthPotPickupSound;
+    #endregion
 
-    // [SerializeField] private AudioSource healthPotUse;
-    [SerializeField] private AudioSource doorOpen;
+    #region Environmental SFX   
+    [SerializeField] private AudioClip doorOpen;
+    [SerializeField] private AudioClip doorClose;
+    // don't put door fail and door click on the same audio source
+    [SerializeField] private AudioClip doorButtonClick;
+   
 
-    [SerializeField] private AudioSource doorClose;
-    [SerializeField] private AudioSource doorFail;
-    [SerializeField] private AudioSource doorButtonClick;
-    [SerializeField] private AudioSource bridgeOpen;
+    #endregion
 
-    #endregion Sound Effects
+    #region Misc
+    [SerializeField] private AudioClip doorFail;
+    [SerializeField] private AudioClip bridgeOpen;
+
+    #endregion
+
+
 
     #region Monobehavior
 
@@ -57,39 +70,56 @@ public class SoundManager : MonoBehaviour {
     #region Methods
 
     private void PlayLevelMusic() {
-        sewerLevelMusic.Play();
+        soundtrack.clip = sewerLevelMusicSound;
+        soundtrack.Play();
     }
 
     private void PlayPauseMusic() {
-        pauseMusic.Play();
+        soundtrack.clip = pauseMusicSound;
+        soundtrack.Play();
+    }
+
+    private void PlaySewerAmbiantMusic() {
+        soundtrack.clip = sewerAmbiant;
+        soundtrack.Play();
     }
 
     private void PlayPlayerDeathMusic() {
-        playerDeath.Play();
+        espereAudio.clip = playerDeathSound;
+        espereAudio.Play();
     }
 
-    private void PlayHealthPotPickup() {
-        healthPotPickup.clip = healthPotPickupSound;
-        healthPotPickup.Play();
+    private void PlayMainMenuMusic() {
+        soundtrack.clip = mainMenuMusic;
+        soundtrack.Play();
     }
+
+    //private void PlayHealthPotPickup() {
+    //    environmentalSFX.clip = healthPotPickup;
+    //    environmentalSFX.Play();
+    //}
 
     public void PlayDoorOpen() {
-        doorOpen.Play();
+        environmentalSFX.clip = doorOpen;
+        environmentalSFX.Play();
     }
 
     public void PlayBridgeOpen() {
-        bridgeOpen.Play();
+        miscAudio.clip = bridgeOpen;
+        miscAudio.Play();
     }
 
     private void PlayDoorClose() {
     }
 
     private void PlayDoorFail() {
-        doorFail.Play();
+        miscAudio.clip = doorFail;
+        miscAudio.Play();
     }
 
     private void PlayButtonClick() {
-        doorButtonClick.Play();
+        environmentalSFX.clip = doorButtonClick;
+        environmentalSFX.Play();
     }
 
     private void Subscribe() {
@@ -98,12 +128,13 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnResume += PlayLevelMusic;
         EventController.Instance.OnPause += PlayPauseMusic;
         EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
-        EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
+        // EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse += PlayDoorOpen;
         EventController.Instance.OnButtonPushSuccess += PlayButtonClick;
         EventController.Instance.OnDoorOpen += PlayDoorOpen;
         EventController.Instance.OnBridgeOpen += PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail += PlayDoorFail;
+
     }
 
     private void Unsubscribe() {
@@ -111,12 +142,13 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnResume -= PlayLevelMusic;
         EventController.Instance.OnPause -= PlayPauseMusic;
         EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;
-        EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
+        // EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse -= PlayDoorOpen;
         EventController.Instance.OnButtonPushSuccess -= PlayButtonClick;
         EventController.Instance.OnDoorOpen -= PlayDoorOpen;
         EventController.Instance.OnBridgeOpen -= PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail -= PlayDoorFail;
+
     }
 
     #endregion Methods
