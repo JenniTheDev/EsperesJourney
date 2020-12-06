@@ -12,6 +12,7 @@ public class DelayDoor : Door {
     private IEnumerator WaitASecond() {
         yield return new WaitForSecondsRealtime(delay);
         EventController.Instance.BroadcastDoorOpen();
+        // doorAnims.
         gameObject.SetActive(false);
     }
 }

@@ -6307,6 +6307,7 @@ MonoBehaviour:
   currentState: 0
   startButton: {fileID: 0}
   resumeButton: {fileID: 0}
+  quit: 27
 --- !u!4 &1105437439
 Transform:
   m_ObjectHideFlags: 0
@@ -75627,6 +75628,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4280267892671499647, guid: 1b69c58744ed86d418efb41066906894,
+        type: 3}
+      propertyPath: doorAnims
+      value: 
+      objectReference: {fileID: 761793097}
     - target: {fileID: 7701390235461514084, guid: 1b69c58744ed86d418efb41066906894,
         type: 3}
       propertyPath: canTripColliders.Array.data[0]

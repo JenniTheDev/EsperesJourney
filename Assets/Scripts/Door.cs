@@ -27,7 +27,7 @@ public class Door : MonoBehaviour {
         foreach (Trigger t in triggers) {
             t.OnTriggered += UpdateTriggers;
         }
-        doorAnims = GetComponent<Animator>();
+        
     }
 
     #endregion MonoBehaviour
