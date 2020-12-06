@@ -337,6 +337,7 @@ MonoBehaviour:
   - {fileID: 5991842962440583288}
   - {fileID: 5991842963353358890}
   - {fileID: 5991842962231640932}
+  doorAnimation: {fileID: 0}
 --- !u!1 &5991842962440583291
 GameObject:
   m_ObjectHideFlags: 0

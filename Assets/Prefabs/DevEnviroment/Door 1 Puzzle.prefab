@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &761793097
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446068083954219282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f2a235cff8aea34babab84bd3408561, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7701390235461514106
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +220,7 @@ MonoBehaviour:
   resetOnOrderFail: 0
   triggers:
   - {fileID: 7701390235461514084}
+  doorAnimation: {fileID: 0}
 --- !u!1 &7701390236788755309
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +331,24 @@ PrefabInstance:
       propertyPath: triggers.Array.data[0]
       value: 
       objectReference: {fileID: 7701390235461514084}
+    - target: {fileID: 2790590432342266907, guid: 41f225b69f90f8b49b4ac20cf645b1d8,
+        type: 3}
+      propertyPath: doorAnims
+      value: 
+      objectReference: {fileID: 761793097}
+    - target: {fileID: 2790590432342266907, guid: 41f225b69f90f8b49b4ac20cf645b1d8,
+        type: 3}
+      propertyPath: doorAnimation
+      value: 
+      objectReference: {fileID: 761793097}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41f225b69f90f8b49b4ac20cf645b1d8, type: 3}
+--- !u!1 &4446068083954219282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2337122548571332726, guid: 41f225b69f90f8b49b4ac20cf645b1d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2151801219699218788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4446068083954219280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2337122548571332724, guid: 41f225b69f90f8b49b4ac20cf645b1d8,

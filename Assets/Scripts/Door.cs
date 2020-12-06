@@ -15,7 +15,7 @@ public class Door : MonoBehaviour {
     private Trigger[] triggers;
 
     [SerializeField]
-    public Animator doorAnims;
+    protected Animator doorAnimation;
 
     private List<int> triggeredOrder;
 
