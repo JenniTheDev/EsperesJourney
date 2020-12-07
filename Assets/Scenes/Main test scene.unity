@@ -4328,6 +4328,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5440145965450913528, guid: e43d874c74215b144844b83a3aef9d5a,
+        type: 3}
+      propertyPath: audioToPlay
+      value: 
+      objectReference: {fileID: 1035905494}
     - target: {fileID: 5440145966111470681, guid: e43d874c74215b144844b83a3aef9d5a,
         type: 3}
       propertyPath: m_Name
@@ -4388,6 +4393,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5440145966628182137, guid: e43d874c74215b144844b83a3aef9d5a,
+        type: 3}
+      propertyPath: canTripColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 174540746}
+    - target: {fileID: 5440145966628182137, guid: e43d874c74215b144844b83a3aef9d5a,
+        type: 3}
+      propertyPath: audioToPlay
+      value: 
+      objectReference: {fileID: 1035905494}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43d874c74215b144844b83a3aef9d5a, type: 3}
 --- !u!1001 &260150231
@@ -21888,7 +21903,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioToPlay
       value: 
-      objectReference: {fileID: 1035905497}
+      objectReference: {fileID: 1035905494}
     - target: {fileID: 7701390236788755309, guid: 1b69c58744ed86d418efb41066906894,
         type: 3}
       propertyPath: m_Name
