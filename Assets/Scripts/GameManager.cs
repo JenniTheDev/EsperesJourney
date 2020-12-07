@@ -56,9 +56,14 @@ public class GameManager : MonoBehaviour {
 
     public void PauseGame() {
         currentState = GameState.Paused;
-      //  startButton.SetActive(true);
-      //  resumeButton.SetActive(true);
 
+        //  startButton.SetActive(true);
+        //  resumeButton.SetActive(true);
+        Time.timeScale = 0;
+        
+       // level1Music.Stop();
+       //.enabled = false;
+        print("We are pressing StartButton and Pausing game.");
     }
 
     
@@ -68,6 +73,7 @@ public class GameManager : MonoBehaviour {
        // startButton.SetActive(false);
        // resumeButton.SetActive(false);
         EventController.Instance.BroadcastResume();
+        
     }
 
     public void QuitGame() {
