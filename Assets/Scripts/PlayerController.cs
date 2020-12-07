@@ -131,11 +131,14 @@ public class PlayerController : MonoBehaviour {
         if (IsAnimatorSet());
         else animator = GetAnimatorOnThisGameObject();
 
+        //Add UI listeners for events
         healthPackGained.AddListener(HealthpotCounter.GetComponent<HealthPotCounter>().UpdateHealthPotCounter);
         healthPackUsed.AddListener(HealthpotCounter.GetComponent<HealthPotCounter>().UpdateHealthPotCounter);
 
         healthIncrease.AddListener(HealthBar.GetComponent<HealthBar>().UpdateHealthBar);
         healthDecrease.AddListener(HealthBar.GetComponent<HealthBar>().UpdateHealthBar);
+        playerRespawned.AddListener(HealthBar.GetComponent<HealthBar>().UpdateHealthBar);
+        healthPackUsed.AddListener(HealthBar.GetComponent<HealthBar>().UpdateHealthBar);
     }
 
     public void Update() {
