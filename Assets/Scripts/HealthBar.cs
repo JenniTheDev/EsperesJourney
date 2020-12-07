@@ -1,23 +1,28 @@
-﻿// Who wrote this?
+﻿//Luis
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour {
-    [SerializeField] private Slider slider;
+public class HealthBar : MonoBehaviour
+{
+    [SerializeField] private GameObject player;
+    private Slider slider;
+    private PlayerController playerControllerScript;
 
-    private void OnEnable() {
+    private void Awake()
+    {
         slider = gameObject.GetComponent<Slider>();
-        //subscribe to eventcontroller OnHealthPotsUpdate
-        // EventController.Instance.OnHealthUpdate += UpdateHealthBar;
+        playerControllerScript = player.GetComponent<PlayerController>();
     }
 
-    private void OnDisable() {
-        //unsubscribe to eventcontroller OnHealthPotsUpdate
-        // EventController.Instance.OnHealthUpdate -= UpdateHealthBar;
-    }
+    // UpdateHealthbar is called when player events for healthincrease and healthdecrease are invoked
+    public void UpdateHealthBar()
+    {
+        if (playerControllerScript != null) { Debug.Log("1"); }
+        else { Debug.Log("0"); }
 
-    // UpdateHPCounter is called when OnHealthUpdate is broadcasted
-    private void UpdateHealthBar(int hp) {
-        slider.value = hp;
+        int currValue = playerControllerScript.getCurrentHealth();
+        Debug.Log("current health is " + slider.value);
+        slider.value = currValue;
+        Debug.Log("New value is " + slider.value);
     }
 }
