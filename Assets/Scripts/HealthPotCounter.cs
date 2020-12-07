@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Luis
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,31 +8,20 @@ public class HealthPotCounter : MonoBehaviour
 {
     [SerializeField] private Text HPotsTxt;
     [SerializeField] private GameObject player;
-    private void OnEnable()
+    private PlayerController playerControllerScript;
+    
+    private void Awake()
     {
-        Subscribe();
-        HPotsTxt.text = player.GetComponent<PlayerController>().getCurrentHealthPacks().ToString();
-    }
-    private void OnDisable()
-    {
-        Unsubscribe();
-    }
-
-    private void UpdateHealthPotCounter(int HPots)
-    {
-        HPotsTxt.text = HPots.ToString();
+        //Subscribe();
+        playerControllerScript = player.GetComponent<PlayerController>();
+        //playerControllerScript.healthPackGained.AddListener(UpdateHealthPotCounter);
+        //playerControllerScript.healthPackUsed.AddListener(UpdateHealthPotCounter);
+        
+        HPotsTxt.text = playerControllerScript.getCurrentHealthPacks().ToString();
     }
 
-    public void Subscribe()
+    public void UpdateHealthPotCounter()
     {
-        Unsubscribe();
-        //subscribe to eventcontroller OnHealthPotsUpdate
-        // EventController.Instance.OnCoinUpdate += UpdateCoinCounter;
-    }
-
-    public void Unsubscribe()
-    {
-        //unsubscribe to eventcontroller OnHealthPotsUpdate
-        //  EventController.Instance.OnCoinUpdate -= UpdateCoinCounter;
+        HPotsTxt.text = playerControllerScript.getCurrentHealthPacks().ToString();
     }
 }

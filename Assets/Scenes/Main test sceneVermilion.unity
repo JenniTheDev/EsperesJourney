@@ -217,7 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &53800043
@@ -314,6 +315,11 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 245031658161770318, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1556067799431673466, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
       propertyPath: m_Name
@@ -332,12 +338,12 @@ PrefabInstance:
     - target: {fileID: 8763458172044313624, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.998
+      value: 14.95
       objectReference: {fileID: 0}
     - target: {fileID: 8763458172044313624, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.076
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 8763458172044313624, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
@@ -792,7 +798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &114542443
@@ -969,7 +976,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 262343025}
-  keyType: 1
+  keyList: 
+  playerKeyList: 
+  numOfCorrectKeys: 0
+  numCorrectExpected: 0
+  doorFailSound: {fileID: 0}
 --- !u!4 &186933551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2101631487383795482, guid: ed9e9a48436407544834e759351e7c3d,
@@ -1072,7 +1083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &220871782 stripped
@@ -1081,6 +1093,184 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1035905493}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &220871788 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6157322793373976047, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &220871789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220871782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19c822821150064995777bd1c72764a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0}
+  moveSpeed: 300
+  dashSpeed: 10
+  dashTimeLength: 0.5
+  playerRotater: {fileID: 1613190986}
+  blinkPoint: {fileID: 991558687}
+  positionBeforeLastTeleport: {x: 0, y: 0, z: 0}
+  currentHealth: 100
+  maxHealth: 100
+  minHealth: 0
+  currentNumberOfHealthPacks: 1
+  maxNumberOfHealthPacks: 3
+  minNumberOfHealthPacks: 0
+  tagsThatCanAffectObjectsHealth:
+  - Enemy_Attack
+  - Health
+  - Boss_Attack
+  tagsThatCanCauseFalling:
+  - Acid
+  howMuchDamageToTakeFromFall: 10
+  isDead: 0
+  playerIsDead: 0
+  timeToWaitToRespawn: 5
+  respawnLocation: {x: 0, y: 0, z: 0}
+  basicAttackObject: {fileID: 7388582123865409461, guid: 104d3a4257fd4384c89f41f747391a28,
+    type: 3}
+  basicAttackSpawnPoint: {fileID: 1506740580}
+  basicAttackTimeLength: 1
+  basicAttackObjectTimeLength: 0.25
+  projectileObject: {fileID: 2774401395151226017, guid: 68520dd4e3635724c96d488b03ed1e2d,
+    type: 3}
+  projectileSpawnPoint: {fileID: 1506740580}
+  projectileTimeLength: 1
+  projectileObjectTimeLength: 1
+  projectileCoolDownTime: 3
+  canUseProjectileAttack: 1
+  animator: {fileID: 0}
+  movemtentDirectionXFloat: Horizontal
+  movemtentDirectionYFloat: Vertical
+  movemtentDirectionSqrMagnitudeFloat: Speed
+  playerDeathTimeLength: 0.1
+  playerHasControl: 1
+  rb: {fileID: 220871788}
+  lastPositionBeforeFall: {x: 0, y: 0, z: 0}
+  lastMoveDirectionBeforeFall: {x: 0, y: 0, z: 0}
+  playerShouldFall: 0
+  timeToWaitAfterFalling: 0.5
+  HealthpotCounter: {fileID: 1338972425}
+  HealthBar: {fileID: 772966802}
+  attack:
+    m_PersistentCalls:
+      m_Calls: []
+  fireProjectile:
+    m_PersistentCalls:
+      m_Calls: []
+  projectileAttackHasCooledDown:
+    m_PersistentCalls:
+      m_Calls: []
+  dash:
+    m_PersistentCalls:
+      m_Calls: []
+  teleport:
+    m_PersistentCalls:
+      m_Calls: []
+  ability:
+    m_PersistentCalls:
+      m_Calls: []
+  healthIncrease:
+    m_PersistentCalls:
+      m_Calls: []
+  healthDecrease:
+    m_PersistentCalls:
+      m_Calls: []
+  playerDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1607961567}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 451399062}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 991558687}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerRespawned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1607961567}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 451399062}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 991558687}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  playerRespawnLocationUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  fullOnHealthPacks:
+    m_PersistentCalls:
+      m_Calls: []
+  outOfHealthPack:
+    m_PersistentCalls:
+      m_Calls: []
+  healthPackGained:
+    m_PersistentCalls:
+      m_Calls: []
+  healthPackUsed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &225063216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &225662752
@@ -1276,7 +1467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &229460493
@@ -1313,7 +1505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 104.70001, y: 14.160004}
+  m_AnchoredPosition: {x: 104.70001, y: 14.160034}
   m_SizeDelta: {x: 24.450745, y: 26.91092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229460495
@@ -1328,7 +1520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb583b1bd4a1f944a8fc690a39de747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsTxt: {fileID: 1728438051}
+  CoinsTxt: {fileID: 1728438051}
+  player: {fileID: 220871782}
 --- !u!1 &233280398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61593a29f1919fc4cb3edd6881debc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpenSound: {fileID: 0}
 --- !u!4 &262343027
 Transform:
   m_ObjectHideFlags: 0
@@ -1559,7 +1753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &310755045 stripped
@@ -1834,7 +2029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &346278996
@@ -1932,7 +2128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &365403413 stripped
@@ -2043,7 +2240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &373680578
@@ -2299,7 +2497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &414469042
@@ -2498,7 +2697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 1
+  type: 0
 --- !u!1 &432716872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,7 +2794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &444621865 stripped
@@ -2603,6 +2803,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5686312782525035217, guid: 5e876cf83fdf4244abe8e1ee2181a533,
     type: 3}
   m_PrefabInstance: {fileID: 5686312782701172472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &451399062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4385570815342025147, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &471876230
 GameObject:
@@ -2781,7 +2987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &497149246
@@ -2880,7 +3087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &509687091 stripped
@@ -3073,7 +3281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &533610577
@@ -3172,7 +3381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &562545249
@@ -3491,7 +3701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &575563492
@@ -3674,7 +3885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &610189157
@@ -3937,7 +4149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &691379982 stripped
@@ -4042,7 +4255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &697589454
@@ -4141,7 +4355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &701430965
@@ -4297,7 +4512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &722170978
@@ -4464,7 +4680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &730403856
@@ -4562,7 +4779,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &743948298
@@ -4683,8 +4901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400.00012, y: 248.7}
-  m_SizeDelta: {x: 533.3334, y: 331.4626}
+  m_AnchoredPosition: {x: 400.00006, y: 248.7}
+  m_SizeDelta: {x: 533.33325, y: 331.4626}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772966804
 MonoBehaviour:
@@ -4693,12 +4911,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772966802}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8e286b2094a0aa4286cfb9abdcae8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 772966805}
+  player: {fileID: 220871782}
 --- !u!114 &772966805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4723,7 +4941,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4737,7 +4955,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1185545475}
   m_FillRect: {fileID: 1185545474}
   m_HandleRect: {fileID: 0}
@@ -4844,7 +5062,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &811634240
@@ -4943,7 +5162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &813900118
@@ -5110,7 +5330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1001 &830998628
@@ -5294,7 +5515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &848875652 stripped
@@ -5399,7 +5621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &857053881
@@ -5817,6 +6040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5571840d645a4124b9ff07686c0530ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorStartPosition: 0
 --- !u!1 &923802725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5995,7 +6219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &965140566
@@ -6044,7 +6269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 3
+  type: 0
 --- !u!58 &965140569
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6123,7 +6348,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4581973b604b1498d2287b84d4d47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyType: 0
+  type: 0
+--- !u!1 &991558687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2975084780385116093, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1003765241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,6 +6392,11 @@ MonoBehaviour:
   playerDeathSound: {fileID: 0}
   healthPotPickup: {fileID: 0}
   healthPotPickupSound: {fileID: 0}
+  doorOpen: {fileID: 0}
+  doorClose: {fileID: 0}
+  doorFail: {fileID: 0}
+  doorButtonClick: {fileID: 0}
+  bridgeOpen: {fileID: 0}
 --- !u!4 &1003765243
 Transform:
   m_ObjectHideFlags: 0
@@ -6236,6 +6472,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: currentNumberOfHealthPacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: HealthpotCounter
+      value: 
+      objectReference: {fileID: 1338972425}
+    - target: {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69,
+        type: 3}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 772966802}
     - target: {fileID: 2336119128233695944, guid: c270bde6f540edc48a01f07da37cbd69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6296,7 +6547,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c270bde6f540edc48a01f07da37cbd69, type: 3}
 --- !u!1 &1039376334
 GameObject:
@@ -6475,7 +6727,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1105164479 stripped
@@ -6561,7 +6814,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 906425567}
-  keyType: 3
+  keyList: 
+  playerKeyList: 
+  numOfCorrectKeys: 0
+  numCorrectExpected: 0
+  doorFailSound: {fileID: 0}
 --- !u!61 &1146959031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6647,16 +6904,16 @@ RectTransform:
   m_GameObject: {fileID: 1185545473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10.55, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 772966803}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -161.98, y: -139.03}
+  m_SizeDelta: {x: -520.2705, y: -321.94815}
+  m_Pivot: {x: 0.49999994, y: 0.50000036}
 --- !u!114 &1185545475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6676,7 +6933,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b3bbeee6e6b390a4c9be34b7dc3d686f, type: 3}
+  m_Sprite: {fileID: 5450313004457421710, guid: b3bbeee6e6b390a4c9be34b7dc3d686f,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7681,7 +7939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1248579764
@@ -7780,7 +8039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1288022174 stripped
@@ -7885,7 +8145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1293172416 stripped
@@ -8307,7 +8568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1338972425
@@ -8344,7 +8606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 162.29999, y: 14.16}
+  m_AnchoredPosition: {x: 162.29999, y: 14.159973}
   m_SizeDelta: {x: 24.450745, y: 27.91092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338972427
@@ -8456,7 +8718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1362857617
@@ -8606,7 +8869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1437215085 stripped
@@ -8717,7 +8981,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1483105023 stripped
@@ -8937,7 +9202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1496548743
@@ -9036,7 +9302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1500675987
@@ -9135,7 +9402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1502078390
@@ -9213,6 +9481,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502078390}
   m_CullTransparentMesh: 0
+--- !u!1 &1506740580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5423960392871623183, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1507709653
 GameObject:
   m_ObjectHideFlags: 0
@@ -9342,7 +9616,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1516293097
@@ -9662,7 +9937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1540081495
@@ -9761,7 +10037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1566377901
@@ -9860,7 +10137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1567680428
@@ -9959,7 +10237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1574783378 stripped
@@ -10119,11 +10398,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7226172706433179215}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1607961567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8233128986108626731, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1612632932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6965666839163404009, guid: ce6888d178ffbc948b025c4ae8892633,
     type: 3}
   m_PrefabInstance: {fileID: 6965666839700680077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1613190986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6185858564192968498, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1644494943
 GameObject:
@@ -10221,7 +10512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1650449192
@@ -10411,7 +10703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1728438049
@@ -10741,7 +11034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1742043352
@@ -10968,7 +11262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1754480389
@@ -69444,7 +69739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1884805512
@@ -69543,7 +69839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1885317957
@@ -69642,7 +69939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &1941877139
@@ -69741,7 +70039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &1955096604 stripped
@@ -69972,7 +70271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!4 &2010339377 stripped
@@ -73173,7 +73473,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &2065142337
@@ -73272,7 +73573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &2081120667
@@ -73371,7 +73673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 0
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
   tagsThatCanDestroyThisObject: []
 --- !u!1 &2087825697
