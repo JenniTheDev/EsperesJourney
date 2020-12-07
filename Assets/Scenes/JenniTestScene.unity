@@ -848,7 +848,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -4727699309651298001, guid: b81ae470c59dc2746bf5555220ebc676,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1508,7 +1508,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5218061924172370630, guid: b81ae470c59dc2746bf5555220ebc676,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2525,6 +2525,7 @@ MonoBehaviour:
   movemtentDirectionSqrMagnitudeFloat: Speed
   playerDeathTimeLength: 0.1
   playerHasControl: 1
+  animationDirection: {x: 0, y: 0}
   rb: {fileID: 440546518}
   lastPositionBeforeFall: {x: 0, y: 0, z: 0}
   lastMoveDirectionBeforeFall: {x: 0, y: 0, z: 0}
@@ -2756,7 +2757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440546514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.6, y: 39.88, z: 0}
+  m_LocalPosition: {x: 7.75, y: 1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1264053184}
@@ -3311,7 +3312,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6965563250911460238, guid: b81ae470c59dc2746bf5555220ebc676,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4016,7 +4017,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1745820931613974536, guid: b81ae470c59dc2746bf5555220ebc676,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6279,8 +6280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  startButton: {fileID: 0}
-  resumeButton: {fileID: 0}
+  quit: 27
+  pause: 112
 --- !u!4 &1105437439
 Transform:
   m_ObjectHideFlags: 0
@@ -6356,10 +6357,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -185714568686211919, guid: b81ae470c59dc2746bf5555220ebc676,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -74579,7 +74580,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioToPlay
       value: 
-      objectReference: {fileID: 628911367}
+      objectReference: {fileID: 292917943}
     - target: {fileID: 5440145966111470681, guid: e43d874c74215b144844b83a3aef9d5a,
         type: 3}
       propertyPath: m_Name
@@ -74640,11 +74641,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5440145966193031345, guid: e43d874c74215b144844b83a3aef9d5a,
-        type: 3}
-      propertyPath: audioToPlay
-      value: 
-      objectReference: {fileID: 628911367}
     - target: {fileID: 5440145966628182137, guid: e43d874c74215b144844b83a3aef9d5a,
         type: 3}
       propertyPath: canTripColliders.Array.data[0]
@@ -74654,7 +74650,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioToPlay
       value: 
-      objectReference: {fileID: 628911367}
+      objectReference: {fileID: 292917943}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43d874c74215b144844b83a3aef9d5a, type: 3}
 --- !u!1001 &5592764416013620078
@@ -75610,7 +75606,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioToPlay
       value: 
-      objectReference: {fileID: 628911367}
+      objectReference: {fileID: 292917943}
     - target: {fileID: 7701390236788755309, guid: 1b69c58744ed86d418efb41066906894,
         type: 3}
       propertyPath: m_Name
