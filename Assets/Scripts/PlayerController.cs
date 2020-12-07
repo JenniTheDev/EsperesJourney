@@ -97,6 +97,11 @@ public class PlayerController : MonoBehaviour {
       [SerializeField] private float timeToWaitAfterFalling = 0.5f;
 
     [Space]
+    [Header("UI")]
+    [SerializeField] private GameObject HealthpotCounter;
+    [SerializeField] private GameObject HealthBar;
+
+    [Space]
     [Header("Events")]
       [SerializeField] private UnityEvent attack;
       [SerializeField] private UnityEvent fireProjectile;
@@ -125,6 +130,12 @@ public class PlayerController : MonoBehaviour {
 
         if (IsAnimatorSet());
         else animator = GetAnimatorOnThisGameObject();
+
+        healthPackGained.AddListener(HealthpotCounter.GetComponent<HealthPotCounter>().UpdateHealthPotCounter);
+        healthPackUsed.AddListener(HealthpotCounter.GetComponent<HealthPotCounter>().UpdateHealthPotCounter);
+
+        healthIncrease.AddListener(HealthBar.GetComponent<HealthBar>().UpdateHealthBar);
+        healthDecrease.AddListener(HealthBar.GetComponent<HealthBar>().UpdateHealthBar);
     }
 
     public void Update() {
@@ -276,8 +287,10 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("The players currentHealth was set to " + input);
     }
 
-    public int getCurrentHealth(){
-      return currentHealth;
+    public int getCurrentHealth()
+    {
+        Debug.Log("The players currentHealth is " + currentHealth);
+        return currentHealth;
     }
 
     public bool canThisObjectDamageMe(Collision2D col) {
@@ -344,9 +357,10 @@ public class PlayerController : MonoBehaviour {
 
     public int getCurrentHealthPacks()
     {
-        Debug.Log("The players numberj of health packs is " + currentNumberOfHealthPacks);
+        Debug.Log("The players number of health packs is " + currentNumberOfHealthPacks);
         return currentNumberOfHealthPacks;
     }
+    
 
     public void updateCurrentHealthPacks(int input) {
         currentNumberOfHealthPacks += input;
@@ -369,7 +383,7 @@ public class PlayerController : MonoBehaviour {
                 healthPackUsed.Invoke();
                 currentHealth = maxHealth;
             }
-            Debug.Log("Something changed the players currentHealth by " + input + " units");
+            Debug.Log("Something changed the players currentHealthPots by " + input + " units");
         }
     }
 

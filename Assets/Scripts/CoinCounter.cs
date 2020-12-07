@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//Luis
+using UnityEngine;
 using UnityEngine.UI;
 
 public class CoinCounter : MonoBehaviour
