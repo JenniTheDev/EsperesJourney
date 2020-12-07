@@ -338,12 +338,12 @@ PrefabInstance:
     - target: {fileID: 8763458172044313624, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.998
+      value: 14.95
       objectReference: {fileID: 0}
     - target: {fileID: 8763458172044313624, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.076
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 8763458172044313624, guid: 7d1a515f1c1bae942aaad30ba8d8d984,
         type: 3}
@@ -1091,6 +1091,184 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1035905493}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &220871788 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6157322793373976047, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &220871789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220871782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19c822821150064995777bd1c72764a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0}
+  moveSpeed: 300
+  dashSpeed: 10
+  dashTimeLength: 0.5
+  playerRotater: {fileID: 1613190986}
+  blinkPoint: {fileID: 991558687}
+  positionBeforeLastTeleport: {x: 0, y: 0, z: 0}
+  currentHealth: 100
+  maxHealth: 100
+  minHealth: 0
+  currentNumberOfHealthPacks: 1
+  maxNumberOfHealthPacks: 3
+  minNumberOfHealthPacks: 0
+  tagsThatCanAffectObjectsHealth:
+  - Enemy_Attack
+  - Health
+  - Boss_Attack
+  tagsThatCanCauseFalling:
+  - Acid
+  howMuchDamageToTakeFromFall: 10
+  isDead: 0
+  playerIsDead: 0
+  timeToWaitToRespawn: 5
+  respawnLocation: {x: 0, y: 0, z: 0}
+  basicAttackObject: {fileID: 7388582123865409461, guid: 104d3a4257fd4384c89f41f747391a28,
+    type: 3}
+  basicAttackSpawnPoint: {fileID: 1506740580}
+  basicAttackTimeLength: 1
+  basicAttackObjectTimeLength: 0.25
+  projectileObject: {fileID: 2774401395151226017, guid: 68520dd4e3635724c96d488b03ed1e2d,
+    type: 3}
+  projectileSpawnPoint: {fileID: 1506740580}
+  projectileTimeLength: 1
+  projectileObjectTimeLength: 1
+  projectileCoolDownTime: 3
+  canUseProjectileAttack: 1
+  animator: {fileID: 0}
+  movemtentDirectionXFloat: Horizontal
+  movemtentDirectionYFloat: Vertical
+  movemtentDirectionSqrMagnitudeFloat: Speed
+  playerDeathTimeLength: 0.1
+  playerHasControl: 1
+  rb: {fileID: 220871788}
+  lastPositionBeforeFall: {x: 0, y: 0, z: 0}
+  lastMoveDirectionBeforeFall: {x: 0, y: 0, z: 0}
+  playerShouldFall: 0
+  timeToWaitAfterFalling: 0.5
+  HealthpotCounter: {fileID: 1338972425}
+  HealthBar: {fileID: 772966802}
+  attack:
+    m_PersistentCalls:
+      m_Calls: []
+  fireProjectile:
+    m_PersistentCalls:
+      m_Calls: []
+  projectileAttackHasCooledDown:
+    m_PersistentCalls:
+      m_Calls: []
+  dash:
+    m_PersistentCalls:
+      m_Calls: []
+  teleport:
+    m_PersistentCalls:
+      m_Calls: []
+  ability:
+    m_PersistentCalls:
+      m_Calls: []
+  healthIncrease:
+    m_PersistentCalls:
+      m_Calls: []
+  healthDecrease:
+    m_PersistentCalls:
+      m_Calls: []
+  playerDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1607961567}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 451399062}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 991558687}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerRespawned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1607961567}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 451399062}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 991558687}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  playerRespawnLocationUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  fullOnHealthPacks:
+    m_PersistentCalls:
+      m_Calls: []
+  outOfHealthPack:
+    m_PersistentCalls:
+      m_Calls: []
+  healthPackGained:
+    m_PersistentCalls:
+      m_Calls: []
+  healthPackUsed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &225063216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,6 +2800,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5686312782525035217, guid: 5e876cf83fdf4244abe8e1ee2181a533,
     type: 3}
   m_PrefabInstance: {fileID: 5686312782701172472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &451399062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4385570815342025147, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &471876230
 GameObject:
@@ -6252,7 +6436,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 194832202801030675, guid: c270bde6f540edc48a01f07da37cbd69, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c270bde6f540edc48a01f07da37cbd69, type: 3}
 --- !u!1 &1039376334
 GameObject:
@@ -10048,11 +10233,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7226172706433179215}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1607961567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8233128986108626731, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1612632932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6965666839163404009, guid: ce6888d178ffbc948b025c4ae8892633,
     type: 3}
   m_PrefabInstance: {fileID: 6965666839700680077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1613190986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6185858564192968498, guid: c270bde6f540edc48a01f07da37cbd69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035905493}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1644494943
 GameObject:

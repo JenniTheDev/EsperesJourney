@@ -14,6 +14,9 @@ public class Door : MonoBehaviour {
     [SerializeField]
     private Trigger[] triggers;
 
+    [SerializeField]
+    protected Animator doorAnimation;
+
     private List<int> triggeredOrder;
 
     #region MonoBehaviour
@@ -24,6 +27,7 @@ public class Door : MonoBehaviour {
         foreach (Trigger t in triggers) {
             t.OnTriggered += UpdateTriggers;
         }
+        
     }
 
     #endregion MonoBehaviour
@@ -40,7 +44,10 @@ public class Door : MonoBehaviour {
 
     private void UpdateTriggers(Trigger trigger) {
         triggeredOrder.Add(Array.IndexOf(triggers, trigger));
-        if (forceOrder && !TriggeredInOrder()) { ResetTriggers(); }
+        if (forceOrder && !TriggeredInOrder()) {
+            EventController.Instance.BroadcastKeyComboFail();
+            ResetTriggers();
+        }
         CheckDoorLock();
     }
 

@@ -47,6 +47,8 @@ public class EventController {
 
     public delegate void OnLivesLeftHandler();
 
+    // game end
+
     public event OnLivesLeftHandler OnLivesLeft;
 
     // Character Specific Events to possibly move in the future

@@ -3,5 +3,6 @@ public enum GameState {
     None,
     StartMenu,
     Paused,
+    Quit,
     Playing,
 }
