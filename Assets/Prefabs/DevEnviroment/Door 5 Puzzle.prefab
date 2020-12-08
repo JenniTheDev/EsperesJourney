@@ -528,6 +528,7 @@ Transform:
   - {fileID: 6199244514362245381}
   - {fileID: 7017466097159785380}
   - {fileID: 6199244513574625661}
+  - {fileID: 1505849293801341512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1219,4 +1220,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2583035473272717277, guid: 007d47adcb40435449cd2946c2aad7ea,
     type: 3}
   m_PrefabInstance: {fileID: 4808653836730856569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5697902535249615099
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4808653836393111941}
+    m_Modifications:
+    - target: {fileID: 6626727849692011185, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_Name
+      value: 3 Tile Door Open to Close (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011185, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 295.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 73.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5cc534b937adad640a28fc48f73a4b47, type: 3}
+--- !u!4 &1505849293801341512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6626727849692011187, guid: 5cc534b937adad640a28fc48f73a4b47,
+    type: 3}
+  m_PrefabInstance: {fileID: 5697902535249615099}
   m_PrefabAsset: {fileID: 0}

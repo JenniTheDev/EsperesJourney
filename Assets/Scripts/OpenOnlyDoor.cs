@@ -26,15 +26,15 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
 
       
 
-    private IEnumerator OpenAfterAnimation() {
+    //private IEnumerator OpenAfterAnimation() {
         
 
-        yield return new WaitForSeconds(delay);
-        EventController.Instance.BroadcastOnDoorClose();
+    //    yield return new WaitForSeconds(delay);
+    //    EventController.Instance.BroadcastOnDoorClose();
 
 
 
-    }
+    //}
 
     public void TriggerExecute() {
         Debug.Log(" Trigger execute called");
