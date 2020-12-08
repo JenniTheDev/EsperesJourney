@@ -361,6 +361,8 @@ MonoBehaviour:
   lastMoveDirectionBeforeFall: {x: 0, y: 0, z: 0}
   playerShouldFall: 0
   timeToWaitAfterFalling: 0.5
+  HealthpotCounter: {fileID: 0}
+  HealthBar: {fileID: 0}
   attack:
     m_PersistentCalls:
       m_Calls: []
