@@ -503,7 +503,7 @@ public class PlayerController : MonoBehaviour {
     // Will control the player dashing
     public IEnumerator PlayerDash() {
         playerHasControl = false;
-
+        EventController.Instance.BroadcastOnEspereDash();
         DashAnimation();
         Vector2 dashDirection = moveDirection * dashSpeed;
         rb.AddForce(dashDirection, ForceMode2D.Impulse);

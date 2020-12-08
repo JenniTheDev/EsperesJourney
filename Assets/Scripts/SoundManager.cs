@@ -145,10 +145,15 @@ public class SoundManager : MonoBehaviour {
         espereAudio.Play();
     }
 
+    private void PlayEspereDash() {
+        espereAudio.clip = dashSound;
+        espereAudio.Play();
+    }
+
     //[SerializeField] private AudioClip bossFire;
     //[SerializeField] private AudioClip bossRoar;
     //[SerializeField] private AudioClip bossRun;
-    //[SerializeField] private AudioClip enemyDeath;
+
     //[SerializeField] private AudioClip lizardRun;
 
 
@@ -165,7 +170,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     private void PlayEnemyDeath() {
-
+        enemyAudio.clip = enemyDeath;
+        enemyAudio.Play();
     }
 
     private void PlayLizardRun() {
@@ -187,8 +193,9 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnBridgeOpen += PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail += PlayDoorFail;
         EventController.Instance.OnPlayerDeath += PlayEspereDeath;
-        EventController.Instance.OnEspereMeleeAttack += PlayEspereDeath;
+        EventController.Instance.OnEspereMeleeAttack += PlayEspereMeleeAttack;
         EventController.Instance.OnDoorClose += PlayDoorClose;
+        EventController.Instance.OnEspereDash += PlayEspereDash;
     }
 
     private void Unsubscribe() {
@@ -203,8 +210,9 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnBridgeOpen -= PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail -= PlayDoorFail;
         EventController.Instance.OnPlayerDeath -= PlayEspereDeath;
-        EventController.Instance.OnEspereMeleeAttack -= PlayEspereDeath;
+        EventController.Instance.OnEspereMeleeAttack -= PlayEspereMeleeAttack;
         EventController.Instance.OnDoorClose -= PlayDoorClose;
+        EventController.Instance.OnEspereDash -= PlayEspereDash;
 
     }
 

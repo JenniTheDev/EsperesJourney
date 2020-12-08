@@ -46,8 +46,9 @@ public class DestroyObject : MonoBehaviour {
 
     // called when object broadcasts it's destroyed
     public void objectDestroyed() {
-        AudioSource objectDestoyedSound = GetComponent<AudioSource>();
-        objectDestoyedSound.Play();
+        //AudioSource objectDestoyedSound = GetComponent<AudioSource>();
+        //objectDestoyedSound.Play();
+        EventController.Instance.BroadcastOnEnemyDeath();
         Debug.Log("object destoyed sound");
     }
 
