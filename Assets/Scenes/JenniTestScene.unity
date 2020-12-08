@@ -243,6 +243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793200, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -351,12 +356,12 @@ PrefabInstance:
     - target: {fileID: 5393272572662896499, guid: 69600fe333189214ea4d2b530aa4ed03,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5393272572662896499, guid: 69600fe333189214ea4d2b530aa4ed03,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69600fe333189214ea4d2b530aa4ed03, type: 3}
@@ -2681,8 +2686,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440546514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.75, y: 1.31, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1}
   m_Children:
   - {fileID: 1264053184}
   - {fileID: 138281560}
@@ -5740,9 +5745,19 @@ MonoBehaviour:
   dashSound: {fileID: 8300000, guid: d0e99421e2061454f9eceeb3dabd717c, type: 3}
   meleeAttackSound: {fileID: 8300000, guid: 78dfc55ff21276c4a88738f931a02134, type: 3}
   teleportSound: {fileID: 8300000, guid: 9f050c04eab5a59448b708fe2d7946bb, type: 3}
+  takingDamage: {fileID: 8300000, guid: ffc3c9cbf120a0742bacd8bdde08ff12, type: 3}
+  bossFire: {fileID: 8300000, guid: 205b8723dec1cd5409392c8048625712, type: 3}
+  bossRoar: {fileID: 8300000, guid: dc97b91edfc31ce46a23034ddcb41560, type: 3}
+  bossRun: {fileID: 8300000, guid: c9c6c0500df77e64bad9a37c19312b35, type: 3}
+  enemyDeath: {fileID: 8300000, guid: c5fe3153468d0b440861340e259033fe, type: 3}
+  lizardRun: {fileID: 8300000, guid: 953ad9758a4f0ba40a012b8104f1b8ab, type: 3}
   doorOpen: {fileID: 8300000, guid: cffe7e0a70f6e464e975ac0eb29075cd, type: 3}
   doorClose: {fileID: 8300000, guid: 59a253b95cb098e44907957136a46de2, type: 3}
   doorButtonClick: {fileID: 8300000, guid: 469ab0b276195a54fb7e9919fe0bc191, type: 3}
+  propBreakGlassOrCeramic: {fileID: 8300000, guid: ed3b76f6350dc2f488a7d6276645bddc,
+    type: 3}
+  propBreakMisc: {fileID: 8300000, guid: c877251e2d7cfc742afb366fa6f0d24c, type: 3}
+  propBreakWood: {fileID: 8300000, guid: d6f3de778c2c3d141b1835923ba1b5a7, type: 3}
   doorFail: {fileID: 8300000, guid: c4c6d1bacd615e047a60ad4f7e6e01c3, type: 3}
   bridgeOpen: {fileID: 8300000, guid: 7d5163d30c40d7449b612b52a7f352eb, type: 3}
 --- !u!4 &1003765243

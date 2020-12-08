@@ -2,10 +2,9 @@
 public class ImmediateDoor : Door {
 
     protected override void OpenDoor() {
-        EventController.Instance.BroadcastDoorOpen();
-       // doorAnims.Play("");
-        // when animation is over
-        
+        // No noise door right now
+        //  EventController.Instance.BroadcastDoorOpen();
+
         gameObject.SetActive(false);
     }
 }
