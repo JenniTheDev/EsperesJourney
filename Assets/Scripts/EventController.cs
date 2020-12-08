@@ -86,9 +86,17 @@ public class EventController {
 
     public event Action OnBridgeOpen;
 
+    public event Action OnGameStart;
+
+    public event Action OnEspereMeleeAttack;
+
     #endregion EventSource & Delegates
 
     #region Class Methods
+
+    public void BroadcastOnEspereMeleeAttack() {
+        OnEspereMeleeAttack?.Invoke();
+    }
 
     public void BroadcastDoorOpen() {
         Debug.Log("Broadcast Door Open");
@@ -129,6 +137,10 @@ public class EventController {
 
     public void BroadcastGameOver() {
         OnGameOver?.Invoke();
+    }
+
+    public void BroadcastGameStart() {
+        OnGameStart?.Invoke();
     }
 
     public void BroadcastLivesLeft() {

@@ -214,6 +214,7 @@ public class PlayerController : MonoBehaviour {
     public void Attack() {
         if (playerHasControl) {
             attack.Invoke();
+            
             Debug.Log("The player is attacking");
             StartCoroutine(PlayerAttack());
         }
@@ -333,6 +334,7 @@ public class PlayerController : MonoBehaviour {
     public void Death() {
         if(!isDead){
           Debug.Log("Player has died");
+           EventController.Instance.BroadcastOnPlayerDeath();
           playerDied.Invoke();
           StartCoroutine(PlayerDeathAndRespawn());
 
@@ -512,7 +514,7 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator PlayerAttack() {
         playerHasControl = false;
-
+        EventController.Instance.BroadcastOnEspereMeleeAttack();
         AttackAnimation();
         rb.velocity = new Vector2(0, 0);
         GameObject attack = Instantiate(basicAttackObject, basicAttackSpawnPoint.transform.position, basicAttackSpawnPoint.transform.rotation);

@@ -78,9 +78,8 @@ public class GameManager : MonoBehaviour {
 
     public void QuitGame() {
         currentState = GameState.Quit;
-        if (Input.GetKey("escape")) {
-            Application.Quit();
-        }
+         Application.Quit();
+        
     }
 
 
@@ -89,6 +88,7 @@ public class GameManager : MonoBehaviour {
         EventController.Instance.OnPause += PauseGame;
         EventController.Instance.OnReset += StartGame;
         EventController.Instance.OnResume += ResumeGame;
+        EventController.Instance.OnGameStart += StartGame;
         
     }
 
@@ -96,5 +96,6 @@ public class GameManager : MonoBehaviour {
         EventController.Instance.OnPause -= PauseGame;
         EventController.Instance.OnReset -= StartGame;
         EventController.Instance.OnResume -= ResumeGame;
+        EventController.Instance.OnGameStart -= StartGame;
     }
 }

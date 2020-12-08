@@ -23,6 +23,7 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioClip dashSound;
     [SerializeField] private AudioClip meleeAttackSound;
     [SerializeField] private AudioClip teleportSound;
+    [SerializeField] private AudioClip takingDamage;
     // [SerializeField] private AudioClip rangedAttackSound;
     // [SerializeField] private AudioClip healthPotPickup;
 
@@ -30,6 +31,12 @@ public class SoundManager : MonoBehaviour {
     #endregion
 
     #region Enemies
+    [SerializeField] private AudioClip bossFire;
+    [SerializeField] private AudioClip bossRoar;
+    [SerializeField] private AudioClip bossRun;
+    [SerializeField] private AudioClip enemyDeath;
+    [SerializeField] private AudioClip lizardRun;
+
 
     #endregion
 
@@ -38,7 +45,11 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioClip doorClose;
     // don't put door fail and door click on the same audio source
     [SerializeField] private AudioClip doorButtonClick;
-   
+    [SerializeField] private AudioClip propBreakGlassOrCeramic;
+    [SerializeField] private AudioClip propBreakMisc;
+    [SerializeField] private AudioClip propBreakWood;
+
+
 
     #endregion
 
@@ -69,27 +80,27 @@ public class SoundManager : MonoBehaviour {
 
     #region Methods
 
-    private void PlayLevelMusic() {
+    public void PlayLevelMusic() {
         soundtrack.clip = sewerLevelMusicSound;
         soundtrack.Play();
     }
 
-    private void PlayPauseMusic() {
+    public void PlayPauseMusic() {
         soundtrack.clip = pauseMusicSound;
         soundtrack.Play();
     }
 
-    private void PlaySewerAmbiantMusic() {
+    public void PlaySewerAmbiantMusic() {
         soundtrack.clip = sewerAmbiant;
         soundtrack.Play();
     }
 
-    private void PlayPlayerDeathMusic() {
+    public void PlayPlayerDeathMusic() {
         espereAudio.clip = playerDeathSound;
         espereAudio.Play();
     }
 
-    private void PlayMainMenuMusic() {
+    public void PlayMainMenuMusic() {
         soundtrack.clip = mainMenuMusic;
         soundtrack.Play();
     }
@@ -109,18 +120,57 @@ public class SoundManager : MonoBehaviour {
         miscAudio.Play();
     }
 
-    private void PlayDoorClose() {
+    public void PlayDoorClose() {
     }
 
-    private void PlayDoorFail() {
+    public void PlayDoorFail() {
         miscAudio.clip = doorFail;
         miscAudio.Play();
     }
 
-    private void PlayButtonClick() {
+    public void PlayButtonClick() {
         environmentalSFX.clip = doorButtonClick;
         environmentalSFX.Play();
     }
+
+    private void PlayEspereDeath() {
+        espereAudio.clip= playerDeathSound;
+        espereAudio.Play();
+    }
+
+    private void PlayEspereMeleeAttack() {
+        espereAudio.clip = meleeAttackSound;
+        espereAudio.Play();
+    }
+
+    //[SerializeField] private AudioClip bossFire;
+    //[SerializeField] private AudioClip bossRoar;
+    //[SerializeField] private AudioClip bossRun;
+    //[SerializeField] private AudioClip enemyDeath;
+    //[SerializeField] private AudioClip lizardRun;
+
+
+    private void PlayBossFire() {
+
+    }
+
+    private void PlayBossRoar() {
+
+    }
+
+    private void PlayBossRun() { 
+
+    }
+
+    private void PlayEnemyDeath() {
+
+    }
+
+    private void PlayLizardRun() {
+
+    }
+
+
 
     private void Subscribe() {
         Unsubscribe();
@@ -134,7 +184,8 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnDoorOpen += PlayDoorOpen;
         EventController.Instance.OnBridgeOpen += PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail += PlayDoorFail;
-
+        EventController.Instance.OnPlayerDeath += PlayEspereDeath;
+        EventController.Instance.OnEspereMeleeAttack += PlayEspereDeath;
     }
 
     private void Unsubscribe() {
@@ -148,6 +199,8 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnDoorOpen -= PlayDoorOpen;
         EventController.Instance.OnBridgeOpen -= PlayBridgeOpen;
         EventController.Instance.OnKeyComboFail -= PlayDoorFail;
+        EventController.Instance.OnPlayerDeath -= PlayEspereDeath;
+        EventController.Instance.OnEspereMeleeAttack -= PlayEspereDeath;
 
     }
 
