@@ -92,9 +92,19 @@ public class EventController {
 
     public event Action OnDoorClose;
 
+    public event Action OnEnemyDeath;
+
+    public event Action OnEspereDash;
+
     #endregion EventSource & Delegates
 
     #region Class Methods
+
+    public void BroadcastOnEspereDash() { OnEspereDash?.Invoke(); }
+
+    public void BroadcastOnEnemyDeath() {
+        OnEnemyDeath?.Invoke();
+    }
 
     public void BroadcastOnDoorClose() {
         OnDoorClose?.Invoke();
