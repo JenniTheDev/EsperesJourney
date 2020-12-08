@@ -150,6 +150,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 7582039906212733179}
+        m_MethodName: _Destory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   EndState:
     m_PersistentCalls:
       m_Calls:
@@ -669,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04787aab02c3a8c42b4a4f211d2ef11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTimeDelay: 0
+  destroyTimeDelay: 1
   destroyOnImpactWithAnyColliders: 0
   destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 0
