@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 7 Tile Door
+  m_Name: 7 Tile Door Open
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,10 +21,12 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: bc6b3e70d2c02de44ab58cf112415dbf, type: 3}
-    - time: 0.14285715
+    - time: 0.42857143
       value: {fileID: 21300000, guid: cbdca9d9f5ba5b042b4aa8f1c11c0c37, type: 3}
-    - time: 0.2857143
+    - time: 0.85714287
       value: {fileID: 21300000, guid: 105cba39d21701e4188ff6a8f9546177, type: 3}
+    - time: 1.1428572
+      value: {fileID: 0}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -47,12 +49,13 @@ AnimationClip:
     - {fileID: 21300000, guid: bc6b3e70d2c02de44ab58cf112415dbf, type: 3}
     - {fileID: 21300000, guid: cbdca9d9f5ba5b042b4aa8f1c11c0c37, type: 3}
     - {fileID: 21300000, guid: 105cba39d21701e4188ff6a8f9546177, type: 3}
+    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.42857146
+    m_StopTime: 1.2857144
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
