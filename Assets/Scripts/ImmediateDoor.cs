@@ -2,9 +2,9 @@
 public class ImmediateDoor : Door {
 
     protected override void OpenDoor() {
-        EventController.Instance.BroadcastDoorOpen();
-       
-        
+        // No noise door right now
+        //  EventController.Instance.BroadcastDoorOpen();
+
         gameObject.SetActive(false);
     }
 }
