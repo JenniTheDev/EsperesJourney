@@ -121,6 +121,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void PlayDoorClose() {
+        environmentalSFX.clip = doorClose;
+        environmentalSFX.Play();
     }
 
     public void PlayDoorFail() {
@@ -186,6 +188,7 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnKeyComboFail += PlayDoorFail;
         EventController.Instance.OnPlayerDeath += PlayEspereDeath;
         EventController.Instance.OnEspereMeleeAttack += PlayEspereDeath;
+        EventController.Instance.OnDoorClose += PlayDoorClose;
     }
 
     private void Unsubscribe() {
@@ -201,6 +204,7 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnKeyComboFail -= PlayDoorFail;
         EventController.Instance.OnPlayerDeath -= PlayEspereDeath;
         EventController.Instance.OnEspereMeleeAttack -= PlayEspereDeath;
+        EventController.Instance.OnDoorClose -= PlayDoorClose;
 
     }
 

@@ -5,28 +5,35 @@ using UnityEngine;
 public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     [SerializeField] private bool doorStartPosition;
     private float delay = 0.5f;
-    // private DoorAnims doorAnims;
+    [SerializeField]private Animator doorAnims;
 
     private void Awake() {
         // doorAnims = GetComponent<DoorAnims>();
         gameObject.SetActive(doorStartPosition);
         // doorDidItsJob = false;
-        Subscribe();
+       
     }
 
     public void OpenDoor() {
-        // this is not working
-        //  WaitASecond(2);
-        // doorAnims.OpenDoor();
-        EventController.Instance.BroadcastDoorOpen();
-        gameObject.SetActive(!doorStartPosition);
         
+        
+        gameObject.SetActive(true);
+        doorAnims.SetTrigger("DoorOpen");
+        EventController.Instance.BroadcastOnDoorClose();
+       // StartCoroutine(OpenAfterAnimation());
+
     }
 
-    public void PlayOpenFailAnim() {
-        // doorAnim.PlayOpenFailAnim();
-        EventController.Instance.BroadcastKeyComboFail();
-        // Debug.Log("door fail sound");
+      
+
+    private IEnumerator OpenAfterAnimation() {
+        
+
+        yield return new WaitForSeconds(delay);
+        EventController.Instance.BroadcastOnDoorClose();
+
+
+
     }
 
     public void TriggerExecute() {
@@ -37,14 +44,7 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     public void TriggerRelease() {
     }
 
-    public void Subscribe() {
-        Unsubscribe();
-        EventController.Instance.OnTriggerUse += TriggerExecute;
-    }
-
-    public void Unsubscribe() {
-        EventController.Instance.OnTriggerUse -= TriggerExecute;
-    }
+   
 
     
 }

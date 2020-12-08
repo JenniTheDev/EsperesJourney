@@ -90,9 +90,15 @@ public class EventController {
 
     public event Action OnEspereMeleeAttack;
 
+    public event Action OnDoorClose;
+
     #endregion EventSource & Delegates
 
     #region Class Methods
+
+    public void BroadcastOnDoorClose() {
+        OnDoorClose?.Invoke();
+    }
 
     public void BroadcastOnEspereMeleeAttack() {
         OnEspereMeleeAttack?.Invoke();
