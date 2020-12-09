@@ -94,8 +94,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void PlayPauseMusic() {
-        soundtrack.clip = pauseMusicSound;
-        soundtrack.Play();
+        miscAudio.clip = pauseMusicSound;
+        miscAudio.Play();
     }
 
     public void PlaySewerAmbiantMusic() {
@@ -192,16 +192,34 @@ public class SoundManager : MonoBehaviour {
         enemyAudio.clip = enemyDeath;
         enemyAudio.Play();
     }
+         
 
-    
+    private void PauseAllAudio() {
+        soundtrack.Pause();
+        environmentalSFX.Pause();
+        espereAudio.Pause();
+        enemyAudio.Pause();
+        // miscAudio.Pause();
+        PlayPauseMusic();
 
+    }
+
+    private void ResumeAllAudio() {
+        miscAudio.Stop();
+        soundtrack.UnPause();
+        environmentalSFX.UnPause();
+        espereAudio.UnPause();
+        enemyAudio.UnPause();
+        // miscAudio.UnPause();
+        
+    }
 
 
     private void Subscribe() {
         Unsubscribe();
         EventController.Instance.OnReset += PlayLevelMusic;
-        EventController.Instance.OnResume += PlayLevelMusic;
-        EventController.Instance.OnPause += PlayPauseMusic;
+        EventController.Instance.OnResume += ResumeAllAudio;
+        EventController.Instance.OnPause += PauseAllAudio;
         EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
         // EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse += PlayDoorOpen;
@@ -218,8 +236,8 @@ public class SoundManager : MonoBehaviour {
 
     private void Unsubscribe() {
         EventController.Instance.OnReset -= PlayLevelMusic;
-        EventController.Instance.OnResume -= PlayLevelMusic;
-        EventController.Instance.OnPause -= PlayPauseMusic;
+        EventController.Instance.OnResume -= ResumeAllAudio;
+        EventController.Instance.OnPause -= PauseAllAudio;
         EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;
         // EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse -= PlayDoorOpen;
