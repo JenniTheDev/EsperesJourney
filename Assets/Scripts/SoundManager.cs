@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
-
+    [Header("Audio Sources")]
     [SerializeField] public AudioSource soundtrack;
     [SerializeField] public AudioSource environmentalSFX;
     [SerializeField] public AudioSource espereAudio;
@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] public AudioSource miscAudio;
 
     #region Soundtracks
+    [Header ("Soundtracks")]
     [SerializeField] private AudioClip sewerLevelMusicSound;
     [SerializeField] private AudioClip pauseMusicSound;
     [SerializeField] private AudioClip gameWonSound;
@@ -19,18 +20,21 @@ public class SoundManager : MonoBehaviour {
     #endregion
 
     #region Espere
+    [Header("Espere's SFX")]
     [SerializeField] private AudioClip playerDeathSound;
     [SerializeField] private AudioClip dashSound;
     [SerializeField] private AudioClip meleeAttackSound;
-    [SerializeField] private AudioClip teleportSound;
     [SerializeField] private AudioClip takingDamage;
+    [SerializeField] private AudioClip runningSound;
     // [SerializeField] private AudioClip rangedAttackSound;
     // [SerializeField] private AudioClip healthPotPickup;
+    //  [SerializeField] private AudioClip teleportSound;
 
 
     #endregion
 
     #region Enemies
+    [Header("Enemy SFX")]
     [SerializeField] private AudioClip bossFire;
     [SerializeField] private AudioClip bossRoar;
     [SerializeField] private AudioClip bossRun;
@@ -40,7 +44,8 @@ public class SoundManager : MonoBehaviour {
 
     #endregion
 
-    #region Environmental SFX   
+    #region Environmental SFX  
+    [Header("Environmental SFX")]
     [SerializeField] private AudioClip doorOpen;
     [SerializeField] private AudioClip doorClose;
     // don't put door fail and door click on the same audio source
@@ -48,14 +53,15 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioClip propBreakGlassOrCeramic;
     [SerializeField] private AudioClip propBreakMisc;
     [SerializeField] private AudioClip propBreakWood;
+    [SerializeField] private AudioClip doorFail;
+    [SerializeField] private AudioClip bridgeOpen;
 
 
 
     #endregion
 
     #region Misc
-    [SerializeField] private AudioClip doorFail;
-    [SerializeField] private AudioClip bridgeOpen;
+   
 
     #endregion
 
@@ -80,14 +86,16 @@ public class SoundManager : MonoBehaviour {
 
     #region Methods
 
+
+
     public void PlayLevelMusic() {
         soundtrack.clip = sewerLevelMusicSound;
         soundtrack.Play();
     }
 
     public void PlayPauseMusic() {
-        soundtrack.clip = pauseMusicSound;
-        soundtrack.Play();
+        miscAudio.clip = pauseMusicSound;
+        miscAudio.Play();
     }
 
     public void PlaySewerAmbiantMusic() {
@@ -150,41 +158,68 @@ public class SoundManager : MonoBehaviour {
         espereAudio.Play();
     }
 
-    //[SerializeField] private AudioClip bossFire;
-    //[SerializeField] private AudioClip bossRoar;
-    //[SerializeField] private AudioClip bossRun;
+    private void PlayEspereRun() {
+        espereAudio.clip = runningSound;
+        espereAudio.Play();
+    }
 
-    //[SerializeField] private AudioClip lizardRun;
-
+    private void PlayEspereDamageTaken() {
+        espereAudio.clip = takingDamage;
+        espereAudio.Play();
+    }
 
     private void PlayBossFire() {
-
+        enemyAudio.clip = bossFire;
+        enemyAudio.Play();
     }
 
     private void PlayBossRoar() {
-
+        enemyAudio.clip = bossRoar;
+        enemyAudio.Play();
     }
 
-    private void PlayBossRun() { 
+    private void PlayBossRun() {
+        enemyAudio.clip = bossRun;
+        enemyAudio.Play();
+    }
 
+    private void PlayLizardRun() {
+        enemyAudio.clip = lizardRun;
+        enemyAudio.Play();
     }
 
     private void PlayEnemyDeath() {
         enemyAudio.clip = enemyDeath;
         enemyAudio.Play();
     }
+         
 
-    private void PlayLizardRun() {
+    private void PauseAllAudio() {
+        soundtrack.Pause();
+        environmentalSFX.Pause();
+        espereAudio.Pause();
+        enemyAudio.Pause();
+        // miscAudio.Pause();
+        PlayPauseMusic();
 
     }
 
+    private void ResumeAllAudio() {
+        miscAudio.Stop();
+        soundtrack.UnPause();
+        environmentalSFX.UnPause();
+        espereAudio.UnPause();
+        enemyAudio.UnPause();
+        // miscAudio.UnPause();
+        
+    }
 
 
     private void Subscribe() {
         Unsubscribe();
         EventController.Instance.OnReset += PlayLevelMusic;
-        EventController.Instance.OnResume += PlayLevelMusic;
-        EventController.Instance.OnPause += PlayPauseMusic;
+        EventController.Instance.OnResume += ResumeAllAudio;
+        EventController.Instance.OnPause += PauseAllAudio;
         EventController.Instance.OnGameOver += PlayPlayerDeathMusic;
         // EventController.Instance.OnHealthPotFind += PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse += PlayDoorOpen;
@@ -196,12 +231,13 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnEspereMeleeAttack += PlayEspereMeleeAttack;
         EventController.Instance.OnDoorClose += PlayDoorClose;
         EventController.Instance.OnEspereDash += PlayEspereDash;
+        EventController.Instance.OnEspereRun += PlayEspereRun;
     }
 
     private void Unsubscribe() {
         EventController.Instance.OnReset -= PlayLevelMusic;
-        EventController.Instance.OnResume -= PlayLevelMusic;
-        EventController.Instance.OnPause -= PlayPauseMusic;
+        EventController.Instance.OnResume -= ResumeAllAudio;
+        EventController.Instance.OnPause -= PauseAllAudio;
         EventController.Instance.OnGameOver -= PlayPlayerDeathMusic;
         // EventController.Instance.OnHealthPotFind -= PlayHealthPotPickup;
         EventController.Instance.OnTriggerUse -= PlayDoorOpen;
@@ -213,6 +249,7 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnEspereMeleeAttack -= PlayEspereMeleeAttack;
         EventController.Instance.OnDoorClose -= PlayDoorClose;
         EventController.Instance.OnEspereDash -= PlayEspereDash;
+        EventController.Instance.OnEspereRun -= PlayEspereRun;
 
     }
 
