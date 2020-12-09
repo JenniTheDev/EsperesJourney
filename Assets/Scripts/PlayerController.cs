@@ -160,7 +160,6 @@ public class PlayerController : MonoBehaviour {
     public void MovePlayer(Vector2 input) {
         // moving player
         if (playerHasControl) rb.velocity = new Vector3(input.x, input.y, 0) * moveSpeed * Time.deltaTime;
-
         // rotating player
         if (playerRotater != null && playerHasControl) {
             if (input.x != 0 || input.y != 0) {
@@ -318,6 +317,8 @@ public class PlayerController : MonoBehaviour {
 
         if (input > 0) healthIncrease.Invoke();
         if (input < 0) healthDecrease.Invoke();
+            
+        
     }
 
     // created event listener for death
@@ -329,7 +330,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    // TODO: add event handler for player death
+    
     // Will kill the player
     public void Death() {
         if(!isDead){

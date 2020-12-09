@@ -96,11 +96,18 @@ public class EventController {
 
     public event Action OnEspereDash;
 
+    public event Action OnEspereRun;
+
+    public event Action OnEspereDamageTaken;
+
     #endregion EventSource & Delegates
 
     #region Class Methods
 
+    public void BroadcastOnEspereRun() { OnEspereRun?. Invoke(); }
     public void BroadcastOnEspereDash() { OnEspereDash?.Invoke(); }
+
+    public void BroadcastOnEspereDamageTaken() { OnEspereDamageTaken?.Invoke(); }
 
     public void BroadcastOnEnemyDeath() {
         OnEnemyDeath?.Invoke();
