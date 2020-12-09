@@ -17,7 +17,7 @@ public class OpenOnlyDoor : MonoBehaviour, ITriggerable {
     public void OpenDoor() {
         
         
-        gameObject.SetActive(true);
+        gameObject.SetActive(!doorStartPosition);
         doorAnims.SetTrigger("DoorOpen");
         EventController.Instance.BroadcastOnDoorClose();
        // StartCoroutine(OpenAfterAnimation());
