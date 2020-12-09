@@ -597,10 +597,14 @@ public class PlayerController : MonoBehaviour {
     private void Subscribe() {
         Unsubscribe();
         EventController.Instance.OnPlayerDeath += Death;
+       // EventController.Instance.OnPause + =   name of method here to freeze player
+       // EventController.Instance.OnResume + = name of method here give player control
     }
 
     private void Unsubscribe() {
         EventController.Instance.OnPlayerDeath -= Death;
+        // EventController.Instance.OnPause -=   name of method here to freeze player
+        // EventController.Instance.OnResume -= name of method here give player control
     }
 
     #endregion
