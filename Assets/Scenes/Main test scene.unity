@@ -15522,6 +15522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss (LargeBasicEnemy)
       objectReference: {fileID: 0}
+    - target: {fileID: 7409369462403583693, guid: 2b5077419dc776a4fac047512edc5d8b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5077419dc776a4fac047512edc5d8b, type: 3}
 --- !u!1001 &937966079
