@@ -173,17 +173,17 @@ public class SoundManager : MonoBehaviour {
         enemyAudio.Play();
     }
 
-    private void PlayBossRoar() {
+    public void PlayBossRoar() {
         enemyAudio.clip = bossRoar;
         enemyAudio.Play();
     }
 
-    private void PlayBossRun() {
+    public void PlayBossRun() {
         enemyAudio.clip = bossRun;
         enemyAudio.Play();
     }
 
-    private void PlayLizardRun() {
+    public void PlayLizardRun() {
         enemyAudio.clip = lizardRun;
         enemyAudio.Play();
     }
@@ -232,6 +232,8 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnDoorClose += PlayDoorClose;
         EventController.Instance.OnEspereDash += PlayEspereDash;
         EventController.Instance.OnEspereRun += PlayEspereRun;
+        EventController.Instance.OnEnemyDeath += PlayEnemyDeath;
+        EventController.Instance.OnBossFire += PlayBossFire;
     }
 
     private void Unsubscribe() {
@@ -250,6 +252,8 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnDoorClose -= PlayDoorClose;
         EventController.Instance.OnEspereDash -= PlayEspereDash;
         EventController.Instance.OnEspereRun -= PlayEspereRun;
+        EventController.Instance.OnEnemyDeath -= PlayEnemyDeath;
+        EventController.Instance.OnBossFire -= PlayBossFire;
 
     }
 

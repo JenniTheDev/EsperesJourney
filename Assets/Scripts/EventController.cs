@@ -100,9 +100,13 @@ public class EventController {
 
     public event Action OnEspereDamageTaken;
 
+    public event Action OnBossFire;
+
     #endregion EventSource & Delegates
 
     #region Class Methods
+
+    public void BroadcastOnBossFire() { OnBossFire?.Invoke(); }
 
     public void BroadcastOnEspereRun() { OnEspereRun?. Invoke(); }
     public void BroadcastOnEspereDash() { OnEspereDash?.Invoke(); }

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectAnimationManager : MonoBehaviour
-{
+public class ObjectAnimationManager : MonoBehaviour {
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
 
@@ -11,79 +10,65 @@ public class ObjectAnimationManager : MonoBehaviour
 
 
     // --- Awake/Updates------------------
-    public void Awake()
-    {
+    public void Awake() {
         if (!IsAnimatorSet()) animator = GetAnimatorOnThisGameObject();
         if (!IsRigidBodySet()) rb = GetRigidBody2DOnThisGameObject();
     }
 
-    public void Update()
-    {
-        if (IsAnimatorSet())
-        {
+    public void Update() {
+        if (IsAnimatorSet()) {
             IdleAnimation();
             MovementAnimation();
         }
     }
 
-    public void FixedUpdate()
-    {
+    public void FixedUpdate() {
         moveDirection = Vector3.Normalize(rb.velocity);
 
     }// --- Get/Set --------------------------
-    public bool IsAnimatorSet()
-    {
+    public bool IsAnimatorSet() {
         if (animator != null) return true;
         else return false;
     }
 
-    public bool IsRigidBodySet()
-    {
+    public bool IsRigidBodySet() {
         if (rb != null) return true;
         else return false;
     }
 
-    public Animator GetAnimatorOnThisGameObject()
-    {
+    public Animator GetAnimatorOnThisGameObject() {
         if (gameObject.GetComponent<Animator>() != null) return gameObject.GetComponent<Animator>();
         else return null;
     }
 
-    public Rigidbody2D GetRigidBody2DOnThisGameObject()
-    {
+    public Rigidbody2D GetRigidBody2DOnThisGameObject() {
         if (gameObject.GetComponent<Rigidbody2D>() != null) return gameObject.GetComponent<Rigidbody2D>();
         else return null;
     }
     // --- Animations ----------------------------------
-    public void MovementAnimation()
-    {
-        if (IsAnimatorSet())
-        {
+    public void MovementAnimation() {
+        if (IsAnimatorSet()) {
             animator.SetFloat("Horizontal", moveDirection.x);
             animator.SetFloat("Vertical", moveDirection.y);
             animator.SetFloat("Speed", moveDirection.sqrMagnitude);
         }
     }
 
-    public void AttackAnimation(bool input)
-    {
-        if (IsAnimatorSet())
-        {
+    public void AttackAnimation(bool input) {
+
+        if (IsAnimatorSet()) {
             animator.SetBool("Attack", input);
+
         }
     }
 
-    public void DeathAnimation(bool input)
-    {
+    public void DeathAnimation(bool input) {
         animator.SetBool("Death", input);
     }
 
-    public void IdleAnimation()
-    {
-        if (IsAnimatorSet())
-        {
-            if (moveDirection.x >= 0.1 || moveDirection.x <= -0.1 || moveDirection.y >= 0.1 || moveDirection.y <= -0.1)
-            {
+    public void IdleAnimation() {
+        if (IsAnimatorSet()) {
+            if (moveDirection.x >= 0.1 || moveDirection.x <= -0.1 || moveDirection.y >= 0.1 || moveDirection.y <= -0.1) {
                 animator.SetFloat("lastMoveHorizontal", -moveDirection.x);
                 animator.SetFloat("lastMoveVertical", moveDirection.y);
             }

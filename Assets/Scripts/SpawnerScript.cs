@@ -22,6 +22,7 @@ public class SpawnerScript : MonoBehaviour {
     // this function will start the Coroutine spawning
     public void startSpawning() {
         StartCoroutine("spawning");
+       
     }
 
     // this function will stop the Coroutine spawning
@@ -62,9 +63,10 @@ public class SpawnerScript : MonoBehaviour {
                 location = spawn.spawnLocationGameObject.transform.position;
                 rotation = spawn.spawnLocationGameObject.transform.rotation;
             }
-
+            EventController.Instance.BroadcastOnBossFire();
             //spawn object
             GameObject g = Instantiate(spawn.spawnableObject, location, rotation);
+            
         }
     }
 }

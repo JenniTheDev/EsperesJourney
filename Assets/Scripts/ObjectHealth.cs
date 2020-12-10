@@ -66,6 +66,7 @@ public class ObjectHealth : MonoBehaviour {
 
     // Will kill the player
     public void Death() {
+       EventController.Instance.BroadcastOnEnemyDeath();
         objectDeath.Invoke();
         Debug.Log("Object has died");
     }
