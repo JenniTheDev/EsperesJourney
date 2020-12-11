@@ -13,12 +13,17 @@ public class SoundTrackChange : MonoBehaviour {
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision) {
-        EventController.Instance.BroadcastOnMusicResume();
-        EventController.Instance.BroadcastOnRestartLevelMusic();
+    //private void OnTriggerExit2D(Collider2D collision) {
+    //    EventController.Instance.BroadcastOnMusicResume();
+    //    EventController.Instance.BroadcastOnRestartLevelMusic();
 
-        // could also delete game object in case they walk over it
-    }
+    //    if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) {
+    //        EventController.Instance.BroadcastOnMusicResume();
+    //        EventController.Instance.BroadcastOnRestartLevelMusic();
+    //        Debug.Log("calling exit");
+    //    }
+    //    // could also delete game object in case they walk over it
+    //}
 
     private IEnumerator PlayAudioPlaylist() {
         for (int i = 0; i < statuePlaylist.Count; i++) {
