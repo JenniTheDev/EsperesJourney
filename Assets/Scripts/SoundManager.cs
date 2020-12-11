@@ -218,6 +218,7 @@ public class SoundManager : MonoBehaviour {
 
     private void Subscribe() {
         Unsubscribe();
+        EventController.Instance.OnRestartLevelMusic += PlayLevelMusic;
         EventController.Instance.OnReset += PlayLevelMusic;
         EventController.Instance.OnResume += ResumeAllAudio;
         EventController.Instance.OnPause += PauseAllAudio;
@@ -259,6 +260,7 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnBossFire -= PlayBossFire;
         EventController.Instance.OnMusicPause -= PauseAllAudio;
         EventController.Instance.OnMusicResume -= ResumeAllAudio;
+        EventController.Instance.OnRestartLevelMusic -= PlayLevelMusic;
 
     }
 

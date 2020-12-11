@@ -104,6 +104,7 @@ public class EventController {
 
     public event Action OnMusicPause;
     public event Action OnMusicResume;
+    public event Action OnRestartLevelMusic;
 
     #endregion EventSource & Delegates
 
@@ -119,6 +120,8 @@ public class EventController {
 
     public void BroadcastOnEspereDamageTaken() { OnEspereDamageTaken?.Invoke(); }
 
+    public void BroadcastOnRestartLevelMusic() { OnRestartLevelMusic?.Invoke(); }
+
     public void BroadcastOnEnemyDeath() {
         OnEnemyDeath?.Invoke();
     }
@@ -132,27 +135,27 @@ public class EventController {
     }
 
     public void BroadcastDoorOpen() {
-        Debug.Log("Broadcast Door Open");
+     //   Debug.Log("Broadcast Door Open");
         OnDoorOpen?.Invoke();
     }
 
     public void BroadcastBridgeOpen() {
-        Debug.Log("Broadcast Bridge Open");
+      //  Debug.Log("Broadcast Bridge Open");
         OnBridgeOpen?.Invoke();
     }
 
     public void BroadcastButtonPushSuccess() {
-        Debug.Log("Broadcast Button Push Success");
+       // Debug.Log("Broadcast Button Push Success");
         OnButtonPushSuccess?.Invoke();
     }
 
     public void BroadcastKeyComboFail() {
-        Debug.Log("Broadcast key combo fail");
+       // Debug.Log("Broadcast key combo fail");
         OnKeyComboFail?.Invoke();
     }
 
     public void BroadcastKeyHolderChange(List<KeyType> keys) {
-        Debug.Log("Broadcast Key Holder Change");
+      //  Debug.Log("Broadcast Key Holder Change");
         OnKeyHolderChange?.Invoke(keys);
     }
 
@@ -182,32 +185,32 @@ public class EventController {
 
     public void BroadcastHealthPotFind() {
         OnHealthPotFind?.Invoke();
-        Debug.Log("Broadcast");
+       // Debug.Log("Broadcast");
     }
 
     public void BroadcastOnPlayerDeath() {
         OnPlayerDeath?.Invoke();
-        Debug.Log("Broadcast death");
+       // Debug.Log("Broadcast death");
     }
 
     public void BroadcastOnTreasureFind() {
         OnTreasureFind?.Invoke();
-        Debug.Log("Broadcast Treasure");
+       // Debug.Log("Broadcast Treasure");
     }
 
     public void BroadcastOnObjectDestroy() {
         OnObjectDestroy?.Invoke();
-        Debug.Log("Broadcast Object Destroy");
+       // Debug.Log("Broadcast Object Destroy");
     }
 
     public void BroadcastOnCoinUpdate() {
         OnCoinUpdate?.Invoke();
-        Debug.Log("Broadcast Coin Update");
+       // Debug.Log("Broadcast Coin Update");
     }
 
     public void BroadcastOnTriggerUse() {
         OnTriggerUse?.Invoke();
-        Debug.Log("Broadcast Trigger Use");
+        // Debug.Log("Broadcast Trigger Use");
     }
 
     #endregion Class Methods
