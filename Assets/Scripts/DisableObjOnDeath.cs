@@ -7,39 +7,25 @@ public class DisableObjOnDeath : MonoBehaviour {
 
     [SerializeField] private GameObject objectToDestroy;
     [SerializeField] private GameObject onThisObjDeath;
+    private bool ignoreThis = false;
 
     void Start() {
-        Subscribe();
-       // objectToDestroy = GetComponent<GameObject>();
+       
+       
     }
 
     void Update() {
-        if (onThisObjDeath == null) {
-            objectToDestroy.SetActive(false);
-            EventController.Instance.BroadcastDoorOpen();
-        }
+      
+            if (onThisObjDeath == null) {
+                objectToDestroy.SetActive(false);
+                EventController.Instance.BroadcastDoorOpen();
+             
+            }
+
+       
     }
-    private void DisableObject() {
-        // animation 
-        
-        if (onThisObjDeath.activeSelf == false) {
-            objectToDestroy.SetActive(false);
-        }
-
-
-
-    }
-
-
-    private void Subscribe() {
-        Unsubscribe();
-        EventController.Instance.OnEnemyDeath += DisableObject;
-    }
-
    
-    private void Unsubscribe() {
-        EventController.Instance.OnEnemyDeath -= DisableObject;
-    }
+
 
 
 }

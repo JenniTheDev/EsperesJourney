@@ -102,9 +102,15 @@ public class EventController {
 
     public event Action OnBossFire;
 
+    public event Action OnMusicPause;
+    public event Action OnMusicResume;
+
     #endregion EventSource & Delegates
 
     #region Class Methods
+
+    public void BroadcastOnMusicPause() { OnMusicPause?.Invoke(); }
+    public void BroadcastOnMusicResume() { OnMusicResume?.Invoke(); }
 
     public void BroadcastOnBossFire() { OnBossFire?.Invoke(); }
 

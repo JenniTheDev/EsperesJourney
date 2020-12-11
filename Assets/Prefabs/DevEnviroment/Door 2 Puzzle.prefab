@@ -422,7 +422,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8102846659225663876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -452,7 +452,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -759,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 4254881258018865449, guid: 35ccd5cae4b86d2468a85dad462d6c68,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.45
+      value: 59.35
       objectReference: {fileID: 0}
     - target: {fileID: 4254881258018865449, guid: 35ccd5cae4b86d2468a85dad462d6c68,
         type: 3}
