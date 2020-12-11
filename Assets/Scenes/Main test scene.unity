@@ -2647,6 +2647,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 156852128}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &163920521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4713369755530438921, guid: f8e0884f85b164648ab8dd36c8ca7de7,
+    type: 3}
+  m_PrefabInstance: {fileID: 325196838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!58 &174540746 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 8236183712725930891, guid: c270bde6f540edc48a01f07da37cbd69,
@@ -2885,6 +2891,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 409706430}
     m_Modifications:
+    - target: {fileID: 956465807, guid: bb06bc422746ad047bfcc078261ff915, type: 3}
+      propertyPath: onThisObjDeath
+      value: 
+      objectReference: {fileID: 163920521}
+    - target: {fileID: 1018360446, guid: bb06bc422746ad047bfcc078261ff915, type: 3}
+      propertyPath: onThisObjDeath
+      value: 
+      objectReference: {fileID: 1047964817}
     - target: {fileID: 4808653836393111940, guid: bb06bc422746ad047bfcc078261ff915,
         type: 3}
       propertyPath: m_Name
@@ -18095,26 +18109,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1016947213}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1018360445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6199244513574625659, guid: bb06bc422746ad047bfcc078261ff915,
-    type: 3}
-  m_PrefabInstance: {fileID: 184523180}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1018360446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018360445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de04b1931edd4aa4fa444ca892e7dfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 1018360445}
-  onThisObjDeath: {fileID: 1047964817}
 --- !u!1001 &1024116571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18712,20 +18706,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 325196838}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1047964824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1047964817}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de04b1931edd4aa4fa444ca892e7dfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 1018360445}
-  onThisObjDeath: {fileID: 1047964817}
 --- !u!1001 &1051465725
 PrefabInstance:
   m_ObjectHideFlags: 0
