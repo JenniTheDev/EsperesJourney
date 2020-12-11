@@ -18,13 +18,14 @@ public class DisableObjOnDeath : MonoBehaviour {
       
             if (onThisObjDeath == null) {
                 objectToDestroy.SetActive(false);
-                EventController.Instance.BroadcastDoorOpen();
-             
+                         
             }
-
-       
+      
     }
    
+    private void PlayDoorOpen() {
+        EventController.Instance.BroadcastDoorOpen();
+    }
 
 
 
