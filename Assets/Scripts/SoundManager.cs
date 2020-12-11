@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] public AudioSource espereAudio;
     [SerializeField] public AudioSource enemyAudio;
     [SerializeField] public AudioSource miscAudio;
+    [SerializeField] public AudioSource cueAudio;
 
     #region Soundtracks
     [Header ("Soundtracks")]
@@ -134,8 +135,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void PlayDoorFail() {
-        miscAudio.clip = doorFail;
-        miscAudio.Play();
+        cueAudio.clip = doorFail;
+       cueAudio.Play();
     }
 
     public void PlayButtonClick() {
@@ -234,6 +235,8 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnEspereRun += PlayEspereRun;
         EventController.Instance.OnEnemyDeath += PlayEnemyDeath;
         EventController.Instance.OnBossFire += PlayBossFire;
+        EventController.Instance.OnMusicPause += PauseAllAudio;
+        EventController.Instance.OnMusicResume += ResumeAllAudio;
     }
 
     private void Unsubscribe() {
@@ -254,6 +257,8 @@ public class SoundManager : MonoBehaviour {
         EventController.Instance.OnEspereRun -= PlayEspereRun;
         EventController.Instance.OnEnemyDeath -= PlayEnemyDeath;
         EventController.Instance.OnBossFire -= PlayBossFire;
+        EventController.Instance.OnMusicPause -= PauseAllAudio;
+        EventController.Instance.OnMusicResume -= ResumeAllAudio;
 
     }
 

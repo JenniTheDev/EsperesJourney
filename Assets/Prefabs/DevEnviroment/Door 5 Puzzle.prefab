@@ -801,20 +801,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1713150232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6199244513574625659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5571840d645a4124b9ff07686c0530ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorStartPosition: 0
-  doorAnims: {fileID: 1713150228}
 --- !u!114 &1018360446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,6 +815,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 6199244513574625659}
   onThisObjDeath: {fileID: 0}
+--- !u!114 &1713150232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199244513574625659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5571840d645a4124b9ff07686c0530ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorStartPosition: 0
+  doorAnims: {fileID: 1713150228}
 --- !u!95 &1461909869
 Animator:
   serializedVersion: 3
