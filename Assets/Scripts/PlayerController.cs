@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour {
     public void Attack() {
         if (playerHasControl) {
             attack.Invoke();
-            
+
             Debug.Log("The player is attacking");
             StartCoroutine(PlayerAttack());
         }
@@ -317,8 +317,8 @@ public class PlayerController : MonoBehaviour {
 
         if (input > 0) healthIncrease.Invoke();
         if (input < 0) healthDecrease.Invoke();
-            
-        
+
+
     }
 
     // created event listener for death
@@ -330,7 +330,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    
+
     // Will kill the player
     public void Death() {
         if(!isDead){
@@ -366,7 +366,7 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("The players number of health packs is " + currentNumberOfHealthPacks);
         return currentNumberOfHealthPacks;
     }
-    
+
 
     public void updateCurrentHealthPacks(int input) {
         currentNumberOfHealthPacks += input;
@@ -510,7 +510,7 @@ public class PlayerController : MonoBehaviour {
         rb.AddForce(dashDirection, ForceMode2D.Impulse);
         yield return new WaitForSeconds(dashTimeLength);
 
-        playerHasControl = true;
+        if(!isDead) playerHasControl = true;
     }
 
     public IEnumerator PlayerAttack() {
@@ -569,7 +569,7 @@ public class PlayerController : MonoBehaviour {
       }
 
       if(playerShouldFall){
-        Debug.Log("The player should fall.");
+        /* Debug.Log("The player should fall.");
         playerHasControl = false; // remove control
         zeroOutVelocity(); // zero out movement
         // Play fall animation
@@ -578,11 +578,21 @@ public class PlayerController : MonoBehaviour {
 
         yield return new WaitForSeconds(timeToWaitAfterFalling);
 
-        Vector3 returnPostition = lastPositionBeforeFall - lastMoveDirectionBeforeFall;
+        Vector3 returnPostition = lastPositionBeforeFall - lastMoveDirectionBeforeFall*2;
         if (returnPostition == getPosition()) returnPostition = getPositionBeforeLastTeleport();
 
         SetPlayerPosition(returnPostition);
         playerHasControl = true;
+
+        if (isCharacterDead()) Death();*/
+
+        playerHasControl = false; // remove control
+        zeroOutVelocity(); // zero out movement
+        yield return new WaitForSeconds(timeToWaitAfterFalling);
+        SetPlayerPosition(respawnLocation);
+        updateCurrentHealth(howMuchDamageToTakeFromFall);
+        playerHasControl = true;
+        if (isCharacterDead()) Death();
       }
       else {
         Debug.Log("The player should not fall.");
