@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SoundTrackChange : MonoBehaviour {
 
-    private SoundManager soundsToChange;
+   
 
     private void OnTriggerEnter2D(Collider2D collision) {
+      
         EventController.Instance.BroadcastOnMusicPause();
     }
 
