@@ -13,7 +13,10 @@ public class StatueAudio : MonoBehaviour {
 
         //    // yield return new WaitForSeconds(statuePlaylist[i].clip.length);
         //}
-        StartCoroutine(PlayAudioPlaylist());
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player")){
+            StartCoroutine(PlayAudioPlaylist());
+        }
+        
     }
 
     private IEnumerator PlayAudioPlaylist() {
