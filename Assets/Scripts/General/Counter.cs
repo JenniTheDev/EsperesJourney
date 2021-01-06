@@ -11,32 +11,40 @@ public class Counter : MonoBehaviour
     [SerializeField] private int minCount = 0;
     [SerializeField] private bool canGoBeyondMaxAndMins = false;
 
-    [SerializeField] private UnityEvent countIncreased;
-    [SerializeField] private UnityEvent countDecreased;
+    [SerializeField] private IntEvent countIncreased;
+    [SerializeField] private IntEvent countDecreased;
 
-    [SerializeField] private UnityEvent countIsFull;
-    [SerializeField] private UnityEvent countIsEmpty;
+    [SerializeField] private IntEvent countIsFull;
+    [SerializeField] private IntEvent countIsEmpty;
+
+    [SerializeField] private IntEvent _maxCount;
+    [SerializeField] private IntEvent _currentCount;
 
     // --- Updates ---------------------------------------
+
+    public void Awake(){
+      _maxCount.Invoke(maxCount);
+      _currentCount.Invoke(currentCount);
+    }
 
     public void updateCurrentCount(int input){
       currentCount += input;
       if(!canGoBeyondMaxAndMins && currentCount > maxCount) {
         currentCount = maxCount;
-        countIsFull.Invoke();
+        countIsFull.Invoke(currentCount);
         return;
       }
       if(!canGoBeyondMaxAndMins && currentCount < minCount) {
         currentCount = minCount;
-        countIsEmpty.Invoke();
+        countIsEmpty.Invoke(currentCount);
         return;
       }
       if(currentCount - input < currentCount){
-        countIncreased.Invoke();
+        countIncreased.Invoke(currentCount);
         return;
       }
       if(currentCount - input > currentCount){
-        countDecreased.Invoke();
+        countDecreased.Invoke(currentCount);
         return;
       }
     }

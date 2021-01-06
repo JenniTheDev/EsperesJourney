@@ -83,4 +83,9 @@ public class ObjectAnimationManager : MonoBehaviour {
             }
         }
     }
+
+    public void DashAnimation()
+    {
+        animator.SetTrigger("Dash");
+    }
 }

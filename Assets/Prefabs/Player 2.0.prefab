@@ -80,10 +80,54 @@ MonoBehaviour:
   tagsThatCanAffectObjectsHealth: []
   healthIncrease:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 520767255737065508}
+        m_MethodName: UpdateHealthBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   healthDecrease:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 520767255737065508}
+        m_MethodName: UpdateHealthBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectDeath:
     m_PersistentCalls:
       m_Calls:
@@ -96,6 +140,34 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: is dead
+          m_BoolArgument: 0
+        m_CallState: 2
+  _maxHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setMaxHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _currentHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &9394434916837634
@@ -143,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOn: 0
   StartOnAwake: 0
-  moveSpeed: 5
+  moveSpeed: 10
   rb: {fileID: 9394434500482376}
   movementMode: 0
   momentumMode: 0
@@ -437,6 +509,7 @@ Transform:
   - {fileID: 6885771053267125998}
   - {fileID: 7917342070860762388}
   - {fileID: 2600653534856963146}
+  - {fileID: 7268161647645013959}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -471,7 +544,7 @@ Animator:
   m_GameObject: {fileID: 1137985097259055997}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c647be66781d8ab4ebb7fe8bc038666f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 942c6e9871e365241b077fa668a684a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -519,7 +592,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: d88b5f3b4d02b754db0667205e6e41ad, type: 3}
+  m_Sprite: {fileID: 7660058185959228050, guid: 50f321fcad68f474eb4deaa4f54df9d8,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -660,6 +734,37 @@ Transform:
   - {fileID: 8559092682851638658}
   m_Father: {fileID: 8962042756610363825}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3025873969036351279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7268161647645013959}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7268161647645013959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025873969036351279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 520767254364094019}
+  m_Father: {fileID: 1137985097259055996}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3354474783069315588
 GameObject:
@@ -1075,16 +1180,132 @@ MonoBehaviour:
   canGoBeyondMaxAndMins: 0
   countIncreased:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealthPots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 520767255556530215}
+        m_MethodName: UpdateHealthPotCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   countDecreased:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealthPots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 520767255556530215}
+        m_MethodName: UpdateHealthPotCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   countIsFull:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealthPots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 520767255556530215}
+        m_MethodName: UpdateHealthPotCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   countIsEmpty:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealthPots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 520767255556530215}
+        m_MethodName: UpdateHealthPotCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _maxCount:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setMaxHealthPots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _currentCount:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1545978817314395381}
+        m_MethodName: setCurrentHealthPots
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5648379369222146013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7917342070860762388}
+  - component: {fileID: 1545978817314395381}
   m_Layer: 0
   m_Name: Stats
   m_TagString: Untagged
@@ -1415,6 +1637,23 @@ Transform:
   m_Father: {fileID: 1137985097259055996}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545978817314395381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7225379978087384503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ecd2cef427a874f80f0c7e928a912a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 0
+  currentHealthPots: 0
+  maxHealthPots: 0
+  currentCoins: 0
 --- !u!1 &7408568630078758330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1830,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 464446559340542007}
         m_MethodName: startTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 683355810853288168}
+        m_MethodName: DashAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2620,6 +2870,175 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3903518583408387459}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5612298617151137399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7268161647645013959}
+    m_Modifications:
+    - target: {fileID: 5393272571190806096, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: PlayerStatsObject
+      value: 
+      objectReference: {fileID: 7225379978087384503}
+    - target: {fileID: 5393272571353974355, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: PlayerStatsObject
+      value: 
+      objectReference: {fileID: 7225379978087384503}
+    - target: {fileID: 5393272572415793200, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572662896499, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393272572662896499, guid: 69600fe333189214ea4d2b530aa4ed03,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69600fe333189214ea4d2b530aa4ed03, type: 3}
+--- !u!114 &520767255737065508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5393272571353974355, guid: 69600fe333189214ea4d2b530aa4ed03,
+    type: 3}
+  m_PrefabInstance: {fileID: 5612298617151137399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e286b2094a0aa4286cfb9abdcae8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &520767254364094019 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5393272572415793204, guid: 69600fe333189214ea4d2b530aa4ed03,
+    type: 3}
+  m_PrefabInstance: {fileID: 5612298617151137399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &520767255556530215 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5393272571190806096, guid: 69600fe333189214ea4d2b530aa4ed03,
+    type: 3}
+  m_PrefabInstance: {fileID: 5612298617151137399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f30cbada3326d44885707e70404cdb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7922094713258728001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3221,7 +3640,7 @@ PrefabInstance:
     - target: {fileID: 6423070638233141134, guid: a4172de92b5fb7044add23f982b75206,
         type: 3}
       propertyPath: targetTime
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6423070638233141134, guid: a4172de92b5fb7044add23f982b75206,
         type: 3}
@@ -3280,6 +3699,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4172de92b5fb7044add23f982b75206, type: 3}
+--- !u!4 &4610044824962167689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4815679695884480371, guid: a4172de92b5fb7044add23f982b75206,
+    type: 3}
+  m_PrefabInstance: {fileID: 9020305969799634170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2597948932061307764 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6423070638233141134, guid: a4172de92b5fb7044add23f982b75206,
@@ -3292,9 +3717,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8b391c73b47ca469da981859f63b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &4610044824962167689 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4815679695884480371, guid: a4172de92b5fb7044add23f982b75206,
-    type: 3}
-  m_PrefabInstance: {fileID: 9020305969799634170}
-  m_PrefabAsset: {fileID: 0}
