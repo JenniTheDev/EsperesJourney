@@ -15,6 +15,10 @@ public class ObjectSensor : MonoBehaviour {
     [Tooltip("Set this is you want to detect everything regardless of any tags.")]
     [SerializeField] private bool detectEverything = false;
 
+    [SerializeField] private bool detectOnEnter = true;
+    [SerializeField] private bool detectOnStay = false;
+    [SerializeField] private bool detectOnExit = false;
+
     [Tooltip("Set the tag of any objects this sensor is looking for.")]
     [SerializeField] private List<string> tagsToListenFor;
 
@@ -63,14 +67,39 @@ public class ObjectSensor : MonoBehaviour {
 
     // --- Collisions --------------------------------------------
 
+    // Enter ---
     public void OnCollisionEnter2D(Collision2D col) {
-        if (getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
+        if (detectOnEnter && getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
             InvokeDetectedSomething();
     }
 
     // Triggers when the player collides with a trigger
     public void OnTriggerEnter2D(Collider2D col) {
-        if (getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
+        if (detectOnEnter && getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
+            InvokeDetectedSomething();
+    }
+
+    // Stay ---
+    public void OnCollisionStay2D(Collision2D col) {
+        if (detectOnStay && getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
+            InvokeDetectedSomething();
+    }
+
+    // Triggers when the player collides with a trigger
+    public void OnTriggerStay2D(Collider2D col) {
+        if (detectOnStay && getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
+            InvokeDetectedSomething();
+    }
+
+    // Exit ---
+    public void OnCollisionExit2D(Collision2D col) {
+        if (detectOnExit && getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
+            InvokeDetectedSomething();
+    }
+
+    // Triggers when the player collides with a trigger
+    public void OnTriggerExit2D(Collider2D col) {
+        if (detectOnExit && getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
             InvokeDetectedSomething();
     }
 }
