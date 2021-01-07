@@ -12,7 +12,7 @@ public class HealthPotCounter : MonoBehaviour
     [SerializeField] private GameObject PlayerStatsObject;
     private PlayerStats playerControllerScript;
 
-    private void Awake()
+    private void Start()
     {
         //Subscribe();
         playerControllerScript = PlayerStatsObject.GetComponent<PlayerStats>();
@@ -20,6 +20,7 @@ public class HealthPotCounter : MonoBehaviour
         //playerControllerScript.healthPackUsed.AddListener(UpdateHealthPotCounter);
 
         HPotsTxt.text = playerControllerScript.getCurrentHealthPots().ToString();
+        Debug.Log(playerControllerScript.getCurrentHealthPots());
     }
 
     public void UpdateHealthPotCounter()
