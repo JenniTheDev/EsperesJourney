@@ -10,6 +10,7 @@ TagManager:
   - Boss_Attack
   - Enemy_Attack
   - Acid
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

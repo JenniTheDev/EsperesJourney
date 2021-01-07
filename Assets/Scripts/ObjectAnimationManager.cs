@@ -8,6 +8,11 @@ public class ObjectAnimationManager : MonoBehaviour {
 
     [SerializeField] private Vector2 moveDirection;
 
+    public enum MovementListeningMode {Rigidbody2D, Other}
+
+    [Tooltip("Rigidbody2D: Will get the Move Direction data from the Rigidbody2D Velocity\nOther: The Move Direction data will be set by some other source")]
+    [SerializeField] private MovementListeningMode movementListeningMode = MovementListeningMode.Rigidbody2D;
+
 
     // --- Awake/Updates------------------
     public void Awake() {
@@ -23,7 +28,7 @@ public class ObjectAnimationManager : MonoBehaviour {
     }
 
     public void FixedUpdate() {
-        moveDirection = Vector3.Normalize(rb.velocity);
+        if(movementListeningMode == MovementListeningMode.Rigidbody2D) moveDirection = Vector3.Normalize(rb.velocity);
 
     }// --- Get/Set --------------------------
     public bool IsAnimatorSet() {
@@ -44,6 +49,10 @@ public class ObjectAnimationManager : MonoBehaviour {
     public Rigidbody2D GetRigidBody2DOnThisGameObject() {
         if (gameObject.GetComponent<Rigidbody2D>() != null) return gameObject.GetComponent<Rigidbody2D>();
         else return null;
+    }
+
+    public void setMoveDirection(Vector2 input) {
+      moveDirection = input;
     }
     // --- Animations ----------------------------------
     public void MovementAnimation() {
@@ -73,5 +82,10 @@ public class ObjectAnimationManager : MonoBehaviour {
                 animator.SetFloat("lastMoveVertical", moveDirection.y);
             }
         }
+    }
+
+    public void DashAnimation()
+    {
+        animator.SetTrigger("Dash");
     }
 }

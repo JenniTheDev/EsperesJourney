@@ -64,6 +64,10 @@ public class FSM : MonoBehaviour {
         }
     }
 
+    public string getCurrentStateName(){
+      return currentState.name;
+    }
+
     // Transitions
 
     public Transition findTransitionWithNameOnCurrentState(string name) {

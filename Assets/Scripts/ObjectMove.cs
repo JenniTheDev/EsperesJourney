@@ -19,6 +19,11 @@ public class ObjectMove : MonoBehaviour {
     [Tooltip("TowardDirection: Move in one preset direction\nTowardObject: Move toward a given GameObject")]
     [SerializeField] private MovementMode movementMode = MovementMode.TowardDirection;
 
+    public enum MomentumMode { Velocity, AddForce }
+
+    [Tooltip("Velocity: Move at constant speed\nAddForce: Move at faster and faster rate")]
+    [SerializeField] private MomentumMode momentumMode = MomentumMode.Velocity;
+
     [Space]
     [Header("Toward Direction Mode")]
     [Tooltip("Only works in TowardDirection Movement Mode")]
@@ -43,18 +48,23 @@ public class ObjectMove : MonoBehaviour {
 
     public void FixedUpdate() {
         if (isOn && movementMode == MovementMode.TowardDirection) {
-            if (!useLocalSpace) rb.velocity = directionToMove * moveSpeed;
+            if (!useLocalSpace) {
+              if(momentumMode == MomentumMode.Velocity) rb.velocity = directionToMove * moveSpeed;
+              else rb.AddForce(directionToMove * moveSpeed,  ForceMode2D.Impulse);
+            }
             else {
                 forwardVel = transform.right * moveSpeed * directionToMove.x;
                 horizontalVel = transform.up * moveSpeed * directionToMove.y;
 
-                rb.velocity = forwardVel + horizontalVel;
+                if(momentumMode == MomentumMode.Velocity) rb.velocity = forwardVel + horizontalVel;
+                else rb.AddForce(forwardVel + horizontalVel,  ForceMode2D.Impulse);
             }
         } else if (isOn && movementMode == MovementMode.TowardObject) {
             directionToMove = objectToMoveTowards.transform.position - gameObject.transform.position;
             Vector3.Normalize(directionToMove);
 
-            rb.velocity = directionToMove * moveSpeed;
+            if(momentumMode == MomentumMode.Velocity) rb.velocity = directionToMove * moveSpeed;
+            else rb.AddForce(directionToMove * moveSpeed,  ForceMode2D.Impulse);
         }
     }
 
@@ -89,6 +99,10 @@ public class ObjectMove : MonoBehaviour {
 
     public void setDirectionToMoveTo(Vector3 direction) {
         directionToMove = direction;
+    }
+
+    public void setDirectionToMoveTo(Vector2 direction) {
+        directionToMove = new Vector3(direction.x, direction.y, 0);
     }
 
     public void setObjectToMoveTowards(GameObject target) {

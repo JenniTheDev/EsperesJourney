@@ -20,12 +20,20 @@ public class ObjectHealth : MonoBehaviour {
     [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
 
     [Header("Events")]
-    [SerializeField] private UnityEvent healthIncrease;
+    [SerializeField] private IntEvent healthIncrease;
 
-    [SerializeField] private UnityEvent healthDecrease;
+    [SerializeField] private IntEvent healthDecrease;
     [SerializeField] private UnityEvent objectDeath;
 
+    [SerializeField] private IntEvent _maxHealth;
+    [SerializeField] private IntEvent _currentHealth;
+
     // --- Main ------------------------------------------------------
+
+    public void Awake(){
+      _maxHealth.Invoke(maxHealth);
+      _currentHealth.Invoke(currentHealth);
+    }
 
     // Sets the currentHealth to the given input
     public void setCurrentHealth(int input) {
@@ -52,8 +60,8 @@ public class ObjectHealth : MonoBehaviour {
         currentHealth += input;
         Debug.Log("Something changed the objects currentHealth by " + input + " units");
 
-        if (input > 0) healthIncrease.Invoke();
-        if (input < 0) healthDecrease.Invoke();
+        if (input > 0) healthIncrease.Invoke(currentHealth);
+        if (input < 0) healthDecrease.Invoke(currentHealth);
 
         if (isObjectDead()) Death();
     }
@@ -94,4 +102,9 @@ public class ObjectHealth : MonoBehaviour {
             Debug.Log("This object does not have a damage script attached");
         }
     }
+}
+
+[System.Serializable]
+public class IntEvent : UnityEvent<int>
+{
 }

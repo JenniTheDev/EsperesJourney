@@ -4,14 +4,16 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    //[SerializeField] private GameObject player;
+    [SerializeField] private GameObject PlayerStatsObject;
     private Slider slider;
-    private PlayerController playerControllerScript;
+    private PlayerStats playerControllerScript;
+    //private PlayerController playerControllerScript;
 
     private void Awake()
     {
         slider = gameObject.GetComponent<Slider>();
-        playerControllerScript = player.GetComponent<PlayerController>();
+        playerControllerScript = PlayerStatsObject.GetComponent<PlayerStats>();
     }
 
     // UpdateHealthbar is called when player events for healthincrease and healthdecrease are invoked

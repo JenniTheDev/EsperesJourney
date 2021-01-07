@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class CoinCounter : MonoBehaviour
 {
     [SerializeField] private Text CoinsTxt;
-    [SerializeField] private GameObject player;
+    //[SerializeField] private GameObject player;
     private void OnEnable()
     {
         Subscribe();
