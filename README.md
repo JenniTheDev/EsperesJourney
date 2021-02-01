@@ -1,8 +1,8 @@
 # EsperesJourney
 
-A 2D adventure game for the Fall 2020 Semester Cal State Fullerton Video Game Development Club 
+A 2D adventure game for the Cal State Fullerton Video Game Development Club. Development began during the Fall 2020 semester.
 
-## Game Background: 
+## About The Game: 
 
 * A 300 year war between humans and monsters, called The Cataclysm, drove monsters into slavery or hiding. </br>
 * The Hero Esperè was once a legendary warrior among the Monsters.
@@ -10,10 +10,13 @@ A 2D adventure game for the Fall 2020 Semester Cal State Fullerton Video Game De
 * The hero descended into the river, being carried into the underground sewers of the Monster's Realm. </br>
 * An Elder from the temple of Syleste (the main deity the monsters worship) performed a self-sacrificing ritual. Her act revived Esperè from death, but she remained comatose, until she finally awakens 20 years later. </br>
 
-## Game Synopsis: 
-
-
 
 ## About the Team:
+
+
+
+## Development Information: 
+Espere's Journey uses Unity Version 2019.4.3f1
+
 
 
