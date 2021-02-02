@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private float currentTime;
     [SerializeField] private float targetTime;
     private float timeDifference;
+    private bool isTimerGoing = false;
 
     public enum CountDirection {CountUp, CountDown}
 
@@ -24,6 +25,11 @@ public class Timer : MonoBehaviour
     }
 
     public void startTimer(){
+      if(!isTimerGoing)StartCoroutine(timer());
+    }
+
+    public void restartTimer(){
+      StopCoroutine(timer());
       StartCoroutine(timer());
     }
 
@@ -58,8 +64,10 @@ public class Timer : MonoBehaviour
     // --- IEnumerators ---------------------
 
     private IEnumerator timer(){
+      isTimerGoing = true;
       yield return new WaitForSeconds(getTimeDifference());
       TimerDoneEvent();
+      isTimerGoing = false;
       yield return null;
     }
 }

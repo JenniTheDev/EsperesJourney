@@ -103,8 +103,3 @@ public class ObjectHealth : MonoBehaviour {
         }
     }
 }
-
-[System.Serializable]
-public class IntEvent : UnityEvent<int>
-{
-}

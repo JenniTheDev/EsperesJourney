@@ -74,8 +74,3 @@ public class PlayerInputManager : MonoBehaviour {
         Player.Disable();
     }
 }
-
-[System.Serializable]
-public class Vector2Event : UnityEvent<Vector2>
-{
-}
