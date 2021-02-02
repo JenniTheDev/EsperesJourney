@@ -169,6 +169,7 @@ MonoBehaviour:
   detectOnEnter: 1
   detectOnStay: 0
   detectOnExit: 0
+  allowDuplicates: 0
   timeBetweenDetectingDuplicates: 1
   tagsToListenFor:
   - Player_Attack

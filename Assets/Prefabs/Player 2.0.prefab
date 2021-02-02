@@ -217,6 +217,7 @@ MonoBehaviour:
   StartOnAwake: 0
   moveSpeed: 10
   rb: {fileID: 9394434500482376}
+  targetMode: 0
   movementMode: 0
   momentumMode: 0
   directionToMove: {x: 0, y: 0, z: 0}
@@ -489,7 +490,7 @@ GameObject:
   - component: {fileID: 683355810853288168}
   m_Layer: 0
   m_Name: Player 2.0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2047,6 +2048,7 @@ MonoBehaviour:
   StartOnAwake: 0
   moveSpeed: 5
   rb: {fileID: 9394434500482376}
+  targetMode: 0
   movementMode: 0
   momentumMode: 1
   directionToMove: {x: 0, y: 0, z: 0}
@@ -3236,7 +3238,7 @@ PrefabInstance:
     - target: {fileID: 1420508590020966812, guid: 071c2cb4a13e0cd4a9c40860a3d56ade,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1420508590020966813, guid: 071c2cb4a13e0cd4a9c40860a3d56ade,
         type: 3}

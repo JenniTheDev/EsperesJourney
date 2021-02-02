@@ -20,6 +20,7 @@ public class ObjectSensor : MonoBehaviour {
     [SerializeField] private bool detectOnStay = false;
     [SerializeField] private bool detectOnExit = false;
 
+    [SerializeField] private bool allowDuplicates = true;
     [SerializeField] private float timeBetweenDetectingDuplicates = 0.1f;
 
     [Tooltip("Set the tag of any objects this sensor is looking for.")]
@@ -32,22 +33,36 @@ public class ObjectSensor : MonoBehaviour {
     private Collision2D lastCollision2D;
     private Collider2D lastCollider2D;
 
+    private void DetectedSomething(Collision2D col) {
+      if(allowDuplicates) InvokeDetectedSomething();
+      else{
+        if(newCollision2D(col)) InvokeDetectedSomething();
+      }
+    }
+
+    private void DetectedSomething(Collider2D col) {
+      if(allowDuplicates) InvokeDetectedSomething();
+      else{
+        if(newCollider2D(col)) InvokeDetectedSomething();
+      }
+    }
+
     // --- Events ----------------------------------------------
 
-    public void InvokeDetectedSomething() {
+    private void InvokeDetectedSomething() {
         detectedSomething.Invoke();
     }
 
     // --- Confermation Functions ------------------------------
 
-    public bool isThisAnObjectToWatchFor_Collision(Collision2D col) {
+    private bool isThisAnObjectToWatchFor_Collision(Collision2D col) {
         foreach (string _tag in tagsToListenFor) {
             if (col.gameObject.tag == _tag) return true;
         }
         return false;
     }
 
-    public bool isThisAnObjectToWatchFor_Collider(Collider2D col) {
+    private bool isThisAnObjectToWatchFor_Collider(Collider2D col) {
         foreach (string _tag in tagsToListenFor) {
             if (col.gameObject.tag == _tag) return true;
         }
@@ -106,36 +121,36 @@ public class ObjectSensor : MonoBehaviour {
     // Enter ---
     public void OnCollisionEnter2D(Collision2D col) {
         if (sensorMode == mode.Collider && detectOnEnter && getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
-          if(newCollision2D(col))  InvokeDetectedSomething();
+          DetectedSomething(col);
     }
 
     // Triggers when the player collides with a trigger
     public void OnTriggerEnter2D(Collider2D col) {
         if (sensorMode == mode.Trigger && detectOnEnter && getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
-            if(newCollider2D(col))  InvokeDetectedSomething();
+            DetectedSomething(col);
     }
 
     // Stay ---
     public void OnCollisionStay2D(Collision2D col) {
         if (sensorMode == mode.Collider && detectOnStay && getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
-            if(newCollision2D(col))  InvokeDetectedSomething();
+            DetectedSomething(col);
     }
 
     // Triggers when the player collides with a trigger
     public void OnTriggerStay2D(Collider2D col) {
         if (sensorMode == mode.Trigger && detectOnStay && getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
-            if(newCollider2D(col))  InvokeDetectedSomething();
+            DetectedSomething(col);
     }
 
     // Exit ---
     public void OnCollisionExit2D(Collision2D col) {
         if (sensorMode == mode.Collider && detectOnExit && getDetectEverything() || isThisAnObjectToWatchFor_Collision(col))
-            if(newCollision2D(col))  InvokeDetectedSomething();
+            DetectedSomething(col);
     }
 
     // Triggers when the player collides with a trigger
     public void OnTriggerExit2D(Collider2D col) {
         if (sensorMode == mode.Trigger && detectOnExit && getDetectEverything() || isThisAnObjectToWatchFor_Collider(col))
-            if(newCollider2D(col))  InvokeDetectedSomething();
+            DetectedSomething(col);
     }
 }
