@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/MainMenu - Production.unity
     guid: 8847239d0ec6d3646aabd1533ae6a758
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 8a8ce511f0389194192d273e82c4401a
   - enabled: 1
-    path: Assets/Scenes/Main test scene.unity
+    path: Assets/Scenes/Sewer Test  - Jenni.unity
     guid: 6eec6a3c2654ea7448a320fa216af20a
   m_configObjects: {}

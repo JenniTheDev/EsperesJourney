@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -329,7 +329,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -368,7 +368,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -394,7 +394,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -420,7 +420,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -446,7 +446,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -472,7 +472,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -498,7 +498,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -524,7 +524,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.76}
+    oldSize: {x: 1.015625, y: 1.484375}
     newSize: {x: 0.65, y: 0.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e286b2094a0aa4286cfb9abdcae8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 784336633}
+  PlayerStatsObject: {fileID: 0}
 --- !u!1 &801256271
 GameObject:
   m_ObjectHideFlags: 0
@@ -11869,7 +11869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb583b1bd4a1f944a8fc690a39de747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsTxt: {fileID: 818128295}
+  CoinsTxt: {fileID: 0}
 --- !u!1 &1700815189
 GameObject:
   m_ObjectHideFlags: 0
