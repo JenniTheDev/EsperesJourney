@@ -2,7 +2,7 @@
 
 A 2D adventure game for the Cal State Fullerton Video Game Development Club. Development began during the Fall 2020 semester.
 
-[The latest release can be found here.](https://digx7.itch.io/esperes-journey)
+[The latest playable release can be found here.](https://digx7.itch.io/esperes-journey)
 
 ## About The Game: 
 
