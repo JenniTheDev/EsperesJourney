@@ -2,6 +2,8 @@
 
 A 2D adventure game for the Cal State Fullerton Video Game Development Club. Development began during the Fall 2020 semester.
 
+[The latest release can be found here.](https://digx7.itch.io/esperes-journey)
+
 ## About The Game: 
 
 * A 300 year war between humans and monsters, called The Cataclysm, drove monsters into slavery or hiding. </br>
