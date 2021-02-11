@@ -10,7 +10,7 @@ public class Dialogue {
     public bool isQuestion;
 
     [Space]
-    [Header("Dialogue")]
+    [Header("Dialogue -------------------")]
         [TextArea(3, 10)]
         public string[] sentences;
 
@@ -18,7 +18,7 @@ public class Dialogue {
 
     [Space]
     //[HideInInspector]
-    [Header("Answers/Responses")]
+    [Header("Answers/Responses ----------")]
         [Tooltip("Answers list.")]
         [TextArea(3, 10)]
         public string[] answers;

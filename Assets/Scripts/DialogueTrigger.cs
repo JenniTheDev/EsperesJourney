@@ -3,44 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script is attached to any interactable gameobject such as an NPC.
 public class DialogueTrigger : MonoBehaviour
 {
-    //This script is attached to any interactable gameobject such as an NPC
     public bool active;
-    //public BoxCollider2D Dtrigger;
     public Dialogue dialogue;
+    private DialogueManager DManager;
+ 
     
     // Start is called before the first frame update
     void Start()
     {
-        //active = true;
-        //Dtrigger = gameObject.GetComponent<BoxCollider2D>();
-        
+        DManager = FindObjectOfType<DialogueManager>();   
     }
 
-    public void TriggerDialogue()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
+    //public void TriggerDialogue()
+    //{
+    //    DManager.StartDialogue(dialogue);
+    //}
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //add E interact action
+        Debug.Log("Player has entered an interactable object's collider.");
         if (collision.tag == "Player" && active)
         {
-            //freeze player();
-            TriggerDialogue();
+            //TriggerDialogue();
+            DManager.interactable = true;
+            DManager.DialogueContainer = dialogue;
         }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
+        Debug.Log("Player has exited an interactable object's collider.");
+        //DManager.EndDialogue();
+        DManager.interactable = false;
+        DManager.DialogueContainer = null;
     }
 }

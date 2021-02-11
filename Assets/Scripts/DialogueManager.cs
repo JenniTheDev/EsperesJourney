@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//This script handles the dialogue pop up
 public class DialogueManager : MonoBehaviour
 {
     //initialize in inspector ---
@@ -13,6 +13,13 @@ public class DialogueManager : MonoBehaviour
     public Text DialogueTxt;
     public GameObject ContButton;
     public Text ContButtonTxt;
+    private bool DialogueHidden = true;
+
+    //text cue for interactable object
+    public Text InteractableCueTxt;
+    //If true, player is inside an interactable's collider
+    public bool interactable = false;
+    public Dialogue DialogueContainer;
 
     public GameObject[] AButtons = new GameObject[3];
     public Text[] AButtonTxt = new Text[3];
@@ -34,12 +41,23 @@ public class DialogueManager : MonoBehaviour
 
         DialogueTxt = Dialogue.GetComponent<Text>();
 
+
+
         //hide dialogue pop up
         HidePopUp();
 
         //hide answer buttons
         HideAButtons();
 
+    }
+
+    //called when interact event is triggered 
+    public void ETriggerDialogue()
+    {   //if the player entered an active interactable gameobject's collider, and dialogue container is not empty, start dialogue.
+        if (interactable && (DialogueContainer != null))
+        {
+            StartDialogue(DialogueContainer);
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -81,7 +99,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        //if dialogue sentence queue is empty and the answers have not already been displayed
+        //if dialogue sentence queue is empty and the answers have not already been displayed (and are supposed to), do it.
         if (sentences.Count == 0 && answers.Count != 0 && isQuestion) 
         {
             EndDialogue();
@@ -95,8 +113,22 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        DialogueTxt.text = sentence;
-        Debug.Log(sentence);
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+        //DialogueTxt.text = sentence;
+        
+    }
+
+    //Types the dialogue into the pop up box character by character.
+    IEnumerator TypeSentence (string sentence)
+    {
+        DialogueTxt.text = "";
+
+        foreach (char letter in sentence.ToCharArray())
+        {
+            DialogueTxt.text += letter;
+            yield return null;
+        }
     }
 
     public void DisplayChoices()
@@ -113,7 +145,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    //used for buttons---
+    //OnClick function for answer buttons---
     public void CheckAnswer(Text chosen)
     {
         //hide answer buttons
@@ -134,6 +166,7 @@ public class DialogueManager : MonoBehaviour
     #region Hide&UnhideMethods
     private void HidePopUp()
     {
+        DialogueHidden = true;
         Debug.Log("Hide pop up dialogue box.");
         DialogueBox.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
         Dialogue.GetComponent<Text>().canvasRenderer.SetAlpha(0f);
@@ -144,12 +177,14 @@ public class DialogueManager : MonoBehaviour
 
     private void UnhidePopUp()
     {
+        DialogueHidden = false;
         Debug.Log("Unhide pop up dialogue box.");
         DialogueBox.GetComponent<Image>().canvasRenderer.SetAlpha(127f);
         Dialogue.GetComponent<Text>().canvasRenderer.SetAlpha(255f);
         ContButton.GetComponent<Button>().interactable = true;
         ContButton.GetComponent<Image>().canvasRenderer.SetAlpha(255f);
         ContButtonTxt.canvasRenderer.SetAlpha(255f);
+        InteractableCueTxt.enabled = false;
     }
 
     private void HideAButtons()
@@ -182,4 +217,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
     #endregion
+
+    void Update()
+    {
+        if (interactable && DialogueHidden)
+        { InteractableCueTxt.enabled = true;}
+        else { InteractableCueTxt.enabled = false; }
+    }
 }
+

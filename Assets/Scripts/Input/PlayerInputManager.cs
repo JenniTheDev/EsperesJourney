@@ -18,6 +18,7 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField] private UnityEvent attackInput;
     [SerializeField] private UnityEvent dashInput;
     [SerializeField] private UnityEvent healInput;
+    [SerializeField] private UnityEvent InteractInput;
 
     // --- Updates -------------------------------------
 
@@ -26,7 +27,7 @@ public class PlayerInputManager : MonoBehaviour {
 
         BindInputs();
     }
-
+    
     // --- Get/Set -------------------------------------
 
     private void setMoveDirection(Vector2 input){
@@ -52,6 +53,11 @@ public class PlayerInputManager : MonoBehaviour {
       healInput.Invoke();
     }
 
+    private void InteractInputEvent()
+    {
+        InteractInput.Invoke();
+    }
+
     // --- BindingInputs ----------------------------------
 
     // This script will bind the inputs on the Input action map to the needed script
@@ -60,6 +66,7 @@ public class PlayerInputManager : MonoBehaviour {
         Player.Character.Dash.performed += ctx => this.dashInputEvent();
         Player.Character.Attack.performed += ctx => this.attackInputEvent();
         Player.Character.Heal.performed += ctx => this.healInputEvent();
+        Player.Character.Interact.performed += ctx => this.InteractInputEvent();
     }
 
     // --- Enable/Disable --------------------------------
