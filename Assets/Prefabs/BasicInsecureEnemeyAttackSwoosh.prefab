@@ -74,7 +74,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2235f0ab1f6554e853678f2f9883b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  units: -10
+  lethalDamage: 0
+  angerDamage: 0
+  hoplessDamage: 0
+  insecureDamage: -10
+  frustratedDamage: 0
+  calmDamage: 0
+  reassureDamage: 0
+  complimentDamage: 0
+  silenceDamage: 0
 --- !u!114 &9023710276612053570
 MonoBehaviour:
   m_ObjectHideFlags: 0

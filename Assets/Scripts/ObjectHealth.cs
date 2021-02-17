@@ -16,6 +16,8 @@ public class ObjectHealth : MonoBehaviour {
     [Tooltip("This is the objects players health.  If the current health ever equals this the player will die")]
     [SerializeField] private int minHealth = 0;
 
+    [SerializeField] private bool isInvincible = false;
+
     [Tooltip("List all the GameObject tags of objects that can alter the health of this gameObject")]
     [SerializeField] private List<string> tagsThatCanAffectObjectsHealth;
 
@@ -57,19 +59,25 @@ public class ObjectHealth : MonoBehaviour {
 
     // Adds the given input to the currentHealth
     public void updateCurrentHealth(int input) {
-        currentHealth += input;
-        Debug.Log("Something changed the objects currentHealth by " + input + " units");
+        if(!isInvincible) {
+          currentHealth += input;
+          Debug.Log("Something changed the objects currentHealth by " + input + " units");
 
-        if (input > 0) healthIncrease.Invoke(currentHealth);
-        if (input < 0) healthDecrease.Invoke(currentHealth);
+          if (input > 0) healthIncrease.Invoke(currentHealth);
+          if (input < 0) healthDecrease.Invoke(currentHealth);
 
-        if (isObjectDead()) Death();
+          if (isObjectDead()) Death();
+        }
     }
 
     // Returns true if the currentHealth is less than or equal to the minHealth
     public bool isObjectDead() {
         if (currentHealth <= minHealth) return true;
         else return false;
+    }
+
+    public void setIsInvincible(bool input) {
+      isInvincible = input;
     }
 
     // Will kill the player
@@ -79,13 +87,17 @@ public class ObjectHealth : MonoBehaviour {
         Debug.Log("Object has died");
     }
 
+    public void ResetHealth() {
+      currentHealth = maxHealth;
+    }
+
     // --- Collisions --------------------------------------------
 
     public void OnCollisionEnter2D(Collision2D col) {
         Debug.Log("Object touched something");
 
         if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)) {
-            updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
+            //updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
         } else {
             Debug.Log("This object does not have a damage script attached");
         }
@@ -96,7 +108,7 @@ public class ObjectHealth : MonoBehaviour {
         Debug.Log("Object touched something");
 
         if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe_Collider2D(col)) {
-            updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
+            //updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
             if (isObjectDead()) Death();
         } else {
             Debug.Log("This object does not have a damage script attached");

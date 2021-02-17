@@ -29,21 +29,35 @@ public class ObjectSensor : MonoBehaviour {
     [Space]
     [Header("Events")]
     [SerializeField] private UnityEvent detectedSomething;
+    [SerializeField] private Collision2DEvent detectedSomething_Collision2D;
+    [SerializeField] private Collider2DEvent detectedSomething_Collider2D;
 
     private Collision2D lastCollision2D;
     private Collider2D lastCollider2D;
 
     private void DetectedSomething(Collision2D col) {
-      if(allowDuplicates) InvokeDetectedSomething();
+      if(allowDuplicates) {
+        InvokeDetectedSomething();
+        InvokeDetectedSomething(col);
+      }
       else{
-        if(newCollision2D(col)) InvokeDetectedSomething();
+        if(newCollision2D(col)) {
+          InvokeDetectedSomething();
+          InvokeDetectedSomething(col);
+        }
       }
     }
 
     private void DetectedSomething(Collider2D col) {
-      if(allowDuplicates) InvokeDetectedSomething();
+      if(allowDuplicates) {
+        InvokeDetectedSomething();
+        InvokeDetectedSomething(col);
+      }
       else{
-        if(newCollider2D(col)) InvokeDetectedSomething();
+        if(newCollider2D(col)) {
+          InvokeDetectedSomething();
+          InvokeDetectedSomething(col);
+        }
       }
     }
 
@@ -51,6 +65,14 @@ public class ObjectSensor : MonoBehaviour {
 
     private void InvokeDetectedSomething() {
         detectedSomething.Invoke();
+    }
+
+    private void InvokeDetectedSomething(Collision2D col) {
+        detectedSomething_Collision2D.Invoke(col);
+    }
+
+    private void InvokeDetectedSomething(Collider2D col) {
+        detectedSomething_Collider2D.Invoke(col);
     }
 
     // --- Confermation Functions ------------------------------

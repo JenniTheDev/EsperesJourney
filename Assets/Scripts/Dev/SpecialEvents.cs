@@ -41,3 +41,13 @@ public class Vector2Event : UnityEvent<Vector2>
 public class Vector3Event : UnityEvent<Vector3>
 {
 }
+
+[System.Serializable]
+public class Collision2DEvent : UnityEvent<Collision2D>
+{
+}
+
+[System.Serializable]
+public class Collider2DEvent : UnityEvent<Collider2D>
+{
+}
