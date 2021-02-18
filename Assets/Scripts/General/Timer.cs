@@ -7,9 +7,11 @@ using UnityEngine.Events;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private bool StartOnAwake = false;
+    [SerializeField] private bool looping = false;
     [SerializeField] private float currentTime;
     [SerializeField] private float targetTime;
     private float timeDifference;
+    private bool isTimerGoing = false;
 
     public enum CountDirection {CountUp, CountDown}
 
@@ -24,11 +26,29 @@ public class Timer : MonoBehaviour
     }
 
     public void startTimer(){
+      if(!isTimerGoing){
+        Debug.Log("Starting Timer");
+        StartCoroutine(timer());
+      }
+    }
+
+    public void restartTimer(){
+      Debug.Log("Timer is being restarted");
+      StopCoroutine(timer());
       StartCoroutine(timer());
     }
 
     public void TimerDoneEvent(){
       TimerDone.Invoke();
+      Debug.Log("Timer is done");
+    }
+
+    private bool shouldTimerLoop(){
+      if(looping) {
+        Debug.Log("Timer should be looping");
+        return true;
+      }
+      else return false;
     }
 
     // --- Get/Set -----------------------------
@@ -58,8 +78,13 @@ public class Timer : MonoBehaviour
     // --- IEnumerators ---------------------
 
     private IEnumerator timer(){
+      isTimerGoing = true;
+      Debug.Log("Time difference is " + getTimeDifference());
       yield return new WaitForSeconds(getTimeDifference());
+      Debug.Log("Time should be done");
       TimerDoneEvent();
+      isTimerGoing = false;
+      if(shouldTimerLoop())startTimer();
       yield return null;
     }
 }

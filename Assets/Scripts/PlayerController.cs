@@ -449,7 +449,7 @@ public class PlayerController : MonoBehaviour {
         if (canThisObjectCauseFall(col)){
           StartCoroutine(PlayerFall());
         } else if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe(col)) {
-            updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
+            //updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
             if (isCharacterDead()) Death();
         } else if (col.gameObject.GetComponent<UpdateHealthPack>() != null) {
             updateCurrentHealthPacks(col.gameObject.GetComponent<UpdateHealthPack>().units);
@@ -463,7 +463,7 @@ public class PlayerController : MonoBehaviour {
         if (canThisObjectCauseFall_Collider2D(col)){
           StartCoroutine(PlayerFall());
         } else if (col.gameObject.GetComponent<HealthChange>() != null && canThisObjectDamageMe_Collider2D(col)) {
-            updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
+            //updateCurrentHealth(col.gameObject.GetComponent<HealthChange>().units);
             if (isCharacterDead()) Death();
         } else if (col.gameObject.GetComponent<UpdateHealthPack>() != null) {
             updateCurrentHealthPacks(col.gameObject.GetComponent<UpdateHealthPack>().units);

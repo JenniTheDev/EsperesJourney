@@ -73,7 +73,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2235f0ab1f6554e853678f2f9883b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  units: -50
+  lethalDamage: -10
+  angerDamage: 0
+  hoplessDamage: 0
+  insecureDamage: 0
+  frustratedDamage: 0
+  calmDamage: 0
+  reassureDamage: 0
+  complimentDamage: 0
+  silenceDamage: 0
 --- !u!114 &9167186605309026534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +98,9 @@ MonoBehaviour:
   StartOnAwake: 1
   moveSpeed: 1
   rb: {fileID: 2809617849578263132}
+  targetMode: 0
   movementMode: 0
+  momentumMode: 0
   directionToMove: {x: 1, y: 0, z: 0}
   useLocalSpace: 1
   objectToMoveTowards: {fileID: 0}
@@ -130,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimeDelay: 1
-  destroyOnImpactWithAnything: 0
+  destroyOnImpactWithAnyColliders: 0
+  destroyOnImpactWithAnyTriggers: 0
   destroyOnAwake: 1
   tagsThatCanDestroyThisObject: []
