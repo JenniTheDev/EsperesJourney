@@ -3,24 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 //This script handles the dialogue pop up
 public class DialogueManager : MonoBehaviour
 {
-    //initialize in inspector ---
-    public GameObject DialogueBox;
-    public GameObject Dialogue;
-    public Text DialogueTxt;
-    public GameObject ContButton;
-    public Text ContButtonTxt;
+    private GameObject DialogueCanvas;
+    private GameObject DialogueBox;
+    private GameObject Dialogue;
+    private Text DialogueTxt;
+    private GameObject ContButton;
+    private Text ContButtonTxt;
     private bool DialogueHidden = true;
 
+    [SerializeField] private UnityEvent DialogueEnd;
+
     //text cue for interactable object
-    public Text InteractableCueTxt;
+    private Text InteractableCueTxt;
     //If true, player is inside an interactable's collider
+    [HideInInspector]
     public bool interactable = false;
+    [HideInInspector]
     public Dialogue DialogueContainer;
 
+    //initialize in inspector if needed---
     public GameObject[] AButtons = new GameObject[3];
     public Text[] AButtonTxt = new Text[3];
     //---------------------------
@@ -39,9 +45,24 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         answers = new List<string>();
 
+
+        DialogueCanvas = GameObject.Find("Dialogue Canvas");
+        if (DialogueCanvas == null) { Debug.LogError("Dialogue canvas was not found."); }
+
+        DialogueBox = GetChildWithName(DialogueCanvas, "DialogueBox");
+        if (DialogueBox == null) { Debug.LogError("DialogueBox gameobject in DialogueCanvas was not found."); }
+
+        Dialogue = GetChildWithName(DialogueBox, "Dialogue");
+        if (Dialogue == null) { Debug.LogError("Dialogue gameobject in DialogueBox was not found."); }
         DialogueTxt = Dialogue.GetComponent<Text>();
 
+        ContButton = GetChildWithName(DialogueBox, "ContinueButton");
+        if (ContButton == null) { Debug.LogError("ContinueButton gameobject in DialogueBox was not found."); }
+        ContButtonTxt = GetChildWithName(ContButton, "Text").GetComponent<Text>();
+        if (ContButtonTxt == null) { Debug.LogError("ContinueButtonTxt gameobject in ContinueButton was not found."); }
 
+        InteractableCueTxt = GetChildWithName(DialogueCanvas, "Interactable Cue").GetComponent<Text>();
+        if (InteractableCueTxt == null) { Debug.LogError("InteractableCue gameobject in DialogueBox was not found."); }
 
         //hide dialogue pop up
         HidePopUp();
@@ -51,12 +72,33 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    public void DialogueEndEvent()
+    {
+        Debug.Log("hhee hee hoo hoo ");
+        DialogueEnd.Invoke();
+    }
+
     //called when interact event is triggered 
     public void ETriggerDialogue()
     {   //if the player entered an active interactable gameobject's collider, and dialogue container is not empty, start dialogue.
         if (interactable && (DialogueContainer != null))
         {
             StartDialogue(DialogueContainer);
+        }
+        
+    }
+
+    public GameObject GetChildWithName(GameObject obj, string name)
+    {
+        Transform trans = obj.transform;
+        Transform childTrans = trans.Find(name);
+        if (childTrans != null)
+        {
+            return childTrans.gameObject;
+        }
+        else
+        {
+            return null;
         }
     }
 
@@ -95,6 +137,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of dialogue.");
         //hide pop up
         HidePopUp();
+        DialogueEndEvent();
     }
 
     public void DisplayNextSentence()
@@ -166,13 +209,13 @@ public class DialogueManager : MonoBehaviour
     #region Hide&UnhideMethods
     private void HidePopUp()
     {
-        DialogueHidden = true;
         Debug.Log("Hide pop up dialogue box.");
         DialogueBox.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
         Dialogue.GetComponent<Text>().canvasRenderer.SetAlpha(0f);
         ContButton.GetComponent<Button>().interactable = false;
         ContButton.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
         ContButtonTxt.canvasRenderer.SetAlpha(0f);
+        DialogueHidden = true;
     }
 
     private void UnhidePopUp()
