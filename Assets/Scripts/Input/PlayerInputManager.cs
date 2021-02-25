@@ -18,6 +18,11 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField] private UnityEvent attackInput;
     [SerializeField] private UnityEvent dashInput;
     [SerializeField] private UnityEvent healInput;
+    [Space]
+    [SerializeField] private UnityEvent ability1Input;
+    [SerializeField] private UnityEvent ability2Input;
+    [SerializeField] private UnityEvent ability3Input;
+    [SerializeField] private UnityEvent ability4Input;
 
     // --- Updates -------------------------------------
 
@@ -52,6 +57,19 @@ public class PlayerInputManager : MonoBehaviour {
       healInput.Invoke();
     }
 
+    private void ability1InputEvent(){
+      ability1Input.Invoke();
+    }
+    private void ability2InputEvent(){
+      ability2Input.Invoke();
+    }
+    private void ability3InputEvent(){
+      ability3Input.Invoke();
+    }
+    private void ability4InputEvent(){
+      ability4Input.Invoke();
+    }
+
     // --- BindingInputs ----------------------------------
 
     // This script will bind the inputs on the Input action map to the needed script
@@ -60,6 +78,10 @@ public class PlayerInputManager : MonoBehaviour {
         Player.Character.Dash.performed += ctx => this.dashInputEvent();
         Player.Character.Attack.performed += ctx => this.attackInputEvent();
         Player.Character.Heal.performed += ctx => this.healInputEvent();
+        Player.Character.Ability1.performed += ctx => this.ability1InputEvent();
+        Player.Character.Ability2.performed += ctx => this.ability2InputEvent();
+        Player.Character.Ability3.performed += ctx => this.ability3InputEvent();
+        Player.Character.Ability4.performed += ctx => this.ability4InputEvent();
     }
 
     // --- Enable/Disable --------------------------------

@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @Player : IInputActionCollection, IDisposable {
+public class @Player : IInputActionCollection, IDisposable
+{
     public InputActionAsset asset { get; }
-
-    public @Player() {
+    public @Player()
+    {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""Player"",
     ""maps"": [
@@ -61,6 +62,38 @@ public class @Player : IInputActionCollection, IDisposable {
                     ""name"": ""Heal"",
                     ""type"": ""Button"",
                     ""id"": ""f5ad345c-bd59-4f5f-b08f-eb378b89e3c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Ability1"",
+                    ""type"": ""Button"",
+                    ""id"": ""365633cc-e1ea-4269-9d99-8a96ed4089fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Ability2"",
+                    ""type"": ""Button"",
+                    ""id"": ""a821e259-ba05-4170-8168-a2f1e0a0cb53"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Ability3"",
+                    ""type"": ""Button"",
+                    ""id"": ""527bb598-bd0a-4aaa-9c05-28797ee5f196"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Ability4"",
+                    ""type"": ""Button"",
+                    ""id"": ""b0bd490e-aae6-4b10-a30e-39d31747f6ee"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -242,6 +275,50 @@ public class @Player : IInputActionCollection, IDisposable {
                     ""action"": ""Heal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""23d4149c-deb3-46b5-bce5-34c5678cdf6b"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""525a85e4-73a1-43e4-a828-123451b3843d"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51cbc9ca-e37a-4e3d-8ce6-a1888972d3cc"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ee72250-94ae-4cc5-807d-d4b5468951e2"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -256,47 +333,58 @@ public class @Player : IInputActionCollection, IDisposable {
         m_Character_Blink = m_Character.FindAction("Blink", throwIfNotFound: true);
         m_Character_Shoot = m_Character.FindAction("Shoot", throwIfNotFound: true);
         m_Character_Heal = m_Character.FindAction("Heal", throwIfNotFound: true);
+        m_Character_Ability1 = m_Character.FindAction("Ability1", throwIfNotFound: true);
+        m_Character_Ability2 = m_Character.FindAction("Ability2", throwIfNotFound: true);
+        m_Character_Ability3 = m_Character.FindAction("Ability3", throwIfNotFound: true);
+        m_Character_Ability4 = m_Character.FindAction("Ability4", throwIfNotFound: true);
     }
 
-    public void Dispose() {
+    public void Dispose()
+    {
         UnityEngine.Object.Destroy(asset);
     }
 
-    public InputBinding? bindingMask {
+    public InputBinding? bindingMask
+    {
         get => asset.bindingMask;
         set => asset.bindingMask = value;
     }
 
-    public ReadOnlyArray<InputDevice>? devices {
+    public ReadOnlyArray<InputDevice>? devices
+    {
         get => asset.devices;
         set => asset.devices = value;
     }
 
     public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
 
-    public bool Contains(InputAction action) {
+    public bool Contains(InputAction action)
+    {
         return asset.Contains(action);
     }
 
-    public IEnumerator<InputAction> GetEnumerator() {
+    public IEnumerator<InputAction> GetEnumerator()
+    {
         return asset.GetEnumerator();
     }
 
-    IEnumerator IEnumerable.GetEnumerator() {
+    IEnumerator IEnumerable.GetEnumerator()
+    {
         return GetEnumerator();
     }
 
-    public void Enable() {
+    public void Enable()
+    {
         asset.Enable();
     }
 
-    public void Disable() {
+    public void Disable()
+    {
         asset.Disable();
     }
 
     // Character
     private readonly InputActionMap m_Character;
-
     private ICharacterActions m_CharacterActionsCallbackInterface;
     private readonly InputAction m_Character_Move;
     private readonly InputAction m_Character_Attack;
@@ -304,41 +392,33 @@ public class @Player : IInputActionCollection, IDisposable {
     private readonly InputAction m_Character_Blink;
     private readonly InputAction m_Character_Shoot;
     private readonly InputAction m_Character_Heal;
-
-    public struct CharacterActions {
+    private readonly InputAction m_Character_Ability1;
+    private readonly InputAction m_Character_Ability2;
+    private readonly InputAction m_Character_Ability3;
+    private readonly InputAction m_Character_Ability4;
+    public struct CharacterActions
+    {
         private @Player m_Wrapper;
-
-        public CharacterActions(@Player wrapper) {
-            m_Wrapper = wrapper;
-        }
-
+        public CharacterActions(@Player wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Character_Move;
         public InputAction @Attack => m_Wrapper.m_Character_Attack;
         public InputAction @Dash => m_Wrapper.m_Character_Dash;
         public InputAction @Blink => m_Wrapper.m_Character_Blink;
         public InputAction @Shoot => m_Wrapper.m_Character_Shoot;
         public InputAction @Heal => m_Wrapper.m_Character_Heal;
-
-        public InputActionMap Get() {
-            return m_Wrapper.m_Character;
-        }
-
-        public void Enable() {
-            Get().Enable();
-        }
-
-        public void Disable() {
-            Get().Disable();
-        }
-
+        public InputAction @Ability1 => m_Wrapper.m_Character_Ability1;
+        public InputAction @Ability2 => m_Wrapper.m_Character_Ability2;
+        public InputAction @Ability3 => m_Wrapper.m_Character_Ability3;
+        public InputAction @Ability4 => m_Wrapper.m_Character_Ability4;
+        public InputActionMap Get() { return m_Wrapper.m_Character; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-
-        public static implicit operator InputActionMap(CharacterActions set) {
-            return set.Get();
-        }
-
-        public void SetCallbacks(ICharacterActions instance) {
-            if (m_Wrapper.m_CharacterActionsCallbackInterface != null) {
+        public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
+        public void SetCallbacks(ICharacterActions instance)
+        {
+            if (m_Wrapper.m_CharacterActionsCallbackInterface != null)
+            {
                 @Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
@@ -357,9 +437,22 @@ public class @Player : IInputActionCollection, IDisposable {
                 @Heal.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
                 @Heal.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
                 @Heal.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnHeal;
+                @Ability1.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility1;
+                @Ability1.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility1;
+                @Ability1.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility1;
+                @Ability2.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility2;
+                @Ability2.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility2;
+                @Ability2.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility2;
+                @Ability3.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility3;
+                @Ability3.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility3;
+                @Ability3.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility3;
+                @Ability4.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility4;
+                @Ability4.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility4;
+                @Ability4.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility4;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
-            if (instance != null) {
+            if (instance != null)
+            {
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
@@ -378,24 +471,33 @@ public class @Player : IInputActionCollection, IDisposable {
                 @Heal.started += instance.OnHeal;
                 @Heal.performed += instance.OnHeal;
                 @Heal.canceled += instance.OnHeal;
+                @Ability1.started += instance.OnAbility1;
+                @Ability1.performed += instance.OnAbility1;
+                @Ability1.canceled += instance.OnAbility1;
+                @Ability2.started += instance.OnAbility2;
+                @Ability2.performed += instance.OnAbility2;
+                @Ability2.canceled += instance.OnAbility2;
+                @Ability3.started += instance.OnAbility3;
+                @Ability3.performed += instance.OnAbility3;
+                @Ability3.canceled += instance.OnAbility3;
+                @Ability4.started += instance.OnAbility4;
+                @Ability4.performed += instance.OnAbility4;
+                @Ability4.canceled += instance.OnAbility4;
             }
         }
     }
-
     public CharacterActions @Character => new CharacterActions(this);
-
-    public interface ICharacterActions {
-
+    public interface ICharacterActions
+    {
         void OnMove(InputAction.CallbackContext context);
-
         void OnAttack(InputAction.CallbackContext context);
-
         void OnDash(InputAction.CallbackContext context);
-
         void OnBlink(InputAction.CallbackContext context);
-
         void OnShoot(InputAction.CallbackContext context);
-
         void OnHeal(InputAction.CallbackContext context);
+        void OnAbility1(InputAction.CallbackContext context);
+        void OnAbility2(InputAction.CallbackContext context);
+        void OnAbility3(InputAction.CallbackContext context);
+        void OnAbility4(InputAction.CallbackContext context);
     }
 }
