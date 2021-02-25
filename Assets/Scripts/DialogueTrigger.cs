@@ -15,19 +15,14 @@ public class DialogueTrigger : MonoBehaviour
     void Start()
     {
         DManager = FindObjectOfType<DialogueManager>();   
+        if(DManager == null) { Debug.LogError("Dialogue Manager was not found in the scene."); }
     }
-
-    //public void TriggerDialogue()
-    //{
-    //    DManager.StartDialogue(dialogue);
-    //}
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Player has entered an interactable object's collider.");
         if (collision.tag == "Player" && active)
         {
-            //TriggerDialogue();
             DManager.interactable = true;
             DManager.DialogueContainer = dialogue;
         }
@@ -36,7 +31,6 @@ public class DialogueTrigger : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Player has exited an interactable object's collider.");
-        //DManager.EndDialogue();
         DManager.interactable = false;
         DManager.DialogueContainer = null;
     }

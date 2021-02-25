@@ -16,23 +16,28 @@ public class DialogueManager : MonoBehaviour
     private Text ContButtonTxt;
     private bool DialogueHidden = true;
 
+    [SerializeField] private UnityEvent DialogueStart;
     [SerializeField] private UnityEvent DialogueEnd;
 
     //text cue for interactable object
     private Text InteractableCueTxt;
     //If true, player is inside an interactable's collider
-    [HideInInspector]
-    public bool interactable = false;
-    [HideInInspector]
-    public Dialogue DialogueContainer;
+    [Tooltip("If true, player is inside an interactable's collider.")]
+    [SerializeField] public bool interactable = false;
+    //[HideInInspector]
+    [SerializeField] public Dialogue DialogueContainer;
 
     //initialize in inspector if needed---
-    public GameObject[] AButtons = new GameObject[3];
-    public Text[] AButtonTxt = new Text[3];
+    [Tooltip("Answer buttons for choices to make if the dialogue is a question.")]
+    private GameObject[] AButtons = new GameObject[3];
+    private Text[] AButtonTxt = new Text[3];
     //---------------------------
 
-    private bool isQuestion;
     private Queue<string> sentences;
+
+    //private bool Typing = false;
+
+    private bool isQuestion;
     private List<string> answers;
     private string correctAnswer;
     private string isCorrect;
@@ -44,7 +49,6 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         answers = new List<string>();
-
 
         DialogueCanvas = GameObject.Find("Dialogue Canvas");
         if (DialogueCanvas == null) { Debug.LogError("Dialogue canvas was not found."); }
@@ -64,25 +68,38 @@ public class DialogueManager : MonoBehaviour
         InteractableCueTxt = GetChildWithName(DialogueCanvas, "Interactable Cue").GetComponent<Text>();
         if (InteractableCueTxt == null) { Debug.LogError("InteractableCue gameobject in DialogueBox was not found."); }
 
+        for (int i = 0; i < 3; i++)
+        {
+            AButtons[i] = GetChildWithName(DialogueBox, "Answer" + (i + 1).ToString());
+            AButtonTxt[i] = GetChildWithName(AButtons[i], "Text").GetComponent<Text>();
+            if (AButtonTxt[i] == null) { Debug.LogError("gameobject in AnswerButton was not found."); }
+        }
+
         //hide dialogue pop up
         HidePopUp();
-
         //hide answer buttons
         HideAButtons();
-
     }
-
+    
+    //Dialogue event functions -----
     public void DialogueEndEvent()
     {
-        Debug.Log("hhee hee hoo hoo ");
         DialogueEnd.Invoke();
     }
+
+    public void DialogueStartEvent()
+    {
+        DialogueStart.Invoke();
+    }
+
+    //--------------------------------
 
     //called when interact event is triggered 
     public void ETriggerDialogue()
     {   //if the player entered an active interactable gameobject's collider, and dialogue container is not empty, start dialogue.
         if (interactable && (DialogueContainer != null))
         {
+            DialogueStartEvent();
             StartDialogue(DialogueContainer);
         }
         
@@ -106,7 +123,6 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Starting conversations with " + dialogue.name + ".");
         sentences.Clear();
-        //Unhide pop up
         UnhidePopUp();
 
         isQuestion = dialogue.isQuestion;
@@ -128,14 +144,12 @@ public class DialogueManager : MonoBehaviour
             isIncorrect = dialogue.incorrectResponse;
         }
         
-
         DisplayNextSentence();
     }
 
     public void EndDialogue()
     {
         Debug.Log("End of dialogue.");
-        //hide pop up
         HidePopUp();
         DialogueEndEvent();
     }
@@ -157,9 +171,7 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-        //DialogueTxt.text = sentence;
-        
+        StartCoroutine(TypeSentence(sentence));      
     }
 
     //Types the dialogue into the pop up box character by character.
@@ -170,13 +182,13 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             DialogueTxt.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.025f); ;
+
         }
     }
 
     public void DisplayChoices()
     {
-        //unhide answer buttons
         UnhideAButtons();
 
         //randomize answers on buttons
@@ -191,10 +203,7 @@ public class DialogueManager : MonoBehaviour
     //OnClick function for answer buttons---
     public void CheckAnswer(Text chosen)
     {
-        //hide answer buttons
         HideAButtons();
-
-        //Unhide pop up
         UnhidePopUp();
 
         if (chosen.text == correctAnswer)
@@ -206,57 +215,50 @@ public class DialogueManager : MonoBehaviour
             DialogueTxt.text = isIncorrect;
         }
     }
+
     #region Hide&UnhideMethods
     private void HidePopUp()
     {
-        Debug.Log("Hide pop up dialogue box.");
-        DialogueBox.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
-        Dialogue.GetComponent<Text>().canvasRenderer.SetAlpha(0f);
-        ContButton.GetComponent<Button>().interactable = false;
-        ContButton.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
-        ContButtonTxt.canvasRenderer.SetAlpha(0f);
+        //Debug.Log("Hide pop up dialogue box.");
+        DialogueBox.SetActive(false);
         DialogueHidden = true;
     }
 
     private void UnhidePopUp()
     {
-        DialogueHidden = false;
-        Debug.Log("Unhide pop up dialogue box.");
-        DialogueBox.GetComponent<Image>().canvasRenderer.SetAlpha(127f);
-        Dialogue.GetComponent<Text>().canvasRenderer.SetAlpha(255f);
-        ContButton.GetComponent<Button>().interactable = true;
-        ContButton.GetComponent<Image>().canvasRenderer.SetAlpha(255f);
-        ContButtonTxt.canvasRenderer.SetAlpha(255f);
+        //Debug.Log("Unhide pop up dialogue box.");
+        DialogueBox.SetActive(true);
         InteractableCueTxt.enabled = false;
+        DialogueHidden = false;
     }
 
     private void HideAButtons()
     {
-        Debug.Log("Hide answer buttons.");
+        //Debug.Log("Hide answer buttons.");
         foreach (GameObject button in AButtons)
         {
-            button.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
+            button.SetActive(false);
             button.GetComponent<Button>().interactable = false;
         }
 
         foreach (Text buttonTxt in AButtonTxt)
         {
-            buttonTxt.GetComponent<Text>().canvasRenderer.SetAlpha(0f);
+            buttonTxt.GetComponent<Text>().enabled = false;
         }
     }
 
     private void UnhideAButtons()
     {
-        Debug.Log("Unhide answer buttons");
+        //Debug.Log("Unhide answer buttons");
         foreach (GameObject button in AButtons)
         {
-            button.GetComponent<Image>().canvasRenderer.SetAlpha(127f);
+            button.SetActive(true);
             button.GetComponent<Button>().interactable = true;
         }
 
         foreach (Text buttonTxt in AButtonTxt)
         {
-            buttonTxt.GetComponent<Text>().canvasRenderer.SetAlpha(127f);
+            buttonTxt.GetComponent<Text>().enabled = true;
         }
     }
     #endregion
