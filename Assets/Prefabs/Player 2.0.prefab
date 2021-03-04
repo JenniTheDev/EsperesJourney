@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 2794277015365659143}
   - component: {fileID: 7021214288407990986}
   - component: {fileID: 683355810853288168}
+  - component: {fileID: 4778315312440967418}
   m_Layer: 0
   m_Name: Player 2.0
   m_TagString: Player
@@ -681,6 +682,67 @@ MonoBehaviour:
   rb: {fileID: 0}
   moveDirection: {x: 0, y: 0}
   movementListeningMode: 1
+--- !u!114 &4778315312440967418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137985097259055997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.26560023, y: -0.82189196, z: 0}
+  - {x: 0.30173212, y: -0.83996326, z: 0}
+  - {x: 0.18970855, y: -0.6826767, z: 0}
+  - {x: 0.24609762, y: -0.42572546, z: 0}
+  - {x: 0.29622135, y: -0.3818556, z: 0}
+  - {x: 0.28995594, y: -0.25651354, z: 0}
+  - {x: 0.35260737, y: 0.03177201, z: 0}
+  - {x: 0.32128283, y: 0.20725216, z: 0}
+  - {x: 0.35260737, y: 0.35139436, z: 0}
+  - {x: 0.27115643, y: 0.43913376, z: 0}
+  - {x: 0.16464669, y: 0.47047046, z: 0}
+  - {x: 0.18344316, y: 0.5456757, z: 0}
+  - {x: 0.27742487, y: 0.55820996, z: 0}
+  - {x: 0.3588758, y: 0.64594936, z: 0}
+  - {x: 0.38393494, y: 0.7399547, z: 0}
+  - {x: 0.32754552, y: 0.83396137, z: 0}
+  - {x: 0.39206567, y: 0.91224855, z: 0}
+  - {x: 0.24609458, y: 0.84649557, z: 0}
+  - {x: 0.26489106, y: 0.74622184, z: 0}
+  - {x: 0.19597122, y: 0.68981797, z: 0}
+  - {x: 0.13958213, y: 0.73368764, z: 0}
+  - {x: -0.08597421, y: 0.7274205, z: 0}
+  - {x: -0.13609792, y: 0.7086193, z: 0}
+  - {x: -0.22381423, y: 0.7650232, z: 0}
+  - {x: -0.192487, y: 0.83396137, z: 0}
+  - {x: -0.31979996, y: 0.89417726, z: 0}
+  - {x: -0.2676722, y: 0.81516004, z: 0}
+  - {x: -0.3240586, y: 0.6334151, z: 0}
+  - {x: -0.18621857, y: 0.55820996, z: 0}
+  - {x: -0.13609487, y: 0.5331415, z: 0}
+  - {x: -0.1799532, y: 0.43913493, z: 0}
+  - {x: -0.31152752, y: 0.2573889, z: 0}
+  - {x: -0.374182, y: -0.13117164, z: 0}
+  - {x: -0.3616512, y: -0.4695951, z: 0}
+  - {x: -0.29899707, y: -0.36932132, z: 0}
+  - {x: -0.29273105, y: -0.53226614, z: 0}
+  - {x: -0.21128044, y: -0.53226614, z: 0}
+  - {x: -0.18621857, y: -0.4633282, z: 0}
+  - {x: -0.18621857, y: -0.70774513, z: 0}
+  m_ShapePathHash: -1804039376
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 360534
 --- !u!1 &1137985097539275373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,32 +2755,32 @@ PrefabInstance:
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.3618951
       objectReference: {fileID: 0}
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.9936156
       objectReference: {fileID: 0}
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -7.5462275
       objectReference: {fileID: 0}
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5149145100956463582, guid: c3126d66b8acc824c963d14229b71809,
         type: 3}
