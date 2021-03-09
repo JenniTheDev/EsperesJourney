@@ -28,6 +28,16 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+    //public void OnCollisionStay2D(Collider2D collision)
+    //{
+    //    Debug.Log("Player has entered an interactable object's collider.");
+    //    if (collision.tag == "Player" && active)
+    //    {
+    //        DManager.interactable = true;
+    //        DManager.DialogueContainer = dialogue;
+    //    }
+    //}
+
     public void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Player has exited an interactable object's collider.");

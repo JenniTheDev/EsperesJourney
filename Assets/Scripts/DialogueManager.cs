@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
     private GameObject DialogueBox;
     private GameObject Dialogue;
     private Text DialogueTxt;
+    private GameObject CharacterPortrait;
+    private Image Portrait;
     private GameObject ContButton;
     private Text ContButtonTxt;
     private bool DialogueHidden = true;
@@ -41,6 +43,7 @@ public class DialogueManager : MonoBehaviour
     private List<string> answers;
     private string correctAnswer;
     private string isCorrect;
+    public bool Correct = false;
     private string isIncorrect;
 
 
@@ -60,6 +63,10 @@ public class DialogueManager : MonoBehaviour
         if (Dialogue == null) { Debug.LogError("Dialogue gameobject in DialogueBox was not found."); }
         DialogueTxt = Dialogue.GetComponent<Text>();
 
+        CharacterPortrait = GetChildWithName(DialogueCanvas, "CharacterPortrait");
+        if (CharacterPortrait == null) { Debug.LogError("Character Portrait image is missing."); }
+        Portrait = CharacterPortrait.GetComponent<Image>();
+
         ContButton = GetChildWithName(DialogueBox, "ContinueButton");
         if (ContButton == null) { Debug.LogError("ContinueButton gameobject in DialogueBox was not found."); }
         ContButtonTxt = GetChildWithName(ContButton, "Text").GetComponent<Text>();
@@ -68,11 +75,13 @@ public class DialogueManager : MonoBehaviour
         InteractableCueTxt = GetChildWithName(DialogueCanvas, "Interactable Cue").GetComponent<Text>();
         if (InteractableCueTxt == null) { Debug.LogError("InteractableCue gameobject in DialogueBox was not found."); }
 
+
         for (int i = 0; i < 3; i++)
         {
-            AButtons[i] = GetChildWithName(DialogueBox, "Answer" + (i + 1).ToString());
+            AButtons[i] = GetChildWithName(DialogueCanvas, "Answer" + (i + 1).ToString());
             AButtonTxt[i] = GetChildWithName(AButtons[i], "Text").GetComponent<Text>();
             if (AButtonTxt[i] == null) { Debug.LogError("gameobject in AnswerButton was not found."); }
+            if (AButtons[i] == null) { Debug.LogError("AnswerButton was not found."); }
         }
 
         //hide dialogue pop up
@@ -105,25 +114,16 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public GameObject GetChildWithName(GameObject obj, string name)
-    {
-        Transform trans = obj.transform;
-        Transform childTrans = trans.Find(name);
-        if (childTrans != null)
-        {
-            return childTrans.gameObject;
-        }
-        else
-        {
-            return null;
-        }
-    }
-
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Starting conversations with " + dialogue.name + ".");
         sentences.Clear();
+        answers.Clear();
+        Correct = false;
         UnhidePopUp();
+
+        //load character portrait
+        Portrait.sprite = dialogue.portrait;
 
         isQuestion = dialogue.isQuestion;
 
@@ -135,6 +135,7 @@ public class DialogueManager : MonoBehaviour
 
         if (isQuestion)
         {
+            Debug.Log("Answers---- answerslength is " + dialogue.answers.Length);
             for (int i = 0; i < dialogue.answers.Length; i++)
             {
                 answers.Add(dialogue.answers[i]);
@@ -147,31 +148,44 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public void EndDialogue()
-    {
-        Debug.Log("End of dialogue.");
-        HidePopUp();
-        DialogueEndEvent();
-    }
-
     public void DisplayNextSentence()
     {
-        //if dialogue sentence queue is empty and the answers have not already been displayed (and are supposed to), do it.
-        if (sentences.Count == 0 && answers.Count != 0 && isQuestion) 
-        {
+        //if question was answered correctly, end the dialogue
+        if (Correct) { 
             EndDialogue();
-            DisplayChoices();
             return;
         }
-        else if (sentences.Count == 0)
+
+        /*Display choices if sentence queue is empty and the dialogue is a question.
+        If not a question, end dialogue once queue is empty.*/
+        if (isQuestion)
         {
-            EndDialogue();
-            return;
+            if (sentences.Count == 0)
+            {
+                DisplayChoices();
+                return;
+            }
+        }
+        else
+        {
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
         }
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));      
+    }
+
+    public void EndDialogue()
+    {
+        Debug.Log("End of dialogue.");
+        HidePopUp();
+        HideAButtons();
+        DialogueEndEvent();
     }
 
     //Types the dialogue into the pop up box character by character.
@@ -187,8 +201,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public GameObject GetChildWithName(GameObject obj, string name)
+    {
+        Transform trans = obj.transform;
+        Transform childTrans = trans.Find(name);
+        if (childTrans != null)
+        {
+            return childTrans.gameObject;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    #region QuestionMethods
     public void DisplayChoices()
     {
+        HidePopUp();
         UnhideAButtons();
 
         //randomize answers on buttons
@@ -199,7 +229,7 @@ public class DialogueManager : MonoBehaviour
             answers.RemoveAt(r);
         }
     }
-
+ 
     //OnClick function for answer buttons---
     public void CheckAnswer(Text chosen)
     {
@@ -208,18 +238,25 @@ public class DialogueManager : MonoBehaviour
 
         if (chosen.text == correctAnswer)
         {
-            DialogueTxt.text = isCorrect;
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(isCorrect));
+            Correct = true;
         }
         else
         {
-            DialogueTxt.text = isIncorrect;
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(isIncorrect));
+            Correct = false;
         }
     }
+
+    #endregion
 
     #region Hide&UnhideMethods
     private void HidePopUp()
     {
         //Debug.Log("Hide pop up dialogue box.");
+        CharacterPortrait.SetActive(false);
         DialogueBox.SetActive(false);
         DialogueHidden = true;
     }
@@ -227,6 +264,7 @@ public class DialogueManager : MonoBehaviour
     private void UnhidePopUp()
     {
         //Debug.Log("Unhide pop up dialogue box.");
+        CharacterPortrait.SetActive(true);
         DialogueBox.SetActive(true);
         InteractableCueTxt.enabled = false;
         DialogueHidden = false;
@@ -245,6 +283,7 @@ public class DialogueManager : MonoBehaviour
         {
             buttonTxt.GetComponent<Text>().enabled = false;
         }
+        DialogueHidden = true;
     }
 
     private void UnhideAButtons()
@@ -260,6 +299,7 @@ public class DialogueManager : MonoBehaviour
         {
             buttonTxt.GetComponent<Text>().enabled = true;
         }
+        DialogueHidden = false;
     }
     #endregion
 
@@ -270,4 +310,3 @@ public class DialogueManager : MonoBehaviour
         else { InteractableCueTxt.enabled = false; }
     }
 }
-
