@@ -8,6 +8,7 @@ public class Item
     {
         Key,
         Coin,
+        Document,
     }
 
     public ItemType itemType;
