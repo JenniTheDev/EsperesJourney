@@ -11,6 +11,8 @@ public class PlayerInputManager : MonoBehaviour {
     */
 
     [SerializeField] private Player Player;                  // This references the input action map
+    [SerializeField] private Inventory inventory;
+    [SerializeField] private UI_Inventory uiInventory;
 
     [SerializeField] private Vector2 moveDirection;
 
@@ -19,11 +21,14 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField] private UnityEvent dashInput;
     [SerializeField] private UnityEvent healInput;
     [SerializeField] private UnityEvent InteractInput;
+    [SerializeField] private UnityEvent InventoryInput;
 
     // --- Updates -------------------------------------
 
     public void Awake() {
         Player = new Player();             // This is needed to set up the input action map
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
 
         BindInputs();
     }
@@ -58,6 +63,11 @@ public class PlayerInputManager : MonoBehaviour {
         InteractInput.Invoke();
     }
 
+    private void InventoryInputEvent()
+    {
+        InventoryInput.Invoke();
+    }
+
     // --- BindingInputs ----------------------------------
 
     // This script will bind the inputs on the Input action map to the needed script
@@ -67,6 +77,7 @@ public class PlayerInputManager : MonoBehaviour {
         Player.Character.Attack.performed += ctx => this.attackInputEvent();
         Player.Character.Heal.performed += ctx => this.healInputEvent();
         Player.Character.Interact.performed += ctx => this.InteractInputEvent();
+        Player.Character.Inventory.performed += ctx => this.InventoryInputEvent();
     }
 
     // --- Enable/Disable --------------------------------

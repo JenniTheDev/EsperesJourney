@@ -12,8 +12,10 @@ public class DialogueManager : MonoBehaviour
     private GameObject DialogueBox;
     private GameObject Dialogue;
     private Text DialogueTxt;
-    private GameObject CharacterPortrait;
+    private GameObject CharacterPortraitBG;
+    private GameObject CharacterImage;
     private Image Portrait;
+    private Image Image;
     private GameObject ContButton;
     private Text ContButtonTxt;
     private bool DialogueHidden = true;
@@ -63,9 +65,12 @@ public class DialogueManager : MonoBehaviour
         if (Dialogue == null) { Debug.LogError("Dialogue gameobject in DialogueBox was not found."); }
         DialogueTxt = Dialogue.GetComponent<Text>();
 
-        CharacterPortrait = GetChildWithName(DialogueCanvas, "CharacterPortrait");
-        if (CharacterPortrait == null) { Debug.LogError("Character Portrait image is missing."); }
-        Portrait = CharacterPortrait.GetComponent<Image>();
+        CharacterPortraitBG = GetChildWithName(DialogueCanvas, "CharacterPortraitBG");
+        CharacterImage = GetChildWithName(CharacterPortraitBG, "CharacterImage");
+        if (CharacterPortraitBG == null) { Debug.LogError("Character Portrait BG is missing."); }
+        else if (CharacterImage == null) { Debug.LogError("Character Portrait Image is missing."); }
+        Portrait = CharacterPortraitBG.GetComponent<Image>();
+        Image = CharacterImage.GetComponent<Image>();
 
         ContButton = GetChildWithName(DialogueBox, "ContinueButton");
         if (ContButton == null) { Debug.LogError("ContinueButton gameobject in DialogueBox was not found."); }
@@ -123,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         UnhidePopUp();
 
         //load character portrait
-        Portrait.sprite = dialogue.portrait;
+        Image.sprite = dialogue.portrait;
 
         isQuestion = dialogue.isQuestion;
 
@@ -256,7 +261,7 @@ public class DialogueManager : MonoBehaviour
     private void HidePopUp()
     {
         //Debug.Log("Hide pop up dialogue box.");
-        CharacterPortrait.SetActive(false);
+        CharacterPortraitBG.SetActive(false);
         DialogueBox.SetActive(false);
         DialogueHidden = true;
     }
@@ -264,7 +269,7 @@ public class DialogueManager : MonoBehaviour
     private void UnhidePopUp()
     {
         //Debug.Log("Unhide pop up dialogue box.");
-        CharacterPortrait.SetActive(true);
+        CharacterPortraitBG.SetActive(true);
         DialogueBox.SetActive(true);
         InteractableCueTxt.enabled = false;
         DialogueHidden = false;
@@ -306,7 +311,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         if (interactable && DialogueHidden)
-        { InteractableCueTxt.enabled = true;}
-        else { InteractableCueTxt.enabled = false; }
+        { InteractableCueTxt.enabled = true;} 
+        else { InteractableCueTxt.enabled = false;}
     }
 }
