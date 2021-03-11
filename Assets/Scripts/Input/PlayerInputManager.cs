@@ -23,6 +23,7 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField] private UnityEvent ability2Input;
     [SerializeField] private UnityEvent ability3Input;
     [SerializeField] private UnityEvent ability4Input;
+    [SerializeField] private UnityEvent InteractInput;
 
     // --- Updates -------------------------------------
 
@@ -31,7 +32,7 @@ public class PlayerInputManager : MonoBehaviour {
 
         BindInputs();
     }
-
+    
     // --- Get/Set -------------------------------------
 
     private void setMoveDirection(Vector2 input){
@@ -70,6 +71,11 @@ public class PlayerInputManager : MonoBehaviour {
       ability4Input.Invoke();
     }
 
+    private void InteractInputEvent()
+    {
+        InteractInput.Invoke();
+    }
+
     // --- BindingInputs ----------------------------------
 
     // This script will bind the inputs on the Input action map to the needed script
@@ -82,6 +88,7 @@ public class PlayerInputManager : MonoBehaviour {
         Player.Character.Ability2.performed += ctx => this.ability2InputEvent();
         Player.Character.Ability3.performed += ctx => this.ability3InputEvent();
         Player.Character.Ability4.performed += ctx => this.ability4InputEvent();
+        Player.Character.Interact.performed += ctx => this.InteractInputEvent();
     }
 
     // --- Enable/Disable --------------------------------

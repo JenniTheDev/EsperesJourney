@@ -97,6 +97,14 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""21d17ab9-9b8d-4a6f-8baf-2881c23ce6e8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -319,6 +327,28 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Ability4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""101b26ae-2c8b-413a-b7b6-8d62df700d22"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a6fe1c4-0309-483d-9847-ce376b4f1d3c"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -337,6 +367,7 @@ public class @Player : IInputActionCollection, IDisposable
         m_Character_Ability2 = m_Character.FindAction("Ability2", throwIfNotFound: true);
         m_Character_Ability3 = m_Character.FindAction("Ability3", throwIfNotFound: true);
         m_Character_Ability4 = m_Character.FindAction("Ability4", throwIfNotFound: true);
+        m_Character_Interact = m_Character.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -396,6 +427,7 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Character_Ability2;
     private readonly InputAction m_Character_Ability3;
     private readonly InputAction m_Character_Ability4;
+    private readonly InputAction m_Character_Interact;
     public struct CharacterActions
     {
         private @Player m_Wrapper;
@@ -410,6 +442,7 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @Ability2 => m_Wrapper.m_Character_Ability2;
         public InputAction @Ability3 => m_Wrapper.m_Character_Ability3;
         public InputAction @Ability4 => m_Wrapper.m_Character_Ability4;
+        public InputAction @Interact => m_Wrapper.m_Character_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -449,6 +482,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Ability4.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility4;
                 @Ability4.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility4;
                 @Ability4.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAbility4;
+                @Interact.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -483,6 +519,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Ability4.started += instance.OnAbility4;
                 @Ability4.performed += instance.OnAbility4;
                 @Ability4.canceled += instance.OnAbility4;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -499,5 +538,6 @@ public class @Player : IInputActionCollection, IDisposable
         void OnAbility2(InputAction.CallbackContext context);
         void OnAbility3(InputAction.CallbackContext context);
         void OnAbility4(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
