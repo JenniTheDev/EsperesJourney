@@ -10,7 +10,7 @@ public class UI_Inventory : MonoBehaviour
 
     [SerializeField] private Transform itemSlotContainer;
     [SerializeField] private Transform itemSlotTemplate;
-    private int X_MAX = 9;
+    private int X_MAX;
     private int Y_MAX = 2;
 
     private void Awake()
@@ -22,10 +22,12 @@ public class UI_Inventory : MonoBehaviour
         //Debug.Log("hello " + itemSlotTemplate);
         this.gameObject.SetActive(false);
     }
+   
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
-        
+        //this.gameObject.SetActive(false);
+        X_MAX = inventory.GetMaxSize();
         RefreshInventoryItems();
     }
 
@@ -33,20 +35,18 @@ public class UI_Inventory : MonoBehaviour
     {
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 95f;
+        float itemSlotCellSize = 58.5f;
 
         foreach (Item item in inventory.GetItemList())
         {
-            Debug.Log(itemSlotContainer); /////////////////////////////////////!!!!!!!!!!
-            Debug.Log(itemSlotTemplate);
 
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize-4);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
             x++;
-            if(x > X_MAX - 1)
+            if(x > (X_MAX / 2) - 1)
             {
                 x = 0;
                 y--;
@@ -56,7 +56,9 @@ public class UI_Inventory : MonoBehaviour
 
     public void ToggleInventory()
     {
+        Debug.Log(this.gameObject.activeSelf);
         if (this.gameObject.activeSelf) { this.gameObject.SetActive(false); }
-        else { this.gameObject.SetActive(true); }
+        else if (!this.gameObject.activeSelf) { this.gameObject.SetActive(true); }
+        Debug.Log(this.gameObject.activeSelf);
     }
 }

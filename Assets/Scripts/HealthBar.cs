@@ -14,13 +14,12 @@ public class HealthBar : MonoBehaviour
     {
         slider = gameObject.GetComponent<Slider>();
         playerControllerScript = PlayerStatsObject.GetComponent<PlayerStats>();
+        if (playerControllerScript = null) { Debug.LogError("Player Controller Script not found."); }
     }
 
     // UpdateHealthbar is called when player events for healthincrease and healthdecrease are invoked
     public void UpdateHealthBar()
     {
-        if (playerControllerScript != null) { Debug.Log("1"); }
-        else { Debug.Log("0"); }
 
         int currValue = playerControllerScript.getCurrentHealth();
         Debug.Log("current health is " + slider.value);
