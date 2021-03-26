@@ -47,8 +47,7 @@ MonoBehaviour:
   active: 1
   dialogue:
     name: Acid Pool
-    portrait: {fileID: 7660058185959228050, guid: 50f321fcad68f474eb4deaa4f54df9d8,
-      type: 3}
+    portrait: {fileID: 21300000, guid: 4ece3915bdbbff94e8ae864eac122027, type: 3}
     isQuestion: 0
     sentences:
     - This pool doesn't look like just any old pool.

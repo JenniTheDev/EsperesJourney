@@ -11,8 +11,8 @@ public class PlayerInputManager : MonoBehaviour {
     */
 
     [SerializeField] private Player Player;                  // This references the input action map
-    [SerializeField] private Inventory inventory;
-    [SerializeField] private UI_Inventory uiInventory;
+    //[SerializeField] private Inventory inventory;
+    //[SerializeField] private UI_Inventory uiInventory;
 
     [SerializeField] private Vector2 moveDirection;
 
@@ -27,12 +27,14 @@ public class PlayerInputManager : MonoBehaviour {
 
     public void Awake() {
         Player = new Player();             // This is needed to set up the input action map
-        inventory = new Inventory();
-        uiInventory.SetInventory(inventory);
+        //inventory = new Inventory();
+        //uiInventory.SetInventory(inventory);
+
+        //ItemWorld.SpawnItemWorld(new Vector3(10, 2), new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
 
         BindInputs();
     }
-    
+
     // --- Get/Set -------------------------------------
 
     private void setMoveDirection(Vector2 input){
