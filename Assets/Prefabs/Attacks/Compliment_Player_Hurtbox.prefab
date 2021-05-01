@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3505354152594296004}
   - component: {fileID: 8475657901277050029}
   - component: {fileID: 8568305848568143879}
+  - component: {fileID: 4008308724822440997}
   m_Layer: 0
   m_Name: Compliment_Player_Hurtbox
   m_TagString: Player_Attack
@@ -195,3 +196,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4008308724822440997
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129496232233785645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3584cb31617a8c45b5206226f4a74bc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
