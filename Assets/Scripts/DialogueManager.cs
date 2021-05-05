@@ -119,6 +119,12 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    public void TriggerDialogue(Dialogue dialogue)
+    {
+        DialogueStartEvent();
+        StartDialogue(dialogue);
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Starting conversations with " + dialogue.name + ".");
@@ -206,7 +212,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public GameObject GetChildWithName(GameObject obj, string name)
+    public static GameObject GetChildWithName(GameObject obj, string name)
     {
         Transform trans = obj.transform;
         Transform childTrans = trans.Find(name);

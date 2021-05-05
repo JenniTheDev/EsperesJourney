@@ -34,8 +34,22 @@ public class ItemWorld : MonoBehaviour
         return item;
     }
 
+    public static ItemWorld DropItem (Vector3 dropPosition, Item item)
+    { // +randomDir * 5f
+        Vector3 randomDir = GetRandomDir();
+        Debug.Log("RigidBody current position " + dropPosition);
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 1.9f, item);
+        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 5f, ForceMode2D.Impulse);
+        return itemWorld;
+    }
+
     public void DestroySelf()
     {
         Destroy(gameObject);
+    }
+
+    public static Vector3 GetRandomDir()
+    {
+        return new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
     }
 }

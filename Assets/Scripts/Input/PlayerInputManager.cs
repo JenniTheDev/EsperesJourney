@@ -13,7 +13,7 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField] private Player Player;                  // This references the input action map
     //[SerializeField] private Inventory inventory;
     //[SerializeField] private UI_Inventory uiInventory;
-
+    
     [SerializeField] private Vector2 moveDirection;
 
     [SerializeField] private Vector2Event moveInput;
@@ -31,7 +31,7 @@ public class PlayerInputManager : MonoBehaviour {
         //uiInventory.SetInventory(inventory);
 
         //ItemWorld.SpawnItemWorld(new Vector3(10, 2), new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
-
+        
         BindInputs();
     }
 

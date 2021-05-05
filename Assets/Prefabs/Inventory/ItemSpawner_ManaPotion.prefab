@@ -47,6 +47,15 @@ MonoBehaviour:
   item:
     itemType: 2
     amount: 1
+    documentDialogue:
+      name: 
+      portrait: {fileID: 0}
+      isQuestion: 0
+      sentences: []
+      answers: []
+      correctAnswer: 
+      correctResponse: 
+      incorrectResponse: 
 --- !u!212 &842027178653664946
 SpriteRenderer:
   m_ObjectHideFlags: 0

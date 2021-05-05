@@ -18,6 +18,7 @@ public class Item
 
     public ItemType itemType;
     public int amount;
+    public Dialogue documentDialogue;
 
     public Sprite GetSprite()
     {

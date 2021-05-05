@@ -26,6 +26,7 @@ public class Inventory
                 if (inventoryItem.itemType == item.itemType)
                 {
                     inventoryItem.amount += item.amount;
+                    Debug.Log("Incrementing " + item.itemType + " amount from inventory to " + item.amount);
                     itemAlreadyInInventory = true;
                 }
             }
@@ -51,6 +52,36 @@ public class Inventory
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
+
+    public void RemoveItem(Item item)
+    {
+        if (item.IsStackable())
+        {   // If stackable, update item amount if already in inventory
+            Item itemInInventory = null;
+            foreach (Item inventoryItem in itemList)
+            {
+                if (inventoryItem.itemType == item.itemType)
+                {
+                    //inventoryItem.amount -= item.amount;
+                    inventoryItem.amount--;
+                    Debug.Log("Decrementing " + item.itemType + " amount from inventory to " + item.amount);
+                    itemInInventory = inventoryItem;
+                }
+            }
+            if (itemInInventory != null && itemInInventory.amount <= 0)
+            { //Remove item if amount was decremented to <= 0
+                itemList.Remove(itemInInventory);
+            }
+        }
+        else
+        { //Remove non-stackable item if possible
+            itemList.Remove(item);
+            Debug.Log("Removing " + item.itemType + " from inventory.");
+        }
+        Debug.Log("item list count is now " + itemList.Count);
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+    }
+
     public List<Item> GetItemList()
     {
         return itemList;

@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class UI_Inventory : MonoBehaviour
 {
     private Inventory inventory;
+    private DialogueManager DManager;
 
     [SerializeField] private Transform itemSlotContainer;
     [SerializeField] private Transform itemSlotTemplate;
+    private Rigidbody2D playerRB;
+
     private int X_MAX;
     private int Y_MAX = 2;
 
@@ -21,6 +24,12 @@ public class UI_Inventory : MonoBehaviour
         //if (itemSlotTemplate == null) { Debug.LogError("itemSlotTemplate was not found."); }
         //Debug.Log("hello " + itemSlotTemplate);
         this.gameObject.SetActive(false);
+        DManager = FindObjectOfType<DialogueManager>();
+    }
+
+    public void SetPlayerRB (Rigidbody2D playerRB)
+    {
+        this.playerRB = playerRB;
     }
    
     public void SetInventory(Inventory inventory)
@@ -53,10 +62,32 @@ public class UI_Inventory : MonoBehaviour
 
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
+
+            //itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
+            //{
+            //    //drop item
+            //    Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+            //    inventory.RemoveItem(item);
+            //    ItemWorld.DropItem(playerRB.position, item);
+            //};
+
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize-4);
-            Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
+            
+            ///////////////
+            GameObject useButtonObj = DialogueManager.GetChildWithName(itemSlotRectTransform.gameObject, "Use_Button");
+            GameObject dropButtonObj = DialogueManager.GetChildWithName(itemSlotRectTransform.gameObject, "Drop_Button");
+            Button useButton = useButtonObj.GetComponent<Button>();
+            Button dropButton = dropButtonObj.GetComponent<Button>();
+
+            Image image = useButtonObj.transform.Find("Image").GetComponent<Image>();
+            if (image == null) { Debug.Log("couldnt find image :/"); }
+            Text uiText = useButtonObj.transform.Find("Text").GetComponent<Text>();
+            if (uiText == null) { Debug.Log("couldnt find text :/"); }
+
             image.sprite = item.GetSprite();
-            Text uiText = itemSlotRectTransform.Find("Text").GetComponent<Text>();
+            setItemOnClick(useButton, dropButton, item);
+            ///////////////
+            
             //update item amount txt
             if (item.amount > 1) { uiText.text = item.amount.ToString(); }
             else { uiText.text = ""; }
@@ -72,10 +103,103 @@ public class UI_Inventory : MonoBehaviour
     }
 
     public void ToggleInventory()
-    {
-        //Debug.Log(this.gameObject.activeSelf);
+    { 
         if (this.gameObject.activeSelf) { this.gameObject.SetActive(false); }
         else if (!this.gameObject.activeSelf) { this.gameObject.SetActive(true); }
-        //Debug.Log(this.gameObject.activeSelf);
     }
+
+    //try to make separate script for this region. Need access to inventory, and player stats. Also might need dialogue manager for documents.
+    #region UI_itemUsageMethods
+    public void setItemOnClick(Button useButton, Button dropButton, Item item)
+    {
+        switch (item.itemType)
+        { 
+            case Item.ItemType.Document:
+                useButton.onClick.AddListener(delegate { useDocument(item); });
+                dropButton.onClick.AddListener(delegate {
+                    ItemWorld.DropItem(playerRB.position, item);
+                    inventory.RemoveItem(item);
+                });
+                return;
+            case Item.ItemType.Key:
+                useButton.onClick.AddListener(delegate { useKey(item); });
+                dropButton.onClick.AddListener(delegate { 
+                    ItemWorld.DropItem(playerRB.position, item);
+                    inventory.RemoveItem(item);
+                });
+                return;
+            case Item.ItemType.Coin:
+                useButton.onClick.AddListener(delegate { useCoin(item); });
+                dropButton.onClick.AddListener(delegate { 
+                    ItemWorld.DropItem(playerRB.position, item);
+                    inventory.RemoveItem(item);
+                });
+                return;
+            case Item.ItemType.ManaPotion:
+                useButton.onClick.AddListener(delegate { useManaPotion(item); });
+                dropButton.onClick.AddListener(delegate { 
+                    ItemWorld.DropItem(playerRB.position, item);
+                    inventory.RemoveItem(item);
+                });
+                return;
+            case Item.ItemType.Shield:
+                useButton.onClick.AddListener(delegate { useShield(item); });
+                dropButton.onClick.AddListener(delegate { 
+                    ItemWorld.DropItem(playerRB.position, item);
+                    inventory.RemoveItem(item);
+                });
+                return;
+            case Item.ItemType.Sword:
+                useButton.onClick.AddListener(delegate { useSword(item); });
+                dropButton.onClick.AddListener(delegate { 
+                    ItemWorld.DropItem(playerRB.position, item);
+                    inventory.RemoveItem(item);
+                });
+                return;
+        }
+    }
+
+    private void useDocument(Item item)
+    {
+        //Gonna need playerinputmanager to call interactInputEvent()
+        
+        
+        if (item.itemType == Item.ItemType.Document)
+        {
+            DManager.TriggerDialogue(item.documentDialogue);
+        }
+
+        return;
+    }
+
+    private void useKey(Item item)
+    {
+        inventory.RemoveItem(item);
+        return;
+    }
+
+    private void useManaPotion(Item item)
+    {
+        inventory.RemoveItem(item);
+        return;
+    }
+
+    private void useShield(Item item)
+    {
+        inventory.RemoveItem(item);
+        return;
+    }
+
+    private void useSword(Item item)
+    {
+        inventory.RemoveItem(item);
+        return;
+    }
+
+    private void useCoin(Item item)
+    {
+        inventory.RemoveItem(item);
+        return;
+    }
+    #endregion
 }
