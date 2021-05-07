@@ -71,6 +71,16 @@ public class ObjectAnimationManager : MonoBehaviour {
         }
     }
 
+    public void ComplimentAnimation(bool input)
+    {
+
+        if (IsAnimatorSet())
+        {
+            animator.SetBool("Compliment", input);
+
+        }
+    }
+
     public void DeathAnimation(bool input) {
         animator.SetBool("Death", input);
     }
