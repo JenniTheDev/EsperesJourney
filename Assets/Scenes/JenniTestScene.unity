@@ -5735,6 +5735,7 @@ MonoBehaviour:
   espereAudio: {fileID: 138281561}
   enemyAudio: {fileID: 554026244}
   miscAudio: {fileID: 292917943}
+  cueAudio: {fileID: 0}
   sewerLevelMusicSound: {fileID: 8300000, guid: e8ca0fab43e74994d9550212acc2be44,
     type: 3}
   pauseMusicSound: {fileID: 8300000, guid: 8fddcacfefe44c64d8aeb6404d8be8fd, type: 3}
@@ -5744,8 +5745,8 @@ MonoBehaviour:
   playerDeathSound: {fileID: 8300000, guid: 43f5caedcb006c5458c562c03b8bb542, type: 3}
   dashSound: {fileID: 8300000, guid: d0e99421e2061454f9eceeb3dabd717c, type: 3}
   meleeAttackSound: {fileID: 8300000, guid: 78dfc55ff21276c4a88738f931a02134, type: 3}
-  teleportSound: {fileID: 8300000, guid: 9f050c04eab5a59448b708fe2d7946bb, type: 3}
   takingDamage: {fileID: 8300000, guid: ffc3c9cbf120a0742bacd8bdde08ff12, type: 3}
+  runningSound: {fileID: 0}
   bossFire: {fileID: 8300000, guid: 205b8723dec1cd5409392c8048625712, type: 3}
   bossRoar: {fileID: 8300000, guid: dc97b91edfc31ce46a23034ddcb41560, type: 3}
   bossRun: {fileID: 8300000, guid: c9c6c0500df77e64bad9a37c19312b35, type: 3}

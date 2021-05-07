@@ -19,7 +19,7 @@ public class HealthPotCounter : MonoBehaviour
         //playerControllerScript.healthPackGained.AddListener(UpdateHealthPotCounter);
         //playerControllerScript.healthPackUsed.AddListener(UpdateHealthPotCounter);
 
-        HPotsTxt.text = playerControllerScript.getCurrentHealthPots().ToString();
+       // HPotsTxt.text = playerControllerScript.getCurrentHealthPots().ToString();
         Debug.Log(playerControllerScript.getCurrentHealthPots());
     }
 
