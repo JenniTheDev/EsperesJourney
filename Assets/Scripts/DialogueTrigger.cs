@@ -20,9 +20,9 @@ public class DialogueTrigger : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player has entered an interactable object's collider.");
-        if (collision.tag == "Player" && active)
+        if ((collision.tag == "Player" || collision.transform.gameObject.name == "SensorCube") && active)
         {
+            Debug.Log("Player has entered " + dialogue.name + "'s collider.");
             DManager.interactable = true;
             DManager.DialogueContainer = dialogue;
         }
