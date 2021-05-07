@@ -11,7 +11,9 @@ public class PlayerInputManager : MonoBehaviour {
     */
 
     [SerializeField] private Player Player;                  // This references the input action map
-
+    //[SerializeField] private Inventory inventory;
+    //[SerializeField] private UI_Inventory uiInventory;
+    
     [SerializeField] private Vector2 moveDirection;
 
     [SerializeField] private Vector2Event moveInput;
@@ -24,15 +26,20 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField] private UnityEvent ability3Input;
     [SerializeField] private UnityEvent ability4Input;
     [SerializeField] private UnityEvent InteractInput;
+    [SerializeField] private UnityEvent InventoryInput;
 
     // --- Updates -------------------------------------
 
     public void Awake() {
         Player = new Player();             // This is needed to set up the input action map
+        //inventory = new Inventory();
+        //uiInventory.SetInventory(inventory);
 
+        //ItemWorld.SpawnItemWorld(new Vector3(10, 2), new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
+        
         BindInputs();
     }
-    
+
     // --- Get/Set -------------------------------------
 
     private void setMoveDirection(Vector2 input){
@@ -76,6 +83,11 @@ public class PlayerInputManager : MonoBehaviour {
         InteractInput.Invoke();
     }
 
+    private void InventoryInputEvent()
+    {
+        InventoryInput.Invoke();
+    }
+
     // --- BindingInputs ----------------------------------
 
     // This script will bind the inputs on the Input action map to the needed script
@@ -89,6 +101,7 @@ public class PlayerInputManager : MonoBehaviour {
         Player.Character.Ability3.performed += ctx => this.ability3InputEvent();
         Player.Character.Ability4.performed += ctx => this.ability4InputEvent();
         Player.Character.Interact.performed += ctx => this.InteractInputEvent();
+        Player.Character.Inventory.performed += ctx => this.InventoryInputEvent();
     }
 
     // --- Enable/Disable --------------------------------

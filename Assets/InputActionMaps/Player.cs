@@ -105,6 +105,14 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""b86112e0-8f39-4904-b66b-ee1f5ef4834e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -342,11 +350,33 @@ public class @Player : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1a6fe1c4-0309-483d-9847-ce376b4f1d3c"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5b051ced-34f9-49a8-b0b1-28d08e2806dc"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""719dd120-f083-4976-8683-78d67fd46f49"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -368,6 +398,7 @@ public class @Player : IInputActionCollection, IDisposable
         m_Character_Ability3 = m_Character.FindAction("Ability3", throwIfNotFound: true);
         m_Character_Ability4 = m_Character.FindAction("Ability4", throwIfNotFound: true);
         m_Character_Interact = m_Character.FindAction("Interact", throwIfNotFound: true);
+        m_Character_Inventory = m_Character.FindAction("Inventory", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -428,6 +459,7 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_Character_Ability3;
     private readonly InputAction m_Character_Ability4;
     private readonly InputAction m_Character_Interact;
+    private readonly InputAction m_Character_Inventory;
     public struct CharacterActions
     {
         private @Player m_Wrapper;
@@ -443,6 +475,7 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @Ability3 => m_Wrapper.m_Character_Ability3;
         public InputAction @Ability4 => m_Wrapper.m_Character_Ability4;
         public InputAction @Interact => m_Wrapper.m_Character_Interact;
+        public InputAction @Inventory => m_Wrapper.m_Character_Inventory;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -485,6 +518,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
+                @Inventory.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInventory;
+                @Inventory.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInventory;
+                @Inventory.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInventory;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -522,6 +558,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Inventory.started += instance.OnInventory;
+                @Inventory.performed += instance.OnInventory;
+                @Inventory.canceled += instance.OnInventory;
             }
         }
     }
@@ -539,5 +578,6 @@ public class @Player : IInputActionCollection, IDisposable
         void OnAbility3(InputAction.CallbackContext context);
         void OnAbility4(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
     }
 }

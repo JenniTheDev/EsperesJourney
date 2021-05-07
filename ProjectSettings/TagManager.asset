@@ -11,6 +11,8 @@ TagManager:
   - Enemy_Attack
   - Acid
   - Checkpoint
+  - Item
+  - Wall
   layers:
   - Default
   - TransparentFX
