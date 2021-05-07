@@ -21,9 +21,9 @@ public class HealthBar : MonoBehaviour
     public void UpdateHealthBar()
     {
 
-        int currValue = playerControllerScript.getCurrentHealth();
+       // int currValue = playerControllerScript.getCurrentHealth();
         Debug.Log("current health is " + slider.value);
-        slider.value = currValue;
+       //slider.value = currValue;
         Debug.Log("New value is " + slider.value);
     }
 }
