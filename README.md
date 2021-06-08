@@ -45,8 +45,9 @@ Espere has four abilities:
 <br><br>
 ## Project Documentation <a name="Docs"></a> <br>
 [Original Pitch] <br>
-[Espere Abilities] <br>
-[Player FSM Documentation] <br>
+[Second Semester Pitch] <br>
+[Espere Abilities](https://github.com/JenniTheDev/EsperesJourney/blob/dev/docs/Esper%C3%A9%20Abilities%20Context.pdf) <br>
+[Player FSM Documentation](https://github.com/JenniTheDev/EsperesJourney/blob/dev/docs/FSM%20Documentation(PDF).pdf) <br>
 
 <br><br>
 ## Acknowledgements <a name="Ack"></a> <br>
