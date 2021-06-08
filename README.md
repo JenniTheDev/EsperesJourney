@@ -33,15 +33,15 @@ Espere's Journey uses Unity Version 2019.4.3f1
 
 ## The Game <a name="Game"></a> <br>
 Espere has four abilities:
-* Calm, a mid-range attack effective against Angered enemies
+* Calm, a mid-range attack effective against Angered enemies <br>
 ![](https://media.giphy.com/media/Q4dTcAlTiUQ12kK0rK/giphy.gif)
-* Compliment, a long range attack effective against Insecure enemies
+* Compliment, a long range attack effective against Insecure enemies <br>
 ![](https://media.giphy.com/media/Lgs1po4pc6t2Stjgsm/giphy.gif) 
-* Reassure, a short range attack effective against Hopeless enemies
+* Reassure, a short range attack effective against Hopeless enemies <br>
 ![](https://media.giphy.com/media/FJ5IFEDoVTAbWPweKw/giphy.gif) 
-* Silence, a AOE attack effective against Frustrated enemies
+* Silence, a AOE attack effective against Frustrated enemies <br>
 ![](https://media.giphy.com/media/3l24HiJStYVZl95uhb/giphy.gif)
-<br><br>
+<br><br> <br>
 
 ## Project Documentation <a name="Docs"></a> <br>
 [Original Pitch] <br>
