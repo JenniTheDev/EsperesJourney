@@ -41,7 +41,6 @@ Espere has four abilities:
 ![](https://media.giphy.com/media/FJ5IFEDoVTAbWPweKw/giphy.gif) 
 * Silence, a AOE attack effective against Frustrated enemies
 ![](https://media.giphy.com/media/3l24HiJStYVZl95uhb/giphy.gif)
-
 <br><br>
 
 ## Project Documentation <a name="Docs"></a> <br>
