@@ -1,0 +1,5747 @@
+fileFormatVersion: 2
+guid: e60fbbd78a83dab4db69fde43f84bccd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5965071856662875718
+    second: Sewer_Tiles_V3_0
+  - first:
+      213: -4623269710106658423
+    second: Sewer_Tiles_V3_1
+  - first:
+      213: 4374124294831495409
+    second: Sewer_Tiles_V3_2
+  - first:
+      213: -5971862440670250491
+    second: Sewer_Tiles_V3_3
+  - first:
+      213: -6591994230331875672
+    second: Sewer_Tiles_V3_4
+  - first:
+      213: 3000254973816067143
+    second: Sewer_Tiles_V3_5
+  - first:
+      213: -6634834050429561826
+    second: Sewer_Tiles_V3_6
+  - first:
+      213: 4225098701283630186
+    second: Sewer_Tiles_V3_7
+  - first:
+      213: -8153826423986556505
+    second: Sewer_Tiles_V3_8
+  - first:
+      213: -4039380722600538260
+    second: Sewer_Tiles_V3_9
+  - first:
+      213: -9057537007348580105
+    second: Sewer_Tiles_V3_10
+  - first:
+      213: -3922288525189897074
+    second: Sewer_Tiles_V3_11
+  - first:
+      213: 7857647428308497720
+    second: Sewer_Tiles_V3_12
+  - first:
+      213: 1292890887596182085
+    second: Sewer_Tiles_V3_13
+  - first:
+      213: 1111166125592162250
+    second: Sewer_Tiles_V3_14
+  - first:
+      213: 7449943728320471732
+    second: Sewer_Tiles_V3_15
+  - first:
+      213: 8928404717275067010
+    second: Sewer_Tiles_V3_16
+  - first:
+      213: -7125904737132534825
+    second: Sewer_Tiles_V3_17
+  - first:
+      213: -7860262742168587546
+    second: Sewer_Tiles_V3_18
+  - first:
+      213: 8837197669476834694
+    second: Sewer_Tiles_V3_19
+  - first:
+      213: 5168674877714903878
+    second: Sewer_Tiles_V3_20
+  - first:
+      213: 902639450118828489
+    second: Sewer_Tiles_V3_21
+  - first:
+      213: 8312853975172424206
+    second: Sewer_Tiles_V3_22
+  - first:
+      213: -3361438147410498407
+    second: Sewer_Tiles_V3_23
+  - first:
+      213: -3198595462847976789
+    second: Sewer_Tiles_V3_24
+  - first:
+      213: -4099028502822782832
+    second: Sewer_Tiles_V3_25
+  - first:
+      213: 1940595519393312018
+    second: Sewer_Tiles_V3_26
+  - first:
+      213: 1812249403537617595
+    second: Sewer_Tiles_V3_27
+  - first:
+      213: -7023568732042158633
+    second: Sewer_Tiles_V3_28
+  - first:
+      213: -2423044117968380073
+    second: Sewer_Tiles_V3_29
+  - first:
+      213: 1062486415588269922
+    second: Sewer_Tiles_V3_30
+  - first:
+      213: 4572185546325938023
+    second: Sewer_Tiles_V3_31
+  - first:
+      213: -7044347137483677704
+    second: Sewer_Tiles_V3_32
+  - first:
+      213: -6749932658736926462
+    second: Sewer_Tiles_V3_33
+  - first:
+      213: 3113659321801930520
+    second: Sewer_Tiles_V3_34
+  - first:
+      213: -8373200309531696295
+    second: Sewer_Tiles_V3_35
+  - first:
+      213: -5366416243359581448
+    second: Sewer_Tiles_V3_36
+  - first:
+      213: -6054988442576027686
+    second: Sewer_Tiles_V3_37
+  - first:
+      213: 5390327264048924680
+    second: Sewer_Tiles_V3_38
+  - first:
+      213: 558509110993184245
+    second: Sewer_Tiles_V3_39
+  - first:
+      213: 876793833495414374
+    second: Sewer_Tiles_V3_40
+  - first:
+      213: -377643480300715905
+    second: Sewer_Tiles_V3_41
+  - first:
+      213: -8873663856786809445
+    second: Sewer_Tiles_V3_42
+  - first:
+      213: -1515466421658279757
+    second: Sewer_Tiles_V3_43
+  - first:
+      213: 8692358162638022183
+    second: Sewer_Tiles_V3_44
+  - first:
+      213: 815768355418794996
+    second: Sewer_Tiles_V3_45
+  - first:
+      213: 5896368669916043597
+    second: Sewer_Tiles_V3_46
+  - first:
+      213: -8529171289879205752
+    second: Sewer_Tiles_V3_47
+  - first:
+      213: 4602070132562037906
+    second: Sewer_Tiles_V3_48
+  - first:
+      213: 4099714068588912430
+    second: Sewer_Tiles_V3_49
+  - first:
+      213: 892591109590433445
+    second: Sewer_Tiles_V3_50
+  - first:
+      213: 4598734295274461709
+    second: Sewer_Tiles_V3_51
+  - first:
+      213: -4880569185502214419
+    second: Sewer_Tiles_V3_52
+  - first:
+      213: -7420750213125968902
+    second: Sewer_Tiles_V3_53
+  - first:
+      213: 893452761894837281
+    second: Sewer_Tiles_V3_54
+  - first:
+      213: -8841025564148101668
+    second: Sewer_Tiles_V3_55
+  - first:
+      213: 5606946292611606762
+    second: Sewer_Tiles_V3_56
+  - first:
+      213: 93325922786778406
+    second: Sewer_Tiles_V3_57
+  - first:
+      213: 1834171753599762044
+    second: Sewer_Tiles_V3_58
+  - first:
+      213: -5989366550948012717
+    second: Sewer_Tiles_V3_59
+  - first:
+      213: -4594929571279788900
+    second: Sewer_Tiles_V3_60
+  - first:
+      213: -5464870320003369721
+    second: Sewer_Tiles_V3_61
+  - first:
+      213: 6631236589222629042
+    second: Sewer_Tiles_V3_62
+  - first:
+      213: 2703956931482194793
+    second: Sewer_Tiles_V3_63
+  - first:
+      213: 1809063790989361324
+    second: Sewer_Tiles_V3_64
+  - first:
+      213: 463088322865919461
+    second: Sewer_Tiles_V3_65
+  - first:
+      213: -3064761695755955370
+    second: Sewer_Tiles_V3_66
+  - first:
+      213: 6012547729563674316
+    second: Sewer_Tiles_V3_67
+  - first:
+      213: -4945392285064729176
+    second: Sewer_Tiles_V3_68
+  - first:
+      213: -3020428027687279635
+    second: Sewer_Tiles_V3_69
+  - first:
+      213: -8961801481053272468
+    second: Sewer_Tiles_V3_70
+  - first:
+      213: 8634350583422626748
+    second: Sewer_Tiles_V3_71
+  - first:
+      213: 6647913837437183422
+    second: Sewer_Tiles_V3_72
+  - first:
+      213: 6136318813719506538
+    second: Sewer_Tiles_V3_73
+  - first:
+      213: 2467431083481708680
+    second: Sewer_Tiles_V3_74
+  - first:
+      213: -4767564455393865952
+    second: Sewer_Tiles_V3_75
+  - first:
+      213: -7654627749996183950
+    second: Sewer_Tiles_V3_76
+  - first:
+      213: -7631984775295132647
+    second: Sewer_Tiles_V3_77
+  - first:
+      213: -1946437305504520694
+    second: Sewer_Tiles_V3_78
+  - first:
+      213: 1042210187470434832
+    second: Sewer_Tiles_V3_79
+  - first:
+      213: 871502469673715463
+    second: Sewer_Tiles_V3_80
+  - first:
+      213: 6655275150072645826
+    second: Sewer_Tiles_V3_81
+  - first:
+      213: -860098084373671494
+    second: Sewer_Tiles_V3_82
+  - first:
+      213: -8557266879668029510
+    second: Sewer_Tiles_V3_83
+  - first:
+      213: 2439955055316946233
+    second: Sewer_Tiles_V3_84
+  - first:
+      213: -892482625921386684
+    second: Sewer_Tiles_V3_85
+  - first:
+      213: -8486865290157465049
+    second: Sewer_Tiles_V3_86
+  - first:
+      213: -5484064873991756179
+    second: Sewer_Tiles_V3_87
+  - first:
+      213: 3905059473535691470
+    second: Sewer_Tiles_V3_88
+  - first:
+      213: -6957494312944667666
+    second: Sewer_Tiles_V3_89
+  - first:
+      213: -3455135554287709003
+    second: Sewer_Tiles_V3_90
+  - first:
+      213: 7890673141546176768
+    second: Sewer_Tiles_V3_91
+  - first:
+      213: 8206359145107551978
+    second: Sewer_Tiles_V3_92
+  - first:
+      213: 1320450950441393114
+    second: Sewer_Tiles_V3_93
+  - first:
+      213: -376649583380119730
+    second: Sewer_Tiles_V3_94
+  - first:
+      213: 6027895184354442785
+    second: Sewer_Tiles_V3_95
+  - first:
+      213: 7543175062947853633
+    second: Sewer_Tiles_V3_96
+  - first:
+      213: -8342054323378462952
+    second: Sewer_Tiles_V3_97
+  - first:
+      213: -2488768947871733825
+    second: Sewer_Tiles_V3_98
+  - first:
+      213: 7091719511901129452
+    second: Sewer_Tiles_V3_99
+  - first:
+      213: 6227734660058444215
+    second: Sewer_Tiles_V3_100
+  - first:
+      213: 7869415300687295441
+    second: Sewer_Tiles_V3_101
+  - first:
+      213: -7472053833240251529
+    second: Sewer_Tiles_V3_102
+  - first:
+      213: 6985775916327540963
+    second: Sewer_Tiles_V3_103
+  - first:
+      213: 69458883510226234
+    second: Sewer_Tiles_V3_104
+  - first:
+      213: 4049055755857045156
+    second: Sewer_Tiles_V3_105
+  - first:
+      213: 8698113548518724635
+    second: Sewer_Tiles_V3_106
+  - first:
+      213: -6419469281915225056
+    second: Sewer_Tiles_V3_107
+  - first:
+      213: 7893764802132573542
+    second: Sewer_Tiles_V3_108
+  - first:
+      213: 8238124828146013752
+    second: Sewer_Tiles_V3_109
+  - first:
+      213: -6577692024689114240
+    second: Sewer_Tiles_V3_110
+  - first:
+      213: -4239589217732105999
+    second: Sewer_Tiles_V3_111
+  - first:
+      213: 708567623606734464
+    second: Sewer_Tiles_V3_112
+  - first:
+      213: -8743884774402383857
+    second: Sewer_Tiles_V3_113
+  - first:
+      213: 7045042716155348390
+    second: Sewer_Tiles_V3_114
+  - first:
+      213: -7719496422809505464
+    second: Sewer_Tiles_V3_115
+  - first:
+      213: 397331578547840744
+    second: Sewer_Tiles_V3_116
+  - first:
+      213: 5054597092638521020
+    second: Sewer_Tiles_V3_117
+  - first:
+      213: 3294314262421149605
+    second: Sewer_Tiles_V3_118
+  - first:
+      213: -2562670016406161592
+    second: Sewer_Tiles_V3_119
+  - first:
+      213: -7708158762893574200
+    second: Sewer_Tiles_V3_120
+  - first:
+      213: 7433738804365442586
+    second: Sewer_Tiles_V3_121
+  - first:
+      213: 5582408730188877967
+    second: Sewer_Tiles_V3_122
+  - first:
+      213: 4824506789848572635
+    second: Sewer_Tiles_V3_123
+  - first:
+      213: -1889971782504445980
+    second: Sewer_Tiles_V3_124
+  - first:
+      213: 3944389230330504852
+    second: Sewer_Tiles_V3_125
+  - first:
+      213: -4866937698749057922
+    second: Sewer_Tiles_V3_126
+  - first:
+      213: 961207412387117587
+    second: Sewer_Tiles_V3_127
+  - first:
+      213: -1719539014780908599
+    second: Sewer_Tiles_V3_128
+  - first:
+      213: 7917769287146031161
+    second: Sewer_Tiles_V3_129
+  - first:
+      213: -1328730874728346767
+    second: Sewer_Tiles_V3_130
+  - first:
+      213: -5270522368514386623
+    second: Sewer_Tiles_V3_131
+  - first:
+      213: -4795162329326497340
+    second: Sewer_Tiles_V3_132
+  - first:
+      213: -5774171375636025919
+    second: Sewer_Tiles_V3_133
+  - first:
+      213: -5762238860426493563
+    second: Sewer_Tiles_V3_134
+  - first:
+      213: 8187802884436914717
+    second: Sewer_Tiles_V3_135
+  - first:
+      213: 2608613071104091886
+    second: Sewer_Tiles_V3_136
+  - first:
+      213: 2855733368703476937
+    second: Sewer_Tiles_V3_137
+  - first:
+      213: 1908316178347292558
+    second: Sewer_Tiles_V3_138
+  - first:
+      213: -3702506517042374441
+    second: Sewer_Tiles_V3_139
+  - first:
+      213: 1559099733096085111
+    second: Sewer_Tiles_V3_140
+  - first:
+      213: -5099789550170561980
+    second: Sewer_Tiles_V3_141
+  - first:
+      213: 6803843557939585900
+    second: Sewer_Tiles_V3_142
+  - first:
+      213: -1477402370933786896
+    second: Sewer_Tiles_V3_143
+  - first:
+      213: 5047081663496643945
+    second: Sewer_Tiles_V3_144
+  - first:
+      213: -6314106731535016140
+    second: Sewer_Tiles_V3_145
+  - first:
+      213: 2833565721164792029
+    second: Sewer_Tiles_V3_146
+  - first:
+      213: -2871961649392693570
+    second: Sewer_Tiles_V3_147
+  - first:
+      213: -7051378477936694628
+    second: Sewer_Tiles_V3_148
+  - first:
+      213: 5325853857097198634
+    second: Sewer_Tiles_V3_149
+  - first:
+      213: 5378447784811519289
+    second: Sewer_Tiles_V3_150
+  - first:
+      213: 3160056495081288936
+    second: Sewer_Tiles_V3_151
+  - first:
+      213: -8262056582553301670
+    second: Sewer_Tiles_V3_152
+  - first:
+      213: -8518174478669163691
+    second: Sewer_Tiles_V3_153
+  - first:
+      213: -9209465052870049452
+    second: Sewer_Tiles_V3_154
+  - first:
+      213: -2647119245409415129
+    second: Sewer_Tiles_V3_155
+  - first:
+      213: 513004564328213604
+    second: Sewer_Tiles_V3_156
+  - first:
+      213: -7201053772990250678
+    second: Sewer_Tiles_V3_157
+  - first:
+      213: 3850102544071515767
+    second: Sewer_Tiles_V3_158
+  - first:
+      213: 8068225138659417180
+    second: Sewer_Tiles_V3_159
+  - first:
+      213: 832086343312577081
+    second: Sewer_Tiles_V3_160
+  - first:
+      213: -2566669906307170964
+    second: Sewer_Tiles_V3_161
+  - first:
+      213: 356661262398341238
+    second: Sewer_Tiles_V3_162
+  - first:
+      213: 7750341231637323139
+    second: Sewer_Tiles_V3_163
+  - first:
+      213: 6962258313617030367
+    second: Sewer_Tiles_V3_164
+  - first:
+      213: 6011571897524855463
+    second: Sewer_Tiles_V3_165
+  - first:
+      213: -3254762398612674171
+    second: Sewer_Tiles_V3_166
+  - first:
+      213: -6510736469793052662
+    second: Sewer_Tiles_V3_167
+  - first:
+      213: -6442073873469585768
+    second: Sewer_Tiles_V3_168
+  - first:
+      213: 2324162889491520210
+    second: Sewer_Tiles_V3_169
+  - first:
+      213: -8007220933522719232
+    second: Sewer_Tiles_V3_170
+  - first:
+      213: -5771605833836573761
+    second: Sewer_Tiles_V3_171
+  - first:
+      213: 2860525145973958551
+    second: Sewer_Tiles_V3_172
+  - first:
+      213: 2498382106037079231
+    second: Sewer_Tiles_V3_173
+  - first:
+      213: 3892777531830966207
+    second: Sewer_Tiles_V3_174
+  - first:
+      213: -8712498149236322166
+    second: Sewer_Tiles_V3_175
+  - first:
+      213: -6404747011466235094
+    second: Sewer_Tiles_V3_176
+  - first:
+      213: -7822360562475408114
+    second: Sewer_Tiles_V3_177
+  - first:
+      213: 2283078182883165963
+    second: Sewer_Tiles_V3_178
+  - first:
+      213: 4945009358237403394
+    second: Sewer_Tiles_V3_179
+  - first:
+      213: 6792429731563243358
+    second: Sewer_Tiles_V3_180
+  - first:
+      213: 4476457396316848236
+    second: Sewer_Tiles_V3_181
+  - first:
+      213: 8140992055463881344
+    second: Sewer_Tiles_V3_182
+  - first:
+      213: -345862872778820075
+    second: Sewer_Tiles_V3_183
+  - first:
+      213: -5030196229709472115
+    second: Sewer_Tiles_V3_184
+  - first:
+      213: 7605354079399055813
+    second: Sewer_Tiles_V3_185
+  - first:
+      213: 5802854543911724861
+    second: Sewer_Tiles_V3_186
+  - first:
+      213: 3955740991776435856
+    second: Sewer_Tiles_V3_187
+  - first:
+      213: -3261134648208290215
+    second: Sewer_Tiles_V3_188
+  - first:
+      213: 1854091618015988094
+    second: Sewer_Tiles_V3_189
+  - first:
+      213: -563432344872513757
+    second: Sewer_Tiles_V3_190
+  - first:
+      213: -9071790169778748171
+    second: Sewer_Tiles_V3_191
+  - first:
+      213: 6640428028756367340
+    second: Sewer_Tiles_V3_192
+  - first:
+      213: 7651867664828354950
+    second: Sewer_Tiles_V3_193
+  - first:
+      213: 2357335801603658658
+    second: Sewer_Tiles_V3_194
+  - first:
+      213: 5626424623630522279
+    second: Sewer_Tiles_V3_195
+  - first:
+      213: 8992741053323870443
+    second: Sewer_Tiles_V3_196
+  - first:
+      213: 8932981646871433097
+    second: Sewer_Tiles_V3_197
+  - first:
+      213: 3484077133350182879
+    second: Sewer_Tiles_V3_198
+  - first:
+      213: -1816292219117342869
+    second: Sewer_Tiles_V3_199
+  - first:
+      213: 6453094794422583637
+    second: Sewer_Tiles_V3_200
+  - first:
+      213: 7971082967008744742
+    second: Sewer_Tiles_V3_201
+  - first:
+      213: 4670061304494061331
+    second: Sewer_Tiles_V3_202
+  - first:
+      213: -264374837025821336
+    second: Sewer_Tiles_V3_203
+  - first:
+      213: -474651543077757300
+    second: Sewer_Tiles_V3_204
+  - first:
+      213: 7841526102675141647
+    second: Sewer_Tiles_V3_205
+  - first:
+      213: 4183232206240072583
+    second: Sewer_Tiles_V3_206
+  - first:
+      213: -228430768699467008
+    second: Sewer_Tiles_V3_207
+  - first:
+      213: 5690700294688780911
+    second: Sewer_Tiles_V3_208
+  - first:
+      213: 2250966547428082338
+    second: Sewer_Tiles_V3_0
+  - first:
+      213: -5766115937435356691
+    second: Sewer_Tiles_V3_1
+  - first:
+      213: 7726300790594016617
+    second: Sewer_Tiles_V3_2
+  - first:
+      213: 7655386455313091810
+    second: Sewer_Tiles_V3_3
+  - first:
+      213: 2919289791602389475
+    second: Sewer_Tiles_V3_4
+  - first:
+      213: 7350800871338680496
+    second: Sewer_Tiles_V3_5
+  - first:
+      213: 6960057557755735994
+    second: Sewer_Tiles_V3_6
+  - first:
+      213: 3474158868001870188
+    second: Sewer_Tiles_V3_7
+  - first:
+      213: -4334458464407360668
+    second: Sewer_Tiles_V3_8
+  - first:
+      213: 8346857522243326104
+    second: Sewer_Tiles_V3_9
+  - first:
+      213: -2044548510922928858
+    second: Sewer_Tiles_V3_10
+  - first:
+      213: 2016829419511540894
+    second: Sewer_Tiles_V3_11
+  - first:
+      213: 4026378009726468398
+    second: Sewer_Tiles_V3_12
+  - first:
+      213: 4446896144158407178
+    second: Sewer_Tiles_V3_13
+  - first:
+      213: 820473449372133834
+    second: Sewer_Tiles_V3_14
+  - first:
+      213: 7163916829356078346
+    second: Sewer_Tiles_V3_15
+  - first:
+      213: 4442020518258864856
+    second: Sewer_Tiles_V3_16
+  - first:
+      213: -1601723379695595493
+    second: Sewer_Tiles_V3_17
+  - first:
+      213: 2678854581995376854
+    second: Sewer_Tiles_V3_18
+  - first:
+      213: -8173834783393496383
+    second: Sewer_Tiles_V3_19
+  - first:
+      213: 4301305762790758249
+    second: Sewer_Tiles_V3_20
+  - first:
+      213: 4842476942096788501
+    second: Sewer_Tiles_V3_21
+  - first:
+      213: -664400824607858623
+    second: Sewer_Tiles_V3_22
+  - first:
+      213: -8821568237960978558
+    second: Sewer_Tiles_V3_23
+  - first:
+      213: -630126681985781711
+    second: Sewer_Tiles_V3_24
+  - first:
+      213: -5222596978484115596
+    second: Sewer_Tiles_V3_25
+  - first:
+      213: 3158029448647034045
+    second: Sewer_Tiles_V3_26
+  - first:
+      213: 8881858831521189102
+    second: Sewer_Tiles_V3_27
+  - first:
+      213: 5722649515320515445
+    second: Sewer_Tiles_V3_28
+  - first:
+      213: -2061367278292681596
+    second: Sewer_Tiles_V3_29
+  - first:
+      213: 2931581801896807638
+    second: Sewer_Tiles_V3_30
+  - first:
+      213: 8381483670890896763
+    second: Sewer_Tiles_V3_31
+  - first:
+      213: 341571466292753057
+    second: Sewer_Tiles_V3_32
+  - first:
+      213: -5077939227611287227
+    second: Sewer_Tiles_V3_33
+  - first:
+      213: 6948956537207276646
+    second: Sewer_Tiles_V3_34
+  - first:
+      213: -2851695995450975616
+    second: Sewer_Tiles_V3_35
+  - first:
+      213: 8960383516900228736
+    second: Sewer_Tiles_V3_36
+  - first:
+      213: 4106004383259657689
+    second: Sewer_Tiles_V3_37
+  - first:
+      213: 934479018190955382
+    second: Sewer_Tiles_V3_38
+  - first:
+      213: -6055124325663972519
+    second: Sewer_Tiles_V3_39
+  - first:
+      213: -7011206290592171725
+    second: Sewer_Tiles_V3_40
+  - first:
+      213: 1375703663792926586
+    second: Sewer_Tiles_V3_41
+  - first:
+      213: 421158333273332145
+    second: Sewer_Tiles_V3_42
+  - first:
+      213: -3377840605967902401
+    second: Sewer_Tiles_V3_43
+  - first:
+      213: -4868142776477238201
+    second: Sewer_Tiles_V3_44
+  - first:
+      213: 5948774104575174874
+    second: Sewer_Tiles_V3_45
+  - first:
+      213: -5209927367338769231
+    second: Sewer_Tiles_V3_46
+  - first:
+      213: -7461302491564194325
+    second: Sewer_Tiles_V3_47
+  - first:
+      213: 710078550161712291
+    second: Sewer_Tiles_V3_48
+  - first:
+      213: 5680005350400974424
+    second: Sewer_Tiles_V3_49
+  - first:
+      213: 3941680101215594720
+    second: Sewer_Tiles_V3_50
+  - first:
+      213: 8683347556427388545
+    second: Sewer_Tiles_V3_51
+  - first:
+      213: -3888107705778191630
+    second: Sewer_Tiles_V3_52
+  - first:
+      213: 3076869717604526985
+    second: Sewer_Tiles_V3_53
+  - first:
+      213: -8135656201279601320
+    second: Sewer_Tiles_V3_54
+  - first:
+      213: -7968809390693837185
+    second: Sewer_Tiles_V3_55
+  - first:
+      213: -4575859592823721558
+    second: Sewer_Tiles_V3_56
+  - first:
+      213: 6658157456435065123
+    second: Sewer_Tiles_V3_57
+  - first:
+      213: 7309130806952215841
+    second: Sewer_Tiles_V3_58
+  - first:
+      213: -1553644009182925573
+    second: Sewer_Tiles_V3_59
+  - first:
+      213: -4415375298396899525
+    second: Sewer_Tiles_V3_60
+  - first:
+      213: 7772539616131891637
+    second: Sewer_Tiles_V3_61
+  - first:
+      213: 5239092077546482801
+    second: Sewer_Tiles_V3_62
+  - first:
+      213: -5542055136424313657
+    second: Sewer_Tiles_V3_63
+  - first:
+      213: 6792374152068373779
+    second: Sewer_Tiles_V3_64
+  - first:
+      213: 7217456296964077015
+    second: Sewer_Tiles_V3_65
+  - first:
+      213: -8590129308175247591
+    second: Sewer_Tiles_V3_66
+  - first:
+      213: 4634616820181116631
+    second: Sewer_Tiles_V3_67
+  - first:
+      213: -1651186638468276810
+    second: Sewer_Tiles_V3_68
+  - first:
+      213: 1344875109326554282
+    second: Sewer_Tiles_V3_69
+  - first:
+      213: 5499236101321258781
+    second: Sewer_Tiles_V3_70
+  - first:
+      213: -4611972808463652597
+    second: Sewer_Tiles_V3_71
+  - first:
+      213: -8570229921419082899
+    second: Sewer_Tiles_V3_72
+  - first:
+      213: 71246460655305521
+    second: Sewer_Tiles_V3_73
+  - first:
+      213: -7932451586966883409
+    second: Sewer_Tiles_V3_74
+  - first:
+      213: -4594420217016042074
+    second: Sewer_Tiles_V3_75
+  - first:
+      213: 4653474912899450929
+    second: Sewer_Tiles_V3_76
+  - first:
+      213: 3744771573830754665
+    second: Sewer_Tiles_V3_77
+  - first:
+      213: -2457702079750361580
+    second: Sewer_Tiles_V3_78
+  - first:
+      213: 6726871617152884601
+    second: Sewer_Tiles_V3_79
+  - first:
+      213: 4974224418289563329
+    second: Sewer_Tiles_V3_80
+  - first:
+      213: -4938389767547616718
+    second: Sewer_Tiles_V3_81
+  - first:
+      213: -6216625123757769755
+    second: Sewer_Tiles_V3_82
+  - first:
+      213: 8213050950937558269
+    second: Sewer_Tiles_V3_83
+  - first:
+      213: 5299777036414441254
+    second: Sewer_Tiles_V3_84
+  - first:
+      213: 4992307299381522366
+    second: Sewer_Tiles_V3_85
+  - first:
+      213: 1009794171367718842
+    second: Sewer_Tiles_V3_86
+  - first:
+      213: 7320945012683917681
+    second: Sewer_Tiles_V3_87
+  - first:
+      213: -8569904853710548306
+    second: Sewer_Tiles_V3_88
+  - first:
+      213: -2927796428585943894
+    second: Sewer_Tiles_V3_89
+  - first:
+      213: -820727760061169715
+    second: Sewer_Tiles_V3_90
+  - first:
+      213: 4574328668953754711
+    second: Sewer_Tiles_V3_91
+  - first:
+      213: -376984212456999269
+    second: Sewer_Tiles_V3_92
+  - first:
+      213: -6454860143265974225
+    second: Sewer_Tiles_V3_93
+  - first:
+      213: 3064739696439081119
+    second: Sewer_Tiles_V3_94
+  - first:
+      213: 975359969641539229
+    second: Sewer_Tiles_V3_95
+  - first:
+      213: -1008907727915080636
+    second: Sewer_Tiles_V3_96
+  - first:
+      213: 874414969060110215
+    second: Sewer_Tiles_V3_97
+  - first:
+      213: -5566994219039591553
+    second: Sewer_Tiles_V3_98
+  - first:
+      213: -772602244560188573
+    second: Sewer_Tiles_V3_99
+  - first:
+      213: -7148564146776914939
+    second: Sewer_Tiles_V3_100
+  - first:
+      213: -737884839815117111
+    second: Sewer_Tiles_V3_101
+  - first:
+      213: 1182457307196848058
+    second: Sewer_Tiles_V3_102
+  - first:
+      213: -486075488056939358
+    second: Sewer_Tiles_V3_103
+  - first:
+      213: 4454571425015599055
+    second: Sewer_Tiles_V3_104
+  - first:
+      213: -9196871593402949853
+    second: Sewer_Tiles_V3_105
+  - first:
+      213: -1093397572505672641
+    second: Sewer_Tiles_V3_106
+  - first:
+      213: -3634170789189166031
+    second: Sewer_Tiles_V3_107
+  - first:
+      213: 8824460961433988137
+    second: Sewer_Tiles_V3_108
+  - first:
+      213: 6223504876269777720
+    second: Sewer_Tiles_V3_109
+  - first:
+      213: 4983478869890020297
+    second: Sewer_Tiles_V3_110
+  - first:
+      213: 9144823889934192430
+    second: Sewer_Tiles_V3_111
+  - first:
+      213: 1075850110377550631
+    second: Sewer_Tiles_V3_112
+  - first:
+      213: 7941724347042439512
+    second: Sewer_Tiles_V3_113
+  - first:
+      213: -7114194046681159778
+    second: Sewer_Tiles_V3_114
+  - first:
+      213: -1342640508110120818
+    second: Sewer_Tiles_V3_115
+  - first:
+      213: -6095821982970950108
+    second: Sewer_Tiles_V3_116
+  - first:
+      213: -6068888697371031053
+    second: Sewer_Tiles_V3_117
+  - first:
+      213: -6223838064883505323
+    second: Sewer_Tiles_V3_118
+  - first:
+      213: -8153464670020739790
+    second: Sewer_Tiles_V3_119
+  - first:
+      213: -8204997714126395703
+    second: Sewer_Tiles_V3_120
+  - first:
+      213: -5829154796364855099
+    second: Sewer_Tiles_V3_121
+  - first:
+      213: -1721899204850170005
+    second: Sewer_Tiles_V3_122
+  - first:
+      213: -2456571332109797996
+    second: Sewer_Tiles_V3_123
+  - first:
+      213: -8405739631143124904
+    second: Sewer_Tiles_V3_124
+  - first:
+      213: -4848861714245529373
+    second: Sewer_Tiles_V3_125
+  - first:
+      213: -8251025457968802961
+    second: Sewer_Tiles_V3_126
+  - first:
+      213: 7815168940318230808
+    second: Sewer_Tiles_V3_127
+  - first:
+      213: 8385667648225056922
+    second: Sewer_Tiles_V3_128
+  - first:
+      213: 9042440406480640864
+    second: Sewer_Tiles_V3_129
+  - first:
+      213: 2797105505032406739
+    second: Sewer_Tiles_V3_130
+  - first:
+      213: -3903654366562058178
+    second: Sewer_Tiles_V3_131
+  - first:
+      213: 2989124076759789393
+    second: Sewer_Tiles_V3_132
+  - first:
+      213: 7540655512210815426
+    second: Sewer_Tiles_V3_133
+  - first:
+      213: -8521969434001550457
+    second: Sewer_Tiles_V3_134
+  - first:
+      213: 5827987492810441611
+    second: Sewer_Tiles_V3_135
+  - first:
+      213: -8637162043601440114
+    second: Sewer_Tiles_V3_136
+  - first:
+      213: 3785067653666634231
+    second: Sewer_Tiles_V3_137
+  - first:
+      213: -8824366805361325131
+    second: Sewer_Tiles_V3_138
+  - first:
+      213: 4867482574114646985
+    second: Sewer_Tiles_V3_139
+  - first:
+      213: -984310211795529430
+    second: Sewer_Tiles_V3_140
+  - first:
+      213: 4246905249061871308
+    second: Sewer_Tiles_V3_141
+  - first:
+      213: -6109007252194118764
+    second: Sewer_Tiles_V3_142
+  - first:
+      213: -2483797182678019086
+    second: Sewer_Tiles_V3_143
+  - first:
+      213: 1341189338421673947
+    second: Sewer_Tiles_V3_144
+  - first:
+      213: -3264256613238037447
+    second: Sewer_Tiles_V3_145
+  - first:
+      213: 2806781237794687211
+    second: Sewer_Tiles_V3_146
+  - first:
+      213: 9215641080865624101
+    second: Sewer_Tiles_V3_147
+  - first:
+      213: 5841769395393031799
+    second: Sewer_Tiles_V3_148
+  - first:
+      213: -3641934054339298851
+    second: Sewer_Tiles_V3_149
+  - first:
+      213: 2148955212777421350
+    second: Sewer_Tiles_V3_150
+  - first:
+      213: 2613071867283201535
+    second: Sewer_Tiles_V3_151
+  - first:
+      213: -2121458965743512405
+    second: Sewer_Tiles_V3_152
+  - first:
+      213: -6186459759805768989
+    second: Sewer_Tiles_V3_153
+  - first:
+      213: -6426505806882752856
+    second: Sewer_Tiles_V3_154
+  - first:
+      213: 7164804387192604615
+    second: Sewer_Tiles_V3_155
+  - first:
+      213: -676829545336310789
+    second: Sewer_Tiles_V3_156
+  - first:
+      213: 8624568375398728820
+    second: Sewer_Tiles_V3_157
+  - first:
+      213: 5540983129116533456
+    second: Sewer_Tiles_V3_158
+  - first:
+      213: 2038954713346767605
+    second: Sewer_Tiles_V3_159
+  - first:
+      213: -2913049369591711474
+    second: Sewer_Tiles_V3_160
+  - first:
+      213: 4439030661433160247
+    second: Sewer_Tiles_V3_161
+  - first:
+      213: -3296677118472511951
+    second: Sewer_Tiles_V3_162
+  - first:
+      213: 5762120935618626453
+    second: Sewer_Tiles_V3_163
+  - first:
+      213: -7282026048671447560
+    second: Sewer_Tiles_V3_164
+  - first:
+      213: 1815396528198882370
+    second: Sewer_Tiles_V3_165
+  - first:
+      213: 5906098407422754989
+    second: Sewer_Tiles_V3_166
+  - first:
+      213: 5820154122082038242
+    second: Sewer_Tiles_V3_167
+  - first:
+      213: -6000373832345161506
+    second: Sewer_Tiles_V3_168
+  - first:
+      213: -3229819532760605745
+    second: Sewer_Tiles_V3_169
+  - first:
+      213: 7606551988538823141
+    second: Sewer_Tiles_V3_170
+  - first:
+      213: -2586843691634683387
+    second: Sewer_Tiles_V3_171
+  - first:
+      213: -8198114488991804489
+    second: Sewer_Tiles_V3_172
+  - first:
+      213: 6082390517208400982
+    second: Sewer_Tiles_V3_173
+  - first:
+      213: 6672260772447451373
+    second: Sewer_Tiles_V3_174
+  - first:
+      213: 7924284158617426308
+    second: Sewer_Tiles_V3_175
+  - first:
+      213: -1936152145419143064
+    second: Sewer_Tiles_V3_176
+  - first:
+      213: -960602365358331698
+    second: Sewer_Tiles_V3_177
+  - first:
+      213: 7980023709627469693
+    second: Sewer_Tiles_V3_178
+  - first:
+      213: 152646688962794114
+    second: Sewer_Tiles_V3_179
+  - first:
+      213: -5221408491560044573
+    second: Sewer_Tiles_V3_180
+  - first:
+      213: -1590525774459398858
+    second: Sewer_Tiles_V3_181
+  - first:
+      213: -3866604037893703823
+    second: Sewer_Tiles_V3_182
+  - first:
+      213: 9155496279524877303
+    second: Sewer_Tiles_V3_183
+  - first:
+      213: 9108560193307205477
+    second: Sewer_Tiles_V3_184
+  - first:
+      213: -2854115307503982313
+    second: Sewer_Tiles_V3_185
+  - first:
+      213: 5720693980581176836
+    second: Sewer_Tiles_V3_186
+  - first:
+      213: 7371125887922085151
+    second: Sewer_Tiles_V3_187
+  - first:
+      213: 7679702047994427542
+    second: Sewer_Tiles_V3_188
+  - first:
+      213: 5405075568888964692
+    second: Sewer_Tiles_V3_189
+  - first:
+      213: -4473988823944636183
+    second: Sewer_Tiles_V3_190
+  - first:
+      213: -672211248108244691
+    second: Sewer_Tiles_V3_191
+  - first:
+      213: 5941861468147306753
+    second: Sewer_Tiles_V3_192
+  - first:
+      213: -3914098888625904115
+    second: Sewer_Tiles_V3_193
+  - first:
+      213: 5460999335160429359
+    second: Sewer_Tiles_V3_194
+  - first:
+      213: -6855421791603589734
+    second: Sewer_Tiles_V3_195
+  - first:
+      213: -2092158122163599971
+    second: Sewer_Tiles_V3_196
+  - first:
+      213: -4433415334199257203
+    second: Sewer_Tiles_V3_197
+  - first:
+      213: 2450711117125859315
+    second: Sewer_Tiles_V3_198
+  - first:
+      213: -3989410289561600214
+    second: Sewer_Tiles_V3_199
+  - first:
+      213: 6825785027071624879
+    second: Sewer_Tiles_V3_200
+  - first:
+      213: 6164686043319106593
+    second: Sewer_Tiles_V3_201
+  - first:
+      213: -7012618785239031181
+    second: Sewer_Tiles_V3_202
+  - first:
+      213: -5122782414748806611
+    second: Sewer_Tiles_V3_203
+  - first:
+      213: -5652109438906917364
+    second: Sewer_Tiles_V3_204
+  - first:
+      213: 1462119424882201456
+    second: Sewer_Tiles_V3_205
+  - first:
+      213: -1358056684599097731
+    second: Sewer_Tiles_V3_206
+  - first:
+      213: -8352326262148089531
+    second: Sewer_Tiles_V3_207
+  - first:
+      213: -980602868272432419
+    second: Sewer_Tiles_V3_208
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a20db4162a0d3f10800000000000000
+      internalID: 2250966547428082338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de17277ea14aaffa0800000000000000
+      internalID: -5766115937435356691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9651d2322a5593b60800000000000000
+      internalID: 7726300790594016617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec064fcb656d3a60800000000000000
+      internalID: 7655386455313091810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e172e03996638820800000000000000
+      internalID: 2919289791602389475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b026ce327a430660800000000000000
+      internalID: 7350800871338680496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfad4a0977179060800000000000000
+      internalID: 6960057557755735994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6156846511b63030800000000000000
+      internalID: 3474158868001870188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b6057ddf8e8d3c0800000000000000
+      internalID: -4334458464407360668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8905c1461bef5d370800000000000000
+      internalID: 8346857522243326104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d826836fd40a3e0800000000000000
+      internalID: -2044548510922928858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cea82eba73dfb10800000000000000
+      internalID: 2016829419511540894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21c039977190e730800000000000000
+      internalID: 4026378009726468398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0abd918b7c86bd30800000000000000
+      internalID: 4446896144158407178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac927715148e26b00800000000000000
+      internalID: 820473449372133834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05363676685b6360800000000000000
+      internalID: 7163916829356078346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2f0d3602a35ad30800000000000000
+      internalID: 4442020518258864856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b105ecc821985c9e0800000000000000
+      internalID: -1601723379695595493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d013c49c043d2520800000000000000
+      internalID: 2678854581995376854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c249134294b09e80800000000000000
+      internalID: -8173834783393496383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967db7d4dce41bb30800000000000000
+      internalID: 4301305762790758249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ce2be4f1fe33340800000000000000
+      internalID: 4842476942096788501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140a5cc58f297c6f0800000000000000
+      internalID: -664400824607858623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f977e1d6e739580800000000000000
+      internalID: -8821568237960978558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130fdbc0f175147f0800000000000000
+      internalID: -630126681985781711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4770d64f7bb9587b0800000000000000
+      internalID: -5222596978484115596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_26
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db444d43d0393db20800000000000000
+      internalID: 3158029448647034045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_27
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8cf59c83b24b70800000000000000
+      internalID: 8881858831521189102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_28
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b9dbe0a6fea6f40800000000000000
+      internalID: 5722649515320515445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c30c9c16d8463e0800000000000000
+      internalID: -2061367278292681596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_30
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc0f0cdd121fa820800000000000000
+      internalID: 2931581801896807638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d503eddf2015470800000000000000
+      internalID: 8381483670890896763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_32
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2f9c950718db400800000000000000
+      internalID: 341571466292753057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54135333d298789b0800000000000000
+      internalID: -5077939227611287227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_34
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6644ed74727af6060800000000000000
+      internalID: 6948956537207276646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a9dbfd99dbc68d0800000000000000
+      internalID: -2851695995450975616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_36
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e7a10a55da95c70800000000000000
+      internalID: 8960383516900228736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_37
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d583666b357bf830800000000000000
+      internalID: 4106004383259657689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673e35947bfe7fc00800000000000000
+      internalID: 934479018190955382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953e8f9d180e7fba0800000000000000
+      internalID: -6055124325663972519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339f442960133be90800000000000000
+      internalID: -7011206290592171725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fa494813b771310800000000000000
+      internalID: 1375703663792926586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9d3f0d54148d500800000000000000
+      internalID: 421158333273332145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39946d8ddf7f11d0800000000000000
+      internalID: -3377840605967902401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cb034ffe1e07cb0800000000000000
+      internalID: -4868142776477238201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_45
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8ee38b78a4e8250800000000000000
+      internalID: 5948774104575174874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4cf2ca9ae92b7b0800000000000000
+      internalID: -5209927367338769231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_47
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be544946ae0247890800000000000000
+      internalID: -7461302491564194325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_48
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a46301eda4bad900800000000000000
+      internalID: 710078550161712291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_49
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ed7f0b5ce63de40800000000000000
+      internalID: 5680005350400974424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e86e2b0b29a3b630800000000000000
+      internalID: 3941680101215594720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_51
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1865c12a892718870800000000000000
+      internalID: 8683347556427388545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_52
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2c1a444aaaa0ac0800000000000000
+      internalID: -3888107705778191630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_53
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b69f9c4bc33ba20800000000000000
+      internalID: 3076869717604526985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855860c1ac7581f80800000000000000
+      internalID: -8135656201279601320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_55
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7695e8641a196190800000000000000
+      internalID: -7968809390693837185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_56
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1bdabb1f74f70c0800000000000000
+      internalID: -4575859592823721558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3213e612ee6866c50800000000000000
+      internalID: 6658157456435065123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_58
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12540455ebf3f6560800000000000000
+      internalID: 7309130806952215841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_59
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfcec355109507ae0800000000000000
+      internalID: -1553644009182925573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37b40d4f8f69b2c0800000000000000
+      internalID: -4415375298396899525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b14136a99b9ddb60800000000000000
+      internalID: 7772539616131891637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_62
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ca8b39c7ef4b840800000000000000
+      internalID: 5239092077546482801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccbccb673aa613b0800000000000000
+      internalID: -5542055136424313657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_64
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d9493cd4c534e50800000000000000
+      internalID: 6792374152068373779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_65
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5337a234e892460800000000000000
+      internalID: 7217456296964077015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_66
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917da8b18eab9c880800000000000000
+      internalID: -8590129308175247591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_67
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d622f45177715040800000000000000
+      internalID: 4634616820181116631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_68
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd1a3c208ec519e0800000000000000
+      internalID: -1651186638468276810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_69
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa48ca659c4f9a210800000000000000
+      internalID: 1344875109326554282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_70
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17f1431916315c40800000000000000
+      internalID: 5499236101321258781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_71
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0963cd7a2bfeffb0800000000000000
+      internalID: -4611972808463652597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_72
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6344622b4d601980800000000000000
+      internalID: -8570229921419082899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_73
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1330dda474e1df000800000000000000
+      internalID: 71246460655305521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_74
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3fad04f454ae190800000000000000
+      internalID: -7932451586966883409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_75
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adb2e7a7275d30c0800000000000000
+      internalID: -4594420217016042074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138409237c6749040800000000000000
+      internalID: 4653474912899450929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_77
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961a92fd7e918f330800000000000000
+      internalID: 3744771573830754665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_78
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41eadbcdafc74edd0800000000000000
+      internalID: -2457702079750361580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_79
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f1e066816aa5d50800000000000000
+      internalID: 6726871617152884601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6393df0cef70540800000000000000
+      internalID: 4974224418289563329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23286eecba0577bb0800000000000000
+      internalID: -4938389767547616718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_82
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb36a4136c1ab9a0800000000000000
+      internalID: -6216625123757769755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_83
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc31d4435e9af170800000000000000
+      internalID: 8213050950937558269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_84
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627514c92279c8940800000000000000
+      internalID: 5299777036414441254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_85
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfa935d90d384540800000000000000
+      internalID: 4992307299381522366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_86
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abff1a0e272830e00800000000000000
+      internalID: 1009794171367718842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_87
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179413573b8399560800000000000000
+      internalID: 7320945012683917681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_88
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2dfabd0f4911980800000000000000
+      internalID: -8569904853710548306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_89
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac3a7b09a06e57d0800000000000000
+      internalID: -2927796428585943894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_90
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf704c53703c94f0800000000000000
+      internalID: -820727760061169715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_91
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cbfd640b74b7f30800000000000000
+      internalID: 4574328668953754711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_92
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96f19a2bdea4caf0800000000000000
+      internalID: -376984212456999269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_93
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28fdc526eabb66a0800000000000000
+      internalID: -6454860143265974225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_94
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f983a472484288a20800000000000000
+      internalID: 3064739696439081119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96ae9689bc298d00800000000000000
+      internalID: 975359969641539229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_96
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444a97254c3aff1f0800000000000000
+      internalID: -1008907727915080636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_97
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fac1118cb822c00800000000000000
+      internalID: 874414969060110215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_98
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73fd73c0401eb2b0800000000000000
+      internalID: -5566994219039591553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_99
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b025c1a5a2745f0800000000000000
+      internalID: -772602244560188573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_100
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504c44188c23bcc90800000000000000
+      internalID: -7148564146776914939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_101
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c68cadc5a182c5f0800000000000000
+      internalID: -737884839815117111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_102
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7788de7aee86010800000000000000
+      internalID: 1182457307196848058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_103
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac67504bec1149f0800000000000000
+      internalID: -486075488056939358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_104
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf09a61c11d1dd30800000000000000
+      internalID: 4454571425015599055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_105
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f165e43062e5080800000000000000
+      internalID: -9196871593402949853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_106
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34668c63b873d0f0800000000000000
+      internalID: -1093397572505672641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_107
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c57410ce4d09dc0800000000000000
+      internalID: -3634170789189166031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_108
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c239c8d78c67a70800000000000000
+      internalID: 8824460961433988137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_109
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833b8ff16b45e5650800000000000000
+      internalID: 6223504876269777720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_110
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3b579e0afd82540800000000000000
+      internalID: 4983478869890020297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_111
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f880560e0f8ee70800000000000000
+      internalID: 9144823889934192430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_112
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7236e9ca9ff2eee00800000000000000
+      internalID: 1075850110377550631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_113
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8512981773ca63e60800000000000000
+      internalID: 7941724347042439512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97ee58053e454d90800000000000000
+      internalID: -7114194046681159778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_115
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88db0d429bfd5de0800000000000000
+      internalID: -1342640508110120818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_116
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ecffa143a476ba0800000000000000
+      internalID: -6095821982970950108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_117
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f901d352e9f6cba0800000000000000
+      internalID: -6068888697371031053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_118
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557601b514c70a9a0800000000000000
+      internalID: -6223838064883505323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_119
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d57bed41319de80800000000000000
+      internalID: -8153464670020739790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_120
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6aa9a0d0ef12e80800000000000000
+      internalID: -8204997714126395703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_121
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c888edc89eaa1fa0800000000000000
+      internalID: -5829154796364855099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_122
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67c0e3dbc59a18e0800000000000000
+      internalID: -1721899204850170005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_123
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495ff20936188edd0800000000000000
+      internalID: -2456571332109797996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_124
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8508a4b4750d85b80800000000000000
+      internalID: -8405739631143124904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_125
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0576516f165bcb0800000000000000
+      internalID: -4848861714245529373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_126
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f639011df087e7d80800000000000000
+      internalID: -8251025457968802961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_127
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8198553aebe057c60800000000000000
+      internalID: 7815168940318230808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_128
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9890f00c40ef5470800000000000000
+      internalID: 8385667648225056922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_129
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bdaea04a33d7d70800000000000000
+      internalID: 9042440406480640864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_130
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d60fba13a051d620800000000000000
+      internalID: 2797105505032406739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_131
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e308a2b390f63d9c0800000000000000
+      internalID: -3903654366562058178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_132
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fa5d0c2808b7920800000000000000
+      internalID: 2989124076759789393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9baea7c3ac5a860800000000000000
+      internalID: 7540655512210815426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_134
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783d99b73f1ebb980800000000000000
+      internalID: -8521969434001550457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_135
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83c2682fbb21e050800000000000000
+      internalID: 5827987492810441611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_136
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8236ab02e2a22880800000000000000
+      internalID: -8637162043601440114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_137
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9fe931af2478430800000000000000
+      internalID: 3785067653666634231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_138
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb80bed42d898580800000000000000
+      internalID: -8824366805361325131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_139
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbe184bc95cc8340800000000000000
+      internalID: 4867482574114646985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_140
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a215325d3170752f0800000000000000
+      internalID: -984310211795529430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_141
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce131da2d900fa30800000000000000
+      internalID: 4246905249061871308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_142
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4933fa26542783ba0800000000000000
+      internalID: -6109007252194118764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_143
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f35c504f97c78dd0800000000000000
+      internalID: -2483797182678019086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_144
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf3a2de89cdc9210800000000000000
+      internalID: 1341189338421673947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_145
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9342a30b7e703b2d0800000000000000
+      internalID: -3264256613238037447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_146
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8cbf03aa0b3f620800000000000000
+      internalID: 2806781237794687211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_147
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5201e7a8cb884ef70800000000000000
+      internalID: 9215641080865624101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_148
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e66286052221150800000000000000
+      internalID: 5841769395393031799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_149
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd935bbf540457dc0800000000000000
+      internalID: -3641934054339298851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_150
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a72df516f92dd10800000000000000
+      internalID: 2148955212777421350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_151
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd5bf5c40f734420800000000000000
+      internalID: 2613071867283201535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba45a458f401f82e0800000000000000
+      internalID: -2121458965743512405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_153
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea578f20a7452aa0800000000000000
+      internalID: -6186459759805768989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_154
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6b4c9840770d6a0800000000000000
+      internalID: -6426505806882752856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_155
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c786cf11af7e6360800000000000000
+      internalID: 7164804387192604615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_156
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf37db05d1b6b96f0800000000000000
+      internalID: -676829545336310789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_157
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47485b41e3f90b770800000000000000
+      internalID: 8624568375398728820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_158
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d26c6d6cc685ec40800000000000000
+      internalID: 5540983129116533456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_159
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa742a4282db4c10800000000000000
+      internalID: 2038954713346767605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_160
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e097f484805c297d0800000000000000
+      internalID: -2913049369591711474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_161
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7327ac91eda9a9d30800000000000000
+      internalID: 4439030661433160247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_162
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e994690a9df32d0800000000000000
+      internalID: -3296677118472511951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_163
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593c360467a27ff40800000000000000
+      internalID: 5762120935618626453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_164
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f50ccbf3eb01fa90800000000000000
+      internalID: -7282026048671447560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_165
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24495c52685913910800000000000000
+      internalID: 1815396528198882370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_166
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da00feea53da6f150800000000000000
+      internalID: 5906098407422754989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_167
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1b9b8665755c050800000000000000
+      internalID: 5820154122082038242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_168
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed074837ac36abca0800000000000000
+      internalID: -6000373832345161506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_169
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb9f2d4f306d23d0800000000000000
+      internalID: -3229819532760605745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_170
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1d56a7bb6ef8960800000000000000
+      internalID: 7606551988538823141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_171
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50297ae3e5fa91cd0800000000000000
+      internalID: -2586843691634683387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_172
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b319a7ce427a3e80800000000000000
+      internalID: -8198114488991804489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_173
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654496313fdf86450800000000000000
+      internalID: 6082390517208400982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_174
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8f08642d1a89c50800000000000000
+      internalID: 6672260772447451373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_175
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48995a52576b8fd60800000000000000
+      internalID: 7924284158617426308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_176
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8687e25c1e76125e0800000000000000
+      internalID: -1936152145419143064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_177
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8aa6afc314ba2f0800000000000000
+      internalID: -960602365358331698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_178
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f4a8fa84dbebe60800000000000000
+      internalID: 7980023709627469693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_179
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28254c7da5f4e1200800000000000000
+      internalID: 152646688962794114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_180
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7fa5124a4d987b0800000000000000
+      internalID: -5221408491560044573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_181
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6359e3f2c315de9e0800000000000000
+      internalID: -1590525774459398858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_182
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177314a1d10175ac0800000000000000
+      internalID: -3866604037893703823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_183
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3ad7bbb5bde0f70800000000000000
+      internalID: 9155496279524877303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_184
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fd6519c3b186e70800000000000000
+      internalID: 9108560193307205477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_185
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7196834ef352468d0800000000000000
+      internalID: -2854115307503982313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_186
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406a145addcf36f40800000000000000
+      internalID: 5720693980581176836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_187
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d1840f0ff7b4660800000000000000
+      internalID: 7371125887922085151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_188
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6983c87e258c39a60800000000000000
+      internalID: 7679702047994427542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_189
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456e4c3b79fa20b40800000000000000
+      internalID: 5405075568888964692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e856bb6ed239e1c0800000000000000
+      internalID: -4473988823944636183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_191
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d217c7e6e63dba6f0800000000000000
+      internalID: -672211248108244691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_192
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1015081268bb57250800000000000000
+      internalID: 5941861468147306753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_193
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06a3bf6cc35ea9c0800000000000000
+      internalID: -3914098888625904115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_194
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bb1e236fd59cb40800000000000000
+      internalID: 5460999335160429359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_195
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dfefdb336acd0a0800000000000000
+      internalID: -6855421791603589734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_196
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d958d7ac54927f2e0800000000000000
+      internalID: -2092158122163599971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_197
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8798472e385972c0800000000000000
+      internalID: -4433415334199257203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_198
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7336fc6cca20220800000000000000
+      internalID: 2450711117125859315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_199
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f746b7a74c2a8c0800000000000000
+      internalID: -3989410289561600214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_200
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6c8cb415f0abe50800000000000000
+      internalID: 6825785027071624879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_201
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cf7d36b4d5d8550800000000000000
+      internalID: 6164686043319106593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_202
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372a8988e5c2eae90800000000000000
+      internalID: -7012618785239031181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_203
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d229743198838e8b0800000000000000
+      internalID: -5122782414748806611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_204
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e1256596caf81b0800000000000000
+      internalID: -5652109438906917364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_205
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0735d4bcedd7a4410800000000000000
+      internalID: 1462119424882201456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_206
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7640a104a6372de0800000000000000
+      internalID: -1358056684599097731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_207
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5493f706483961c80800000000000000
+      internalID: -8352326262148089531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer_Tiles_V3_208
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda74e203e23462f0800000000000000
+      internalID: -980602868272432419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
