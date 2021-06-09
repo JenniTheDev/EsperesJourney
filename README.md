@@ -21,7 +21,7 @@ Espere's Journey uses Unity Version 2019.4.3f1
 
 <br><br>
 ## The Team <a name="Team"></a> <br>
-* JP - Artist, Game Designer, Team Lead: [Portfolio](www.jpouii.com) - [Github](https://github.com/jspinn) - [Instagram](www.instagram.com/jpouii)
+* JP - Artist, Game Designer, Team Lead: [Portfolio](https://www.jpouii.com) - [Github](https://github.com/jspinn) - [Instagram](https://www.instagram.com/jpouii)
 * Jenni - Engineer: [Portfolio](https://jennithe.dev/) - [Github](https://github.com/JenniTheDev)
 * Everette - Engineer: [Portfolio](https://digx7xstudi0.wixsite.com/digx7) - [Github](https://github.com/Digx7)
 * Luis - Engineer: [Portfolio] - [Github](https://github.com/LuiRangel)
