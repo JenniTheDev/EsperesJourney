@@ -21,7 +21,7 @@ Espere's Journey uses Unity Version 2019.4.3f1
 
 <br><br>
 ## The Team <a name="Team"></a> <br>
-* JP - Artist, Game Designer, Team Lead: [Portfolio] - [Github](https://github.com/jspinn)
+* JP - Artist, Game Designer, Team Lead: [Portfolio](www.jpouii.com) - [Github](https://github.com/jspinn) - [Instagram](www.instagram.com/jpouii)
 * Jenni - Engineer: [Portfolio](https://jennithe.dev/) - [Github](https://github.com/JenniTheDev)
 * Everette - Engineer: [Portfolio](https://digx7xstudi0.wixsite.com/digx7) - [Github](https://github.com/Digx7)
 * Luis - Engineer: [Portfolio] - [Github](https://github.com/LuiRangel)
@@ -45,8 +45,7 @@ Espere has four abilities:
 <br><br>
 
 ## Project Documentation <a name="Docs"></a> <br>
-[Original Pitch] <br>
-[Second Semester Pitch] <br>
+[Second Semester Pitch](https://docs.google.com/presentation/d/1J8oOZmcst3VuU9ixyMSHdP6s-9XXT8tUvnogLkv7Xmo/edit#slide=id.g98344ba069_7_0) <br>
 [Espere Abilities](https://jennithe.dev/EsperesJourney/docs/EspereAbilitiesContext.pdf) <br>
 [Player FSM Documentation](https://jennithe.dev/EsperesJourney/docs/FSMDocumentation.pdf) <br>
 
